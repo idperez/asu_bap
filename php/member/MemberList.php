@@ -1,9 +1,9 @@
 <?php
-Class MembersList 
+class MembersList 
 {
-    $size;
+    private $size;
     
-    function MembersList(int size)
+    function MembersList($size)
     {
         $this->size = size;    
     }    

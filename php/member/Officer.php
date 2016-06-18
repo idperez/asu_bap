@@ -1,11 +1,11 @@
 <?php
-include 'Member.php';
+include 'member.php';
 
 class Officer extends Member
 {   
     //should automatically call constructor of base class
     
-    function addMemberPartial($firstName, $lastName, $email, $title)
+    function addMemberPartial($firstName, $lastName, $email, $password)
     {
         
     }
