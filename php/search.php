@@ -40,6 +40,7 @@ if (strlen($search_string) >= 1 && $search_string !== ' ') {
    
     // Check for results
     if (isset($results)) {
+        
         for($i = 0; $i < $count; $i++) {
             // Output strings and highlight the matches
              $firstname = preg_replace("/".$search_string."/i", "<b>".$search_string."</b>", $results['firstname']);
@@ -58,7 +59,7 @@ if (strlen($search_string) >= 1 && $search_string !== ' ') {
             $o = str_replace('major', $major, $o);
             $o = str_replace('level', $level, $o);
             $o = str_replace('linkedin', '<a target="_blank" href='.$linkedin.'>
-                    <img alt="follow me on instagram" src="../../assets/images/linkedin.png" border=0>
+                    <img alt="follow me on instagram" src="/bap/assets/images/linkedin.png" border=0>
                         </a>', $o);
             $o = str_replace('profile', '<a type="button" class="btn btn-info btn-sm" href="profile.php">View</a>', $o);
             $o = str_replace('edit', '<a type="button" class="btn btn-primary" href="edit-member.php">Edit</a>', $o);
@@ -67,6 +68,7 @@ if (strlen($search_string) >= 1 && $search_string !== ' ') {
         }
     } else {
         // Replace for no results
+ 
         $o = str_replace('firstname', '<span class="label label-danger">No Matches</span>', $html);
         $o = str_replace('lastname', '', $o);
         $o = str_replace('email', '', $o);

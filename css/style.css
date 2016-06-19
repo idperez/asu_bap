@@ -106,6 +106,19 @@ figure {
 }
 
 .fh5co-cover,
+.fh5co-hero-ish {
+  position: relative;
+  height: 143px;
+  font-weight: 300;
+}
+@media screen and (max-width: 768px) {
+  .fh5co-cover,
+  .fh5co-hero-ish {
+    height: 700px;
+  }
+}
+
+.fh5co-cover,
 .fh5co-hero {
   position: relative;
   height: 800px;

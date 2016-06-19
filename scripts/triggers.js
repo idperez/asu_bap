@@ -1,5 +1,5 @@
 $(document).ready(function() {  
-    
+
     $(".tablesearch").hide();
     // Search
     function search() {
@@ -11,7 +11,7 @@ $(document).ready(function() {
         if(query_value !== ''){
             $.ajax({
                 type: "POST",
-                url: "../search.php",
+                url: "/bap/php/search.php",
                 data: { query: query_value, search_by: search_by },
                 cache: false,
                 success: function(html){
