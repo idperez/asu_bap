@@ -1,7 +1,7 @@
 <?php
 class DatabaseService
 {
-    private $host = "localhost";
+    public $host = "localhost";
     private $username = "root";
     private $password = "";
     private $databaseName = "bap";
@@ -12,7 +12,7 @@ class DatabaseService
         global $test_db;
 
         $test_db = new mysqli();
-        $test_db->connect($host, $username, $password, $databaseName);
+        $test_db->connect($this->host, $this->username, $this->password, $this->databaseName);
         $test_db->set_charset("utf8");
 
         //	Check Connection
@@ -23,7 +23,8 @@ class DatabaseService
         }
         else
         {
-            connect();
+            $test_db->connect();
+            printf("Connection success");
         }
     }
     
