@@ -47,19 +47,31 @@
                                 <?php } ?>
                                     <a href="/bap/php/members.php">Members</a>
                                 </li>
+                                
+                                <?php if($_SESSION['page'] == 'services') { ?> 
+                                <li class="active">
+                                <?php } else { ?>
                                 <li>
-                                    <a href="services.html" class="fh5co-sub-ddown">Services</a>
-                                     <ul class="fh5co-sub-menu">
-                                        <li><a href="left-sidebar.html">Web Development</a></li>
-                                        <li><a href="right-sidebar.html">Branding &amp; Identity</a></li>                                    
-                                        <li><a href="#">UI Animation</a></li>
-                                        <li><a href="#">Copywriting</a></li>
-                                        <li><a href="#">Photography</a></li> 
-                                    </ul>
+                                <?php } ?>
+                                    <a href="/bap/html/services.php">Services</a>
                                 </li>
-                                <li><a href="about.html">About</a></li>
-                                <li><a href="contact.html">Contact</a></li>
-                               
+                                
+                                <?php if($_SESSION['page'] == 'about') { ?> 
+                                <li class="active">
+                                <?php } else { ?>
+                                <li>
+                                <?php } ?>
+                                    <a href="/bap/html/about.php">About</a>
+                                </li>
+                                
+                                <?php if($_SESSION['page'] == 'contact') { ?> 
+                                <li class="active">
+                                <?php } else { ?>
+                                <li>
+                                <?php } ?>
+                                    <a href="/bap/html/contact.php">Contact</a>
+                                </li>
+                                                             
                                 <?php if($_SESSION['page'] == 'login') { ?> 
                                 <li class="active">
                                 <?php } else { ?>
@@ -78,5 +90,3 @@
         </div>
             
       
-    </body>
-</html>

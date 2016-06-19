@@ -23,21 +23,22 @@
         <div class="row" >
             <div class="col-md-12 col-sm-12" >
                 <div class="animate-box text-center" style="position:relative; top:-22">  
-                    <img src="/bap/assets/images/profile_logo.png"  alt="profile_logo" height="120" style="position:relative; top:-35px; "></h1>
+                    <img src="/bap/assets/images/profile_logo.png"  alt="profile_logo" height="120" style="position:relative; top:-35px; ">
                 </div>
             </div>    
         </div>
         <div class="row" >
             <div class="col-md-12 col-sm-12" >
                 <div class="animate-box text-center" style="position:relative; top:-22">  
-                    <div style="width: 100%; height: 30px; border-bottom: 1px solid black; text-align: center">
-                        <span style="font-size: 40px; background-color: #F3F5F6; padding: 0 10px;">
+                    <div style="width: 100%; height: 20px; border-bottom: 1px solid black; text-align: center">
+                        <span style="font-size: 30px; background-color: #F3F5F6; padding: 0 10px;">
                         Officers
                         </span>
                     </div>
+                    
                     <br><br>
-                    <div style="width: 100%; height: 30px; border-bottom: 1px solid black; text-align: center">
-                        <span style="font-size: 40px; background-color: #F3F5F6; padding: 0 10px;">
+                    <div style="width: 100%; height: 20px; border-bottom: 1px solid black; text-align: center">
+                        <span style="font-size: 30px; background-color: #F3F5F6; padding: 0 10px;">
                         Members
                         </span>
                     </div>
@@ -45,9 +46,8 @@
             </div>    
        </div> 
     </div>
-    
-    </div>
-    </body>  
+</div>
+</body>  
 
 
 <?php require_once($root."/bap/html/footer.php"); ?>

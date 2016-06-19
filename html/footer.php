@@ -9,9 +9,9 @@
                             <ul class="footer-menu">
                                 <li><a href="/bap/html/index.php">Home</a></li>
                                 <li><a href="/bap/php/members.php">Members</a></li>
-                                <li><a href="#">Services</a></li>
-                                <li><a href="#">About</a></li>
-                                <li><a href="#">Contact</a></li>
+                                <li><a href="/bap/html/services.php">Services</a></li>
+                                <li><a href="/bap/html/about.php">About</a></li>
+                                <li><a href="/bap/html/contact.php">Contact</a></li>
                                 <li><a href="/bap/php/login.php">Log In</a></li
                             </ul>
                         </div>
@@ -29,6 +29,6 @@
     <script src="/bap/js/hoverIntent.js"></script>
     <script src="/bap/js/superfish.js"></script>
     <script src="/bap/js/main.js"></script>
-    </body>
+  
 </html>
 

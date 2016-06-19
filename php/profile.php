@@ -55,7 +55,7 @@
                                     </td>
                                     </tr>
                                 </table>
-                            <a target="_blank" href='.$linkedin.'>
+                            <a target="_blank" href='http://www.linkedin.com'>
                            
                            <img alt="connect with me on linkedin" src="/bap/assets/images/linkedin.png" border=0 height="50" width="50" style="float: left;">            
                        </a>
@@ -65,5 +65,6 @@
             </div>
         </div>
     </div>
+    <a href="acrobat_file.pdf">pdf file</a>
     </body>
 <?php require_once($root."/bap/html/footer.php"); ?>
