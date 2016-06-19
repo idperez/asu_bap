@@ -36,7 +36,6 @@ if(isset($_POST['submit'])) {
     
       redirect_to("member/home.php");
     } else {
-      // Failure
       $warning = true;
     }    
   }
@@ -92,7 +91,7 @@ if(isset($_POST['submit'])) {
                                 <li><a href="about.html">About</a></li>
                                 <li><a href="#">Blog</a></li>
                                 <li><a href="contact.html">Contact</a></li>
-                               
+                            
                                 <li class="active">
                                     <a href="/bap/php/login.php">Login</a>
                                 </li>
@@ -120,7 +119,25 @@ if(isset($_POST['submit'])) {
                                 <label>Password:</label>
                                     <input type="password" class="form-control" maxlength="24" placeholder="password" name="password">
                                     <br>
-                                <button type="submit" class="btn btn-danger" name="submit">Log In</button> 
+                                <button type="submit" class="btn btn-danger" name="submit">Log In</button>
+                                    <br>
+                                <?php
+                                if($warning){ ?>
+                                    <br>
+                                    <div class="alert alert-danger" role="alert"  stype = "">              
+                                        <strong>Error!</strong> Incorrect email/password.              
+                                    </div>          
+                                <?php } ?>
+                                    <br>
+                                <?php
+                                    
+                                if(isset($_SESSION['message'])){
+                                    if($_SESSION['message'] != ""){
+                                        print_message($_SESSION['message']); 
+                                    }
+                                }
+                                    $_SESSION['message'] = "";
+                                ?>
                             </div>                     
                         </form>         
                     </div>
