@@ -28,7 +28,7 @@ class Member {
         $hasGraduated, $graduationYear, $major, $major2, $major3, $password, $level)
     {
         $this->id = $id;
-        $this->firstName = $firstName;
+        $this->firstName = $this->setFirstName($firstName);
         $this->lastName = $lastName;
         $this->email = $email;
         $this->jobtitle = $jobtitle; //job title
