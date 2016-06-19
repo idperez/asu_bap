@@ -1,5 +1,4 @@
 <?php
-include 'databaseservice.php';
 
 class MembersList 
 {
