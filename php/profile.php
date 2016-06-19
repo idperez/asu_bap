@@ -3,7 +3,6 @@
 <?php require_once($root."/bap/includes/functions/sessions.php"); ?>
 <?php require_once($root."/bap/includes/functions/functions.php"); ?>
 <?php require_once($root."/bap/includes/functions/validations.php"); ?>
-<?php require_once($root."/bap/php/databaseservice.php"); ?>
 <?php require_once($root."/bap/php/member/MemberList.php"); ?>
 
 <?php $_SESSION['page'] = "members" ?>
@@ -38,6 +37,7 @@
                       
                     </div>
                 </div>
+                <div container="container">
                 <div class="col-md-8 col-sm-8">
                     <div class="fh5co-grid text-nowrap animate-box">
                             <h3 style="display:inline; color: black;">Class &nbsp;&nbsp; <h4 style="display:inline; color: grey;"> 2017 </h4></h3>
@@ -60,6 +60,7 @@
                            <img alt="connect with me on linkedin" src="/bap/assets/images/linkedin.png" border=0 height="50" width="50" style="float: left;">            
                        </a>
                     </div>
+                </div>
                 </div>
             </div>
         </div>
