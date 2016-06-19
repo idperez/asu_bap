@@ -107,7 +107,7 @@ if(isset($_POST['submit'])) {
         
    <div class="fh5co-hero">
         <div class="fh5co-overlay"></div>
-        <div class="fh5co-cover text-center" style="background-image: url(../assets/images/tempe.jpg); ">
+        <div class="fh5co-cover text-center" style="background-image: url(/bap/assets/images/wp-carey-building.jpg); ">
         <div class="desc animate-box" style="position:relative; top:280px; ">
             <div class="container">
                 <div class="row">
@@ -130,12 +130,5 @@ if(isset($_POST['submit'])) {
         </div>
         </div>
 </body>
-
-    <script src="/bap/js/jquery.min.js"></script>
-    <script src="/bap/js/jquery.easing.1.3.js"></script>
-    <script src="/bap/js/bootstrap.min.js"></script>
-    <script src="/bap/js/jquery.waypoints.min.js"></script>
-    <script src="/bap/js/hoverIntent.js"></script>
-    <script src="/bap/js/superfish.js"></script>
-    <script src="/bap/js/main.js"></script>
-</html>
+<footer>
+<?php require_once($root."/bap/html/footer.php"); ?>
