@@ -1,4 +1,5 @@
 <?php
+
 class Member {
     private $id;
     private $firstName;
@@ -17,11 +18,15 @@ class Member {
     private $nextMember;
     private $previousMember;
     
+    private $databaseService;
+    
     function Member($id)
     {
         $this->id = $id;
+        $this->databaseService = new DatabaseService;
     }
     
+    //todo - add SQL queries through database service performQuery() for all set functions to update fields at $this->id
     function getId()
     {
         return $this->id;
