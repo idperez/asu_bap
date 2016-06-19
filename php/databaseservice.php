@@ -24,7 +24,7 @@ class DatabaseService
         else
         {
             $test_db->connect();
-            printf("Connection success");
+           
         }
     }
     
