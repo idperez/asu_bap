@@ -17,6 +17,8 @@
         <link rel="stylesheet" href="/bap/assets/css/style-responsive.css" rel="stylesheet">
 	<link rel="stylesheet" href="/bap/assets/css/table-responsive.css" rel="stylesheet">
         
+        <link rel="icon" href="/bap/assets/images/logo.png"/>
+        
         <script src="/bap/js/modernizr-2.6.2.min.js"></script>
     </head>
         <div id="fh5co-wrapper">

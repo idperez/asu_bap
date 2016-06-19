@@ -1,6 +1,7 @@
 <?php
-include 'databaseservice.php';
-include 'Member.php';
+$root = realpath($_SERVER["DOCUMENT_ROOT"]); 
+include $root.'/bap/php/databaseservice.php';
+include $root.'/bap/php/member/Member.php';
 
 class MemberList 
 {
