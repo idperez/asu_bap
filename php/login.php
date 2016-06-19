@@ -1,13 +1,15 @@
 <?php $root = realpath($_SERVER["DOCUMENT_ROOT"]); ?>
-<?php require_once($root."/bap/includes/connection.php"); ?>
-<?php require_once($root."/bap/includes/functions/sessions.php"); ?>
-<?php require_once($root."/bap/includes/functions/functions.php"); ?>
-<?php require_once($root."/bap/includes/functions/validations.php"); ?>
+<?php require_once($root."/bap/asu_bap/includes/connection.php"); ?>
+<?php require_once($root."/bap/asu_bap/includes/functions/sessions.php"); ?>
+<?php require_once($root."/bap/asu_bap/includes/functions/functions.php"); ?>
+<?php require_once($root."/bap/asu_bap/includes/functions/validations.php"); ?>
+<?php require_once($root."/bap/asu_bap/php/databaseservice.php"); ?>
 
-<?php include($root."/bap/html/headers/main-header.html"); ?>
+<?php include($root."/bap/asu_bap/html/headers/main-header.html"); ?>
 
 
 <?php
+$DatabaseService = new DatabaseService;
 
 $warning = false;
 
