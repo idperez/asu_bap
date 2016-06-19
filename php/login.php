@@ -4,9 +4,6 @@
 <?php require_once($root."/bap/includes/functions/functions.php"); ?>
 <?php require_once($root."/bap/includes/functions/validations.php"); ?>
 
-<?php include($root."/bap/html/headers/main-header.html"); ?>
-
-
 <?php
 
 $warning = false;
@@ -44,44 +41,98 @@ if(isset($_POST['submit'])) {
 }
 
 ?>
+<?php //include($root."/bap/html/headers/photo-header.php"); ?>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+       
+        <title>Beta Alpha Psi</title>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>SignIn</title>
+        <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,300' rel='stylesheet' type='text/css'>
+        
+        <link rel="stylesheet" href="/bap/css/animate.css">
+        <link rel="stylesheet" href="/bap/css/icomoon.css">
+        <link rel="stylesheet" href="/bap/css/bootstrap.css">
+        <link rel="stylesheet" href="/bap/css/superfish.css">
+        <link rel="stylesheet" href="/bap/css/style.css">
+        
+        <script src="/bap/js/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body>
+        <div id="fh5co-wrapper">
+        <div id="fh5co-page">
+        <div id="fh5co-header">
+            <header id="fh5co-header-section">
+                <div class="container">
+                    <div class="nav-header">
+                        <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
+                        <h1 id="fh5co-logo"><a href="/bap/html/index.html">Beta Alpha Psi</a></h1>
+                        <nav id="fh5co-menu-wrap" role="navigation">
+                            <ul class="sf-menu" id="fh5co-primary-menu">
+                                <li>
+                                    <a href="/bap/html/index.html">Home</a>
+                            </li>
+                                <li>
+                                    <a href="portfolio.html">Portfolio</a>
+                                </li>
+                                <li>
+                                    <a href="services.html" class="fh5co-sub-ddown">Services</a>
+                                     <ul class="fh5co-sub-menu">
+                                        <li><a href="left-sidebar.html">Web Development</a></li>
+                                        <li><a href="right-sidebar.html">Branding &amp; Identity</a></li>                                    
+                                        <li><a href="#">UI Animation</a></li>
+                                        <li><a href="#">Copywriting</a></li>
+                                        <li><a href="#">Photography</a></li> 
+                                    </ul>
+                                </li>
+                                <li><a href="about.html">About</a></li>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                               
+                                <li class="active">
+                                    <a href="/bap/php/login.php">Login</a>
+                                </li>
+                            </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </header>
+        </div>
 
-    <link href="../css/signin.css" rel="stylesheet">
-
-</head>
-
-
-<body>
-    <div class="container">
-
-        <form class="form-signin" action="" method="post">
-            
-            <h2 class="form-signin-heading">Please sign in</h2>
-            <label for="inputEmail" class="sr-only">Email address</label>
-            <input type="email" id="inputEmail" name="email" class="form-control" placeholder="Email address" required autofocus/>
-            <label for="inputPassword" class="sr-only">Password</label>
-            <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Password" required/>
-            <button class="btn btn-lg btn-primary btn-block" type="submit" name="submit">Sign in</button>
-            <?php
-            if($warning){ ?>
-                <div class="alert alert-danger" role="alert"  stype = "">              
-                     <strong>Error!</strong> Incorrect email/password.              
-                </div>          
-            <?php } ?>
-            <?php 
-            if(isset($_SESSION['message'])){
-                if($_SESSION['message'] != ""){
-            print_message($_SESSION['message']); 
-                }
-            }
-                  $_SESSION['message'] = "";
-            ?>
-        </form>
-   
-    </div>
+        
+   <div class="fh5co-hero">
+        <div class="fh5co-overlay"></div>
+        <div class="fh5co-cover text-center" style="background-image: url(../assets/images/tempe.jpg); ">
+        <div class="desc animate-box" style="position:relative; top:280px; ">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-4">
+                        <form role="form" action="" method="post" enctype="multipart/form-data" style=" margin: 0 auto; width:80%">
+                            <div class="form-group col-md-6 ">
+                                <label>Email:</label>
+                                    <input type="email" class="form-control" maxlength="24" placeholder="email" id="firstname" name="email">
+                                    <br>
+                                <label>Password:</label>
+                                    <input type="password" class="form-control" maxlength="24" placeholder="password" name="password">
+                                    <br>
+                                <button type="submit" class="btn btn-danger" name="submit">Log In</button> 
+                            </div>                     
+                        </form>         
+                    </div>
+                </div>                      
+            </div>
+        </div>
+        </div>
+        </div>
 </body>
+
+    <script src="/bap/js/jquery.min.js"></script>
+    <script src="/bap/js/jquery.easing.1.3.js"></script>
+    <script src="/bap/js/bootstrap.min.js"></script>
+    <script src="/bap/js/jquery.waypoints.min.js"></script>
+    <script src="/bap/js/hoverIntent.js"></script>
+    <script src="/bap/js/superfish.js"></script>
+    <script src="/bap/js/main.js"></script>
 </html>
