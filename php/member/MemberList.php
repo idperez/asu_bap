@@ -26,9 +26,7 @@ class MemberList
                     $row['title'], $row['linkedin'], $row['phone'], $row['picture_path'], $row['graduated'], 
                     $row['gradYear'], $row['major1'], $row['major2'], $row['major3'], $row['password'], $row['level']
                );
-               $tempMember->setFirstName($row['firstname']);
-               $tempMember->setLastName($row['lastname']);
-                echo $tempMember->getFullName();
+                echo $tempMember->getJobTitle();
                 echo " ";
            }
            

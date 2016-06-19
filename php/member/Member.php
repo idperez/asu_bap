@@ -5,7 +5,7 @@ class Member {
     private $firstName;
     private $lastName;
     private $email;
-    private $jobtitle; //job title
+    private $jobTitle; //job title
     private $linkedInUrl;
     private $phoneNumber;
     private $imagePath;
@@ -24,23 +24,23 @@ class Member {
     
     //todo - add in param for graduationSemester and update SQL database table (and all records)
     //??todo?? - add param for short biography or maybe short questions and update SQL database table (and all records)
-    function Member($id, $firstName, $lastName, $email, $jobtitle, $linkedInUrl, $phoneNumber, $imagePath, 
+    function Member($id, $firstName, $lastName, $email, $jobTitle, $linkedInUrl, $phoneNumber, $imagePath, 
         $hasGraduated, $graduationYear, $major, $major2, $major3, $password, $level)
     {
         $this->id = $id;
-        $this->firstName = $this->setFirstName($firstName);
-        $this->lastName = $lastName;
-        $this->email = $email;
-        $this->jobtitle = $jobtitle; //job title
-        $this->linkedInUrl = $linkedInUrl;
-        $this->phoneNumber = $phoneNumber;
-        $this->imagePath = $imagePath;
-        $this->hasGraduated = $hasGraduated;
-        $this->graduationYear = $graduationYear;
-        //this->$graduationSemester = $graduationSemester;
-        $this->majors = array($major, $major2, $major3); //array of majors - max of 3
-        $this->password = $password;
-        $this->level = $level;
+        $this->setFirstName($firstName);
+        $this->setLastName($lastName);
+        $this->setEmail($email);
+        $this->setJobTitle($jobTitle); //job title
+        $this->setLinkedInUrl($linkedInUrl);
+        $this->setPhoneNumber($phoneNumber);
+        $this->setImagePath($imagePath);
+        $this->setHasGraduated($hasGraduated);
+        $this->setGraduationYear($graduationYear);
+        ////this->$setGraduationSemester($graduationSemester);
+        $this->setThreeMajors($major, $major2, $major3); //array of majors - max of 3
+        $this->setPassword($password);
+        $this->setLevel($level);
         
         $this->databaseService = new DatabaseService;
     }
@@ -86,6 +86,16 @@ class Member {
         return $this->email;
     }
     
+    function setJobTitle($jobTitle)
+    {
+        $this->jobTitle = $jobTitle;
+    }
+    
+    function getJobTitle()
+    {
+        return $this->jobTitle;
+    }
+    
     function setLinkedInUrl($url)
     {
         $this->linkedInUrl = $url;
@@ -96,14 +106,14 @@ class Member {
         return $this->linkedInUrl;
     }
     
-    function setPhone($phoneNumber)
+    function setPhoneNumber($phoneNumber)
     {
         //remove dashes for db
         //todo
         $this->phoneNumber = $phoneNumber;
     }
     
-    function getPhone($phoneNumber, $returnWithFormat)
+    function getPhoneNumber($phoneNumber, $returnWithFormat)
     {
         //return phone number with '-' if returnWithFormat = true, else return 
         //todo
@@ -131,7 +141,7 @@ class Member {
     {
         //if 0, has not graduated
         //todo - test for both string and int after '==' 
-        if($hasGraduated == "1") //has graduated, is alumni
+        if($hasGraduated == 1) //has graduated, is alumni
         {
             $this->hasGraduated = true;
         }
@@ -176,6 +186,20 @@ class Member {
     }
     
     //1, 2, 3 declared majors
+    
+    function findNumberOfMajors()
+    {
+        $numberOfMajors = 0;
+        if($major3 != null)
+            $numberOfMajors = 3;
+        else if($major2 != null)
+            $numberOfMajors = 2;
+        else //$major != null
+            $numberOfMajors = 1;
+            
+        return $numberOfMajors;   
+    }
+    
     function setMajor($major)
     {
         $this->majors = array($major); //return array to keep consistency
