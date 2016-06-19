@@ -5,6 +5,7 @@ class Member {
     private $firstName;
     private $lastName;
     private $email;
+    private $jobtitle; //job title
     private $linkedInUrl;
     private $phoneNumber;
     private $imagePath;
@@ -15,14 +16,32 @@ class Member {
     private $password;
     private $level;
     
+    //will be useful when showing the 'brothers' page and navigation between profiles
     private $nextMember;
     private $previousMember;
     
     private $databaseService;
     
-    function Member($id)
+    //todo - add in param for graduationSemester and update SQL database table (and all records)
+    //??todo?? - add param for short biography or maybe short questions and update SQL database table (and all records)
+    function Member($id, $firstName, $lastName, $email, $jobtitle, $linkedInUrl, $phoneNumber, $imagePath, 
+        $hasGraduated, $graduationYear, $major, $major2, $major3, $password, $level)
     {
         $this->id = $id;
+        $this->firstName = $firstName;
+        $this->lastName = $lastName;
+        $this->email = $email;
+        $this->jobtitle = $jobtitle; //job title
+        $this->linkedInUrl = $linkedInUrl;
+        $this->phoneNumber = $phoneNumber;
+        $this->imagePath = $imagePath;
+        $this->hasGraduated = $hasGraduated;
+        $this->graduationYear = $graduationYear;
+        //this->$graduationSemester = $graduationSemester;
+        $this->majors = array($major, $major2, $major3); //array of majors - max of 3
+        $this->password = $password;
+        $this->level = $level;
+        
         $this->databaseService = new DatabaseService;
     }
     
@@ -177,14 +196,16 @@ class Member {
         return $this->majors; //returns array with the member's list of majors
     }
     
+    //todo - add hashing before updating password/setting in database
     function setPassword($password)
     {
         $this->password = $password;
     }
     
+    //todo - add reverse hashing before returning password
     function getPassword()
     {
-        return $this->password;
+        //return $this->password;
     }  
     
     function setLevel($level)
