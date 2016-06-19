@@ -3,11 +3,10 @@
 <?php require_once($root."/bap/includes/functions/sessions.php"); ?>
 <?php require_once($root."/bap/includes/functions/functions.php"); ?>
 <?php require_once($root."/bap/includes/functions/validations.php"); ?>
-<?php require_once($root."/bap/php/databaseservice.php"); ?>
 <?php require_once($root."/bap/php/member/MemberList.php"); ?>
 
 <?php
-$DatabaseService = new DatabaseService;
+$MemberList = new MemberList;
 
 $warning = false;
 

@@ -1,13 +1,32 @@
 <?php
+include 'databaseservice.php';
+include 'Member.php';
 
-class MembersList 
+class MemberList 
 {
     private $size;
-    private $members; //array of all member objects
+    private $databaseService;
+    private $head;
+    private $tail;
     
-    function MembersList($size)
+    function MemberList()
     {
-        $this->size = size;    
+           $this->databaseService = new DatabaseService;
+           $members = $this->databaseService->performQuery("
+           SELECT * FROM member
+           ");
+           
+           //create new members and append to list
+           while ($row = mysql_fetch_assoc($members)) 
+           {
+               $tempMember = new Member($row['id']);
+               $tempMember->setFirstName($row['firstname']);
+               $tempMember->setLastName($row['lastname']);
+                echo $tempMember->getFullName();
+                echo " ";
+           }
+           
+           $this->databaseService->freeResource($members);
     }    
 }
 ?>
