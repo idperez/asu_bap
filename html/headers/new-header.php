@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html class="no-js">
     <head>
@@ -8,13 +9,13 @@
 
         <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,300' rel='stylesheet' type='text/css'>
         
-        <link rel="stylesheet" href="../css/animate.css">
-        <link rel="stylesheet" href="../css/icomoon.css">
-        <link rel="stylesheet" href="../css/bootstrap.css">
-        <link rel="stylesheet" href="../css/superfish.css">
-        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="../../css/animate.css">
+        <link rel="stylesheet" href="../../css/icomoon.css">
+        <link rel="stylesheet" href="../../css/bootstrap.css">
+        <link rel="stylesheet" href="../../css/superfish.css">
+        <link rel="stylesheet" href="../../css/style.css">
         
-        <script src="../js/modernizr-2.6.2.min.js"></script>
+        <script src="../../js/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
         <div id="fh5co-wrapper">
@@ -44,7 +45,6 @@
                                     </ul>
                                 </li>
                                 <li><a href="about.html">About</a></li>
-                                <li><a href="#">Blog</a></li>
                                 <li><a href="contact.html">Contact</a></li>
                                 <li><a href="../php/login.php">Login</a></li>
                             </ul>
@@ -53,5 +53,67 @@
                 </div>
             </header>
         </div>
+
+        <div class="fh5co-hero">
+            <div class="fh5co-overlay"></div>
+            <div class="fh5co-cover text-center" style="background-image: url(../../assets/images/tempe.jpg); ">
+            <div class="desc animate-box" style="position:relative; top:280px; ">
+             
+            <div class="container">
+            <div class="row">
+            <div class="col-md-8 col-md-offset-4">
+           
+                    
+            <form role="form" action="" method="post" enctype="multipart/form-data" style=" margin: 0 auto;
+    width:80%">
+                                        
+                    
+      
+      
+              <div class="form-group col-md-6 ">
+                <label>Email:</label>
+                        <input type="email" class="form-control" maxlength="24" placeholder="email" id="firstname" name="email">
+                        <br>
+                  <label>Password:</label>
+                <input type="password" class="form-control" maxlength="24" placeholder="password" name="password">
+                <br>
+                <button type="submit" class="btn btn-danger" name="submit">Log In</button> 
+              </div>           
+                
+                 
+                </div>
+              <div class="form-group col-lg-4">                  
+                               
+              </div>              
+            </form>         
+            </div>
+    </div>    
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+            </div>
+            </div>
+        </div>
+
+        
+
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/jquery.easing.1.3.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="../../js/jquery.waypoints.min.js"></script>
+    <script src="../../js/hoverIntent.js"></script>
+    <script src="../../js/superfish.js"></script>
+    <script src="../../js/main.js"></script>
     </body>
 </html>
+
