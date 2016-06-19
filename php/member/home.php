@@ -1,9 +1,9 @@
 <?php $root = realpath($_SERVER["DOCUMENT_ROOT"]); ?>
-<?php require_once($root."/bap/asu_bap/includes/connection.php"); ?>
-<?php require_once($root."/bap/asu_bap/includes/functions/sessions.php"); ?>
-<?php require_once($root."/bap/asu_bap/includes/functions/functions.php"); ?>
-<?php require_once($root."/bap/asu_bap/includes/functions/validations.php"); ?>
-<?php require_once($root."/bap/asu_bap/php/databaseservice.php"); ?>
+<?php require_once($root."/bap/includes/connection.php"); ?>
+<?php require_once($root."/bap/includes/functions/sessions.php"); ?>
+<?php require_once($root."/bap/includes/functions/functions.php"); ?>
+<?php require_once($root."/bap/includes/functions/validations.php"); ?>
+<?php require_once($root."/bap/php/databaseservice.php"); ?>
 
 <?php
  confirm_logged_in();
