@@ -7,12 +7,12 @@
                         </div>
                         <div class="col-md-6">
                             <ul class="footer-menu">
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">Portfolio</a></li>
+                                <li><a href="/bap/html/index.php">Home</a></li>
+                                <li><a href="/bap/php/members.php">Members</a></li>
                                 <li><a href="#">Services</a></li>
                                 <li><a href="#">About</a></li>
-                                <li><a href="#">Blog</a></li>
                                 <li><a href="#">Contact</a></li>
+                                <li><a href="/bap/php/login.php">Log In</a></li
                             </ul>
                         </div>
                     </div>

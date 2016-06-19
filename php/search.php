@@ -33,15 +33,12 @@ if (strlen($search_string) >= 1 && $search_string !== ' ') {
     // Do the search
     $result = mysqli_query($conn, $query);
     //$result = $test_db->query($query);
-    $results = mysqli_fetch_assoc($result);
-    $count = mysqli_num_rows($result);
     
     
-   
     // Check for results
-    if (isset($results)) {
+    if (isset($result)) {
         
-        for($i = 0; $i < $count; $i++) {
+        while($results = mysqli_fetch_assoc($result)) {
             // Output strings and highlight the matches
              $firstname = preg_replace("/".$search_string."/i", "<b>".$search_string."</b>", $results['firstname']);
              $lastname = $results['lastname'];
