@@ -10,7 +10,7 @@
 <?php include($root."/bap/html/headers/photo-header.php"); ?>   
     <div class="fh5co-hero-ish">
     <div class="fh5co-overlay"></div>
-    <div class="fh5co-cover text-center" style="background-image: url(/bap/assets/images/members.jpg); ">
+    <div class="fh5co-cover text-center" style="background-image: url(/bap/assets/images/about-image.jpg); ">
     <div class="desc animate-box" style="position:relative; top:280px; ">          
     </div>
     </div>
@@ -18,8 +18,11 @@
     </div>
  
     <br>
-   
-    <div onLoad="document.forms.search.part.focus()">  
+    
+    <div id="fh5co-content-section">
+            <div class="container">
+                <div class="row">
+                     <div onLoad="document.forms.search.part.focus()">  
     <section id="container" >       
         <section id="main-content" style="margin: 25px;">
             <section class="wrapper">
@@ -80,6 +83,20 @@
     </section>
     </di></div>
 </body>
+                    <div class="col-md-12">
+                        <div class="fh5co-testimonial text-center animate-box">
+                            <h1>Isidro Perez</h1>                      
+                            <blockquote>
+                                <p> The organization seeks to develop its members' professionalism through career-oriented, social, and community activities. Being a member of Beta Alpha Psi will provide great opportunities to interact with both  the accounting faculty and members of the professional accounting community.</p>
+                            </blockquote>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+   
+   
 
     </div>
       

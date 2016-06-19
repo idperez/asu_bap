@@ -1,9 +1,9 @@
- <div id="footer" >
+<footer> 
+<div id="footer" >
                 <div class="container">
                     <div class="row">
                         <div class="col-md-6">
-                            C© 2016 Beta Alpha Psi, Beta Tau Chapter 
-                        
+                            C© 2016 Beta Alpha Psi, Beta Tau Chapter                       
                         </div>
                         <div class="col-md-6">
                             <ul class="footer-menu">
@@ -19,8 +19,8 @@
                 </div>
             </div>
         </footer>
-        </div>
-    </div>
+      
+    
 
     <script src="/bap/js/jquery.min.js"></script>
     <script src="/bap/js/jquery.easing.1.3.js"></script>
