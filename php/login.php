@@ -88,5 +88,5 @@ if(isset($_POST['submit'])) {
         </div>
         </div>
 </body>
-<footer>
+
 <?php require_once($root."/bap/html/footer.php"); ?>

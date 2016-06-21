@@ -113,11 +113,4 @@
                 </div>
             </div>
         </div>
-        
-<script src="/bap/js/jquery.min.js"></script>
-    <script src="/bap/js/jquery.easing.1.3.js"></script>
-    <script src="/bap/js/bootstrap.min.js"></script>
-    <script src="/bap/js/jquery.waypoints.min.js"></script>
-    <script src="/bap/js/hoverIntent.js"></script>
-    <script src="/bap/js/superfish.js"></script>
-    <script src="/bap/js/main.js"></script>
+        <?php require_once($root."/bap/html/footer.php"); ?>

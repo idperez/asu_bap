@@ -3,7 +3,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-6">
-                            C© 2016 Beta Alpha Psi, Beta Tau Chapter                       
+                            C© 2016 Beta Alpha Psi, Beta Tau Chapter - Isidro Perez, Drew Demechko                     
                         </div>
                         <div class="col-md-6">
                             <ul class="footer-menu">
@@ -20,15 +20,17 @@
             </div>
         </footer>
       
+
+        <script src="/bap/js/jquery.min.js"></script>
+	<script src="/bap/js/jquery.easing.1.3.js"></script>
+	<script src="/bap/js/bootstrap.min.js"></script>
+	<script src="/bap/js/jquery.waypoints.min.js"></script>
+	<script src="/bap/js/hoverIntent.js"></script>
+	<script src="/bap/js/superfish.js"></script>
+	<script src="/bap/js/main.js"></script>
+
     
 
-    <script src="/bap/js/jquery.min.js"></script>
-    <script src="/bap/js/jquery.easing.1.3.js"></script>
-    <script src="/bap/js/bootstrap.min.js"></script>
-    <script src="/bap/js/jquery.waypoints.min.js"></script>
-    <script src="/bap/js/hoverIntent.js"></script>
-    <script src="/bap/js/superfish.js"></script>
-    <script src="/bap/js/main.js"></script>
   
 </html>
 
