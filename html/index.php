@@ -113,5 +113,4 @@
                 </div>
             </div>
         </div>
-        
-<?php require_once($root."/bap/html/footer.php"); ?>
+        <?php require_once($root."/bap/html/footer.php"); ?>

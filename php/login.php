@@ -52,7 +52,7 @@ if(isset($_POST['submit'])) {
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-4">
-                        <form role="form" action="" method="post" enctype="multipart/form-data" style=" margin: 0 auto; width:80%">
+                        <form role="form" action="" method="post" enctype="multipart/form-data" style=" margin: 0 auto; width:80%;">
                             <div class="form-group col-md-6 ">
                                 <label>Email:</label>
                                     <input type="email" class="form-control" maxlength="24" placeholder="email" id="firstname" name="email">
@@ -88,5 +88,5 @@ if(isset($_POST['submit'])) {
         </div>
         </div>
 </body>
-<footer>
+
 <?php require_once($root."/bap/html/footer.php"); ?>
