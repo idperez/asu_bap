@@ -15,6 +15,9 @@ class Member {
     private $majors; //array of majors - max of 3
     private $password;
     private $level;
+    private $state;
+    private $city;
+    private $bio;
     
     //will be useful when showing the 'brothers' page and navigation between profiles
     private $nextMember;
@@ -23,9 +26,11 @@ class Member {
     private $databaseService;
     
     //todo - add in param for graduationSemester and update SQL database table (and all records)
-    //??todo?? - add param for short biography or maybe short questions and update SQL database table (and all records)
+    //todo - add bio, city, and state
+    //todo - uncomment and successfully add graduationSemester
     function Member($id, $firstName, $lastName, $email, $jobTitle, $linkedInUrl, $phoneNumber, $imagePath, 
-        $hasGraduated, $graduationYear, $major, $major2, $major3, $password, $level)
+        $hasGraduated, $graduationYear, $graduationSemester, $major, $major2, $major3, $password, $level,
+        $state, $city, $bio)
     {
         $this->id = $id;
         $this->setFirstName($firstName);
@@ -37,10 +42,13 @@ class Member {
         $this->setImagePath($imagePath);
         $this->setHasGraduated($hasGraduated);
         $this->setGraduationYear($graduationYear);
-        ////this->$setGraduationSemester($graduationSemester);
+        $this->$setGraduationSemester($graduationSemester);
         $this->setThreeMajors($major, $major2, $major3); //array of majors - max of 3
         $this->setPassword($password);
         $this->setLevel($level);
+        $this->setState($state);
+        $this->setCity($city);
+        $this->setBio($bio);
         
         $this->databaseService = new DatabaseService;
     }
@@ -173,6 +181,7 @@ class Member {
         $this->graduationSemester = $semester;
     }
     
+    //use to get graduation information regardless of null values
     function getGraduation()
     {
         if($this->graduationSemester != null) //return accurate graduation date
@@ -240,6 +249,37 @@ class Member {
     function getLevel()
     {
         return $this->level;
+    }
+    
+    //make sure state and city get parsed as capital letters
+    function setState($state)
+    {
+        $this->state = $state;
     }   
+    
+    function getState()
+    {
+        return $this->state;
+    }
+    
+    function setCity($city)
+    {
+        $this->city = $city;
+    }   
+    
+    function getCity()
+    {
+        return $this->city;
+    }
+    
+    function setBio($bio)
+    {
+        $this->bio = $bio;
+    }   
+    
+    function getBio()
+    {
+        return $this->bio;
+    }
 }
 ?>
