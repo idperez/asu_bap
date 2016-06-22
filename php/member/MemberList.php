@@ -8,8 +8,8 @@ class MemberList
 {
     private $size;
     private $databaseService;
-    private $head;
-    private $tail;
+    private $firstMember;
+    private $lastMember;
     private $tableName;
     
     function MemberList($tableName)
@@ -20,12 +20,14 @@ class MemberList
         $this->databaseService = new DatabaseService;
         
         $members = $this->databaseService->performQuery("
-        SELECT * FROM member
+        SELECT * FROM ".$tableName." 
+        ORDER BY ".$tableName." lastname
         ");
-           
-        //create new members and append to list
+        
+        //??todo?? - Should Officers be in a separate lists? May be easier to add a new param isOfficer and reflect that by a WHERE in SQL
+        //create new members and append them to end of list
         while ($row = mysql_fetch_assoc($members)) 
-        {
+        {                
             //param 'fieldname' the way it appears in the sql database
             $tempMember = new Member($row['id'], $row['firstname'], $row['lastname'], $row['email'],
             $row['title'], $row['linkedin'], $row['phone'], $row['picture_path'], $row['graduated'], 
@@ -33,7 +35,20 @@ class MemberList
             $row['level'], $row['state'], $row['city'], $row['bio']
             );
             
-            //todo - add $tempMember to MembersList
+            if($this->firstMember == null)
+            {
+                $this->firstMember = $tempMember;
+                $this->lastMember = $tempMember;
+            }
+            else
+            {              
+                //Append newest Member to end of list
+                $this->lastMember->nextMember = $tempMember;
+                $oldMember = $this->lastMember;
+                $this->lastMember = $tempMember;
+                $this->lastMember->previousMember = $oldMember;
+            }
+            
             $size++;
         }
         
@@ -41,15 +56,38 @@ class MemberList
         $this->databaseService->freeResource($members);
     }
     
-    function addMemberPartial($tableName, $firstName, $lastName, $email, $password, $level)
+    function addMemberPartial($firstName, $lastName, $email, $password, $level)
     {
-        $tempMember = $this->databaseService->performQuery("
-        INSERT INTO ".$tableName." (firstname, lastname, email, password, level) 
+        $member = $this->databaseService->performQuery("
+        INSERT INTO ".$this->tableName." (firstname, lastname, email, password, level) 
         VALUES (".$firstName.",".$lastName.",".$email.",".$password.",".$level.")
         ");
         
-        //todo - create new Member object based on $tempMember['id']
-        //todo - append Member object to end of MembersList
+        $tempMember = new Member($member['id'], $member['firstname'], $member['lastname'], $member['email'],
+            $member['password'], $member['level']);
+            
+        if($this->firstMember == null)
+        {
+            $this->firstMember = $tempMember;
+            $this->lastMember = $tempMember;
+        }
+        else
+        {
+            $currentMember = $this->firstMember;
+            //Add newest Member to the appropriate spot in the list
+            while($currentMember->nextMember != null && 
+                strcmp($currentMember->nextMember->lastname, $tempMember->lastname) < 0)
+            {
+                //strcmp() returns < 0 if str1 is less than str2; > 0 if str1 is greater than str2; 0 if they are equal.
+                $currentMember = $currentMember->nextMember;  
+            }
+            
+            //insert member to list, in-between $currentMember->next
+            $tempMember->nextMember = $currentMember->nextMember;
+            $tempMember->previousMember = $currentMember;
+            $currentMember->next = $tempMember;            
+        }
+                        
         $size++;
         
         //free resource
@@ -60,7 +98,7 @@ class MemberList
         $hasGraduated, $graduationYear, $major, $major2, $major3, $password, $level, $state, $city, $bio)
     {
         $tempMember = $this->databaseService->performQuery("
-        INSERT INTO ".$tableName." (firstname, lastname, email, title, linkedin, phone, picture_path, 
+        INSERT INTO ".$this->tableName." (firstname, lastname, email, title, linkedin, phone, picture_path, 
         graduated, gradYear, major1, major2, major3, password, level, state, city, bio) 
         VALUES (".$firstName.",".$lastName.",".$email.",".$jobTitle.",".$linkedInUrl.",".$phoneNumber.
         ",".$imagePath.",".$hasGraduated.",".$graduationYear.",".$major.",".$major2.",".$major3.",".
@@ -68,13 +106,14 @@ class MemberList
         ");
         
         //todo - create new Member object based on $tempMember['id']
-        //todo - append Member object to end of MembersList
+        //todo - traverse through the list to add Member Alphabetically and by object type
         $size++;
         
         //free resource
         $this->databaseService->freeResource($tempMember);
     }
     
+    //if delete head/tail, special case
     function deleteMember($id)
     {
         //using a LinkedList is perfect because there should not be too many deletions other than for testing purposes
