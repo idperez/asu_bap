@@ -64,7 +64,8 @@ class MemberList
         ");
         
         $tempMember = new Member($member['id'], $member['firstname'], $member['lastname'], $member['email'],
-            $member['password'], $member['level']);
+            $member['password'], $member['level']
+        );
             
         if($this->firstMember == null)
         {
@@ -97,7 +98,7 @@ class MemberList
     function addMemberFull($firstName, $lastName, $email, $jobTitle, $linkedInUrl, $phoneNumber, $imagePath, 
         $hasGraduated, $graduationYear, $major, $major2, $major3, $password, $level, $state, $city, $bio)
     {
-        $tempMember = $this->databaseService->performQuery("
+        $member = $this->databaseService->performQuery("
         INSERT INTO ".$this->tableName." (firstname, lastname, email, title, linkedin, phone, picture_path, 
         graduated, gradYear, major1, major2, major3, password, level, state, city, bio) 
         VALUES (".$firstName.",".$lastName.",".$email.",".$jobTitle.",".$linkedInUrl.",".$phoneNumber.
@@ -105,8 +106,34 @@ class MemberList
         $password.",".$level.",".$state.",".$city.",".$bio.")
         ");
         
-        //todo - create new Member object based on $tempMember['id']
-        //todo - traverse through the list to add Member Alphabetically and by object type
+        $tempMember = new Member($member['id'], $member['firstname'], $member['lastname'], $member['email'],
+            $member['title'], $member['linkedin'], $member['phone'], $member['picture_path'], $member['graduated'], 
+            $member['gradYear'], $member['major1'], $member['major2'], $member['major3'], $member['password'],
+            $member['level'], $member['state'], $member['city'], $member['bio']
+        );
+        
+        if($this->firstMember == null)
+        {
+            $this->firstMember = $tempMember;
+            $this->lastMember = $tempMember;
+        }
+        else
+        {
+            $currentMember = $this->firstMember;
+            //Add newest Member to the appropriate spot in the list
+            while($currentMember->nextMember != null && 
+                strcmp($currentMember->nextMember->lastname, $tempMember->lastname) < 0)
+            {
+                //strcmp() returns < 0 if str1 is less than str2; > 0 if str1 is greater than str2; 0 if they are equal.
+                $currentMember = $currentMember->nextMember;  
+            }
+            
+            //insert member to list, in-between $currentMember->next
+            $tempMember->nextMember = $currentMember->nextMember;
+            $tempMember->previousMember = $currentMember;
+            $currentMember->next = $tempMember;            
+        }
+        
         $size++;
         
         //free resource
