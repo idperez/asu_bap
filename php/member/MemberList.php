@@ -1,8 +1,8 @@
 <?php
 $root = realpath($_SERVER["DOCUMENT_ROOT"]); 
 include $root.'/bap/php/databaseservice.php';
-include $root.'/bap/php/member/Member.php';
-include $root.'bap/php/member/Officer.php';
+//include $root.'/bap/php/member/Member.php';
+include $root.'/bap/php/member/Officer.php';
 
 class MemberList 
 {
@@ -21,7 +21,7 @@ class MemberList
         
         $members = $this->databaseService->performQuery("
         SELECT * FROM ".$tableName." 
-        ORDER BY ".$tableName." lastname
+        ORDER BY lastname
         ");
         
         //??todo?? - Should Officers be in a separate lists? May be easier to add a new param isOfficer and reflect that by a WHERE in SQL
@@ -31,7 +31,7 @@ class MemberList
             //param 'fieldname' the way it appears in the sql database
             $tempMember = new Member($row['id'], $row['firstname'], $row['lastname'], $row['email'],
             $row['title'], $row['linkedin'], $row['phone'], $row['picture_path'], $row['graduated'], 
-            $row['gradYear'], $row['major1'], $row['major2'], $row['major3'], $row['password'], 
+            $row['gradYear'], $row['gradSemester'], $row['major1'], $row['major2'], $row['major3'], $row['password'], 
             $row['level'], $row['state'], $row['city'], $row['bio']
             );
             
@@ -49,7 +49,7 @@ class MemberList
                 $this->lastMember->previousMember = $oldMember;
             }
             
-            $size++;
+            $this->size++;
         }
         
         //free resources   
@@ -89,7 +89,7 @@ class MemberList
             $currentMember->next = $tempMember;            
         }
                         
-        $size++;
+        $this->size++;
         
         //free resource
         $this->databaseService->freeResource($tempMember);
@@ -134,7 +134,7 @@ class MemberList
             $currentMember->next = $tempMember;            
         }
         
-        $size++;
+        $this->size++;
         
         //free resource
         $this->databaseService->freeResource($tempMember);

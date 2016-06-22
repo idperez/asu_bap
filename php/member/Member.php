@@ -20,8 +20,9 @@ class Member {
     private $bio;
     
     //will be useful when showing the 'brothers' page and navigation between profiles
-    private $nextMember;
-    private $previousMember;
+    //todo - make private variable to getNext and prev
+    public $nextMember;
+    public $previousMember;
     
     private $databaseService;
     
@@ -42,7 +43,7 @@ class Member {
         $this->setImagePath($imagePath);
         $this->setHasGraduated($hasGraduated);
         $this->setGraduationYear($graduationYear);
-        $this->$setGraduationSemester($graduationSemester);
+        $this->setGraduationSemester($graduationSemester);
         $this->setThreeMajors($major, $major2, $major3); //array of majors - max of 3
         $this->setPassword($password);
         $this->setLevel($level);
