@@ -6,7 +6,7 @@
 <?php require_once($root."/bap/php/member/MemberList.php"); ?>
 
 <?php
-$MemberList = new MemberList;
+$MemberList = new MemberList("member");
 
 $warning = false;
 

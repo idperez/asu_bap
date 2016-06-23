@@ -10,7 +10,7 @@ class Officer extends Member
         
     }
     
-    function addMember($firstName, $lastName, $email, $title, $linkedInUrl, $phone, $imagePath, $hasGraduated, $expectedGraduationYear, $expectedGraduationSemester, $majorsId, $password, $level)
+    function addMember($firstName, $lastName, $email, $title, $linkedInUrl, $phone, $imagePath, $hasGraduated, $graduationYear, $graduationSemester, $majorsId, $password, $level)
     {
         
     }
