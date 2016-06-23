@@ -9,7 +9,7 @@
                             <ul class="footer-menu">
                                 <li><a href="/bap/html/index.php">Home</a></li>
                                 <li><a href="/bap/php/members.php">Members</a></li>
-                                <li><a href="/bap/html/services.php">Services</a></li>
+                                <li><a href="/bap/html/info.php">Info</a></li>
                                 <li><a href="/bap/html/about.php">About</a></li>
                                 <li><a href="/bap/html/contact.php">Contact</a></li>
                                 <li><a href="/bap/php/login.php">Log In</a></li

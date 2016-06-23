@@ -99,7 +99,7 @@
                                 <img src="/bap/assets/images/logo.png" alt="mission">
                             </figure>
                             <blockquote>
-                                <p> The organization seeks to develop its members' professionalism through career-oriented, social, and community activities. Being a member of Beta Alpha Psi will provide great opportunities to interact with both  the accounting faculty and members of the professional accounting community.</p>
+                                <p> Our organization seeks to develop its members' professionalism through career-oriented, social, and community activities. Being a member of Beta Alpha Psi will provide great opportunities to interact with both  the accounting faculty and members of the professional accounting community.</p>
                             </blockquote>
                         </div>
                     </div>

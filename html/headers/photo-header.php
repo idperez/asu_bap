@@ -48,12 +48,12 @@
                                     <a href="/bap/php/members.php">Members</a>
                                 </li>
                                 
-                                <?php if($_SESSION['page'] == 'services') { ?> 
+                                <?php if($_SESSION['page'] == 'info') { ?> 
                                 <li class="active">
                                 <?php } else { ?>
                                 <li>
                                 <?php } ?>
-                                    <a href="/bap/html/services.php">Services</a>
+                                    <a href="/bap/html/info.php">Info</a>
                                 </li>
                                 
                                 <?php if($_SESSION['page'] == 'about') { ?> 
