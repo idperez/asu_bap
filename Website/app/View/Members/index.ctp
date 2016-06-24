@@ -1,3 +1,4 @@
+<?php print_r($member)?>
 <?php foreach($members as $member):?>
 <div><?php echo h($member['Member']['last_name']);?></div>
 <td></td>
