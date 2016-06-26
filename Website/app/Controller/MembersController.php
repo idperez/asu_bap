@@ -3,16 +3,11 @@ class MembersController extends AppController{
     
     public function index()
     {
-        //return all members to the view
+        //returns all members to the view
         $memberdata = $this->Member->find('all', 
             array('order' => 'last_name'));
             
-        $member = $this->Member->find('first', 
-            array('conditions' => 
-                array('id' => 12)));
-            
         $this->set('members', $memberdata);
-        $this->set('member', $member);
     }
     
     public function search()
@@ -20,9 +15,22 @@ class MembersController extends AppController{
         
     }
     
-    public function _getId()
+    public function view($id = null)
     {
+        //returns a single member
+        if(!$id)
+        {
+           throw new  NotFoundException(__('The Id was not found.'));
+        }
         
+        $member = $this->Member->findById($id);
+        
+        if(!$member)
+        {
+            throw new NotFoundException(__('This member does not exist.'));
+        }
+        
+        $this->set('member', $member);
     }
 }
 ?>
