@@ -7,6 +7,8 @@
 
 <?php
 $MemberList = new MemberList("member");
+$MemberList->addMemberPartial("Dre", "Fun", "isd.com", "test", "Officer");
+$MemberList->traversePrint();
 
 $warning = false;
 

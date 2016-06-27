@@ -11,6 +11,7 @@ class MemberList
     private $firstMember;
     private $lastMember;
     private $tableName;
+    private $lastMemberIdCreated;
     
     function MemberList($tableName)
     {
@@ -35,6 +36,9 @@ class MemberList
             $row['level'], $row['state'], $row['city'], $row['bio']
             );
             
+            //testing
+            echo $tempMember->getLastName()."<br>";
+            
             if($this->firstMember == null)
             {
                 $this->firstMember = $tempMember;
@@ -58,10 +62,16 @@ class MemberList
     
     function addMemberPartial($firstName, $lastName, $email, $password, $level)
     {
-        $member = $this->databaseService->performQuery("
-        INSERT INTO ".$this->tableName." (firstname, lastname, email, password, level) 
-        VALUES (".$firstName.",".$lastName.",".$email.",".$password.",".$level.")
-        ");
+        //todo - use addSuccessful for if user was unable to add a Member
+        $addSuccessful = $this->databaseService->performQuery('
+        INSERT INTO '.$this->tableName.' (firstname, lastname, email, password, level) 
+        VALUES ("'.$firstName.'","'.$lastName.'","'.$email.'","'.$password.'","'.$level.'");' 
+        );
+        
+        $this->lastMemberIdCreated = mysql_insert_id();
+        
+        $member = mysql_fetch_assoc($this->databaseService->performQuery('SELECT id, firstname, lastname, email, password, level 
+        FROM '.$this->tableName.' WHERE id='.$this->lastMemberIdCreated));
         
         $tempMember = new Member($member['id'], $member['firstname'], $member['lastname'], $member['email'],
             $member['password'], $member['level']
@@ -77,7 +87,7 @@ class MemberList
             $currentMember = $this->firstMember;
             //Add newest Member to the appropriate spot in the list
             while($currentMember->nextMember != null && 
-                strcmp($currentMember->nextMember->lastname, $tempMember->lastname) < 0)
+                strcmp($currentMember->nextMember->getLastName(), $tempMember->getLastName()) < 0)
             {
                 //strcmp() returns < 0 if str1 is less than str2; > 0 if str1 is greater than str2; 0 if they are equal.
                 $currentMember = $currentMember->nextMember;  
@@ -90,9 +100,6 @@ class MemberList
         }
                         
         $this->size++;
-        
-        //free resource
-        $this->databaseService->freeResource($tempMember);
     }
     
     function addMemberFull($firstName, $lastName, $email, $jobTitle, $linkedInUrl, $phoneNumber, $imagePath, 
@@ -135,9 +142,23 @@ class MemberList
         }
         
         $this->size++;
-        
-        //free resource
-        $this->databaseService->freeResource($tempMember);
+    }
+    
+    function traversePrint()
+    {
+        if($this->firstMember == null)
+        {
+            echo "list is empty.";
+        }
+        else
+        {
+            $currentMember = $this->firstMember;
+            while($currentMember->nextMember != null)  
+            {
+                echo "<br>".$currentMember->getLastName();
+                $currentMember = $currentMember->nextMember;
+            }  
+        }    
     }
     
     //if delete head/tail, special case

@@ -29,14 +29,22 @@ class Member {
     //todo - add in param for graduationSemester and update SQL database table (and all records)
     //todo - add bio, city, and state
     //todo - uncomment and successfully add graduationSemester
-    function Member($id, $firstName, $lastName, $email, $jobTitle, $linkedInUrl, $phoneNumber, $imagePath, 
-        $hasGraduated, $graduationYear, $graduationSemester, $major, $major2, $major3, $password, $level,
-        $state, $city, $bio)
+    function Member($id, $firstName, $lastName, $email, $password, $level)
     {
         $this->id = $id;
         $this->setFirstName($firstName);
         $this->setLastName($lastName);
         $this->setEmail($email);
+        $this->setPassword($password);
+        $this->setLevel($level);
+        
+        $this->databaseService = new DatabaseService;
+    }
+    
+    //this serves as an overloaded constructor because PHP does not support method overloading...
+    function MemberFull($jobTitle, $linkedInUrl, $phoneNumber, $imagePath, $hasGraduated, $graduationYear, 
+        $graduationSemester, $major, $major2, $major3, $password, $state, $city, $bio)
+    {
         $this->setJobTitle($jobTitle); //job title
         $this->setLinkedInUrl($linkedInUrl);
         $this->setPhoneNumber($phoneNumber);
@@ -45,13 +53,9 @@ class Member {
         $this->setGraduationYear($graduationYear);
         $this->setGraduationSemester($graduationSemester);
         $this->setThreeMajors($major, $major2, $major3); //array of majors - max of 3
-        $this->setPassword($password);
-        $this->setLevel($level);
         $this->setState($state);
         $this->setCity($city);
         $this->setBio($bio);
-        
-        $this->databaseService = new DatabaseService;
     }
     
     //todo - add SQL queries through database service performQuery() for all set functions to update fields at $this->id
