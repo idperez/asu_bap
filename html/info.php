@@ -22,7 +22,6 @@
         </div>
         </div>
 
-
 <div id="fh5co-work">
     <div class="work-wrap">
         <div class="container">
@@ -47,100 +46,71 @@
         </div>
     </div>
 </div>
+
 <hr>
-<div id="fh5co-work-section">
-        <div class="container">
+
+<div id="fh5co-services-section" class="border-bottom">
+    <div class="container">
         <div class="row">
             <div class="col-md-3 animate-box">
-                <h3 class="heading-section">Come Prepared</h3>
-                <p>We pride ourselves in our professionalism and ethics, check out these helpful resources </p>
+                <h3 class="heading-section">What We Do</h3>
+                <p>Far far away, behind the word mountains, far from the countries Vokalia and </p>
             </div>
-            <div class="col-md-9">
+            <div class="col-md-9 col-sm-12">
                 <div class="row">
                     <div class="col-md-4 col-sm-4">
-                        <div class="fh5co-grid animate-box">
-           
-                                <div class="prod-title">
-                                    <h3>World Class Members</h3>
-                                    <span>World Class University</span>
-                                </div>
-                            
-                        </div>
-                    </div>
-                    <div class="col-md-8 col-sm-8">
-                        <div class="fh5co-grid animate-box" style="background-image: url(/bap/assets/images/home_horzontal_1.jpg);">
-                            <a class="image-popup text-center">
-                                <div class="prod-title">
-                                    <h3>Memorable Events</h3>
-                                    <span>Arizona's Finest</span>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-8 col-sm-8">
-                        <div class="fh5co-grid animate-box" style="background-image: url(/bap/assets/images/home_horizontal_2.jpg);">
-                            <a class="image-popup text-center">
-                                <div class="prod-title">
-                                    <h3>In Touch With The Community</h3>
-                                    <span>Always Giving Back</span>
-                                </div>
-                            </a>
+                        <div class="services animate-box">
+                            <span><img src="/bap/assets/images/News-100.png" height="50" width="50"></img></span>
+                            <h3>Announcements</h3>
+                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-4">
-                        <div class="fh5co-grid animate-box" style="background-image: url(/bap/assets/images/home_vertical_2.jpg);">
-                            <a class="image-popup text-center">
-                                <div class="prod-title">
-                                    <h3>Strong Minds, Strong Friends</h3>
-                                    <span>Lifetime Relationships</span>
-                                </div>
-                            </a>
+                        <div class="services animate-box">
+                            <span><img src="/bap/assets/images/Permanent Job-100.png" height="50" width="50"></img></span>
+                            <h3>Advisory Board</h3>
+                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
                         </div>
                     </div>
+                    <div class="col-md-4 col-sm-4">
+                        <div class="services animate-box">
+                            <span><img src="/bap/assets/images/Conference-100.png" height="50" width="50"></img></span>
+                            <h3>Executive Board</h3>
+                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                        </div>
+                    </div>	
+                </div>
+            </div>
+            <div class="col-md-3 animate-box">
+            </div>
+            <div class="col-md-9 col-sm-12">
+                <div class="row">
+                    <div class="col-md-4 col-sm-4">
+                        <div class="services animate-box">
+                            <span><img src="/bap/assets/images/Crowdfunding-100.png" height="50" width="50"></img></span>
+                            <h3>Sponsor</h3>
+                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                        <div class="services animate-box">
+                            <span><img src="/bap/assets/images/Calendar-100.png" height="50" width="50"></img></span>
+                            <h3>Events</h3>
+                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                        <div class="services animate-box">
+                            <span><img src="/bap/assets/images/Rules-100.png" height="50" width="50"></img></span>
+                            <h3>Policies</h3>
+                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                        </div>
+                    </div>	
                 </div>
             </div>
         </div>
-        </div>
-        </div>
-        <hr>
-        <!-- fh5co-work-section -->
-		<div id="fh5co-services-section" class="border-bottom">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-3 animate-box">
-						<h3 class="heading-section">What We Do</h3>
-						<p>Far far away, behind the word mountains, far from the countries Vokalia and </p>
-					</div>
-					<div class="col-md-9 col-sm-12">
-						<div class="row">
-							<div class="col-md-4 col-sm-4">
-								<div class="services animate-box">
-									<span><i class="icon-browser"></i></span>
-									<h3>Web Development</h3>
-									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-								</div>
-							</div>
-							<div class="col-md-4 col-sm-4">
-								<div class="services animate-box">
-									<span><i class="icon-mobile"></i></span>
-									<h3>Mobile Apps</h3>
-									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-								</div>
-							</div>
-							<div class="col-md-4 col-sm-4">
-								<div class="services animate-box">
-									<span><i class="icon-tools"></i></span>
-									<h3>UX Design</h3>
-									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-								</div>
-							</div>	
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		
-
+    </div>
+</div>
 </body>
 
 
