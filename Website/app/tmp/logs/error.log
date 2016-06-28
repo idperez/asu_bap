@@ -1,0 +1,327 @@
+2016-06-24 17:23:15 Error: [MissingActionException] Action PagesController::index() could not be found.
+Exception Attributes: array (
+  'controller' => 'PagesController',
+  'action' => 'index',
+)
+Request URL: /bap/Website/Pages/
+Stack Trace:
+#0 C:\xampp\htdocs\bap\Website\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\bap\Website\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\bap\Website\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-06-24 17:23:22 Error: [MissingActionException] Action PagesController::Home() could not be found.
+Exception Attributes: array (
+  'controller' => 'PagesController',
+  'action' => 'Home',
+)
+Request URL: /bap/Website/Pages/Home
+Stack Trace:
+#0 C:\xampp\htdocs\bap\Website\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\bap\Website\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\bap\Website\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-06-24 22:04:34 Error: [MissingControllerException] Controller class MembersController could not be found.
+Exception Attributes: array (
+  'class' => 'MembersController',
+  'plugin' => NULL,
+)
+Request URL: /bap/Website/Members
+Stack Trace:
+#0 C:\xampp\htdocs\bap\Website\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-24 22:05:24 Error: [MissingActionException] Action AppController::Members() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'Members',
+)
+Request URL: /bap/Website/app/Members
+Stack Trace:
+#0 C:\xampp\htdocs\bap\Website\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\bap\Website\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(AppController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\bap\Website\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-06-24 22:06:04 Error: [MissingActionException] Action AppController::Members() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'Members',
+)
+Request URL: /bap/Website/app/Members
+Stack Trace:
+#0 C:\xampp\htdocs\bap\Website\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\bap\Website\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(AppController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\bap\Website\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-06-24 22:06:07 Error: [MissingActionException] Action AppController::Members() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'Members',
+)
+Request URL: /bap/Website/app/Members
+Stack Trace:
+#0 C:\xampp\htdocs\bap\Website\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\bap\Website\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(AppController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\bap\Website\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-06-24 22:06:53 Error: [MissingViewException] View file "C:\xampp\htdocs\bap\Website\app\View\App\members.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\xampp\\htdocs\\bap\\Website\\app\\View\\App\\members.ctp',
+)
+Request URL: /bap/Website/app/Members
+Stack Trace:
+#0 C:\xampp\htdocs\bap\Website\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\bap\Website\lib\Cake\Controller\Controller.php(948): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\bap\Website\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#3 C:\xampp\htdocs\bap\Website\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(AppController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\xampp\htdocs\bap\Website\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2016-06-24 22:07:39 Error: [MissingControllerException] Controller class MembersController could not be found.
+Exception Attributes: array (
+  'class' => 'MembersController',
+  'plugin' => NULL,
+)
+Request URL: /bap/Website/Members
+Stack Trace:
+#0 C:\xampp\htdocs\bap\Website\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-24 22:08:18 Error: [MissingViewException] View file "C:\xampp\htdocs\bap\Website\app\View\App\members.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\xampp\\htdocs\\bap\\Website\\app\\View\\App\\members.ctp',
+)
+Request URL: /bap/Website/app/Members
+Stack Trace:
+#0 C:\xampp\htdocs\bap\Website\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\bap\Website\lib\Cake\Controller\Controller.php(948): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\bap\Website\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#3 C:\xampp\htdocs\bap\Website\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(AppController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\xampp\htdocs\bap\Website\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2016-06-24 22:08:28 Error: [MissingViewException] View file "C:\xampp\htdocs\bap\Website\app\View\App\members.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\xampp\\htdocs\\bap\\Website\\app\\View\\App\\members.ctp',
+)
+Request URL: /bap/Website/app/Members/
+Stack Trace:
+#0 C:\xampp\htdocs\bap\Website\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\bap\Website\lib\Cake\Controller\Controller.php(948): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\bap\Website\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#3 C:\xampp\htdocs\bap\Website\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(AppController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\xampp\htdocs\bap\Website\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2016-06-24 22:08:32 Error: [MissingActionException] Action AppController::index() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'index',
+)
+Request URL: /bap/Website/app/
+Stack Trace:
+#0 C:\xampp\htdocs\bap\Website\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\bap\Website\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(AppController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\bap\Website\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-06-24 22:08:44 Error: [MissingControllerException] Controller class MembersController could not be found.
+Exception Attributes: array (
+  'class' => 'MembersController',
+  'plugin' => NULL,
+)
+Request URL: /bap/Website/Members
+Stack Trace:
+#0 C:\xampp\htdocs\bap\Website\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-24 22:11:31 Error: [MissingControllerException] Controller class MemberController could not be found.
+Exception Attributes: array (
+  'class' => 'MemberController',
+  'plugin' => NULL,
+)
+Request URL: /bap/Website/Member
+Stack Trace:
+#0 C:\xampp\htdocs\bap\Website\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-24 22:11:34 Error: [MissingControllerException] Controller class MembersController could not be found.
+Exception Attributes: array (
+  'class' => 'MembersController',
+  'plugin' => NULL,
+)
+Request URL: /bap/Website/Members
+Stack Trace:
+#0 C:\xampp\htdocs\bap\Website\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-24 23:20:02 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'member_id' in 'where clause'
+Request URL: /bap/Website/Members
+Stack Trace:
+#0 C:\xampp\htdocs\bap\Website\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\bap\Website\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Member`...', Array)
+#2 C:\xampp\htdocs\bap\Website\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `Member`...', Array, Array)
+#3 C:\xampp\htdocs\bap\Website\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT `Member`...', false)
+#4 C:\xampp\htdocs\bap\Website\lib\Cake\Model\Model.php(2696): DboSource->read(Object(Member), Array)
+#5 C:\xampp\htdocs\bap\Website\app\Controller\MembersController.php(12): Model->find('first', Array)
+#6 [internal function]: MembersController->index()
+#7 C:\xampp\htdocs\bap\Website\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(MembersController), Array)
+#8 C:\xampp\htdocs\bap\Website\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#9 C:\xampp\htdocs\bap\Website\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(MembersController), Object(CakeRequest), Object(CakeResponse))
+#10 C:\xampp\htdocs\bap\Website\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2016-06-25 00:46:38 Error: Fatal Error (1): Call to a member function find() on null in [C:\xampp\htdocs\bap\Website\app\Controller\MembersController.php, line 14]
+2016-06-25 00:46:38 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /bap/Website/Members
+Stack Trace:
+#0 C:\xampp\htdocs\bap\Website\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 14)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 14, Array)
+#2 C:\xampp\htdocs\bap\Website\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 14, Array)
+#3 C:\xampp\htdocs\bap\Website\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-06-25 00:47:12 Error: Fatal Error (1): Call to a member function find() on null in [C:\xampp\htdocs\bap\Website\app\Controller\MembersController.php, line 14]
+2016-06-25 00:47:12 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /bap/Website/Members
+Stack Trace:
+#0 C:\xampp\htdocs\bap\Website\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 14)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 14, Array)
+#2 C:\xampp\htdocs\bap\Website\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 14, Array)
+#3 C:\xampp\htdocs\bap\Website\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-06-25 00:48:41 Error: Fatal Error (1): Call to a member function find() on null in [C:\xampp\htdocs\bap\Website\app\Controller\MembersController.php, line 14]
+2016-06-25 00:48:41 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /bap/Website/Members
+Stack Trace:
+#0 C:\xampp\htdocs\bap\Website\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 14)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 14, Array)
+#2 C:\xampp\htdocs\bap\Website\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 14, Array)
+#3 C:\xampp\htdocs\bap\Website\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-06-25 00:48:53 Error: Fatal Error (1): Call to a member function find() on null in [C:\xampp\htdocs\bap\Website\app\Controller\MembersController.php, line 14]
+2016-06-25 00:48:53 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /bap/Website/Members
+Stack Trace:
+#0 C:\xampp\htdocs\bap\Website\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 14)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 14, Array)
+#2 C:\xampp\htdocs\bap\Website\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 14, Array)
+#3 C:\xampp\htdocs\bap\Website\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-06-25 00:52:25 Error: Fatal Error (1): Call to a member function find() on null in [C:\xampp\htdocs\bap\Website\app\Controller\MembersController.php, line 14]
+2016-06-25 00:52:25 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /bap/Website/Members
+Stack Trace:
+#0 C:\xampp\htdocs\bap\Website\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 14)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 14, Array)
+#2 C:\xampp\htdocs\bap\Website\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 14, Array)
+#3 C:\xampp\htdocs\bap\Website\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-06-26 21:39:57 Error: [MissingViewException] View file "C:\xampp\htdocs\bap\Website\app\View\Members\view.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\xampp\\htdocs\\bap\\Website\\app\\View\\Members\\view.ctp',
+)
+Request URL: /bap/Website/Members/view/7
+Stack Trace:
+#0 C:\xampp\htdocs\bap\Website\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\bap\Website\lib\Cake\Controller\Controller.php(948): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\bap\Website\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#3 C:\xampp\htdocs\bap\Website\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(MembersController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\xampp\htdocs\bap\Website\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2016-06-29 00:34:12 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /bap/Website/css/boostrap.css
+Stack Trace:
+#0 C:\xampp\htdocs\bap\Website\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-29 00:35:34 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /bap/Website/css/boostrap.css
+Stack Trace:
+#0 C:\xampp\htdocs\bap\Website\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-29 00:36:14 Error: Fatal Error (4): syntax error, unexpected '}' in [C:\xampp\htdocs\bap\Website\app\View\Layouts\default.ctp, line 32]
+2016-06-29 00:36:14 Error: [FatalErrorException] syntax error, unexpected '}'
+Request URL: /bap/Website/
+Stack Trace:
+#0 C:\xampp\htdocs\bap\Website\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 32)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 32, Array)
+#2 C:\xampp\htdocs\bap\Website\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 32, Array)
+#3 C:\xampp\htdocs\bap\Website\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-06-29 00:38:51 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /bap/Website/css/boostrap.css
+Stack Trace:
+#0 C:\xampp\htdocs\bap\Website\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-29 00:41:15 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /bap/Website/css/boostrap.css
+Stack Trace:
+#0 C:\xampp\htdocs\bap\Website\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-29 00:44:41 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /bap/Website/css/boostrap.css
+Stack Trace:
+#0 C:\xampp\htdocs\bap\Website\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-29 00:44:47 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /bap/Website/css/boostrap.css
+Stack Trace:
+#0 C:\xampp\htdocs\bap\Website\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-29 00:44:57 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /bap/Website/css/boostrap.css
+Stack Trace:
+#0 C:\xampp\htdocs\bap\Website\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-29 01:09:52 Error: Fatal Error (4): syntax error, unexpected '(', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in [C:\xampp\htdocs\bap\Website\app\View\Pages\home.ctp, line 1]
+2016-06-29 01:09:52 Error: [FatalErrorException] syntax error, unexpected '(', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$'
+Request URL: /bap/Website/
+Stack Trace:
+#0 C:\xampp\htdocs\bap\Website\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 1)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 1, Array)
+#2 C:\xampp\htdocs\bap\Website\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 1, Array)
+#3 C:\xampp\htdocs\bap\Website\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-06-29 01:12:08 Error: Fatal Error (4): syntax error, unexpected '(', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in [C:\xampp\htdocs\bap\Website\app\Controller\PagesController.php, line 55]
+2016-06-29 01:12:08 Error: [FatalErrorException] syntax error, unexpected '(', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$'
+Request URL: /bap/Website/
+Stack Trace:
+#0 C:\xampp\htdocs\bap\Website\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 55)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 55, Array)
+#2 C:\xampp\htdocs\bap\Website\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 55, Array)
+#3 C:\xampp\htdocs\bap\Website\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-06-29 01:12:10 Error: Fatal Error (4): syntax error, unexpected '(', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in [C:\xampp\htdocs\bap\Website\app\Controller\PagesController.php, line 55]
+2016-06-29 01:12:10 Error: [FatalErrorException] syntax error, unexpected '(', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$'
+Request URL: /bap/Website/
+Stack Trace:
+#0 C:\xampp\htdocs\bap\Website\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 55)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 55, Array)
+#2 C:\xampp\htdocs\bap\Website\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 55, Array)
+#3 C:\xampp\htdocs\bap\Website\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
