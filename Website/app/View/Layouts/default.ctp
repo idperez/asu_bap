@@ -1,62 +1,70 @@
-<?php
-/**
- *
- * PHP 5
- *
- * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
- * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
- *
- * Licensed under The MIT License
- * For full copyright and license information, please see the LICENSE.txt
- * Redistributions of files must retain the above copyright notice.
- *
- * @copyright     Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
- * @link          http://cakephp.org CakePHP(tm) Project
- * @package       app.View.Layouts
- * @since         CakePHP(tm) v 0.10.0.1076
- * @license       http://www.opensource.org/licenses/mit-license.php MIT License
- */
+<?php session_start();?>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+       <?php echo $this->Html->css('animate');?>
+       <?php echo $this->Html->css('icomoon');?>
+       <?php echo $this->Html->css('bootstrap');?>
+       <?php echo $this->Html->css('superfish');?>
+       <?php echo $this->Html->css('style');?>
+       <?php echo $this->Html->css('main');?>
+       <?php echo $this->Html->css('fonts');?>
+        <title>Beta Alpha Psi</title>
+        
+<!--        <link rel="icon" href="/bap/assets/images/logo.png"/>
+        
+        <script src="/bap/js/modernizr-2.6.2.min.js"></script>-->
+    </head>
+    
+        <div id="fh5co-wrapper">
+        
+        <div id="fh5co-page">
+        <div id="fh5co-header" style="position:relative; top:-40px; ">
+            <header id="fh5co-header-section">
+                <div class="container">
+                    <div class="nav-header">
+                        <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
+                        <h1 id="fh5co-logo"><a href="/bap/html/index.php">Beta Alpha Psi</a></h1>
+                        <nav id="fh5co-menu-wrap" role="navigation">
+                            <ul class="sf-menu" id="fh5co-primary-menu">
+                                
+                                <li class="active">
+                                <li>
+                                    <a href="/bap/html/index.php">Home</a>
+                                </li>
 
-$cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework');
-?>
-<!DOCTYPE html>
-<html>
-<head>
-	<?php echo $this->Html->charset(); ?>
-	<title>
-		<?php echo $cakeDescription ?>:
-		<?php echo $title_for_layout; ?>
-	</title>
-	<?php
-		echo $this->Html->meta('icon');
+                                <li class="active">
+                                <li>
+                                    <a href="/bap/php/members.php">Members</a>
+                                </li>
+                                
+                                <li class="active">
+                                <li>
+                                    <a href="/bap/html/info.php">Info</a>
+                                </li>
+                                
+                                <li class="active">
+                                <li>
+                                    <a href="/bap/html/about.php">About</a>
+                                </li>
 
-		echo $this->Html->css('cake.generic');
-
-		echo $this->fetch('meta');
-		echo $this->fetch('css');
-		echo $this->fetch('script');
-	?>
-</head>
-<body>
-	<div id="container">
-		<div id="header">
-			<h1><?php echo $this->Html->link($cakeDescription, 'http://cakephp.org'); ?></h1>
-		</div>
-		<div id="content">
-
-			<?php echo $this->Session->flash(); ?>
-
-			<?php echo $this->fetch('content'); ?>
-		</div>
-		<div id="footer">
-			<?php echo $this->Html->link(
-					$this->Html->image('cake.power.gif', array('alt' => $cakeDescription, 'border' => '0')),
-					'http://www.cakephp.org/',
-					array('target' => '_blank', 'escape' => false)
-				);
-			?>
-		</div>
-	</div>
-	<?php echo $this->element('sql_dump'); ?>
-</body>
+                                <li class="active">
+                                <li>
+                                    <a href="/bap/html/contact.php">Contact</a>
+                                </li>
+                                                             
+                                <li class="active">
+                                <li>
+                                    <a href="/bap/php/login.php">Login</a>
+                                </li> 
+                            </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </header>
+        </div>
+    </div>
+    <?php echo $this->fetch('content');?>
 </html>
