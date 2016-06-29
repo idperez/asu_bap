@@ -85,7 +85,7 @@
                         <div class="fh5co-testimonial text-center animate-box">
                             <h2>Our Mission</h2>
                             <figure>
-                                <img src="/bap/assets/images/logo.png" alt="mission">
+								<?php echo $this->Html->image('logo.png', array('alt' => 'mission')) ?>
                             </figure>
                             <blockquote>
                                 <p> Our organization seeks to develop its members' professionalism through career-oriented, social, and community activities. Being a member of Beta Alpha Psi will provide great opportunities to interact with both  the accounting faculty and members of the professional accounting community.</p>
