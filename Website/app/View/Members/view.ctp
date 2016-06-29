@@ -30,7 +30,7 @@
                     <div class="fh5co-grid text-nowrap animate-box">
                             <h3 style="display:inline; color: black;">Class &nbsp;&nbsp; <h4 style="display:inline; color: grey;"> 2017 </h4></h3>
                             <br><br>
-                            <h3 style="display:inline; color: black;">Major(s) &nbsp;&nbsp;<h4 style="display:inline; color: grey;"><?php echo $member['Major']['name'] . ", " . $member['Member']['major_two'] . ", " . $member['Member']['major_three'];?></h4></h3>
+                            <h3 style="display:inline; color: black;">Major(s) &nbsp;&nbsp;<h4 style="display:inline; color: grey;"><?php echo $member['Major'][0]['name'] . ", " . $member['Member']['major_two'] . ", " . $member['Member']['major_three'];?></h4></h3>
                             <br><br>
                             <h3 style="display:inline; color: black;">Email &nbsp;&nbsp;<h4 style="display:inline; color: grey;"><?php echo $member['Member']['email'];?></h4></h3>  
                             <br><br>
