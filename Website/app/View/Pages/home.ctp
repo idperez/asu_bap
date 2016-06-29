@@ -1,9 +1,10 @@
-		<div class="fh5co-hero">
+    <div class="fh5co-hero">
             <div class="fh5co-overlay"></div>
             <div class="fh5co-cover text-center" style="background-image: url(/bap/assets/images/tempe.jpg); ">
             <div class="desc animate-box" style="position:relative; top:280px; ">
-             
-                <img src="/bap/assets/images/logo.png" style="width: 200px; height: 200px;" alt='main'>					
+                                              
+                <?php echo $this->Html->image('logo.png', array('width'=>'200px', 'height' => '200px', 'main')) ?>
+                                                
                 <span>Beta Tau Chapter</span>
                 
                 <span ><a class="btn btn-danger" href="#">Donate Today</a></span>
@@ -32,7 +33,7 @@
             <div class="col-md-9">
                 <div class="row">
                     <div class="col-md-4 col-sm-4">
-                        <div class="fh5co-grid animate-box" style="background-image: url(/bap/assets/images/home_vertical.jpg);">
+                        <div class="fh5co-grid animate-box" style="background-image: url(/bap/Website/app/webroot/img/home_vertical.jpg);">
                             <a class="image-popup text-center">
                                 <div class="prod-title">
                                     <h3>World Class Members</h3>
@@ -42,7 +43,7 @@
                         </div>
                     </div>
                     <div class="col-md-8 col-sm-8">
-                        <div class="fh5co-grid animate-box" style="background-image: url(/bap/assets/images/home_horzontal_1.jpg);">
+                        <div class="fh5co-grid animate-box" style="background-image: url(/bap/Website/app/webroot/img/home_horzontal_1.jpg);">
                             <a class="image-popup text-center">
                                 <div class="prod-title">
                                     <h3>Memorable Events</h3>
@@ -52,7 +53,7 @@
                         </div>
                     </div>
                     <div class="col-md-8 col-sm-8">
-                        <div class="fh5co-grid animate-box" style="background-image: url(/bap/assets/images/home_horizontal_2.jpg);">
+                        <div class="fh5co-grid animate-box" style="background-image: url(/bap/Website/app/webroot/img/home_horizontal_2.jpg);">
                             <a class="image-popup text-center">
                                 <div class="prod-title">
                                     <h3>In Touch With The Community</h3>
@@ -62,7 +63,7 @@
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-4">
-                        <div class="fh5co-grid animate-box" style="background-image: url(/bap/assets/images/home_vertical_2.jpg);">
+                        <div class="fh5co-grid animate-box" style="background-image: url(/bap/Website/app/webroot/img/home_vertical_2.jpg);">
                             <a class="image-popup text-center">
                                 <div class="prod-title">
                                     <h3>Strong Minds, Strong Friends</h3>
@@ -85,7 +86,7 @@
                         <div class="fh5co-testimonial text-center animate-box">
                             <h2>Our Mission</h2>
                             <figure>
-								<?php echo $this->Html->image('logo.png', array('alt' => 'mission')) ?>
+                            <?php echo $this->Html->image('logo.png', array('alt' => 'mission')) ?>
                             </figure>
                             <blockquote>
                                 <p> Our organization seeks to develop its members' professionalism through career-oriented, social, and community activities. Being a member of Beta Alpha Psi will provide great opportunities to interact with both  the accounting faculty and members of the professional accounting community.</p>
@@ -95,7 +96,7 @@
                     <div class="col-md-6 col-sm-6">
                         <div class="fh5co-about-us animate-box">
                             <h2 class="text-center">About Us</h2>
-                            <img src="/bap/assets/images/group_photo.jpg" alt="About Us">
+                            <?php echo $this->Html->image('group_photo.jpg', array('alt' => 'about')) ?>            
                             <p>Founded in 1919, Beta Alpha Psi is an honor organization for financial information students and professionals. There are over 300 chapters on college and university campuses with over 300,000 members initiated since Beta Alpha Psi's formation. <br><a href="#">Know More About Us</a></p>
                         </div>
                     </div>
