@@ -1,5 +1,5 @@
 <?php
 class Member extends AppModel{
-    public $belongsTo = 'Photo';
+   public $belongsTo = 'Photo';
 }
 ?>
