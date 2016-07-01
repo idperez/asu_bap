@@ -12,7 +12,7 @@
         <div class="row" >
             <div class="col-md-12 col-sm-12" >
                 <div class="animate-box text-left" style="position:relative; top:-22">  
-                    <h1 style="display:inline; font-size: 40px; color: black;">Isidro Perez - <h4 style="display:inline; font-size: 30px; color: grey"> Director of Recruitment </h4><img src="/bap/assets/images/profile_logo.png"  alt="profile_logo" height="120" style="position:relative; top:-35px; float: right"></h1>
+                    <h1 style="display:inline; font-size: 40px; color: black;"><?php echo $member['Member']['first_name'] . " " . $member['Member']['last_name'] . " - ";?><h4 style="display:inline; font-size: 30px; color: grey"><?php echo $member['Member']['title'];?></h4><img src="/bap/assets/images/profile_logo.png"  alt="profile_logo" height="120" style="position:relative; top:-35px; float: right"></h1>
                 </div>
             </div>    
        </div>
@@ -30,7 +30,23 @@
                     <div class="fh5co-grid text-nowrap animate-box">
                             <h3 style="display:inline; color: black;">Class &nbsp;&nbsp; <h4 style="display:inline; color: grey;"> 2017 </h4></h3>
                             <br><br>
-                            <h3 style="display:inline; color: black;">Major(s) &nbsp;&nbsp;<h4 style="display:inline; color: grey;"><?php echo $member['Major'][0]['name'] . ", " . $member['Member']['major_two'] . ", " . $member['Member']['major_three'];?></h4></h3>
+                            <h3 style="display:inline; color: black;">Major(s) &nbsp;&nbsp;<h4 style="display:inline; color: grey;">
+                            <?php 
+                            $majorCount = count($member['Major']);
+                            if($majorCount > 0) // members have majors
+                            {
+                                for($i = 0; $i < $majorCount; $i++)
+                                {
+                                    if($i == 1 || $member['Major'][$i++]['name'] == null)
+                                        echo $member['Major'][$i]['name'];
+                                    else
+                                        echo ', ' . $member['Major'][$i]['name'];
+                                }
+                            }  
+                            else { // members have no majors
+                                echo 'Member does not have a major declared yet.';
+                            }
+                            ?></h4></h3>
                             <br><br>
                             <h3 style="display:inline; color: black;">Email &nbsp;&nbsp;<h4 style="display:inline; color: grey;"><?php echo $member['Member']['email'];?></h4></h3>  
                             <br><br>
