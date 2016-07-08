@@ -37,7 +37,7 @@
                             {
                                 for($i = 0; $i < $majorCount; $i++)
                                 {
-                                    if($i == 1 || $member['Major'][$i++]['name'] == null)
+                                    if($i == 1 || $member['Major'][$i+=1]['name'] == null)
                                         echo $member['Major'][$i]['name'];
                                     else
                                         echo ', ' . $member['Major'][$i]['name'];

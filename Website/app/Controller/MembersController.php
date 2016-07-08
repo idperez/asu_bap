@@ -10,7 +10,7 @@ class MembersController extends AppController{
         $this->set('members', $memberdata);
     }
     
-    public function search()
+    public function add()
     {
         
     }
@@ -31,6 +31,16 @@ class MembersController extends AppController{
         }
         
         $this->set('member', $member);
+    }
+    
+    public function edit($id = null)
+    {
+        
+    }
+    
+    public function delete($id = null)
+    {
+        
     }
 }
 ?>
