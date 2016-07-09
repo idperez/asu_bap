@@ -34,6 +34,7 @@
               <div class="form-inline">                  
                  <fieldset>                     
                     <div class="form-group col-lg-6">
+                        <!--TODO - figure out a way to check capital letter of first char for all names before submitting form (possible javascript fix)-->
                         <?php echo $this->Form->input('first_name', array(
                             'type' => 'text',
                             'class' => 'form-control',
