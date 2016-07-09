@@ -1,6 +1,6 @@
 <div class="fh5co-hero">
     <div class="fh5co-overlay"></div>
-        <div class="fh5co-cover text-center" style="background-image: url(/bap/assets/images/brothers.jpg); ">
+        <div class="fh5co-cover text-center" style="background-image: url(/bap/Website/app/webroot/img/brothers.jpg); ">
             <div class="desc animate-box" style="position:relative; top:280px; ">
                 <h2>Get Informed</h2>
 
@@ -18,19 +18,17 @@
                 <div class="fh5co-project-inner row">
                     <div class="fh5co-imgs col-md-8 animate-box">
                         <div class="img-holder-2 animate-box">
-                            <img src="/bap/assets/images/about-image.jpg" alt="back-1" height="445" width="640">
+                            <?php echo $this->Html->image('about-image.jpg', array('height'=>'445', 'width'=>'640')) ?>         
                         </div>
                         <div class="img-holder-1 animate-box">
-                            <img src="/bap/assets/images/ladies.jpg" alt="front-1" height="450" width="650">
+                            <?php echo $this->Html->image('ladies.jpg', array('height'=>'450', 'width'=>'650')) ?>                        
                         </div>
-
-
                     </div>
                     <div class="fh5co-text col-md-4 animate-box">
                         <h3>Want To Become A Member?</h3>
                         <h2>Join the club that will elevate you.</h2>
                         <p>See when to apply.</p>
-                        <p><a href="/bap/html/join.php" class="btn btn-danger">Join</a></p>
+                        <p><button class="btn-danger" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Pages', 'action'=>'join'))?>'">Join</button></p>
                     </div>
                 </div>
             </div>
@@ -50,21 +48,21 @@
                     <div class="row">
                         <div class="col-md-4 col-sm-4">
                             <div class="services animate-box">
-                                <span><img src="/bap/assets/images/News-100.png" height="50" width="50"></img></span>
+                                <span><img src="/bap/Website/app/webroot/img/icons/News-100.png" height="50" width="50"></img></span>
                                 <h3>Announcements</h3>
                                 <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
                             </div>
                         </div>
                         <div class="col-md-4 col-sm-4">
                             <div class="services animate-box">
-                                <span><img src="/bap/assets/images/Permanent Job-100.png" height="50" width="50"></img></span>
+                                <span><img src="/bap/Website/app/webroot/img/icons/Permanent Job-100.png" height="50" width="50"></img></span>
                                 <h3>Advisory Board</h3>
                                 <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
                             </div>
                         </div>
                         <div class="col-md-4 col-sm-4">
                             <div class="services animate-box">
-                                <span><img src="/bap/assets/images/Conference-100.png" height="50" width="50"></img></span>
+                                <span><img src="/bap/Website/app/webroot/img/icons/Conference-100.png" height="50" width="50"></img></span>
                                 <h3>Executive Board</h3>
                                 <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
                             </div>
@@ -77,21 +75,21 @@
                     <div class="row">
                         <div class="col-md-4 col-sm-4">
                             <div class="services animate-box">
-                                <span><img src="/bap/assets/images/Crowdfunding-100.png" height="50" width="50"></img></span>
+                                <span><img src="/bap/Website/app/img/icons/Crowdfunding-100.png" height="50" width="50"></img></span>
                                 <h3>Sponsor</h3>
                                 <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
                             </div>
                         </div>
                         <div class="col-md-4 col-sm-4">
                             <div class="services animate-box">
-                                <span><img src="/bap/assets/images/Calendar-100.png" height="50" width="50"></img></span>
+                                <span><img src="/bap/Website/app/img/icons/Calendar-100.png" height="50" width="50"></img></span>
                                 <h3>Events</h3>
                                 <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
                             </div>
                         </div>
                         <div class="col-md-4 col-sm-4">
                             <div class="services animate-box">
-                                <span><img src="/bap/assets/images/Rules-100.png" height="50" width="50"></img></span>
+                                <span><img src="/bap/Website/app/img/icons/Rules-100.png" height="50" width="50"></img></span>
                                 <h3>Policies</h3>
                                 <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
                             </div>

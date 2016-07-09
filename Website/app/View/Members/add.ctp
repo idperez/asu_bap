@@ -1,6 +1,6 @@
 <div class="fh5co-hero-ish">
     <div class="fh5co-overlay"></div>
-        <div class="fh5co-cover" style="background-image: url(/bap/assets/images/about-image.jpg); ">
+        <div class="fh5co-cover" style="background-image: url(/bap/Website/app/webroot/img/about-image.jpg); ">
             <div class="desc animate-box" style="position:relative; top:280px; ">          
             </div>
         </div>
@@ -11,7 +11,7 @@
         <div class="row" >
             <div class="col-md-12 col-sm-12" >
                 <div class="animate-box text-center" style="position:relative; top:-22">  
-                    <img src="/bap/assets/images/profile_logo.png"  alt="profile_logo" height="120" style="position:relative; top:-35px; ">
+                    <img src="/bap/Website/app/webroot/img/profile_logo.png"  alt="profile_logo" height="120" style="position:relative; top:-35px; ">
                 </div>
             </div>    
         </div>
