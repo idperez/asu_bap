@@ -39,8 +39,8 @@
                             'class' => 'form-control',
                             'maxlength' => 24,
                             'placeholder' => 'First Name',
-                            'id' => 'firstname',
-                            'name' => 'firstname'));
+                            'id' => 'first_name',
+                            'name' => 'first_name'));
                         ?>
                     </div>      
                     <div class="form-group col-lg-6">
@@ -49,8 +49,8 @@
                             'class' => 'form-control',
                             'maxlength' => 24,
                             'placeholder' => 'Last Name',
-                            'id' => 'lastname',
-                            'name' => 'lastname'));
+                            'id' => 'last_name',
+                            'name' => 'last_name'));
                         ?>                
                     </div>
                  </fieldset>

@@ -12,7 +12,15 @@ class MembersController extends AppController{
     
     public function add()
     {
-        
+        if($this->request->is('post'))
+        {
+            $this->Member->create();
+            
+            if($this->Member->save($this->request->data))
+            {
+                $this->redirect('index');
+            }
+        }
     }
     
     public function view($id = null)
