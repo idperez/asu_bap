@@ -27,35 +27,53 @@
                         <h1 id="fh5co-logo"><a href="/bap/html/index.php">Beta Alpha Psi</a></h1>
                         <nav id="fh5co-menu-wrap" role="navigation">
                             <ul class="sf-menu" id="fh5co-primary-menu">
+                           
+                                <li class="active">
+                                <li>
+                                    <?php echo $this->Html->link(
+                                        'Home',
+                                        array('manager' => true, 'controller' => 'Pages', 'action' => 'display')
+                                    );?>
+                                </li>
                                 
                                 <li class="active">
                                 <li>
-                                    <a href="/bap/html/index.php">Home</a>
+                                    <?php echo $this->Html->link(
+                                        'Members',
+                                        array('controller' => 'Members', 'action' => 'index')
+                                    );?>
+                                </li>
+                                
+                                <li class="active">
+                                <li>
+                                    <?php echo $this->Html->link(
+                                        'Info',
+                                        array('controller' => 'Pages', 'action' => 'info')
+                                    );?>
+                                </li>
+                                
+                                <li class="active">
+                                <li>
+                                    <?php echo $this->Html->link(
+                                        'About',
+                                        array('controller' => 'Pages', 'action' => 'about')
+                                    );?>
                                 </li>
 
                                 <li class="active">
                                 <li>
-                                    <a href="/bap/php/members.php">Members</a>
-                                </li>
-                                
-                                <li class="active">
-                                <li>
-                                    <a href="/bap/html/info.php">Info</a>
-                                </li>
-                                
-                                <li class="active">
-                                <li>
-                                    <a href="/bap/html/about.php">About</a>
-                                </li>
-
-                                <li class="active">
-                                <li>
-                                    <a href="/bap/html/contact.php">Contact</a>
+                                    <?php echo $this->Html->link(
+                                        'Contact',
+                                        array('controller' => 'Pages', 'action' => 'contact')
+                                    );?>
                                 </li>
                                                              
                                 <li class="active">
                                 <li>
-                                    <a href="/bap/php/login.php">Login</a>
+                                    <?php echo $this->Html->link(
+                                        'Login',
+                                        array('controller' => 'Pages', 'action' => 'login')
+                                    );?>
                                 </li> 
                             </li>
                             </ul>

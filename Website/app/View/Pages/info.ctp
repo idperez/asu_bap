@@ -1,12 +1,3 @@
-<?php $root = realpath($_SERVER["DOCUMENT_ROOT"]); ?>
-<?php require_once($root."/bap/includes/connection.php"); ?>
-<?php require_once($root."/bap/includes/functions/sessions.php"); ?>
-<?php require_once($root."/bap/includes/functions/functions.php"); ?>
-<?php require_once($root."/bap/includes/functions/validations.php"); ?>
-<?php require_once($root."/bap/php/member/MemberList.php"); ?>
-
-<?php $_SESSION['page'] = "info" ?>
-
 <div class="fh5co-hero">
     <div class="fh5co-overlay"></div>
         <div class="fh5co-cover text-center" style="background-image: url(/bap/assets/images/brothers.jpg); ">
