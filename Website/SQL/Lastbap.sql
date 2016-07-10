@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 10, 2016 at 05:17 AM
+-- Generation Time: Jul 01, 2016 at 03:04 AM
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 5.6.21
 
@@ -19,31 +19,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `bap`
 --
-
--- --------------------------------------------------------
-
---
--- Table structure for table `events`
---
-
-CREATE TABLE `events` (
-  `id` int(11) NOT NULL,
-  `name` varchar(30) NOT NULL,
-  `description` varchar(100) NOT NULL,
-  `time` datetime NOT NULL,
-  `address` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `events_members`
---
-
-CREATE TABLE `events_members` (
-  `event_id` int(11) NOT NULL,
-  `member_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -229,14 +204,7 @@ INSERT INTO `members` (`id`, `first_name`, `last_name`, `email`, `title`, `linke
 (55, 'Dre', 'Eer', 'isd.com', '', '', '', 0, '', '', 'test', '', 'Officer', '', '', '', 1),
 (56, 'Dre', 'Fun', 'isd.com', '', '', '', 0, '', '', 'test', '', 'Officer', '', '', '', 1),
 (57, 'Dre', 'Fun', 'isd.com', '', '', '', 0, '', '', 'test', '', 'Officer', '', '', '', 1),
-(58, 'Dre', 'Fun', 'isd.com', '', '', '', 0, '', '', 'test', '', 'Officer', '', '', '', 1),
-(59, '', '', 'test@test.com', '', '', '', 0, '', '', 'test123', '', '0', '', '', '', 0),
-(60, '', '', 'test@test.com', '', '', '', 0, '', '', 'test123', '', '0', '', '', '', 0),
-(61, '', '', 'isidro.perez@live.com', '', '', '', 0, '', '', 'test', '', '0', '', '', '', 0),
-(62, '', '', 'isidro.perez@live.com', '', '', '', 0, '', '', 'test', '', '0', '', '', '', 0),
-(63, 'TestFirst', 'TestLast', 'isidro.perez@live.com', '', '', '', 0, '', '', 'test', '', '0', '', '', '', 0),
-(64, '', '', 'isidro.perez@liv', '', '', '', 0, '', '', 'test1234', '', '0', '', '', '', 0),
-(65, '12df', '', 'isidro.perez@yahoo.com', '', '', '', 0, '', '', 'test12344', '', '0', '', '', '', 0);
+(58, 'Dre', 'Fun', 'isd.com', '', '', '', 0, '', '', 'test', '', 'Officer', '', '', '', 1);
 
 -- --------------------------------------------------------
 
@@ -272,12 +240,6 @@ INSERT INTO `photos` (`id`, `url`) VALUES
 --
 
 --
--- Indexes for table `events`
---
-ALTER TABLE `events`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Indexes for table `majors`
 --
 ALTER TABLE `majors`
@@ -306,11 +268,6 @@ ALTER TABLE `photos`
 --
 
 --
--- AUTO_INCREMENT for table `events`
---
-ALTER TABLE `events`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
---
 -- AUTO_INCREMENT for table `majors`
 --
 ALTER TABLE `majors`
@@ -319,7 +276,7 @@ ALTER TABLE `majors`
 -- AUTO_INCREMENT for table `members`
 --
 ALTER TABLE `members`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=66;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=59;
 --
 -- AUTO_INCREMENT for table `minors`
 --
