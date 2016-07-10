@@ -15,7 +15,7 @@
         
         <?php echo $this->Html->script('modernizr-2.6.2.min.js');?>
     </head>
-    
+  
         <div id="fh5co-wrapper">
         
         <div id="fh5co-page">
@@ -24,10 +24,12 @@
                 <div class="container">
                     <div class="nav-header">
                         <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
-                        <h1 id="fh5co-logo"><?php echo $this->Html->link(
-                                        'Beta Alpha Psi',
-                                        array('manager' => true, 'controller' => 'Pages', 'action' => 'display')
-                                    );?></h1>
+                        <h1 id="fh5co-logo">
+                            <?php echo $this->Html->link(
+                                'Beta Alpha Psi',
+                                array('manager' => true, 'controller' => 'Pages', 'action' => 'display')
+                            );?>
+                        </h1>
                         <nav id="fh5co-menu-wrap" role="navigation">
                             <ul class="sf-menu" id="fh5co-primary-menu">
                            
@@ -51,7 +53,7 @@
                                 <li>
                                     <?php echo $this->Html->link(
                                         'Info',
-                                        array('controller' => 'Pages', 'action' => 'info')
+                                        array('controller' => 'Info', 'action' => 'display')
                                     );?>
                                 </li>
                                 
@@ -143,7 +145,6 @@
         <?php echo $this->Html->script('jquery.waypoints.min.js');?> 
         <?php echo $this->Html->script('magnific-popup-options.min.js');?> 
         <?php echo $this->Html->script('main.js');?>    
-        
         <?php echo $this->Html->script('respond.min.js');?>
         <?php echo $this->Html->script('superfish.js');?>     
 </html>
