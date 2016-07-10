@@ -8,6 +8,13 @@ class Member extends AppModel{
                 'joinTable' => 'majors_members',
                 'foreignKey' => 'member_id',
                 'associationForeignKey' => 'major_id'
+            ),
+    'Event' =>
+            array(
+                'className' => 'Event',
+                'joinTable' => 'events_members',
+                'foreignKey' => 'member_id',
+                'associationForeignKey' => 'event_id'
             )
     );
     public $validate = array(

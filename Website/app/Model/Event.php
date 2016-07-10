@@ -1,11 +1,11 @@
-<?php
-class Major extends AppModel{
+<?php 
+class Event extends AppModel{
     public $hasAndBelongsToMany = array(
     'Member' =>
             array(
                 'className' => 'Member',
-                'joinTable' => 'majors_members',
-                'foreignKey' => 'major_id',
+                'joinTable' => 'events_members',
+                'foreignKey' => 'event_id',
                 'associationForeignKey' => 'member_id'
             )
     );

@@ -20,7 +20,6 @@
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
 App::uses('AppController', 'Controller');
-
 /**
  * Static content controller
  *
@@ -75,6 +74,6 @@ class PagesController extends AppController {
     
     public function info()
     {  
-        $this->set('info');
+        //$this->set('info');
     }
 }
