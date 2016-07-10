@@ -107,7 +107,7 @@ figure {
 
 .fh5co-hero-ish {
   position: relative;
-  height: 142px;
+  height: 100px;
   font-weight: 200;
 /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#7d7e7d+1,494949+99 */
 background: rgb(125,126,125); /* Old browsers */
@@ -848,7 +848,7 @@ h3.heading-section:before {
 }
 
 .fh5co-blog {
-  width: 100%;
+  width: 350px;
   height: 385px;
   background-size: cover;
   background-position: center center;
@@ -864,7 +864,7 @@ h3.heading-section:before {
   }
 }
 .fh5co-blog:hover, .fh5co-blog:focus {
-  width: 100%;
+  width: 350px;
   -webkit-box-shadow: 10px 27px 78px -15px rgba(0, 0, 0, 0.65);
   -moz-box-shadow: 10px 27px 78px -15px rgba(0, 0, 0, 0.65);
   box-shadow: 10px 27px 78px -15px rgba(0, 0, 0, 0.65);
@@ -876,7 +876,6 @@ h3.heading-section:before {
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(0, 0, 0, 0.5);
   opacity: 1;
 }
 .fh5co-blog .image-popup span {
