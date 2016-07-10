@@ -56,6 +56,38 @@
                                         'Info',
                                         array('controller' => 'Info', 'action' => 'index')
                                     );?>
+                                    <ul class="fh5co-sub-menu">
+                                        <li><?php echo $this->Html->link(
+                                                'Announcements',
+                                                array('controller' => 'Info', 'action' => 'announcements')
+                                            );?>
+                                        </li>
+                                        <li>
+                                            <a class="fh5co-sub-ddown">Board</a>
+                                            <ul class="fh5co-sub-menu">
+                                                <li><?php echo $this->Html->link(
+                                                        'Advisory',
+                                                        array('controller' => 'Info', 'action' => 'advisory_board')
+                                                    );?>
+                                                </li>
+                                                <li><?php echo $this->Html->link(
+                                                        'Executive',
+                                                        array('controller' => 'Info', 'action' => 'executive_board')
+                                                    );?>
+                                                </li>
+                                            </ul>
+                                        </li>     
+                                        <li><?php echo $this->Html->link(
+                                                'Events',
+                                                array('controller' => 'Info', 'action' => 'events')
+                                            );?>
+                                        </li>
+                                        <li><?php echo $this->Html->link(
+                                                'Policies',
+                                                array('controller' => 'Info', 'action' => 'policies')
+                                            );?>
+                                        </li>
+                                    </ul>
                                 </li>
                                 
                                 <li class="active">
