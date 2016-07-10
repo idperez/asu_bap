@@ -1,10 +1,6 @@
 <div class="fh5co-hero-ish">
     <div class="fh5co-overlay"></div>
-        <div class="fh5co-cover" style="background-image: url(/bap/assets/images/about-image.jpg); ">
-            <div class="desc animate-box" style="position:relative; top:280px; ">          
-            </div>
-        </div>
-    </div>
+    <div class="desc animate-box" style="position:relative; top:280px; "></div>
 </div>
 <div id="fh5co-work-section" >
     <div class="container" style="position:relative; top:-20">
