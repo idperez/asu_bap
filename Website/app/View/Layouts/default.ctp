@@ -68,7 +68,7 @@
                                 <li>
                                     <?php echo $this->Html->link(
                                         'Contact',
-                                        array('controller' => 'Pages', 'action' => 'contact')
+                                        array('controller' => 'Contact', 'action' => 'index')
                                     );?>
                                 </li>
                                                              
@@ -76,7 +76,7 @@
                                 <li>
                                     <?php echo $this->Html->link(
                                         'Login',
-                                        array('controller' => 'Pages', 'action' => 'login')
+                                        array('controller' => 'Login', 'action' => 'index')
                                     );?>
                                 </li> 
                             </li>
