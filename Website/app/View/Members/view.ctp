@@ -1,10 +1,14 @@
 <div class="fh5co-hero-ish">
     <div class="fh5co-overlay"></div>
+<<<<<<< HEAD
         <div class="fh5co-cover " style="background-image: url(/bap/Website/app/webroot/img/about-image.jpg); ">
             <div class="desc animate-box" style="position:relative; top:280px; ">          
             </div>
     </div>
 </div>
+=======
+    <div class="desc animate-box" style="position:relative; top:280px; "></div>
+>>>>>>> 001486a9d119960eac9acd7f2885b618a22bdcdb
 </div>
     <?php print_r($member);?>
 <div id="fh5co-work-section" >
@@ -37,20 +41,30 @@
                             {
                                 for($i = 0; $i < $majorCount; $i++)
                                 {
-                                    if($i == 1 || $member['Major'][$i+=1]['name'] == null)
+                                    if($i == 0 || $member['Major'][$i+=1]['name'] == null)
                                         echo $member['Major'][$i]['name'];
                                     else
                                         echo ', ' . $member['Major'][$i]['name'];
                                 }
                             }  
-                            else { // members have no majors
+                            else 
+                            { // members have no majors
                                 echo 'Member does not have a major declared yet.';
                             }
                             ?></h4></h3>
                             <br><br>
                             <h3 style="display:inline; color: black;">Email &nbsp;&nbsp;<h4 style="display:inline; color: grey;"><?php echo $member['Member']['email'];?></h4></h3>  
                             <br><br>
-                            <h3 style="display:inline; color: black;">Hometown &nbsp;&nbsp;<h4 style="display:inline; color: grey;"><?php echo $member['Member']['city'] . ", " . $member['Member']['state'];?></h4></h3> <!--may use ternary here so it doesn't display uneeded commas-->
+                            <h3 style="display:inline; color: black;">Hometown &nbsp;&nbsp;<h4 style="display:inline; color: grey;"><?php 
+                                $city = $member['Member']['city'] ? $member['Member']['city'] : null;
+                                $state = $member['Member']['state'] ? $member['Member']['state'] : null;
+                                if($city && $state)
+                                    echo $city . ', ' . $state;
+                                else if($city)
+                                    echo $city;
+                                else
+                                    echo $state;
+                                ?></h4></h3> <!--may use ternary here so it doesn't display uneeded commas-->
                             <br><br>
                                 <table style="table-layout: fixed; width: 100%;">
                                     <tr>

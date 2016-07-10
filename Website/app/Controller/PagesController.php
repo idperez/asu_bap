@@ -20,7 +20,6 @@
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
 App::uses('AppController', 'Controller');
-
 /**
  * Static content controller
  *
@@ -71,5 +70,10 @@ class PagesController extends AppController {
         }
         $this->set(compact('page', 'subpage', 'title_for_layout'));
         $this->render(implode('/', $path));
+    }
+    
+    public function info()
+    {  
+        //$this->set('info');
     }
 }

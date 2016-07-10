@@ -15,9 +15,8 @@
         
         <?php echo $this->Html->script('modernizr-2.6.2.min.js');?>
     </head>
-  
-        <div id="fh5co-wrapper">
-        
+    
+        <div id="fh5co-wrapper">       
         <div id="fh5co-page">
         <div id="fh5co-header" style="position:relative; top:-40px; ">
             <header id="fh5co-header-section">
