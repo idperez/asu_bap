@@ -10,6 +10,8 @@
        <?php echo $this->Html->css('style');?>
        <?php echo $this->Html->css('main');?>
        <?php echo $this->Html->css('fonts');?>
+       <?php echo $this->Html->css('hover.css');?>
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" media="all">
         <title>Beta Alpha Psi</title>
                <link rel="icon" href="/bap/Website/app/webroot/img/logo.png"/>
         
@@ -116,19 +118,19 @@
                                     <li>
                                     <?php echo $this->Html->link(
                                         'About',
-                                        array('controller' => 'Pages', 'action' => 'about')
+                                        array('controller' => 'About', 'action' => 'index')
                                     );?>
                                     </li>
                                     <li>
                                     <?php echo $this->Html->link(
                                         'Contact',
-                                        array('controller' => 'Pages', 'action' => 'contact')
+                                        array('controller' => 'Contact', 'action' => 'index')
                                     );?>
                                     </li>
                                     <li>
                                     <?php echo $this->Html->link(
                                         'Login',
-                                        array('controller' => 'Pages', 'action' => 'login')
+                                        array('controller' => 'Login', 'action' => 'index')
                                     );?>
                                     </li> 
                                 </ul>

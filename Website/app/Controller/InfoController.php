@@ -34,4 +34,27 @@ class InfoController extends AppController {
     public function index() {
         
     }
+    
+    public function announcements() {
+        
+    }
+    
+    public function advisory_board() {
+        
+    }
+    
+    public function executive_board() {
+        
+    }
+    
+    public function sponsor() {
+        
+    }
+    
+    public function events() {
+        
+    }
+    public function policies() {
+        
+    }
 }
