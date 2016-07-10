@@ -7,8 +7,8 @@
                                                 
                 <span>Beta Tau Chapter</span>
                 
-                <span ><a class="btn btn-danger" href="#">Donate Today</a></span>
-                <div style="position:relative; top: -25px;">
+                <span ><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Info', 'action'=>'sponsor'))?>'" style="position:relative; top:-20px;">Donate Today</a></span>
+                <div style="position:relative; top: -45px;">
                 <a target="_blank" title="find us on Facebook" href="http://www.facebook.com/bapasu">
                     <img alt="follow us on facebook" src="//login.create.net/images/icons/user/facebook_30x30.png" border=0>
                 </a>
@@ -103,3 +103,28 @@
                 </div>
             </div>
         </div>
+        <hr>
+    <div id="main-section">
+        <div id="fh5co-work">
+            <div class="work-wrap">
+                <div class="container">
+                    <div class="fh5co-project-inner row">
+                        <div class="fh5co-imgs col-md-8 animate-box">
+                            <div class="img-holder-2 animate-box">
+                                <?php echo $this->Html->image('about-image.jpg', array('height'=>'445', 'width'=>'640')) ?>         
+                            </div>
+                            <div class="img-holder-1 animate-box">
+                                <?php echo $this->Html->image('ladies.jpg', array('height'=>'450', 'width'=>'650')) ?>                        
+                            </div>
+                        </div>
+                        <div class="fh5co-text col-md-4 animate-box">
+                            <h3>Want To Become A Member?</h3>
+                            <h2 >Join the club that will elevate you.</h2>
+                            <p style="position:relative; top:0px;">See when to apply.</p>
+                            <span ><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Join', 'action'=>'index'))?>'" style="position:relative; top:-30px;">Join</a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

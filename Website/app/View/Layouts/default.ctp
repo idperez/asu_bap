@@ -13,8 +13,8 @@
        <?php echo $this->Html->css('hover.css');?>
         <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" media="all">
         <title>Beta Alpha Psi</title>
-               <link rel="icon" href="/bap/Website/app/webroot/img/logo.png"/>
         
+        <link rel="icon" href="/bap/Website/app/webroot/img/logo.png"/>
         <?php echo $this->Html->script('modernizr-2.6.2.min.js');?>
     </head>
     
@@ -88,8 +88,7 @@
                                             );?>
                                         </li>
                                     </ul>
-                                </li>
-                                
+                                </li>              
                                 <li class="active">
                                 <li>
                                     <?php echo $this->Html->link(

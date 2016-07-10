@@ -73,31 +73,7 @@
             </div>
         </div>
     </div>
-    <hr>
-    <div id="main-section">
-        <div id="fh5co-work">
-            <div class="work-wrap">
-                <div class="container">
-                    <div class="fh5co-project-inner row">
-                        <div class="fh5co-imgs col-md-8 animate-box">
-                            <div class="img-holder-2 animate-box">
-                                <?php echo $this->Html->image('about-image.jpg', array('height'=>'445', 'width'=>'640')) ?>         
-                            </div>
-                            <div class="img-holder-1 animate-box">
-                                <?php echo $this->Html->image('ladies.jpg', array('height'=>'450', 'width'=>'650')) ?>                        
-                            </div>
-                        </div>
-                        <div class="fh5co-text col-md-4 animate-box">
-                            <h3>Want To Become A Member?</h3>
-                            <h2>Join the club that will elevate you.</h2>
-                            <p>See when to apply.</p>
-                            <p><button class="btn-danger" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Pages', 'action'=>'join'))?>'">Join</button></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    
 </body>
 
 
