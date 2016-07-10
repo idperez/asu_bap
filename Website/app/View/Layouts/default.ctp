@@ -52,7 +52,7 @@
                                 <li>
                                     <?php echo $this->Html->link(
                                         'Info',
-                                        array('controller' => 'Info', 'action' => 'display')
+                                        array('controller' => 'Info', 'action' => 'index')
                                     );?>
                                 </li>
                                 
@@ -60,7 +60,7 @@
                                 <li>
                                     <?php echo $this->Html->link(
                                         'About',
-                                        array('controller' => 'Pages', 'action' => 'about')
+                                        array('controller' => 'About', 'action' => 'index')
                                     );?>
                                 </li>
 
@@ -110,7 +110,7 @@
                                     <li>
                                     <?php echo $this->Html->link(
                                         'Info',
-                                        array('controller' => 'Pages', 'action' => 'info')
+                                        array('controller' => 'Info', 'action' => 'index')
                                     );?>
                                     </li>
                                     <li>

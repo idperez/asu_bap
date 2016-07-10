@@ -1,26 +1,18 @@
 <div class="fh5co-hero-ish">
     <div class="fh5co-overlay"></div>
-<<<<<<< HEAD
         <div class="fh5co-cover " style="background-image: url(/bap/Website/app/img/about-image.jpg); ">
             <div class="desc animate-box" style="position:relative; top:280px; ">          
             </div>
         </div>
     </div>
-=======
     <div class="desc animate-box" style="position:relative; top:280px; "></div>
->>>>>>> 001486a9d119960eac9acd7f2885b618a22bdcdb
 </div>
 <div id="fh5co-work-section" >
     <div class="container" style="position:relative; top:-20">
         <div class="row" >
             <div class="col-md-12 col-sm-12" >
-<<<<<<< HEAD
-                <div class="animate-box text-center" style="position:relative; top:-22">  
-                    <img src="/bap/Website/app/webroot/img/profile_logo.png"  alt="profile_logo" height="120" style="position:relative; top:-35px; ">
-=======
                 <div class="animate-box text-center" style="position:relative;">  
                     <img src="/bap/assets/images/profile_logo.png"  alt="profile_logo" height="120" style="position:relative; top:-35px; ">
->>>>>>> 001486a9d119960eac9acd7f2885b618a22bdcdb
                 </div>
             </div>    
         </div>

@@ -9,14 +9,14 @@ App::uses('AppController', 'Controller');
  * @package       app.Controller
  * @link http://book.cakephp.org/2.0/en/controllers/pages-controller.html
  */
-class InfoController extends AppController {
+class AboutController extends AppController {
 
 /**
  * Controller name
  *
  * @var string
  */
-    public $name = 'Info';
+    public $name = 'About';
 
 /**
  * This controller does not use a model
