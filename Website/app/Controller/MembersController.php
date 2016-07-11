@@ -46,9 +46,31 @@ class MembersController extends AppController{
         
     }
     
+    public function adminview()
+    {
+        //returns all members to the view
+        $memberdata = $this->Member->find('all', 
+            array('order' => 'last_name'));
+            
+        $this->set('members', $memberdata);
+    }
+    
     public function delete($id = null)
     {
+        $data = $this->Member->findById($id);
         
+        if($this->Member->exists($id))
+        {
+            if($this->Member->delete($id)) //success
+                $this->redirect('index');
+            else //unsuccessful
+                throw new NotFoundException(__('This deletion was unsuccessful.'));
+        }
+        else
+        {
+            //Member does not exist
+            throw new NotFoundException(__('This member does not exist.'));
+        }
     }
 }
 ?>
