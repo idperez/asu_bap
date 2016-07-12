@@ -31,6 +31,9 @@
                                 ));?>
                                 </div>
                                 <div><?php echo h($member['Member']['first_name']) . " " . h($member['Member']['last_name']);?></div>
+                                <div><?php echo $this->Html->link('Delete', array(
+                                    'controller' => 'Members', 'action' => 'delete', $member['Member']['id'])
+                                );?>
                             <td></td>
                         <?php } ?>
                     <?php endforeach; ?>

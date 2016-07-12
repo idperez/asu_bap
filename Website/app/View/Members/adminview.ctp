@@ -22,13 +22,13 @@
                     <?php foreach($members as $member):?>
                     <!--todo - formatting adjustments -->
                         <?php if($member['Member']['level'] == 'Officer'){ ?>
-                                <div class="card col-md-2">
+                                <div class="card col-md-2 col-sm-4 col-xs-4">
                                     <?php echo $this->Html->image($member['Photo']['url'], array(
                                         "alt" => "Profile image",
                                         'url' => array('controller' => 'Members', 'action' => 'view', $member['Member']['id']),
                                         'class' => 'card-img-top',
                                         'width' => '100%',
-                                        'height' => '20%'
+                                        'height' => '30%'
                                     ));?>
                                     <div class="card-block">
                                         <p class="card-text">
@@ -44,20 +44,19 @@
                     <div style="width: 100%; height: 20px; border-bottom: 1px solid black; text-align: center">
                         <span style="font-size: 30px; background-color: #F3F5F6; padding: 0 10px;">
                             Members
-                        </div>
+                        </span>
                     </div>
                     <!--Grabbing all members (non-officers)-->
-                    <br><br>
                     <?php foreach($members as $member):?>
                     <!--todo - formatting adjustments -->
                         <?php if($member['Member']['level'] != 'Officer'){ ?>
-                                <div class="card col-md-2">
+                                <div class="card col-md-2 col-sm-4 col-xs-4">
                                     <?php echo $this->Html->image($member['Photo']['url'], array(
                                         "alt" => "Profile image",
                                         'url' => array('controller' => 'Members', 'action' => 'view', $member['Member']['id']),
                                         'class' => 'card-img-top',
                                         'width' => '100%',
-                                        'height' => '20%'
+                                        'height' => '30%'
                                     ));?>
                                     <div class="card-block">
                                         <p class="card-text">
