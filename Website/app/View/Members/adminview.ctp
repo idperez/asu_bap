@@ -32,7 +32,13 @@
                                     ));?>
                                     <div class="card-block">
                                         <p class="card-text">
-                                            <?php echo h($member['Member']['first_name']) . " " . h($member['Member']['last_name']);?>
+                                            <?php echo h($member['Member']['first_name']) . " " . h($member['Member']['last_name']) . "<br>";?>
+                                            <?php echo $this->Html->link('Delete', array(
+                                                'controller' => 'Members', 'action' => 'delete', $member['Member']['id'])
+                                            ). "<br>";?>
+                                            <?php echo $this->Html->link('Edit', array(
+                                                'controller' => 'Members', 'action' => 'edit', $member['Member']['id'])
+                                            );?>
                                         <p>
                                     </div>
                                 </div>
@@ -60,7 +66,13 @@
                                     ));?>
                                     <div class="card-block">
                                         <p class="card-text">
-                                            <?php echo h($member['Member']['first_name']) . " " . h($member['Member']['last_name']);?>
+                                            <?php echo h($member['Member']['first_name']) . " " . h($member['Member']['last_name']) . "<br>";?>
+                                            <?php echo $this->Html->link('Delete', array(
+                                                'controller' => 'Members', 'action' => 'delete', $member['Member']['id'])
+                                            ) . "<br>";?>
+                                            <?php echo $this->Html->link('Edit', array(
+                                                'controller' => 'Members', 'action' => 'edit', $member['Member']['id'])
+                                            );?>
                                         <p>
                                     </div>
                                 </div>
