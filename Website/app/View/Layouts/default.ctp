@@ -11,7 +11,6 @@
        <?php echo $this->Html->css('main');?>
        <?php echo $this->Html->css('fonts');?>
        <?php echo $this->Html->css('hover.css');?>
-        <?php echo $this->Html->css('tile.css');?>
         <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" media="all">
         <title>Beta Alpha Psi</title>
         
