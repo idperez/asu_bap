@@ -25,10 +25,29 @@
                     <?php foreach($members as $member):?>
                     <!--todo - formatting adjustments -->
                         <?php if($member['Member']['level'] == 'Officer'){ ?>
-                                <div><?php echo $this->Html->image($member['Photo']['url'], array(
-                                    "alt" => "Profile image",
-                                    'url' => array('controller' => 'Members', 'action' => 'view', $member['Member']['id'])
-                                ));?>
+                                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                                    <div>
+                                        <img class="img-responsive" src=<?php echo $this->Html->image($member['Photo']['url'], array(
+                                                "alt" => "Profile image",
+                                                'url' => array('controller' => 'Members', 'action' => 'view', $member['Member']['id'])
+                                            ));?>
+                                        <div class="overlay">
+                                            <h2>Effect 10</h2>
+                                            <p class="icon-links">
+                                                <a href="#">
+                                                    <span class="fa fa-twitter"></span>
+                                                </a>
+                                                <a href="#">
+                                                    <span class="fa fa-facebook"></span>
+                                                </a>
+                                                <a href="#">
+                                                    <span class="fa fa-instagram"></span>
+                                                </a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
                                 </div>
                                 <div><?php echo h($member['Member']['first_name']) . " " . h($member['Member']['last_name']);?></div>
                                 <div><?php echo $this->Html->link('Delete', array(
