@@ -162,7 +162,44 @@
                             ?>
                         </div>               
                     </fieldset>
-                </div>                                                                    
+                </div>
+                <div class="form-inline">
+                    <fieldset>                 
+                        <div class="form-group col-lg-6">
+                            <?php echo $this->Form->input('city', array(
+                                'type' => 'text',
+                                'class' => 'form-control',
+                                'maxlength' => 100,
+                                'placeholder' => 'City of Birth',
+                                'name' => 'city'));
+                            ?>
+                        </div>
+                        <div class="form-group col-lg-6">
+                            <?php echo $this->Form->input('state', array(
+                                'type' => 'text',
+                                'class' => 'form-control',
+                                'maxlength' => 100,
+                                'placeholder' => 'State of Birth',
+                                'name' => 'state'));
+                            ?>
+                        </div>               
+                    </fieldset>
+                </div>
+                <div class="form-inline">
+                    <fieldset>                 
+                        <div class="form-group col-lg-12">
+                            <?php echo $this->Form->input('bio', array(
+                                'type' => 'textarea',
+                                'class' => 'form-control',
+                                'style' => 'resize:none',
+                                'maxlength' => 500,
+                                'placeholder' => 'List a little bit about yourself here...',
+                                'name' => 'bio'));
+                            ?>
+                        </div>            
+                    </fieldset>
+                </div>
+                <!--Todo - Add minor, major, state, city, and bio inputs-->                                                                    
             </div>             
               <div class="form-group col-lg-12">         
                 <?php echo $this->Form->end(array('label' => 'Submit', 
