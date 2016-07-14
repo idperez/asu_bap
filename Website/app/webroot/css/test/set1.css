@@ -12,8 +12,8 @@
 .grid {
 	position: relative;
 	margin: 0 auto;
-	padding: 1em 0 4em;
-	max-width: 1000px;
+	padding: 0em 0em 4em 1em;
+	max-width: 5000px;
 	list-style: none;
 	text-align: center;
 }
@@ -24,13 +24,17 @@
 	float: left;
 	overflow: hidden;
 	margin: 10px 1%;
-	min-width: 200px;
-	max-width: 200px;
-	max-height: 360px;
+	min-width: 165px;
+	max-width: 165px;
+        min-height: 210px;
+        max-height: 210px;
 	width: 48%;
-	background: #3085a3;
+	background: #f2f2f2;
 	text-align: center;
 	cursor: pointer;
+        -webkit-box-shadow: 3px 3px 30px 0px rgba(50, 50, 50, 0.43);
+        -moz-box-shadow:    3px 3px 30px 0px rgba(50, 50, 50, 0.43);
+        box-shadow:         3px 3px 30px 0px rgba(50, 50, 50, 0.43);
 }
 
 .grid figure img {
@@ -982,11 +986,11 @@ figure.effect-sarah:hover p {
 
 figure.effect-zoe figcaption {
         top: auto;
-	bottom: 0;   
+	bottom: -.1em;   
 	padding: 0em;
 	height: 2.7em;
 	background: #fff; 
-        min-width: 200px;
+        min-width: 165px;
 	color: #3c4a50;
 	-webkit-transition: -webkit-transform 0.35s;
 	transition: transform 0.35s;

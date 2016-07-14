@@ -11,6 +11,10 @@
        <?php echo $this->Html->css('main');?>
        <?php echo $this->Html->css('fonts');?>
        <?php echo $this->Html->css('hover.css');?>
+        <link href='http://fonts.googleapis.com/css?family=Raleway:400,800,300' rel='stylesheet' type='text/css'>
+		
+		
+		<link rel="stylesheet" type="text/css" href="/bap/Website/app/webroot/css/test/set1.css" />
         <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" media="all">
         <title>Beta Alpha Psi</title>
         
