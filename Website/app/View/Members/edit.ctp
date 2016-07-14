@@ -77,7 +77,7 @@
                     <fieldset>                 
                         <div class="form-group col-lg-6">
                             <?php echo $this->Form->input('password', array(
-                                'type' => 'password',
+                                'type' => 'text',
                                 'class' => 'form-control',
                                 'maxlength' => 30,
                                 'placeholder' => 'Password',
@@ -177,10 +177,15 @@
                         </div>
                         <div class="form-group col-lg-6">
                             <?php echo $this->Form->input('state', array(
-                                'type' => 'text',
+                                'options' => array('Not in the US', 'Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 
+                                    'Colorado', 'Connecticut', 'Delaware', 'District of Columbia', 'Florida', 'Georgia', 'Hawaii', 
+                                    'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana', 'Maine', 'Maryland', 
+                                    'Massachusetts', 'Michigan', 'Minnesota', 'Mississippi', 'Missouri', 'Montana', 'Nebraska', 
+                                    'Nevada', 'New Hampshire', 'New Jersey', 'New Mexico', 'New York', 'North Carolina', 
+                                    'North Dakota', 'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania', 'Rhode Island', 'South Carolina', 
+                                    'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont', 'Virginia', 'Washington', 'West Virginia', 
+                                    'Wisconsin', 'Wyoming'),
                                 'class' => 'form-control',
-                                'maxlength' => 100,
-                                'placeholder' => 'State of Birth',
                                 'name' => 'state'));
                             ?>
                         </div>               
@@ -200,11 +205,9 @@
                         </div>            
                     </fieldset>
                 </div>
-                <!--Todo - Add minor, major, state, city, and bio inputs-->                                                                    
-
             </div>             
               <div class="form-group col-lg-12">         
-                <?php echo $this->Form->end(array('label' => 'Submit', 
+                <?php echo $this->Form->end(array('label' => 'Save', 
                             'class' => 'btn btn-primary', 
                             'name' => 'submit')); 
                 ?>                  

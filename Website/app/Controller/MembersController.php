@@ -43,7 +43,20 @@ class MembersController extends AppController{
     
     public function edit($id = null)
     {
+        //returns a single member
+        if(!$id)
+        {
+           throw new  NotFoundException(__('The Id was not found.'));
+        }
         
+        $member = $this->Member->findById($id);
+        
+        if(!$member)
+        {
+            throw new NotFoundException(__('This member does not exist.'));
+        }   
+        
+        $this->request->data = $member;     
     }
     
     public function adminview()
