@@ -6,11 +6,13 @@
 <div id="fh5co-work-section">
     <div class="container">
         <div class="row">
+            
             <div class="col-md-12 col-sm-12" >
                 <div class="animate-box text-center" style="position:relative;">  
                     <img src="/bap/assets/images/profile_logo.png"  alt="profile_logo" height="120" style="position:relative; top:-70px; ">
                 </div>
             </div>    
+     
             <div class="col-md-12 col-sm-12" >
                 <div class="animate-box text-center" style="position:relative;">  
                     <div style="width: 100%; height: 20px; border-bottom: 1px solid black; text-align: center; position:relative; top:-70px;">
@@ -21,55 +23,52 @@
                 </div>          
             </div>
         </div>
-    </div>
-     <div class="container">
-        <div class="row">
-            <div class="col-lg-4 col-md-4 col-sm-4">                
-                <h3 class="animate-box text-center">Faculty Advisor </h3>
-                <div class="fh5co-blog animate-box" style="background-image: url(/bap/Website/app/webroot/img/executive_board/Garverick,Michael.jpg)">     
+        <div class="container animate-box">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">  
+                    <div class="row">
+                        
+                        <div class="col-lg-4 col-md-4 col-sm-4">
+                            <span><h2>President</h2><h3 class="heading-section">Hunter Moisson</h3></span>
+                            <div class="fh5co-blog" style="background-image: url(/bap/Website/app/webroot/img/executive_board/Hunter,Moisson.jpeg); height: 250px; width: 230px;">
+                            </div>
+                        </div> 
+                        <div class="col-lg-4 col-md-4 col-sm-4">
+                            <span><h2>Vice President</h2><h3 class="heading-section">Jordan Yovanovich</h3></span>
+                            <div class="fh5co-blog" style="background-image: url(/bap/Website/app/webroot/img/executive_board/Jord,Yov.jpg); height: 250px; width: 230px;">
+                            </div>
+                        </div> 
+                    </div>
                 </div>
-                <h2 class="animate-box text-center">Michael Garverick </h2>
-            </div>
-            
-            <div class="col-lg-4 col-md-4 col-sm-4">
-                <h3 class="animate-box text-center">President </h3>
-                <div class="fh5co-blog animate-box" style="background-image: url(/bap/Website/app/webroot/img/executive_board/Hunter,Moisson.jpeg)">
-                </div>
-                <h2 class="animate-box text-center">Hunter Moisson</h2>
-            </div>
-            
-            <div class="col-lg-4 col-md-4 col-sm-4">
-                <h3 class="animate-box text-center">Director of External Operations</h3>
-                <div class="fh5co-blog animate-box" style="background-image: url(/bap/Website/app/webroot/img/executive_board/Culver,Kaitlin.jpeg)">
-                </div>
-                <h2 class="animate-box text-center">Kaitlin Culver</h2>
             </div>
         </div>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-            <div class="hovereffect">
-                <img class="img-responsive" src="http://placehold.it/350x200" alt="">
-                    <div class="overlay">
-                        <h2>Effect 10</h2>
-                        <p class="icon-links">
-                            <a href="#">
-                                <span class="fa fa-linkedin-square"></span>
-                            </a>
-                            <a href="#">
-                                <span class="fa fa-facebook"></span>
-                            </a>
-                            <a href="#">
-                                <span class="fa fa-instagram"></span>
-                            </a>
-                        </p>
+        <div class="container animate-box">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12"> 
+                   
+                   
+                        <div class="col-lg-offset-2 col-md-offset-2 col-sm-offset-2">
+                            <div class="col-lg-4">
+                            <span><h2>Director of External Operations</h2><h3 class="heading-section">Michael Garverick</h3></span>
+                            <div class="fh5co-blog" style="background-image: url(/bap/Website/app/webroot/img/executive_board/Garverick,Michael.jpg); height: 250px; width: 230px;">     
+                            </div>  
+                        
+                        
+          
+                            <span><h2>Faculty Advisor</h2><h3 class="heading-section">Michael Garverick</h3></span>
+                            <div class="fh5co-blog" style="background-image: url(/bap/Website/app/webroot/img/executive_board/Garverick,Michael.jpg); height: 250px; width: 230px;">     
+
+                           </div>
+                        </div>           
                     </div>
                     </div>
-        </div>
+                        
+                        
+  
+                </div>
+            </div>
         </div>
     </div>
-    <hr>
 </div>
 
     
