@@ -26,11 +26,10 @@
     <div class="row">
         <div class="col-lg-8 col-lg-offset-3">
             <div class="input-group">          
-                <?php echo $this->Form->create('Member'); ?>
+                <?php echo $this->Form->create('Member'); ?> 
                 <div class="form-inline">                  
                     <fieldset>                     
                         <div class="form-group col-lg-6">
-                            <?php echo $this->Form->input('id', array('type' => 'hidden')); ?>
                             <!--TODO - figure out a way to check capital letter of first char for all names before submitting form (possible javascript fix)-->
                             <?php echo $this->Form->input('first_name', array(
                                 'type' => 'text',
@@ -145,7 +144,7 @@
                     <fieldset>                 
                         <div class="form-group col-lg-6">
                             <?php echo $this->Form->input('graduation_semester', array(
-                                'options' => array('Spring', 'Summer', 'Fall'),
+                                'options' => array('Unknown', 'Spring', 'Summer', 'Fall'),
                                 'class' => 'form-control',
                                 'name' => 'graduation_semester'));
                             ?>
@@ -177,7 +176,7 @@
                         </div>
                         <div class="form-group col-lg-6">
                             <?php echo $this->Form->input('state', array(
-                                'options' => array('Not in the US', 'Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 
+                                'options' => array('Prefer not to answer','Not in the US', 'Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 
                                     'Colorado', 'Connecticut', 'Delaware', 'District of Columbia', 'Florida', 'Georgia', 'Hawaii', 
                                     'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana', 'Maine', 'Maryland', 
                                     'Massachusetts', 'Michigan', 'Minnesota', 'Mississippi', 'Missouri', 'Montana', 'Nebraska', 
@@ -204,14 +203,14 @@
                             ?>
                         </div>            
                     </fieldset>
-                </div>
-            </div>             
-              <div class="form-group col-lg-12">         
+                </div> 
+            </div>              
+              <div class="form-group col-lg-6">        
                 <?php echo $this->Form->end(array('label' => 'Save', 
                             'class' => 'btn btn-primary', 
                             'name' => 'submit')); 
                 ?>                  
-              </div>              
+              </div>  
             </form>         
         </div>
     </div>

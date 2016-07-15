@@ -54,9 +54,19 @@ class MembersController extends AppController{
         if(!$member)
         {
             throw new NotFoundException(__('This member does not exist.'));
-        }   
+        }    
         
-        $this->request->data = $member;     
+        //save new inputs to member
+        if($this->request->is('post') || $this->request->is('put'))
+        {       
+            $this->Member->id = $id; //set member id = to id caught
+            if($this->Member->save($this->request->data))
+            {
+                $this->redirect('index');
+            }
+        }
+        
+        $this->request->data = $member;    
     }
     
     public function adminview()
