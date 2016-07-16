@@ -128,7 +128,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d7e7d', end
 .fh5co-cover,
 .fh5co-hero {
   position: relative;
-  height: 800px;
+  height: 700px;
   font-weight: 300;
 }
 @media screen and (max-width: 768px) {
