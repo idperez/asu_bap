@@ -16,7 +16,7 @@
                                     <button type="submit" class="btn btn-primary" name="submit">Log In</button>
                                         <br>      
                                 </div>                     
-                            </form>         
+                            </form>      
                         </div>
                     </div>                      
                 </div>
