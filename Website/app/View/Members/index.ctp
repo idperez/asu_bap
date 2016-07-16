@@ -26,7 +26,7 @@
                     <div class="grid"> 
                         <?php for($i = 0; $i < 6; $i++) { ?>
                             <figure class="effect-zoe">  
-                                <img class="img-responsive" src="/bap/Website/app/webroot/img/profile_pics/Perez,Isidro.jpg" style="height: 190px;">
+                                <img class="img-responsive" src="/bap/Website/app/webroot/img/profile_pics/Perez,Isidro.jpg" style="height: 190px; width: 165px;">
                                 <figcaption>
                                     <p>Sofware Enigineer</p>
                                     <h6 class="icon-links">

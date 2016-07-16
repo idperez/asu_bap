@@ -27,49 +27,95 @@
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12">  
                     <div class="row">
-                        
+                        <div class="col-lg-offset-3"> 
                         <div class="col-lg-4 col-md-4 col-sm-4">
-                            <span><h2>President</h2><h3 class="heading-section">Hunter Moisson</h3></span>
+                            <span><h3>President</h3><h3 class="heading-section">Hunter Moisson</h3></span>
                             <div class="fh5co-blog" style="background-image: url(/bap/Website/app/webroot/img/executive_board/Hunter,Moisson.jpeg); height: 250px; width: 230px;">
+                                  <span><a class="hvr-wobble-vertical fa fa-linkedin-square fa-2x" aria-hidden="true"  style="color: whitesmoke;"  onclick="window.location.href='https://www.linkedin.com/in/hunter-moisson-a27a1426'"></a></span>
+                                <span><a class="hvr-wobble-vertical fa fa-envelope-square fa-2x" aria-hidden="true"  style="color: whitesmoke;"  onclick="window.location.href='mailto:president.asubap@gmail.com?Subject='"></a></span>                                   
+                            
                             </div>
                         </div> 
                         <div class="col-lg-4 col-md-4 col-sm-4">
-                            <span><h2>Vice President</h2><h3 class="heading-section">Jordan Yovanovich</h3></span>
+                            <span><h3>Vice President</h3><h3 class="heading-section">Jordan Yovanovich</h3></span>
                             <div class="fh5co-blog" style="background-image: url(/bap/Website/app/webroot/img/executive_board/Jord,Yov.jpg); height: 250px; width: 230px;">
+                                  <span><a class="hvr-wobble-vertical fa fa-linkedin-square fa-2x" aria-hidden="true"  style="color: whitesmoke;"  onclick="window.location.href='https://www.linkedin.com/in/hunter-moisson-a27a1426'"></a></span>
+                                <span><a class="hvr-wobble-vertical fa fa-envelope-square fa-2x" aria-hidden="true"  style="color: whitesmoke;"  onclick="window.location.href='mailto:vp.asubap@gmail.com?Subject='"></a></span>                                   
+                            
+                                
                             </div>
                         </div> 
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+        
+        <hr class="animate-box">
+        <br>
+        
         <div class="container animate-box">
             <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12"> 
-                   
-                   
-                        <div class="col-lg-offset-2 col-md-offset-2 col-sm-offset-2">
-                            <div class="col-lg-4">
-                            <span><h2>Director of External Operations</h2><h3 class="heading-section">Michael Garverick</h3></span>
-                            <div class="fh5co-blog" style="background-image: url(/bap/Website/app/webroot/img/executive_board/Garverick,Michael.jpg); height: 250px; width: 230px;">     
-                            </div>  
-                        
-                        
-          
-                            <span><h2>Faculty Advisor</h2><h3 class="heading-section">Michael Garverick</h3></span>
-                            <div class="fh5co-blog" style="background-image: url(/bap/Website/app/webroot/img/executive_board/Garverick,Michael.jpg); height: 250px; width: 230px;">     
-
-                           </div>
-                        </div>           
+                <div class="col-lg-12 col-md-12 col-sm-12">               
+                    <div class="col-lg-4 col-md-4 col-sm-4">
+                        <span><h4>Director of External Operations</h4><h3 class="heading-section">Kaitlin Culver</h3></span>
+                        <div class="fh5co-blog" style="background-image: url(/bap/Website/app/webroot/img/executive_board/Culver,Kaitlin.jpeg); height: 250px; width: 230px;"> 
+                              <span><a class="hvr-wobble-vertical fa fa-linkedin-square fa-2x" aria-hidden="true"  style="color: whitesmoke;"  onclick="window.location.href='https://www.linkedin.com/in/kaitlin-culver-b66aa193'"></a></span>
+                                <span><a class="hvr-wobble-vertical fa fa-envelope-square fa-2x" aria-hidden="true"  style="color: whitesmoke;"  onclick="window.location.href='mailto:natl.ro.asubap@gmail.com?Subject='"></a></span>                                   
+                            
+                        </div>  
                     </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4">
+                        <span><h4>Director of Internal Communications</h4><h3 class="heading-section">Allison McClelland</h3></span>
+                        <div class="fh5co-blog" style="background-image: url(/bap/Website/app/webroot/img/executive_board/McCelland,Allison.png); height: 250px; width: 230px;"> 
+                            <span><a class="hvr-wobble-vertical fa fa-linkedin-square fa-2x" aria-hidden="true"  style="color: whitesmoke;"  onclick="window.location.href='https://www.linkedin.com/in/allisonmcclelland'"></a></span>
+                                <span><a class="hvr-wobble-vertical fa fa-envelope-square fa-2x" aria-hidden="true"  style="color: whitesmoke;"  onclick="window.location.href='mailto:cmc.asubap@gmail.com?Subject='"></a></span>                                   
+                            
+                        </div>
                     </div>
-                        
-                        
-  
+                    <div class="col-lg-4 col-md-4 col-sm-4">
+                        <span><h4>Director of Recruiting</h4><h3 class="heading-section">George Kemper</h3></span>
+                        <div class="fh5co-blog" style="background-image: url(/bap/Website/app/webroot/img/executive_board/Kemper,George.jpeg); height: 250px; width: 230px;">
+                            <span><a class="hvr-wobble-vertical fa fa-linkedin-square fa-2x" aria-hidden="true"  style="color: whitesmoke;"  onclick="window.location.href='https://www.linkedin.com/in/georgewkemper'"></a></span>
+                                <span><a class="hvr-wobble-vertical fa fa-envelope-square fa-2x" aria-hidden="true"  style="color: whitesmoke;"  onclick="window.location.href='mailto:info.asubap@gmail.com?Subject='"></a></span>                                   
+                            
+                        </div>
+                    </div> 
                 </div>
             </div>
+        </div>
+        
+        <hr class="animate-box">
+        <br>
+        
+        <div class="container animate-box">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">  
+                    <div class="row">
+                        <div class="col-lg-offset-3"> 
+                        <div class="col-lg-4 col-md-4 col-sm-4">
+                            <span><h3>Treasurer</h3><h3 class="heading-section">Zachary Sorel</h3></span>
+                            <div class="fh5co-blog" style="background-image: url(/bap/Website/app/webroot/img/executive_board/Zach.jpg); height: 250px; width: 230px;">
+                                <span><a class="hvr-wobble-vertical fa fa-linkedin-square fa-2x" aria-hidden="true"  style="color: whitesmoke;"  onclick="window.location.href='https://www.linkedin.com/in/zachary-sorel-8161a8a1'"></a></span>
+                                <span><a class="hvr-wobble-vertical fa fa-envelope-square fa-2x" aria-hidden="true"  style="color: whitesmoke;"  onclick="window.location.href='mailto:treasurer.asubap@gmail.com?Subject='"></a></span>                                   
+                            </div>                    
+                        </div> 
+                        <div class="col-lg-4 col-md-4 col-sm-4">
+                            <span><h3>Faculty Advisor</h3><h3 class="heading-section">Michael Garverick</h3></span>
+                            <div class="fh5co-blog" style="background-image: url(/bap/Website/app/webroot/img/executive_board/Garverick,Michael.jpg); height: 250px; width: 230px;">
+                                <span><a class="hvr-wobble-vertical fa fa-linkedin-square fa-2x" aria-hidden="true"  style="color: whitesmoke;"  onclick="window.location.href='https://www.linkedin.com/in/mikegarv'"></a></span>
+                                <span><a class="hvr-wobble-vertical fa fa-envelope-square fa-2x" aria-hidden="true"  style="color: whitesmoke;"  onclick="window.location.href='mailto:Mike.Garv@asu.edu?Subject='"></a></span>                                         
+                            </div>
+                        </div> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
         </div>
     </div>
 </div>
+
 
     
 
