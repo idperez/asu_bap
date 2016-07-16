@@ -65,7 +65,7 @@
                         </div>
                         <div class="form-group col-lg-6">
                             <?php echo $this->Form->input('level', array(
-                                'options' => array('Candidate', 'Member', 'Officer', 'Alumni'),
+                                'options' => array('Candidate' => 'Candidate', 'Member' => 'Member', 'Officer' => 'Officer', 'Alumni' => 'Alumni'),
                                 'class' => 'form-control',
                                 'name' => 'level'));
                             ?>
@@ -176,14 +176,22 @@
                         </div>
                         <div class="form-group col-lg-6">
                             <?php echo $this->Form->input('state', array(
-                                'options' => array('Prefer not to answer','Not in the US', 'Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 
-                                    'Colorado', 'Connecticut', 'Delaware', 'District of Columbia', 'Florida', 'Georgia', 'Hawaii', 
-                                    'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana', 'Maine', 'Maryland', 
-                                    'Massachusetts', 'Michigan', 'Minnesota', 'Mississippi', 'Missouri', 'Montana', 'Nebraska', 
-                                    'Nevada', 'New Hampshire', 'New Jersey', 'New Mexico', 'New York', 'North Carolina', 
-                                    'North Dakota', 'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania', 'Rhode Island', 'South Carolina', 
-                                    'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont', 'Virginia', 'Washington', 'West Virginia', 
-                                    'Wisconsin', 'Wyoming'),
+                                'options' => array('Prefer not to answer' => 'Prefer not to answer','Not in the US' => 'Not in the US', 
+                                    'Alabama' => 'Alabama', 'Alaska' => 'Alaska', 'Arizona' => 'Arizona', 'Arkansas' => 'Arkansas', 
+                                    'California' => 'California', 'Colorado' => 'Colorado', 'Connecticut' => 'Connecticut', 
+                                    'Delaware' => 'Delaware', 'District of Columbia' => 'District of Columbia', 'Florida' => 'Florida', 
+                                    'Georgia' => 'Georgia', 'Hawaii' => 'Hawaii', 'Idaho' => 'Idaho', 'Illinois' => 'Illinois', 
+                                    'Indiana' => 'Indiana', 'Iowa' => 'Iowa', 'Kansas' => 'Kansas', 'Kentucky' => 'Kentucky', 
+                                    'Louisiana' => 'Louisiana', 'Maine' => 'Maine', 'Maryland' => 'Maryland', 'Massachusetts' => 'Massachusetts', 
+                                    'Michigan' => 'Michigan', 'Minnesota' => 'Minnesota', 'Mississippi' => 'Mississippi', 'Missouri' => 'Missouri', 
+                                    'Montana' => 'Montana', 'Nebraska' => 'Nebraska', 'Nevada' => 'Nevada', 'New Hampshire' => 'New Hampshire', 
+                                    'New Jersey' => 'New Jersey', 'New Mexico' => 'New Mexico', 'New York' => 'New York', 
+                                    'North Carolina' => 'North Carolina', 'North Dakota' => 'North Dakota', 'Ohio' => 'Ohio', 
+                                    'Oklahoma' => 'Oklahoma', 'Oregon' => 'Oregon', 'Pennsylvania' => 'Pennsylvania', 
+                                    'Rhode Island' => 'Rhode Island', 'South Carolina' => 'South Carolina', 'South Dakota' => 'South Dakota', 
+                                    'Tennessee' => 'Tennessee', 'Texas' => 'Texas', 'Utah' => 'Utah', 'Vermont' => 'Vermont', 
+                                    'Virginia' => 'Virginia', 'Washington' => 'Washington', 'West Virginia' => 'West Virginia', 
+                                    'Wisconsin' => 'Wisconsin', 'Wyoming' => 'Wyoming'),
                                 'class' => 'form-control',
                                 'name' => 'state'));
                             ?>
