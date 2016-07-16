@@ -18,8 +18,8 @@
                     <?php foreach($members as $member):?>
                     <!--todo - formatting adjustments -->
                         <?php if($member['Member']['level'] == 'Officer'){ ?>
-                                <div class="card col-md-2 col-sm-4 col-xs-4">
-                                    <?php echo $this->Html->image($member['Photo']['url'], array(
+                            <div class="card col-md-2 col-sm-4 col-xs-4">
+                                <?php echo $this->Html->image($member['Photo']['url'], array(
                                         "alt" => "Profile image",
                                         'url' => array('controller' => 'Members', 'action' => 'view', $member['Member']['id']),
                                         'class' => 'card-img-top',
