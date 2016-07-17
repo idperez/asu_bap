@@ -10,7 +10,8 @@
         <?php echo $this->Html->css('style');?>
         <?php echo $this->Html->css('main');?>
         <?php echo $this->Html->css('fonts');?>
-        <?php echo $this->Html->css('hover');?>
+        <?php echo $this->Html->css('hover-min');?>
+        <?php echo $this->Html->css('tile');?>
         <link href='http://fonts.googleapis.com/css?family=Raleway:400,800,300' rel='stylesheet' type='text/css'> 
         <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" media="all">
         <title>Beta Alpha Psi</title>
@@ -120,61 +121,61 @@
             </div>
         </div>
     <?php echo $this->fetch('content');?>
-            <footer> 
-                <div id="footer" >
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-6">
-                                C© 2016 Beta Alpha Psi, Beta Tau Chapter - Isidro Perez, Drew Demechko                     
-                            </div>
-                            <div class="col-md-6">
-                                <ul class="footer-menu">
-                                    <li><?php echo $this->Html->link(
-                                        'Home',
-                                        array('manager' => true, 'controller' => 'Pages', 'action' => 'display')
-                                    );?>
-                                    </li>
-                                    <li> <?php echo $this->Html->link(
-                                        'Members',
-                                        array('controller' => 'Members', 'action' => 'index')
-                                    );?>
-                                    </li>
-                                    <li>
-                                    <?php echo $this->Html->link(
-                                        'Info',
-                                        array('controller' => 'Info', 'action' => 'index')
-                                    );?>
-                                    </li>
-                                    <li>
-                                    <?php echo $this->Html->link(
-                                        'About',
-                                        array('controller' => 'About', 'action' => 'index')
-                                    );?>
-                                    </li>
-                                    <li>
-                                    <?php echo $this->Html->link(
-                                        'Contact',
-                                        array('controller' => 'Contact', 'action' => 'index')
-                                    );?>
-                                    </li>
-                                    <li>
-                                    <?php echo $this->Html->link(
-                                        'Login',
-                                        array('controller' => 'Login', 'action' => 'index')
-                                    );?>
-                                    </li> 
-                                </ul>
-                            </div>
-                        </div>
+    <footer> 
+        <div id="footer" >
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        C© 2016 Beta Alpha Psi, Beta Tau Chapter - Isidro Perez, Drew Demechko                     
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="footer-menu">
+                            <li><?php echo $this->Html->link(
+                                'Home',
+                                array('manager' => true, 'controller' => 'Pages', 'action' => 'display')
+                            );?>
+                            </li>
+                            <li> <?php echo $this->Html->link(
+                                'Members',
+                                array('controller' => 'Members', 'action' => 'index')
+                            );?>
+                            </li>
+                            <li>
+                            <?php echo $this->Html->link(
+                                'Info',
+                                array('controller' => 'Info', 'action' => 'index')
+                            );?>
+                            </li>
+                            <li>
+                            <?php echo $this->Html->link(
+                                'About',
+                                array('controller' => 'About', 'action' => 'index')
+                            );?>
+                            </li>
+                            <li>
+                            <?php echo $this->Html->link(
+                                'Contact',
+                                array('controller' => 'Contact', 'action' => 'index')
+                            );?>
+                            </li>
+                            <li>
+                            <?php echo $this->Html->link(
+                                'Login',
+                                array('controller' => 'Login', 'action' => 'index')
+                            );?>
+                            </li> 
+                        </ul>
                     </div>
                 </div>
-        </footer>  
-        <?php echo $this->Html->script('jquery.min.js');?>
-        <?php echo $this->Html->script('jquery.easing.1.3.min.js');?>
-        <?php echo $this->Html->script('hoverIntent.js');?>    
-        <?php echo $this->Html->script('jquery.waypoints.min.js');?> 
-        <?php echo $this->Html->script('magnific-popup-options.min.js');?> 
-        <?php echo $this->Html->script('main.js');?>    
-        <?php echo $this->Html->script('respond.min.js');?>
-        <?php echo $this->Html->script('superfish.js');?>     
+            </div>
+        </div>
+    </footer>  
+    <?php echo $this->Html->script('jquery.min.js');?>
+    <?php echo $this->Html->script('jquery.easing.1.3.min.js');?>
+    <?php echo $this->Html->script('hoverIntent.js');?>    
+    <?php echo $this->Html->script('jquery.waypoints.min.js');?> 
+    <?php echo $this->Html->script('magnific-popup-options.min.js');?> 
+    <?php echo $this->Html->script('main.js');?>    
+    <?php echo $this->Html->script('respond.min.js');?>
+    <?php echo $this->Html->script('superfish.js');?>     
 </html>
