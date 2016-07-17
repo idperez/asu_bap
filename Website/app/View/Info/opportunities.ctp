@@ -12,7 +12,7 @@
                 </div>
                 <div class="animate-box" style="width: 100%; height: 20px; border-bottom: 1px solid black; text-align: center">
                     <span style="font-size: 30px; background-color: #F3F5F6; padding: 0 10px;">
-                    Opportunities
+                        Opportunities
                     </span>
                 </div>
             </div>    
@@ -35,7 +35,7 @@
                 </div>
               </div>
               <div class="panel panel-default" >
-                <h3 class="heading-section">Opportunity Titl</h3>
+                <h3 class="heading-section">Opportunity Title</h3>
                 <div style="position:relative; top:-20px;">
                     <div class="panel-body">Would you like to earn good money working for Apple this next year? Is a flexible part time schedule, something you are looking for? Do you want rewarding/meaningful work where you ARE the difference? How about a job that can grow into a career? Motivated Sun Devils can work for Apple from home. All majors with a 2.7+ GPA who will be enrolled at ASU through May 2017 are encouraged to apply
                         <br><br>
@@ -107,6 +107,9 @@
                 <a target="_blank" title="follow me on instagram" href="http://www.instagram.com/asu_bap">
                     <img alt="follow me on instagram" src="https://c866088.ssl.cf3.rackcdn.com/assets/instagram30x30.png" border=0>
                 </a>
+            </div>
+            <div class="col-md-5 col-sm-5">
+                <iframe width="460" height="260" src="https://www.youtube.com/embed/s2TKXYWNfMk" frameborder="0" allowfullscreen></iframe>
             </div>
         </div>
     </div>

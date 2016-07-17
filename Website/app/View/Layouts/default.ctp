@@ -71,7 +71,7 @@
                                                     </li>
                                                     <li><?php echo $this->Html->link(
                                                             'Join',
-                                                            array('controller' => 'Info', 'Join' => 'index')
+                                                            array('controller' => 'Join', 'action' => 'index')
                                                         );?>
                                                     </li>
                                                 </ul>
