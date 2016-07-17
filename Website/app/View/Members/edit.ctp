@@ -27,31 +27,19 @@
         <div class="col-lg-8 col-lg-offset-3">
             <div class="input-group">          
                 <?php echo $this->Form->create('Member'); ?> 
-                <div class="form-inline">                  
-                    <fieldset>                     
-                        <div class="form-group col-lg-6">
-                            <!--TODO - figure out a way to check capital letter of first char for all names before submitting form (possible javascript fix)-->
-                            <?php echo $this->Form->input('first_name', array(
+                <div class="form-inline">
+                    <fieldset>                 
+                        <div class="form-group col-lg-12">
+                            <?php echo $this->Form->input('title', array(
                                 'type' => 'text',
                                 'class' => 'form-control',
-                                'maxlength' => 24,
-                                'placeholder' => 'First Name',
-                                'id' => 'first_name',
-                                'name' => 'first_name'));
+                                'maxlength' => 50,
+                                'placeholder' => 'Full-time Student',
+                                'name' => 'title'));
                             ?>
-                        </div>      
-                        <div class="form-group col-lg-6">
-                            <?php echo $this->Form->input('last_name', array(
-                                'type' => 'text',
-                                'class' => 'form-control',
-                                'maxlength' => 24,
-                                'placeholder' => 'Last Name',
-                                'id' => 'last_name',
-                                'name' => 'last_name'));
-                            ?>                
-                        </div>
+                        </div>               
                     </fieldset>
-                </div>   
+                </div>  
                 <div class="form-inline">
                     <fieldset>                 
                         <div class="form-group col-lg-6">
@@ -64,33 +52,13 @@
                             ?>
                         </div>
                         <div class="form-group col-lg-6">
-                            <?php echo $this->Form->input('level', array(
-                                'options' => array('Candidate' => 'Candidate', 'Member' => 'Member', 'Officer' => 'Officer', 'Alumni' => 'Alumni'),
-                                'class' => 'form-control',
-                                'name' => 'level'));
-                            ?>
-                        </div>               
-                    </fieldset>
-                </div>
-                <div class="form-inline">
-                    <fieldset>                 
-                        <div class="form-group col-lg-6">
-                            <?php echo $this->Form->input('password', array(
-                                'type' => 'text',
-                                'class' => 'form-control',
-                                'maxlength' => 30,
-                                'placeholder' => 'Password',
-                                'name' => 'password'));
-                            ?>
-                        </div>
-                        <div class="form-group col-lg-6">
-                            <?php echo $this->Form->input('title', array(
-                                'type' => 'text',
-                                'class' => 'form-control',
-                                'maxlength' => 50,
-                                'placeholder' => 'Full-time Student',
-                                'name' => 'title'));
-                            ?>
+                        <?php echo $this->Form->input('password', array(
+                            'type' => 'text',
+                            'class' => 'form-control',
+                            'maxlength' => 30,
+                            'placeholder' => 'Password',
+                            'name' => 'password'));
+                        ?>
                         </div>               
                     </fieldset>
                 </div>    
