@@ -4,8 +4,8 @@
         <div class="desc animate-box" style="position:relative; top:300px; ">
              <h2>About Us</h2>
         </div>
-        </div>
     </div>
+</div>
 <div id="fh5co-content-section">
     <div class="container">
         <div class="row">
@@ -32,10 +32,10 @@
                 <div class="fh5co-testimonial text-center animate-box">
                     <h2>Our Borders Extend Beyond Arizona</h2>
                     <figure>
-                    <?php echo $this->Html->image('logo.png', array('alt' => 'mission')) ?>
+                        <?php echo $this->Html->image('logo.png', array('alt' => 'mission')) ?>
                     </figure>
                     <blockquote>
-                    <p>Founded in 1919, Beta Alpha Psi is an honor organization for financial information students and professionals. There are over 300 chapters on college and university campuses with over 300,000 members initiated since Beta Alpha Psi's formation.</p>           
+                        <p>Founded in 1919, Beta Alpha Psi is an honor organization for financial information students and professionals. There are over 300 chapters on college and university campuses with over 300,000 members initiated since Beta Alpha Psi's formation.</p>           
                     </blockquote>
                 </div>
             </div>
