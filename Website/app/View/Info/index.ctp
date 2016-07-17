@@ -22,8 +22,8 @@
                     <div class="row">
                         <div class="col-md-4 col-sm-4">
                             <div class="services animate-box">
-                                <span><a class="hvr-wobble-vertical fa fa-newspaper-o fa-4x" ria-hidden="true" style="color: #bfbfbf" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Info', 'action'=>'announcements'))?>'"></a></span>
-                                <h3>Announcements</h3>
+                                <span><a class="hvr-wobble-vertical fa fa-paypal fa-4x" ria-hidden="true" style="color: #bfbfbf" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Info', 'action'=>'sponsor'))?>'"></a></span>
+                                <h3>Sponsor</h3>
                                 <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
                             </div>
                         </div>
@@ -49,8 +49,8 @@
                     <div class="row">
                         <div class="col-md-4 col-sm-4">
                             <div class="services animate-box">                          
-                                <span><a class="hvr-wobble-vertical fa fa-paypal fa-4x" aria-hidden="true" style="color: #bfbfbf;" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Info', 'action'=>'sponsor'))?>'"></a></span>
-                                <h3>Sponsor</h3>
+                                <span><a class="hvr-wobble-vertical fa fa-binoculars fa-4x" aria-hidden="true" style="color: #bfbfbf;" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Info', 'action'=>'opportunities'))?>'"></a></span>
+                                <h3>Opportunities</h3>
                                 <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
                             </div>
                         </div>
@@ -73,7 +73,6 @@
             </div>
         </div>
     </div>
-    
 </body>
 
 

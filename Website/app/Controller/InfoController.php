@@ -54,6 +54,11 @@ class InfoController extends AppController {
     public function events() {
         
     }
+    
+    public function opportunities() {
+        
+    }
+    
     public function policies() {
         
     }
