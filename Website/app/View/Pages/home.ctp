@@ -1,7 +1,7 @@
 <div class="fh5co-hero">
     <div class="fh5co-overlay"></div>
         <div class="fh5co-cover text-center" style="background-image: url(/bap/Website/app/webroot/img/tempe.jpg); ">
-        <div class="desc animate-box" style="position:relative; top:200px; ">                                
+        <div class="desc animate-box" style="position:relative; top:300px; ">                                
             <?php echo $this->Html->image('logo.png', array('width'=>'200px', 'height' => '200px', 'main')) ?>
 
             <span>Beta Tau Chapter</span>
@@ -107,7 +107,7 @@
         <div class="work-wrap">
             <div class="container">
                 <div class="fh5co-project-inner row">
-                    <div class="fh5co-imgs col-md-8 animate-box">
+                    <div class="fh5co-imgs col-md-8 animate-box" >
                         <div class="img-holder-2 animate-box">
                             <?php echo $this->Html->image('about-image.jpg', array('height'=>'445', 'width'=>'640')) ?>         
                         </div>
@@ -118,7 +118,7 @@
                     <div class="fh5co-text col-md-4 animate-box">
                         <h3>Want To Become A Member?</h3>
                         <h2 >Join the club that will elevate you.</h2>
-                        <p style="position:relative; top:0px;">See when to apply.</p>
+                        <p>See when to apply.</p>
                         <span ><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Join', 'action'=>'index'))?>'" style="position:relative; top:-30px;">Join</a></span>
                     </div>
                 </div>

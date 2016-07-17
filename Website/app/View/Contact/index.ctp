@@ -1,11 +1,11 @@
 <div class="fh5co-hero">
     <div class="fh5co-overlay"></div>
-        <div class="fh5co-cover text-center" style="background-image: url(/bap/Website/app/webroot/img/contact.jpg); ">
-            <div class="desc animate-box" style="position:relative; top:280px; ">
-                 <h2>Contact Us</h2>
-            </div>
-            </div>
+    <div class="fh5co-cover text-center" style="background-image: url(/bap/Website/app/webroot/img/contact.jpg); ">
+        <div class="desc animate-box" style="position:relative; top:300px; ">
+             <h2>Contact Us</h2>
         </div>
+    </div>
+</div>
  <div id="fh5co-work-section">
     <div class="container">
         <div class="row animate-box">         

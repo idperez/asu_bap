@@ -1,7 +1,7 @@
 <div class="fh5co-hero">
     <div class="fh5co-overlay"></div>
         <div class="fh5co-cover text-center" style="background-image: url(/bap/Website/app/webroot/img/wp-carey-building.jpg); ">
-            <div class="desc animate-box" style="position:relative; top:280px; ">
+            <div class="desc animate-box" style="position:relative; top:300px; ">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-8 col-md-offset-4">
