@@ -69,15 +69,6 @@ class MembersController extends AppController{
         $this->request->data = $member;    
     }
     
-    public function adminview()
-    {
-        //returns all members to the view
-        $memberdata = $this->Member->find('all', 
-            array('order' => 'last_name'));
-            
-        $this->set('members', $memberdata);
-    }
-    
     public function delete($id = null)
     {
         $data = $this->Member->findById($id);

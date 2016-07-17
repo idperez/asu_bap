@@ -38,6 +38,14 @@ class Member extends AppModel{
         'last_name' => array(
             'rule' => '/^[a-zA-Z]*$/', //regex for exluding all numberic and special chars
             'message' => 'Please enter a valid Last Name.'    
+    ),
+        'phone' => array(
+            'rule' => 'phone',
+            'message' => 'Please use a valid 10 digit phone number.'    
+    ),
+        'linkedin' => array(
+            'rule' => 'url',
+            'message' => 'Please include a valid url (ex: https://linkedin.com).'
     ));
 }
 ?>
