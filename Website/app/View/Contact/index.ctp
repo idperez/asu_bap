@@ -6,27 +6,27 @@
         </div>
     </div>
 </div>
- <div id="fh5co-work-section">
+<div id="fh5co-work-section">
     <div class="container">
         <div class="row animate-box">         
             <div class="col-md-9">
                 <div class="row">
                     <div class="col-md-3 col-sm-3">
-                        <div class="fh5co-blog" style="background-image: url(/bap/Website/app/webroot/img/executive_board/Hunter,Moisson.jpeg); width: 200px; height: 220px;"></div>
+                        <div class="fh5co-blog" style="background-image: url(/bap/Website/app/webroot/img/executive_board/Kemper,George.jpeg); width: 200px; height: 220px;"></div>
                     </div> 
-                    <div class="col-md-4 col-sm-4">
+                    <div class="col-md-6 col-sm-6">
                         <div style="position:relative; left: 20px;">
-                            <h2>Hunter Moisson</h2>
-                            <h3 style="position:relative; top:-20px;">President</h3>
+                            <h2>Director of Recruiting</h2>
+                            <h3 style="position:relative; top:-20px;">George Kemper</h3>
                             <div style="position:relative; top:-40px;">
-                                <span><a class="hvr-wobble-vertical fa fa-linkedin-square fa-2x" aria-hidden="true"  style="color: #bfbfbf"  onclick="window.location.href='https://www.linkedin.com/in/hunter-moisson-a27a1426'"></a></span>
-                                <span><a class="hvr-wobble-vertical fa fa-envelope-square fa-2x" aria-hidden="true"  style="color: #bfbfbf"  onclick="window.location.href='mailto:president.asubap@gmail.com?Subject='"></a></span>                                                                                
+                                <span><a class="hvr-wobble-vertical fa fa-linkedin-square fa-2x" aria-hidden="true"  style="color: #bfbfbf"  onclick="window.location.href='https://www.linkedin.com/in/georgewkemper'"></a></span>
+                                <span><a class="hvr-wobble-vertical fa fa-envelope-square fa-2x" aria-hidden="true"  style="color: #bfbfbf"  onclick="window.location.href='mailto:info.asubap@gmail.com?Subject='"></a></span>                                                   
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-3 animate-box">
+            <div class="col-md-3 col-sm-6 animate-box">
                 <h3 class="heading-section">Rush Inquiries</h3>      
                 <p style="position:relative; top: -15px;">See when to apply.</p>
                 <span><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Join', 'action'=>'index'))?>'" style="position:relative; top:-30px;">Join</a></span>            
@@ -38,17 +38,17 @@
            <div class="col-md-9">
                <div class="row">
                    <div class="col-md-3 col-sm-3">
-                       <div class="fh5co-blog" style="background-image: url(/bap/Website/app/webroot/img/executive_board/Jord,Yov.jpg); width: 200px; height: 220px;"></div>
+                       <div class="fh5co-blog" style="background-image: url(/bap/Website/app/webroot/img/executive_board/Culver,Kaitlin.jpeg); width: 200px; height: 220px;"></div>
                    </div> 
-                   <div class="col-md-4 col-sm-4">
-                       <div style="position:relative; left: 20px;">
-                           <h2>Jordan Yovanovich</h2>
-                           <h3 style="position:relative; top:-20px;">Vice President</h3>
-                           <div style="position:relative; top:-40px;">
-                                <span><a class="hvr-wobble-vertical fa fa-linkedin-square fa-2x" aria-hidden="true"  style="color: #bfbfbf"  onclick="window.location.href='https://www.linkedin.com/in/hunter-moisson-a27a1426'"></a></span>
-                                <span><a class="hvr-wobble-vertical fa fa-envelope-square fa-2x" aria-hidden="true"  style="color: #bfbfbf"  onclick="window.location.href='mailto:vp.asubap@gmail.com?Subject='"></a></span>                                              
-                           </div>
-                       </div>
+                   <div class="col-md-6 col-sm-6">
+                        <div style="position:relative; left: 20px;">
+                            <h2>Director of External Operations</h2>
+                            <h3 style="position:relative; top:-20px;">Kaitlin Culver</h3>
+                            <div style="position:relative; top:-40px;">
+                                <span><a class="hvr-wobble-vertical fa fa-linkedin-square fa-2x" aria-hidden="true"  style="color: #bfbfbf"  onclick="window.location.href='https://www.linkedin.com/in/kaitlin-culver-b66aa193'"></a></span>
+                                <span><a class="hvr-wobble-vertical fa fa-envelope-square fa-2x" aria-hidden="true"  style="color: #bfbfbf"  onclick="window.location.href='mailto:natl.ro.asubap@gmail.com?Subject='"></a></span>                                   
+                            </div>
+                        </div>
                    </div>
                </div>
            </div>

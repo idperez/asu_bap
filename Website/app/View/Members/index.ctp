@@ -1,3 +1,4 @@
+<?php $_SESSION['page'] = "members" ?>
 <div class="fh5co-hero-ish">
     <div class="fh5co-overlay"></div>
        
