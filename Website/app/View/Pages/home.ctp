@@ -96,7 +96,7 @@
                 <div class="fh5co-about-us animate-box">
                     <h2 class="text-center">About Us</h2>
                     <?php echo $this->Html->image('group_photo.jpg', array('alt' => 'about')) ?>            
-                    <p>Founded in 1919, Beta Alpha Psi is an honor organization for financial information students and professionals. There are over 300 chapters on college and university campuses with over 300,000 members initiated since Beta Alpha Psi's formation. <br><a onclick="window.location.href='<?php echo Router::url(array('controller'=>'About', 'action'=>'index'))?>'">Know More About Us</a></p>
+                    <p>Founded in 1919, Beta Alpha Psi is an honor organization for financial information students and professionals. There are over 300 chapters on college and university campuses with over 300,000 members initiated since Beta Alpha Psi's formation. <br><a onclick="window.location.href='<?php echo Router::url(array('controller'=>'About', 'action'=>'index'))?>'" style="cursor: pointer;">Know More About Us</a></p>
                 </div>
             </div>
         </div>

@@ -42,7 +42,7 @@
             <div class="col-md-6 col-sm-6">
                 <div class="fh5co-about-us animate-box">
                     <?php echo $this->Html->image('global_about.jpg', array('alt' => 'about')) ?>            
-                    <p>Founded in 1919, Beta Alpha Psi is an honor organization for financial information students and professionals. There are over 300 chapters on college and university campuses with over 300,000 members initiated since Beta Alpha Psi's formation. <br><a onclick="window.location.href='https://www.bap.org/'">Visit our global site.</a></p>
+                    <p>Founded in 1919, Beta Alpha Psi is an honor organization for financial information students and professionals. There are over 300 chapters on college and university campuses with over 300,000 members initiated since Beta Alpha Psi's formation. <br><a onclick="window.location.href='https://www.bap.org/'" style="cursor: pointer;">Visit our global site.</a></p>
                 </div>
             </div>
         </div>

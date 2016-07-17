@@ -33,24 +33,18 @@
                             </h1>
                             <nav id="fh5co-menu-wrap" role="navigation">
                                 <ul class="sf-menu" id="fh5co-primary-menu">
-
-                                    <li class="active">
                                     <li>
                                         <?php echo $this->Html->link(
                                             'Home',
                                             array('manager' => true, 'controller' => 'Pages', 'action' => 'display')
                                         );?>
                                     </li>
-
-                                    <li class="active">
                                     <li>
                                         <?php echo $this->Html->link(
                                             'Members',
                                             array('controller' => 'Members', 'action' => 'index')
                                         );?>
                                     </li>
-
-                                    <li class="active">
                                     <li>
                                         <?php echo $this->Html->link(
                                             'Info',
@@ -58,10 +52,30 @@
                                         );?>
                                         <ul class="fh5co-sub-menu">
                                             <li><?php echo $this->Html->link(
-                                                    'Announcements',
-                                                    array('controller' => 'Info', 'action' => 'announcements')
+                                                    'Sponsor',
+                                                    array('controller' => 'Info', 'action' => 'sponsor')
                                                 );?>
                                             </li>
+                                            <li>
+                                                <a class="fh5co-sub-ddown" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Info', 'action'=>'announcements'))?>'" style="cursor: pointer;">Announcements</a>
+                                                <ul class="fh5co-sub-menu">
+                                                    <li><?php echo $this->Html->link(
+                                                            'Events',
+                                                            array('controller' => 'Info', 'action' => 'events')
+                                                        );?>
+                                                    </li>
+                                                    <li><?php echo $this->Html->link(
+                                                            'Opportunities',
+                                                            array('controller' => 'Info', 'action' => 'opportunities')
+                                                        );?>
+                                                    </li>
+                                                    <li><?php echo $this->Html->link(
+                                                            'Join',
+                                                            array('controller' => 'Info', 'Join' => 'index')
+                                                        );?>
+                                                    </li>
+                                                </ul>
+                                            </li> 
                                             <li>
                                                 <a class="fh5co-sub-ddown">Board</a>
                                                 <ul class="fh5co-sub-menu">
@@ -78,34 +92,24 @@
                                                 </ul>
                                             </li>     
                                             <li><?php echo $this->Html->link(
-                                                    'Events',
-                                                    array('controller' => 'Info', 'action' => 'events')
-                                                );?>
-                                            </li>
-                                            <li><?php echo $this->Html->link(
                                                     'Policies',
                                                     array('controller' => 'Info', 'action' => 'policies')
                                                 );?>
-                                            </li>
+                                            </li>            
                                         </ul>
                                     </li>              
-                                    <li class="active">
                                     <li>
                                         <?php echo $this->Html->link(
                                             'About',
                                             array('controller' => 'About', 'action' => 'index')
                                         );?>
                                     </li>
-
-                                    <li class="active">
                                     <li>
                                         <?php echo $this->Html->link(
                                             'Contact',
                                             array('controller' => 'Contact', 'action' => 'index')
                                         );?>
                                     </li>
-
-                                    <li class="active">
                                     <li>
                                         <?php echo $this->Html->link(
                                             'Login',
