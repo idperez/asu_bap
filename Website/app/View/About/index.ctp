@@ -1,69 +1,113 @@
 <div class="fh5co-hero">
     <div class="fh5co-overlay"></div>
-        <div class="fh5co-cover text-center" style="background-image: url(/bap/Website/app/webroot/img/aboutus.jpg); ">
-            <div class="desc animate-box" style="position:relative; top:300px; ">
-                 <h2>About Us</h2>
+    <div class="fh5co-cover text-center" style="background-image: url(/bap/Website/app/webroot/img/aboutus.jpg); ">
+        <div class="desc animate-box" style="position:relative; top:300px; ">
+             <h2>About Us</h2>
+        </div>
+        </div>
+    </div>
+<div id="fh5co-content-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-6">
+                <div class="fh5co-about-us animate-box">
+                    <img style="height: 400px; width: 550px;"<?php echo $this->Html->image('about_middle.jpg', array('alt' => 'about')) ?>     
+                    <p>Founded in 1919, Beta Alpha Psi is an honor organization for financial information students and professionals. There are over 300 chapters on college and university campuses with over 300,000 members initiated since Beta Alpha Psi's formation.
+                </div>
             </div>
+            <div class="col-md-6 col-sm-6">
+                <div class="fh5co-about-us animate-box">
+                    <img style="height: 400px; width: 550px;"<?php echo $this->Html->image('about_middle_2.jpg', array('alt' => 'about')) ?>            
+                    <p>Founded in 1919, Beta Alpha Psi is an honor organization for financial information students and professionals. There are over 300 chapters on college and university campuses with over 300,000 members initiated since Beta Alpha Psi's formation.
+                </div>
             </div>
         </div>
- <div id="fh5co-work-section">
+    </div>
+</div>
+<hr>
+<div id="fh5co-content-section">
     <div class="container">
-        <div class="row animate-box">         
-            <div class="col-md-9">
-                <div class="row">
-                    <div class="col-md-3 col-sm-3">
-                        <div class="fh5co-blog" style="background-image: url(/bap/Website/app/webroot/img/executive_board/Hunter,Moisson.jpeg); width: 200px; height: 220px;"></div>
-                    </div> 
-                    <div class="col-md-4 col-sm-4">
-                        <div style="position:relative; left: 20px;">
-                            <h2>Hunter Moisson</h2>
-                            <h3 style="position:relative; top:-20px;">President</h3>
-                            <div style="position:relative; top:-40px;">
-                                <span><a class="hvr-wobble-vertical fa fa-linkedin-square fa-2x" aria-hidden="true"  style="color: #bfbfbf"  onclick="window.location.href='https://www.linkedin.com/in/hunter-moisson-a27a1426'"></a></span>
-                                <span><a class="hvr-wobble-vertical fa fa-envelope-square fa-2x" aria-hidden="true"  style="color: #bfbfbf"  onclick="window.location.href='mailto:president.asubap@gmail.com?Subject='"></a></span>                                                                                
+        <div class="row">
+            <div class="col-md-6 col-sm-6">
+                <div class="fh5co-testimonial text-center animate-box">
+                    <h2>Our Borders Extend Beyond Arizona</h2>
+                    <figure>
+                    <?php echo $this->Html->image('logo.png', array('alt' => 'mission')) ?>
+                    </figure>
+                    <blockquote>
+                    <p>Founded in 1919, Beta Alpha Psi is an honor organization for financial information students and professionals. There are over 300 chapters on college and university campuses with over 300,000 members initiated since Beta Alpha Psi's formation.</p>           
+                    </blockquote>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-6">
+                <div class="fh5co-about-us animate-box">
+                    <?php echo $this->Html->image('global_about.jpg', array('alt' => 'about')) ?>            
+                    <p>Founded in 1919, Beta Alpha Psi is an honor organization for financial information students and professionals. There are over 300 chapters on college and university campuses with over 300,000 members initiated since Beta Alpha Psi's formation. <br><a onclick="window.location.href='https://www.bap.org/'">Visit our global site.</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<hr>
+<div id="fh5co-services-section" class="border-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 animate-box">
+                    <h3 class="heading-section">Get To Know Us More</h3>
+                    <p>Far far away, behind the word mountains, far from the countries Vokalia and </p>
+                </div>
+                <div class="col-md-9 col-sm-12">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-4">
+                            <div class="services animate-box">
+                                <span><a class="hvr-wobble-vertical fa fa-newspaper-o fa-4x" ria-hidden="true" style="color: #bfbfbf" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Info', 'action'=>'announcements'))?>'"></a></span>
+                                <h3>Announcements</h3>
+                                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
                             </div>
                         </div>
+                        <div class="col-md-4 col-sm-4">
+                            <div class="services animate-box">
+                                <span><a class="hvr-wobble-vertical fa fa-briefcase fa-4x" aria-hidden="true" style="color: #bfbfbf;" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Info', 'action'=>'advisory_board'))?>'"></a></span>
+                                <h3>Advisory Board</h3>
+                                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-4">
+                            <div class="services animate-box">
+                                <span><a class="hvr-wobble-vertical fa fa-users fa-4x" aria-hidden="true" style="color: #bfbfbf;" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Info', 'action'=>'executive_board'))?>'"></a></span>
+                                <h3>Executive Board</h3>
+                                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                            </div>
+                        </div>	
+                    </div>
+                </div>
+                <div class="col-md-3 animate-box">
+                </div>
+                <div class="col-md-9 col-sm-12">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-4">
+                            <div class="services animate-box">                          
+                                <span><a class="hvr-wobble-vertical fa fa-paypal fa-4x" aria-hidden="true" style="color: #bfbfbf;" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Info', 'action'=>'sponsor'))?>'"></a></span>
+                                <h3>Sponsor</h3>
+                                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-4">
+                            <div class="services animate-box">
+                                <span><a class="hvr-wobble-vertical fa fa-calendar fa-4x" aria-hidden="true" style="color: #bfbfbf;" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Info', 'action'=>'events'))?>'"></a></span>
+                                <h3>Events</h3>
+                                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-4">
+                            <div class="services animate-box">
+                                <span><a class="hvr-wobble-vertical fa fa-clipboard fa-4x" aria-hidden="true" style="color: #bfbfbf;" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Info', 'action'=>'policies'))?>'"></a></span>
+                                <h3>Policies</h3>
+                                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                            </div>
+                        </div>	
                     </div>
                 </div>
             </div>
-            <div class="col-md-3 animate-box">
-                <h3 class="heading-section">Rush Inquiries</h3>      
-                <p style="position:relative; top: -15px;">See when to apply.</p>
-                <span><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Join', 'action'=>'index'))?>'" style="position:relative; top:-30px;">Join</a></span>            
-            </div>
         </div>
     </div>
-    <div class="container">
-       <div class="row animate-box">         
-           <div class="col-md-9">
-               <div class="row">
-                   <div class="col-md-3 col-sm-3">
-                       <div class="fh5co-blog" style="background-image: url(/bap/Website/app/webroot/img/executive_board/Jord,Yov.jpg); width: 200px; height: 220px;"></div>
-                   </div> 
-                   <div class="col-md-4 col-sm-4">
-                       <div style="position:relative; left: 20px;">
-                           <h2>Jordan Yovanovich</h2>
-                           <h3 style="position:relative; top:-20px;">Vice President</h3>
-                           <div style="position:relative; top:-40px;">
-                                <span><a class="hvr-wobble-vertical fa fa-linkedin-square fa-2x" aria-hidden="true"  style="color: #bfbfbf"  onclick="window.location.href='https://www.linkedin.com/in/hunter-moisson-a27a1426'"></a></span>
-                                <span><a class="hvr-wobble-vertical fa fa-envelope-square fa-2x" aria-hidden="true"  style="color: #bfbfbf"  onclick="window.location.href='mailto:vp.asubap@gmail.com?Subject='"></a></span>                                              
-                           </div>
-                       </div>
-                   </div>
-               </div>
-           </div>
-           <div class="col-md-3 animate-box">
-                <h3 class="heading-section">Follow us</h3>
-                 <a target="_blank" title="find us on Facebook" href="http://www.facebook.com/bapasu">
-                    <img alt="follow us on facebook" src="//login.create.net/images/icons/user/facebook_30x30.png" border=0>
-                </a>
-                <a target="_blank" title="follow me on twitter" href="http://www.twitter.com/asu_bap">
-                    <img alt="follow me on twitter" src="//login.create.net/images/icons/user/twitter-b_30x30.png" border=0>
-                </a>
-                <a target="_blank" title="follow me on instagram" href="http://www.instagram.com/asu_bap">
-                    <img alt="follow me on instagram" src="https://c866088.ssl.cf3.rackcdn.com/assets/instagram30x30.png" border=0>
-                </a>
-            </div>
-       </div>
-    </div>
-</div>
