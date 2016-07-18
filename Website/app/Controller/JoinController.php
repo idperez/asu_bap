@@ -38,4 +38,5 @@ class JoinController extends AppController {
     public function new_member() {
         
     }
+   
 }

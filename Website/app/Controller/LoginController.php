@@ -34,4 +34,8 @@ class LoginController extends AppController {
     public function index() {
         
     }
+    
+    public function hub() {
+        
+    }
 }
