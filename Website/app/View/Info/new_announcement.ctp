@@ -19,7 +19,7 @@
         </div>
     </div>
 </div>
-<form class="animate-box" role="form" action="" method="post" enctype="multipart/form-data" style="position: relative; top: -100px;">
+<form class="animate-box form-group" role="form" action="" method="post" enctype="multipart/form-data" style="position: relative; top: -100px;">
     <div id="fh5co-content-section">
         <div class="container">
             <div class="row">
@@ -38,6 +38,16 @@
                             <br>
                             <label>Time (12:59 PM)</label>
                             <input type="text" class="form-control" maxlength="50" placeholder="Title" name="time">
+                            <br>
+                            <div class="form-group">
+                                <label for="sel1">Type</label>
+                                <select class="form-control" id="sel1">
+                                    <option>Event</option>
+                                    <option>Opportunity</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                              
                         </div>
                     </div>
                 </div>
@@ -133,7 +143,5 @@
             <button type="submit" class="btn btn-primary" name="submit">Create</button>
         </div>
     </div>
+  
 </form>
-
-
-   
