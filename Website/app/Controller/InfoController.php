@@ -62,4 +62,12 @@ class InfoController extends AppController {
     public function policies() {
         
     }
+    
+    public function new_announcement() {
+        
+    }
+    
+    public function edit_announcement() {
+        
+    }
 }
