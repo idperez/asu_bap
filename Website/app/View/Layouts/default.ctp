@@ -1,4 +1,3 @@
-<?php session_start();?>
 <html class="no-js">
     <head>
         <meta charset="utf-8">
@@ -111,10 +110,21 @@
                                         );?>
                                     </li>
                                     <li>
-                                        <?php echo $this->Html->link(
-                                            'Login',
-                                            array('controller' => 'Login', 'action' => 'index')
-                                        );?>
+                                        <?php if(AuthComponent::user())
+                                                {
+                                                    echo $this->Html->link(
+                                                        'Logout',
+                                                        array('controller' => 'Members', 'action' => 'logout')
+                                                    );
+                                                }
+                                                else
+                                                { 
+                                                    echo $this->Html->link(
+                                                        'Login',
+                                                        array('controller' => 'Members', 'action' => 'login')
+                                                    );
+                                                }
+                                                ?>
                                     </li> 
                                 </li>
                                 </ul>

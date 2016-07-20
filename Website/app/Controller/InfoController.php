@@ -31,6 +31,13 @@ class InfoController extends AppController {
  * @param mixed What page to display
  * @return void
  */
+     //All pages that are visible to regular users
+    public function beforeFilter()
+    {
+        $this->Auth->allow('index', 'announcements', 'advisory_board', 'executive_board', 'sponsor', 'events', 'opportunities', 
+            'policies', 'new_announcement');
+    }
+    
     public function index() {
         
     }

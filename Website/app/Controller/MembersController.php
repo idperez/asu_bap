@@ -1,6 +1,12 @@
 <?php
 class MembersController extends AppController{
     
+        //All pages that are visible to regular users
+    public function beforeFilter()
+    {
+        $this->Auth->allow('index', 'view', 'add');
+    }
+    
     public function index()
     {
         //returns all members to the view
@@ -89,7 +95,21 @@ class MembersController extends AppController{
     
     public function login()
     {
-        
+        if($this->request->is('post'))
+        {
+            if($this->Auth->login())
+            {
+                return $this->redirect($this->Auth->redirectUrl());
+            }
+            
+            $this->Session->setFlash(_('Invalid username or password.'));
+        }
+    }
+    
+    public function logout()
+    {
+        $this->Auth->logout();
+        $this->redirect('login');
     }
     
     public function profilehub()

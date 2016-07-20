@@ -1,5 +1,13 @@
 <?php
 class Member extends AppModel{
+   
+   //Actions to modify model item before adding to model 
+   public function beforeSave($options = array())
+   {
+        $this->data['Member']['password'] = AuthComponent::password($this->data['Member']['password']);     
+        return true;
+   }
+   
    public $belongsTo = 'Photo';
    public $hasAndBelongsToMany = array(
     'Major' =>

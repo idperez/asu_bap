@@ -50,6 +50,12 @@ class PagesController extends AppController {
  * @param mixed What page to display
  * @return void
  */
+     //All pages that are visible to regular users
+    public function beforeFilter()
+    {
+        $this->Auth->allow('display');
+    }
+    
     public function display() {
         $path = func_get_args();
 

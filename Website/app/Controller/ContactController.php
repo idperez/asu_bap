@@ -25,6 +25,12 @@ class ContactController extends AppController {
  */
     public $uses = array();
 
+    //All pages that are visible to regular users
+    public function beforeFilter()
+    {
+        $this->Auth->allow('index');
+    }
+    
 /**
  * Displays a view
  *
