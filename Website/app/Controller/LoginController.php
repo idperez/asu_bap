@@ -32,7 +32,7 @@ class LoginController extends AppController {
  * @return void
  */
     public function index() {
-        
+        $this->redirect('hub');
     }
     
     public function hub() {

@@ -86,5 +86,15 @@ class MembersController extends AppController{
             throw new NotFoundException(__('This member does not exist.'));
         }
     }
+    
+    public function login()
+    {
+        
+    }
+    
+    public function profilehub()
+    {
+        
+    }
 }
 ?>
