@@ -43,12 +43,12 @@
                 <div class="form-inline">
                     <fieldset>                 
                         <div class="form-group col-lg-6">
-                            <?php echo $this->Form->input('email', array(
+                            <?php echo $this->Form->input('username', array(
                                 'type' => 'email',
                                 'class' => 'form-control',
                                 'maxlength' => 50,
                                 'placeholder' => 'example@asu.edu',
-                                'name' => 'email'));
+                                'name' => 'username'));
                             ?>
                         </div>
                         <div class="form-group col-lg-6">

@@ -30,7 +30,7 @@ class Member extends AppModel{
         'rule' => array('minlength', '8'),
         'message' => 'Minimum length is 8 characters.'
     ),
-        'email' => array(
+        'username' => array(
         'ValidEmailRule' => array(
             'rule' => 'email',
             'message' => 'Please enter a valid email address.',

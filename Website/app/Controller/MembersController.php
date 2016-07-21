@@ -97,9 +97,15 @@ class MembersController extends AppController{
     {
         if($this->request->is('post'))
         {
-            if($this->Auth->login())
+            if($this->Auth->login(array(
+                'User'=>array(
+                    'username'=>'myusername',
+                    'password'=>'mypassword'
+                )
+            )))
             {
-                return $this->redirect($this->Auth->redirectUrl());
+                return $this->redirect(profilehub);
+                echo 'test3';
             }
             
             $this->Session->setFlash(_('Invalid username or password.'));

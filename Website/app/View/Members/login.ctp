@@ -9,12 +9,12 @@
                                 <div class="form-group col-md-6 ">
                                     <?php
                                     echo $this->Form->create('Member');
-                                    echo $this->Form->input('email', array(
+                                    echo $this->Form->input('username', array(
                                         'type' => 'email',
                                         'class' => 'form-control',
                                         'maxlength' => 50,
                                         'placeholder' => 'example@asu.edu',
-                                        'name' => 'email')
+                                        'name' => 'username')
                                     );                                    
                                     echo $this->Form->input('password', array(
                                         'type' => 'text',
