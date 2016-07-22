@@ -1,10 +1,11 @@
 <?php
-class Member extends AppModel{
+App::uses('AppModel', 'Model');
+class User extends AppModel{
    
    //Actions to modify model item before adding to model 
    public function beforeSave($options = array())
    {
-        $this->data['Member']['password'] = AuthComponent::password($this->data['Member']['password']);     
+        $this->data['User']['password'] = AuthComponent::password($this->data['User']['password']); 
         return true;
    }
    
@@ -13,15 +14,15 @@ class Member extends AppModel{
     'Major' =>
             array(
                 'className' => 'Major',
-                'joinTable' => 'majors_members',
-                'foreignKey' => 'member_id',
+                'joinTable' => 'majors_users',
+                'foreignKey' => 'user_id',
                 'associationForeignKey' => 'major_id'
             ),
     'Event' =>
             array(
                 'className' => 'Event',
-                'joinTable' => 'events_members',
-                'foreignKey' => 'member_id',
+                'joinTable' => 'events_users',
+                'foreignKey' => 'user_id',
                 'associationForeignKey' => 'event_id'
             )
     );

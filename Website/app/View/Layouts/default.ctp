@@ -41,7 +41,7 @@
                                     <li>
                                         <?php echo $this->Html->link(
                                             'Members',
-                                            array('controller' => 'Members', 'action' => 'index')
+                                            array('controller' => 'Users', 'action' => 'index')
                                         );?>
                                     </li>
                                     <li>
@@ -114,14 +114,14 @@
                                                 {
                                                     echo $this->Html->link(
                                                         'Logout',
-                                                        array('controller' => 'Members', 'action' => 'logout')
+                                                        array('controller' => 'Users', 'action' => 'logout')
                                                     );
                                                 }
                                                 else
                                                 { 
                                                     echo $this->Html->link(
                                                         'Login',
-                                                        array('controller' => 'Members', 'action' => 'login')
+                                                        array('controller' => 'Users', 'action' => 'login')
                                                     );
                                                 }
                                                 ?>
@@ -150,8 +150,8 @@
                             );?>
                             </li>
                             <li> <?php echo $this->Html->link(
-                                'Members',
-                                array('controller' => 'Members', 'action' => 'index')
+                                'Users',
+                                array('controller' => 'Users', 'action' => 'index')
                             );?>
                             </li>
                             <li>

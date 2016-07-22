@@ -24,12 +24,12 @@
             <div class="col-sm-12 col-md-12 col-lg-12">
                 <div class="animate-box text-center">  
                     <div class="grid">
-                        <?php foreach($members as $member):?> 
-                            <?php if($member['Member']['level'] == 'Officer'){ ?>
+                        <?php foreach($users as $user):?> 
+                            <?php if($user['User']['level'] == 'Officer'){ ?>
                                 <figure class="effect-zoe">  
-                                    <?php echo $this->Html->image($member['Photo']['url'], array(
+                                    <?php echo $this->Html->image($user['Photo']['url'], array(
                                         "alt" => "Profile image",
-                                        'url' => array('controller' => 'Members', 'action' => 'view', $member['Member']['id']),
+                                        'url' => array('controller' => 'Users', 'action' => 'view', $user['User']['id']),
                                         'class' => 'img-responsive',
                                         'style' => 'height: 190px; width: 165px;',
                                         'width' => '100%',
@@ -37,10 +37,10 @@
                                     ));?>
                                     <figcaption>
                                         <p><?php 
-                                        $majorCount = count($member['Major']);
+                                        $majorCount = count($user['Major']);
                                         if($majorCount > 0) // members have majors
                                         {
-                                            echo $member['Major'][0]['name'];
+                                            echo $user['Major'][0]['name'];
                                         }  
                                         else 
                                         { // members have no majors
@@ -49,20 +49,20 @@
                                         </p>
                                         <h6 class="icon-links">
                                             <?php echo $this->Html->link('Edit', array(
-                                                'controller' => 'Members', 'action' => 'edit', $member['Member']['id'])
+                                                'controller' => 'Users', 'action' => 'edit', $user['User']['id'])
                                             );?>
                                             <span><a class="hvr-wobble-vertical fa fa-linkedin-square fa-2x" aria-hidden="true"  style="color: #bfbfbf;"  onclick="window.location.href='<?php echo Router::url(array('controller'=>'Info', 'action'=>'advisory_board'))?>'"></a></span>
                                             <span><a class="hvr-wobble-vertical fa fa-envelope-square fa-2x" aria-hidden="true"  style="color: #bfbfbf;"  onclick="window.location.href='<?php echo Router::url(array('controller'=>'Info', 'action'=>'advisory_board'))?>'"></a></span>
                                             <?php echo $this->Html->link('Delete', array(
-                                                'controller' => 'Members', 'action' => 'delete', $member['Member']['id'])
+                                                'controller' => 'Users', 'action' => 'delete', $user['User']['id'])
                                             );?>
                                         </h6>     
                                     </figcaption>
-                                    <h4><?php echo h($member['Member']['first_name']) . " " . h($member['Member']['last_name']);?></h4>
+                                    <h4><?php echo h($user['User']['first_name']) . " " . h($user['User']['last_name']);?></h4>
                                 </figure>
                             <?php } ?>
                         <?php endforeach; ?>
-                        <?php unset($member); ?>            
+                        <?php unset($user); ?>            
                     </div>
                 </div>
             </div>
@@ -85,23 +85,23 @@
             <div class="col-sm-12 col-md-12 col-lg-12">
                 <div class="animate-box text-center">  
                     <div class="grid">
-                        <?php foreach($members as $member):?> 
-                            <?php if($member['Member']['level'] == 'Member'){ ?>
+                        <?php foreach($users as $user):?> 
+                            <?php if($user['User']['level'] == 'Member'){ ?>
                                 <figure class="effect-zoe">  
-                                    <?php echo $this->Html->image($member['Photo']['url'], array(
+                                    <?php echo $this->Html->image($user['Photo']['url'], array(
                                         "alt" => "Profile image",
-                                        'url' => array('controller' => 'Members', 'action' => 'view', $member['Member']['id']),
+                                        'url' => array('controller' => 'Users', 'action' => 'view', $user['User']['id']),
                                         'class' => 'img-responsive',
                                         'style' => 'height: 190px; width: 165px;',
                                         'width' => '100%',
                                         'height' => '30%'
                                     ));?>
                                     <figcaption>
-                                        <p>                            <?php 
-                                        $majorCount = count($member['Major']);
+                                        <p><?php 
+                                        $majorCount = count($user['Major']);
                                         if($majorCount > 0) // members have majors
                                         {
-                                            echo $member['Major'][0]['name'];
+                                            echo $user['Major'][0]['name'];
                                         }  
                                         else 
                                         { // members have no majors
@@ -110,20 +110,20 @@
                                         </p>
                                         <h6 class="icon-links">
                                             <?php echo $this->Html->link('Edit', array(
-                                                'controller' => 'Members', 'action' => 'edit', $member['Member']['id'])
+                                                'controller' => 'Users', 'action' => 'edit', $user['User']['id'])
                                             );?>
                                             <span><a class="hvr-wobble-vertical fa fa-linkedin-square fa-2x" aria-hidden="true"  style="color: #bfbfbf;"  onclick="window.location.href='<?php echo Router::url(array('controller'=>'Info', 'action'=>'advisory_board'))?>'"></a></span>
                                             <span><a class="hvr-wobble-vertical fa fa-envelope-square fa-2x" aria-hidden="true"  style="color: #bfbfbf;"  onclick="window.location.href='<?php echo Router::url(array('controller'=>'Info', 'action'=>'advisory_board'))?>'"></a></span>
                                             <?php echo $this->Html->link('Delete', array(
-                                                'controller' => 'Members', 'action' => 'delete', $member['Member']['id'])
+                                                'controller' => 'Users', 'action' => 'delete', $user['User']['id'])
                                             );?>
                                         </h6>     
                                     </figcaption>
-                                    <h4><?php echo h($member['Member']['first_name']) . " " . h($member['Member']['last_name']);?></h4>
+                                    <h4><?php echo h($user['User']['first_name']) . " " . h($user['User']['last_name']);?></h4>
                                 </figure>
                             <?php } ?>
                         <?php endforeach; ?>
-                        <?php unset($member); ?>            
+                        <?php unset($user); ?>            
                     </div>
                 </div>
             </div>

@@ -8,9 +8,9 @@
                             <form role="form" action="" method="post" enctype="multipart/form-data" style=" margin: 0 auto; width:80%;">
                                 <div class="form-group col-md-6 ">
                                     <?php
-                                    echo $this->Form->create('Member');
+                                    echo $this->Form->create('User');
                                     echo $this->Form->input('username', array(
-                                        'type' => 'email',
+                                        'type' => 'text',
                                         'class' => 'form-control',
                                         'maxlength' => 50,
                                         'placeholder' => 'example@asu.edu',
