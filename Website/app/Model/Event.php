@@ -1,12 +1,12 @@
 <?php 
 class Event extends AppModel{
     public $hasAndBelongsToMany = array(
-    'Member' =>
+    'User' =>
             array(
-                'className' => 'Member',
-                'joinTable' => 'events_members',
+                'className' => 'User',
+                'joinTable' => 'events_users',
                 'foreignKey' => 'event_id',
-                'associationForeignKey' => 'member_id'
+                'associationForeignKey' => 'user_id'
             )
     );
 }

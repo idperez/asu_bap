@@ -1,22 +1,28 @@
 <?php
-class MembersController extends AppController{
+class UsersController extends AppController{
+    
+        //All pages that are visible to regular users
+    public function beforeFilter()
+    {
+        $this->Auth->allow('index', 'view', 'add');
+    }
     
     public function index()
     {
-        //returns all members to the view
-        $memberdata = $this->Member->find('all', 
+        //returns all users to the view
+        $userdata = $this->User->find('all', 
             array('order' => 'last_name'));
             
-        $this->set('members', $memberdata);
+        $this->set('users', $userdata);
     }
     
     public function add()
     {
         if($this->request->is('post'))
         {
-            $this->Member->create();
+            $this->User->create();
             
-            if($this->Member->save($this->request->data))
+            if($this->User->save($this->request->data))
             {
                 $this->redirect('index');
             }
@@ -25,20 +31,20 @@ class MembersController extends AppController{
     
     public function view($id = null)
     {
-        //returns a single member
+        //returns a single user
         if(!$id)
         {
            throw new  NotFoundException(__('The Id was not found.'));
         }
         
-        $member = $this->Member->findById($id);
+        $user = $this->User->findById($id);
         
-        if(!$member)
+        if(!$user)
         {
             throw new NotFoundException(__('This member does not exist.'));
         }
         
-        $this->set('member', $member);
+        $this->set('user', $user);
     }
     
     public function edit($id = null)
@@ -49,9 +55,9 @@ class MembersController extends AppController{
            throw new  NotFoundException(__('The Id was not found.'));
         }
         
-        $member = $this->Member->findById($id);
+        $user = $this->User->findById($id);
         
-        if(!$member)
+        if(!$user)
         {
             throw new NotFoundException(__('This member does not exist.'));
         }    
@@ -59,23 +65,23 @@ class MembersController extends AppController{
         //save new inputs to member
         if($this->request->is('post') || $this->request->is('put'))
         {       
-            $this->Member->id = $id; //set member id = to id caught
-            if($this->Member->save($this->request->data))
+            $this->User->id = $id; //set member id = to id caught
+            if($this->User->save($this->request->data))
             {
                 $this->redirect('index');
             }
         }
         
-        $this->request->data = $member;    
+        $this->request->data = $user;    
     }
     
     public function delete($id = null)
     {
-        $data = $this->Member->findById($id);
+        $data = $this->User->findById($id);
         
-        if($this->Member->exists($id))
+        if($this->User->exists($id))
         {
-            if($this->Member->delete($id)) //success
+            if($this->User->delete($id)) //success
                 $this->redirect('index');
             else //unsuccessful
                 throw new NotFoundException(__('This deletion was unsuccessful.'));
@@ -85,6 +91,32 @@ class MembersController extends AppController{
             //Member does not exist
             throw new NotFoundException(__('This member does not exist.'));
         }
+    }
+    
+    public function login()
+    {
+        if($this->request->is('post'))
+        {
+            if($this->Auth->login())
+            {
+                echo 'test';
+                return $this->redirect($this->Auth->redirectUrl());
+            }
+            
+            $this->Session->setFlash(_('Invalid username or password.'));
+            pr($this->Auth->user());
+        }
+    }
+    
+    public function logout()
+    {
+        $this->Auth->logout();
+        $this->redirect('login');
+    }
+    
+    public function profilehub()
+    {
+        
     }
 }
 ?>

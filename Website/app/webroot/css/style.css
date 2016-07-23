@@ -11,6 +11,11 @@
 *	Edit this section
 *
 * ======================================================= */
+textarea
+{
+  resize: none;
+}
+
 body {
   font-family: "Source Sans Pro", Arial, sans-serif;
   line-height: 1.5;

@@ -1,19 +1,28 @@
 <?php
-class Member extends AppModel{
+App::uses('AppModel', 'Model');
+class User extends AppModel{
+   
+   //Actions to modify model item before adding to model 
+   public function beforeSave($options = array())
+   {
+        $this->data['User']['password'] = AuthComponent::password($this->data['User']['password']); 
+        return true;
+   }
+   
    public $belongsTo = 'Photo';
    public $hasAndBelongsToMany = array(
     'Major' =>
             array(
                 'className' => 'Major',
-                'joinTable' => 'majors_members',
-                'foreignKey' => 'member_id',
+                'joinTable' => 'majors_users',
+                'foreignKey' => 'user_id',
                 'associationForeignKey' => 'major_id'
             ),
     'Event' =>
             array(
                 'className' => 'Event',
-                'joinTable' => 'events_members',
-                'foreignKey' => 'member_id',
+                'joinTable' => 'events_users',
+                'foreignKey' => 'user_id',
                 'associationForeignKey' => 'event_id'
             )
     );
@@ -22,7 +31,7 @@ class Member extends AppModel{
         'rule' => array('minlength', '8'),
         'message' => 'Minimum length is 8 characters.'
     ),
-        'email' => array(
+        'username' => array(
         'ValidEmailRule' => array(
             'rule' => 'email',
             'message' => 'Please enter a valid email address.',

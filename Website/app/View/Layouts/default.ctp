@@ -1,4 +1,3 @@
-<?php session_start();?>
 <html class="no-js">
     <head>
         <meta charset="utf-8">
@@ -42,7 +41,7 @@
                                     <li>
                                         <?php echo $this->Html->link(
                                             'Members',
-                                            array('controller' => 'Members', 'action' => 'index')
+                                            array('controller' => 'Users', 'action' => 'index')
                                         );?>
                                     </li>
                                     <li>
@@ -111,10 +110,21 @@
                                         );?>
                                     </li>
                                     <li>
-                                        <?php echo $this->Html->link(
-                                            'Login',
-                                            array('controller' => 'Login', 'action' => 'index')
-                                        );?>
+                                        <?php if(AuthComponent::user())
+                                                {
+                                                    echo $this->Html->link(
+                                                        'Logout',
+                                                        array('controller' => 'Users', 'action' => 'logout')
+                                                    );
+                                                }
+                                                else
+                                                { 
+                                                    echo $this->Html->link(
+                                                        'Login',
+                                                        array('controller' => 'Users', 'action' => 'login')
+                                                    );
+                                                }
+                                                ?>
                                     </li> 
                                 </li>
                                 </ul>
@@ -140,8 +150,8 @@
                             );?>
                             </li>
                             <li> <?php echo $this->Html->link(
-                                'Members',
-                                array('controller' => 'Members', 'action' => 'index')
+                                'Users',
+                                array('controller' => 'Users', 'action' => 'index')
                             );?>
                             </li>
                             <li>

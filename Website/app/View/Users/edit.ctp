@@ -26,7 +26,7 @@
     <div class="row">
         <div class="col-lg-8 col-lg-offset-3">
             <div class="input-group">          
-                <?php echo $this->Form->create('Member'); ?> 
+                <?php echo $this->Form->create('User'); ?> 
                 <div class="form-inline">
                     <fieldset>                 
                         <div class="form-group col-lg-12">
@@ -43,12 +43,12 @@
                 <div class="form-inline">
                     <fieldset>                 
                         <div class="form-group col-lg-6">
-                            <?php echo $this->Form->input('email', array(
+                            <?php echo $this->Form->input('username', array(
                                 'type' => 'email',
                                 'class' => 'form-control',
                                 'maxlength' => 50,
                                 'placeholder' => 'example@asu.edu',
-                                'name' => 'email'));
+                                'name' => 'username'));
                             ?>
                         </div>
                         <div class="form-group col-lg-6">
@@ -213,3 +213,4 @@
     'class' => 'form-control',
     'name' => 'level'));*/
  ?>
+ 
