@@ -114,15 +114,9 @@ figure {
   position: relative;
   height: 100px;
   font-weight: 200;
-/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#7d7e7d+1,494949+99 */
-background: rgb(125,126,125); /* Old browsers */
-background: -moz-linear-gradient(top,  rgba(125,126,125,1) 1%, rgba(73,73,73,1) 99%); /* FF3.6-15 */
-background: -webkit-linear-gradient(top,  rgba(125,126,125,1) 1%,rgba(73,73,73,1) 99%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to bottom,  rgba(125,126,125,1) 1%,rgba(73,73,73,1) 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d7e7d', endColorstr='#494949',GradientType=0 ); /* IE6-9 */
-
-
+  background-image: url(/bap/Website/app/webroot/img/tempe.jpg);
 }
+
 @media screen and (max-width: 768px) {
   .fh5co-cover,
   .fh5co-hero-ish {
