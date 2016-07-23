@@ -33,7 +33,7 @@ class JoinController extends AppController {
  */
     public function beforeFilter()
     {
-        $this->Auth->allow('index', 'new_member');
+        $this->Auth->allow('index', 'new_member', 'prospective_member');
     }
     
     public function index() {

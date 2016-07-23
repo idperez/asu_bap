@@ -110,8 +110,8 @@
                 <h3 class="heading-section">Take The Time</h3>
                 <p>If you’re ready to grow personally and professionally, expand your network, become a stronger leader, serve your community and make lifelong friends along the way, we would love to welcome you to Beta Alpha Psi. </p>
             </div>
-            <div class="col-md-offset-5 animate-box">
-                <iframe src="https://player.vimeo.com/video/84151038" width="700" height="400" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            <div class="col-md-offset-4 animate-box">
+                <iframe src="https://player.vimeo.com/video/84151038" width="750" height="425" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
             </div>            
         </div>
     </div>
