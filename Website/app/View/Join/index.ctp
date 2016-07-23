@@ -18,7 +18,7 @@
                 <div class="fh5co-testimonial text-center animate-box">
                     <h2>Registration Instructions <br><br> <div style="color: red">Fall 2016: August 18, 2016 - December 2, 2016</div></h2>
                         <p>Applications for Beta Alpha Psi for the Fall 2016 semester are currently not available, however, to sign up for updates please fill out the prospective member <a onclick="window.location.href='<?php echo Router::url(array('controller'=>'Join', 'action'=>'prospective_member'))?>'" style="cursor: pointer;">form</a>.  Any applicant who meets 
-                        <a href="https://drive.google.com/file/d/0B4zn8biCRMSUUkd4NEp2NWxCWm8/view?usp=sharing" target="_blank" style="cursor: pointer;">eligibility</a> 
+                        <a href="https://drive.google.com/file/d/0B4zn8biCRMSUQlpLV0xBOVVtY0U/view?usp=sharing" target="_blank" style="cursor: pointer;">eligibility</a> 
                         requirements found under membership will have the opportunity to apply for the Fall 2016 semester at a later date. We are very excited about this upcoming Fall semester and look forward to our current candidates becoming members. Thank you for your interest and we wish you a happy and successful semester!</p>   
                 </div>
             </div>
