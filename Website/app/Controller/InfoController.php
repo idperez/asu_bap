@@ -35,7 +35,7 @@ class InfoController extends AppController {
     public function beforeFilter()
     {
         $this->Auth->allow('index', 'announcements', 'advisory_board', 'executive_board', 'sponsor', 'events', 'opportunities', 
-            'policies', 'new_announcement');
+            'policies', 'new_announcement', 'our_sponsors');
     }
     
     public function index() {
@@ -75,6 +75,10 @@ class InfoController extends AppController {
     }
     
     public function edit_announcement() {
+        
+    }
+    
+    public function our_sponsors() {
         
     }
 }
