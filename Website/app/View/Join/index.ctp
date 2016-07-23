@@ -20,6 +20,7 @@
                     <p>Applications for Beta Alpha Psi for the Fall 2016 semester are currently not available, however, to sign up for updates please fill out the prospective member <a onclick="window.location.href='<?php echo Router::url(array('controller'=>'Join', 'action'=>'prospective_member'))?>'" style="cursor: pointer;">form</a>.  Any applicant who meets 
                     <a href="https://drive.google.com/file/d/0B4zn8biCRMSUQlpLV0xBOVVtY0U/view?usp=sharing" target="_blank" style="cursor: pointer;">eligibility</a> 
                     requirements found under membership will have the opportunity to apply for the Fall 2016 semester at a later date. We are very excited about this upcoming Fall semester and look forward to our current candidates becoming members. Thank you for your interest and we wish you a happy and successful semester!</p>   
+                    <span ><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Join', 'action'=>'prospective_member'))?>'" style="position:relative; top:0px;">Prospective Member</a></span>
                 </div>
             </div>
             <div class="col-md-6 col-sm-6">

@@ -1,6 +1,6 @@
 <div class="fh5co-hero">
     <div class="fh5co-overlay"></div>
-    <div class="fh5co-cover text-center" style="background-image: url(/bap/Website/app/webroot/img/prospective_member.jpeg); ">
+    <div class="fh5co-cover text-center" style="background-image: url(/bap/Website/app/webroot/img/prospective_member.jpg); ">
         <div class="desc animate-box" style="position:relative; top:200px; ">    
             <div class="container">
                 <div class="row">
@@ -20,7 +20,6 @@
                                     <br>   
                                 <button type="submit" class="btn btn-primary" name="submit">Submit</button>
                                 <br><br>
-                                
                             </div>         
                         </form>  
                         <div class="col-lg-8 col-lg-offset-2" >
