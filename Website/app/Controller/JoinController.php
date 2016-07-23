@@ -31,6 +31,11 @@ class JoinController extends AppController {
  * @param mixed What page to display
  * @return void
  */
+    public function beforeFilter()
+    {
+        $this->Auth->allow('index', 'new_member');
+    }
+    
     public function index() {
         
     }
@@ -38,5 +43,8 @@ class JoinController extends AppController {
     public function new_member() {
         
     }
-   
+
+    public function prospective_member() {
+        
+    }
 }
