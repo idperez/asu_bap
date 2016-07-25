@@ -126,7 +126,7 @@
                                                         array('controller' => 'Users', 'action' => 'login')
                                                     );
                                                 }
-                                                ?>
+                                        ?>
                                     </li> 
                                 </li>
                                 </ul>

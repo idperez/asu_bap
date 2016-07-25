@@ -114,7 +114,7 @@ class UsersController extends AppController{
             if(!empty($user) && $this->Auth->login($user['User']))
             {
                 $this->Session->setFlash('Connection Successful');
-                return redirect('profilehub');
+                return $this->redirect('profilehub');
             }
             else 
             {
@@ -126,7 +126,7 @@ class UsersController extends AppController{
     public function logout()
     {
         $this->Auth->logout();
-        $this->redirect('index');
+        $this->redirect('login');
     }
     
     public function profilehub()

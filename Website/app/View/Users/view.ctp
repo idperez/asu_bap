@@ -3,7 +3,6 @@
     <div class="desc animate-box" style="position:relative; top:280px; "></div>
 
 </div>
-    <?php print_r($user);?>
 <div id="fh5co-work-section" >
     <div class="container" style="position:relative; top:-20">
         <div class="row" >

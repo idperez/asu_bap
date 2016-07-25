@@ -1,1 +1,1 @@
-hub for members
+<?php echo AuthComponent::user('id');?>

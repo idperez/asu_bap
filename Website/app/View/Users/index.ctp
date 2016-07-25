@@ -48,13 +48,17 @@
                                         }?>
                                         </p>
                                         <h6 class="icon-links">
-                                            <?php echo $this->Html->link('Edit', array(
-                                                'controller' => 'Users', 'action' => 'edit', $user['User']['id'])
+                                            <?php
+                                                if(AuthComponent::user('level') == 'Officer')
+                                                    echo $this->Html->link('Edit', array(
+                                                        'controller' => 'Users', 'action' => 'edit', $user['User']['id'])
                                             );?>
                                             <span><a class="hvr-wobble-vertical fa fa-linkedin-square fa-2x" aria-hidden="true"  style="color: #bfbfbf;"  onclick="window.location.href='<?php echo Router::url(array('controller'=>'Info', 'action'=>'advisory_board'))?>'"></a></span>
                                             <span><a class="hvr-wobble-vertical fa fa-envelope-square fa-2x" aria-hidden="true"  style="color: #bfbfbf;"  onclick="window.location.href='<?php echo Router::url(array('controller'=>'Info', 'action'=>'advisory_board'))?>'"></a></span>
-                                            <?php echo $this->Html->link('Delete', array(
-                                                'controller' => 'Users', 'action' => 'delete', $user['User']['id'])
+                                            <?php
+                                                if(AuthComponent::user('level') == 'Officer') 
+                                                    echo $this->Html->link('Delete', array(
+                                                        'controller' => 'Users', 'action' => 'delete', $user['User']['id'])
                                             );?>
                                         </h6>     
                                     </figcaption>
@@ -109,13 +113,17 @@
                                         }?>
                                         </p>
                                         <h6 class="icon-links">
-                                            <?php echo $this->Html->link('Edit', array(
-                                                'controller' => 'Users', 'action' => 'edit', $user['User']['id'])
+                                            <?php 
+                                                if(AuthComponent::user('level') == 'Officer')
+                                                    echo $this->Html->link('Edit', array(
+                                                        'controller' => 'Users', 'action' => 'edit', $user['User']['id'])
                                             );?>
                                             <span><a class="hvr-wobble-vertical fa fa-linkedin-square fa-2x" aria-hidden="true"  style="color: #bfbfbf;"  onclick="window.location.href='<?php echo Router::url(array('controller'=>'Info', 'action'=>'advisory_board'))?>'"></a></span>
                                             <span><a class="hvr-wobble-vertical fa fa-envelope-square fa-2x" aria-hidden="true"  style="color: #bfbfbf;"  onclick="window.location.href='<?php echo Router::url(array('controller'=>'Info', 'action'=>'advisory_board'))?>'"></a></span>
-                                            <?php echo $this->Html->link('Delete', array(
-                                                'controller' => 'Users', 'action' => 'delete', $user['User']['id'])
+                                            <?php
+                                                if(AuthComponent::user('level') == 'Officer') 
+                                                    echo $this->Html->link('Delete', array(
+                                                        'controller' => 'Users', 'action' => 'delete', $user['User']['id'])
                                             );?>
                                         </h6>     
                                     </figcaption>
