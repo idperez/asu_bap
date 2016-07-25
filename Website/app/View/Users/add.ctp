@@ -57,7 +57,7 @@
                  <fieldset>                 
                     <div class="form-group col-lg-6">
                         <?php echo $this->Form->input('username', array(
-                            'type' => 'email',
+                            'type' => 'text',
                             'class' => 'form-control',
                             'maxlength' => 34,
                             'placeholder' => 'example@asu.edu',

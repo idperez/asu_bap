@@ -37,8 +37,7 @@ class AppController extends Controller {
     'Session', 'Auth'
     );
     
-    
-    public function Members()
+    public function Users()
     {
         
     }

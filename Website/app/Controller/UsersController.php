@@ -20,6 +20,7 @@ class UsersController extends AppController{
     {
         if($this->request->is('post'))
         {
+            $data = $this->request->data;
             $this->User->create();
             
             if($this->User->save($this->request->data))
@@ -97,21 +98,35 @@ class UsersController extends AppController{
     {
         if($this->request->is('post'))
         {
-            if($this->Auth->login())
-            {
-                echo 'test';
-                return $this->redirect($this->Auth->redirectUrl());
-            }
+            $data = $this->request->data;
+            $username = $data['username'];
+            $password = Security::hash($data['password'], 'md5', false);
+            echo $password;
             
-            $this->Session->setFlash(_('Invalid username or password.'));
-            pr($this->Auth->user());
+            $user = $this->User->find('first', array(
+                'conditions' => array(
+                    'user.username' => $username,
+                    'user.password' => $password
+                ),
+                'recursive' => -1
+            ));
+            
+            if(!empty($user) && $this->Auth->login($user['User']))
+            {
+                $this->Session->setFlash('Connection Successful');
+                return redirect('profilehub');
+            }
+            else 
+            {
+                $this->Session->setFlash('Invalid username and/or password');
+            }
         }
     }
     
     public function logout()
     {
         $this->Auth->logout();
-        $this->redirect('login');
+        $this->redirect('index');
     }
     
     public function profilehub()

@@ -10,7 +10,7 @@
                                     <?php
                                     echo $this->Form->create('User');
                                     echo $this->Form->input('username', array(
-                                        'type' => 'text',
+                                        'type' => 'email',
                                         'class' => 'form-control',
                                         'maxlength' => 50,
                                         'placeholder' => 'example@asu.edu',

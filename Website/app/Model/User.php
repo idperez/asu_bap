@@ -5,7 +5,7 @@ class User extends AppModel{
    //Actions to modify model item before adding to model 
    public function beforeSave($options = array())
    {
-        $this->data['User']['password'] = AuthComponent::password($this->data['User']['password']); 
+        $this->data['User']['password'] = md5($this->data['User']['password']);//AuthComponent::password($this->data['User']['password']); 
         return true;
    }
    
@@ -27,10 +27,6 @@ class User extends AppModel{
             )
     );
     public $validate = array(
-        'password' => array(
-        'rule' => array('minlength', '8'),
-        'message' => 'Minimum length is 8 characters.'
-    ),
         'username' => array(
         'ValidEmailRule' => array(
             'rule' => 'email',
@@ -40,6 +36,10 @@ class User extends AppModel{
             'rule' => 'isUnique',
             'message' => 'This email has already been registered.'
     )),
+        'password' => array(
+        'rule' => array('minlength', '8'),
+        'message' => 'Minimum length is 8 characters.'
+    ),
         'first_name' => array(
             'rule' => '/^[a-zA-Z]*$/', //regex for exluding all numberic and special chars
             'message' => 'Please enter a valid First Name.'    
