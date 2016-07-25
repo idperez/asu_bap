@@ -112,7 +112,8 @@
                     <fieldset>                 
                         <div class="form-group col-lg-6">
                             <?php echo $this->Form->input('graduation_semester', array(
-                                'options' => array('Unknown', 'Spring', 'Summer', 'Fall'),
+                                'options' => array('Unknown' => 'Unknown', 'Spring' => 'Spring', 'Summer' => 'Summer', 
+                                    'Fall' => 'Fall'),
                                 'class' => 'form-control',
                                 'name' => 'graduation_semester'));
                             ?>
