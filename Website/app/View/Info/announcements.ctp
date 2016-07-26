@@ -28,11 +28,11 @@
                 <div style="position:relative; top:-20px;">
                     <div class="panel-body">Would you like to earn good money working for Apple this next year? Is a flexible part time schedule, something you are looking for? Do you want rewarding/meaningful work where you ARE the difference? How about a job that can grow into a career? Motivated Sun Devils can work for Apple from home. All majors with a 2.7+ GPA who will be enrolled at ASU through May 2017 are encouraged to apply
                         <br><br>
-                        <b>Helpful Links:</b> LinkName1 LinkName2
+                        <b>Links:</b> LinkName1 LinkName2
                         <br>
-                        <b>Additional Files:</b> FileName1 FileName2
-                        <br>
+                        <b>Files:</b> FileName1 FileName2
                     </div>
+                    
                 </div>
               </div>
               <div class="panel panel-default" >

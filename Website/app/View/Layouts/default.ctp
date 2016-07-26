@@ -43,12 +43,6 @@
                                             'Members',
                                             array('controller' => 'Users', 'action' => 'index')
                                         );?>
-                                    </li>
-                                    <li>
-                                        <?php echo $this->Html->link(
-                                            'Info',
-                                            array('controller' => 'Info', 'action' => 'index')
-                                        );?>
                                         <ul class="fh5co-sub-menu">
                                              <li><?php echo $this->Html->link(
                                                             'Join',
@@ -56,8 +50,21 @@
                                                         );?>
                                             </li>
                                             <li><?php echo $this->Html->link(
-                                                    'Sponsor',
-                                                    array('controller' => 'Info', 'action' => 'sponsor')
+                                                    'Policies',
+                                                    array('controller' => 'Info', 'action' => 'policies')
+                                                );?>
+                                            </li>   
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <?php echo $this->Html->link(
+                                            'Info',
+                                            array('controller' => 'Info', 'action' => 'index')
+                                        );?>
+                                        <ul class="fh5co-sub-menu">
+                                            <li><?php echo $this->Html->link(
+                                                    'Join',
+                                                    array('controller' => 'Join', 'action' => 'index')
                                                 );?>
                                             </li>
                                             <li>
@@ -91,12 +98,11 @@
                                                     </li>
                                                 </ul>
                                             </li>
-                                           
                                             <li><?php echo $this->Html->link(
-                                                    'Policies',
-                                                    array('controller' => 'Info', 'action' => 'policies')
+                                                    'Sponsor',
+                                                    array('controller' => 'Info', 'action' => 'sponsor')
                                                 );?>
-                                            </li>            
+                                            </li>              
                                         </ul>
                                     </li>              
                                     <li>
