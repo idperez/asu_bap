@@ -53,8 +53,10 @@
                                                     echo $this->Html->link('Edit', array(
                                                         'controller' => 'Users', 'action' => 'edit', $user['User']['id'])
                                             );?>
-                                            <span><a class="hvr-wobble-vertical fa fa-linkedin-square fa-2x" aria-hidden="true"  style="color: #bfbfbf;"  onclick="window.location.href='<?php echo Router::url(array('controller'=>'Info', 'action'=>'advisory_board'))?>'"></a></span>
-                                            <span><a class="hvr-wobble-vertical fa fa-envelope-square fa-2x" aria-hidden="true"  style="color: #bfbfbf;"  onclick="window.location.href='<?php echo Router::url(array('controller'=>'Info', 'action'=>'advisory_board'))?>'"></a></span>
+                                            <?php if(!(empty($user['User']['linkedin']))){ ?>
+                                            <span><a class="hvr-wobble-vertical fa fa-linkedin-square fa-2x" aria-hidden="true"  style="color: #bfbfbf;" target="_blank"  href="<?php $user['User']['linkedin'];?>"></a></span>
+                                            <?php } ?>
+                                            <span><a class="hvr-wobble-vertical fa fa-envelope-square fa-2x" aria-hidden="true" href='mailto:<?php echo $user['User']['username'];?>'></a></span>
                                             <?php
                                                 if(AuthComponent::user('level') == 'Officer') 
                                                     echo $this->Html->link('Delete', array(
@@ -118,8 +120,10 @@
                                                     echo $this->Html->link('Edit', array(
                                                         'controller' => 'Users', 'action' => 'edit', $user['User']['id'])
                                             );?>
-                                            <span><a class="hvr-wobble-vertical fa fa-linkedin-square fa-2x" aria-hidden="true"  style="color: #bfbfbf;"  onclick="window.location.href='<?php echo Router::url(array('controller'=>'Info', 'action'=>'advisory_board'))?>'"></a></span>
-                                            <span><a class="hvr-wobble-vertical fa fa-envelope-square fa-2x" aria-hidden="true"  style="color: #bfbfbf;"  onclick="window.location.href='<?php echo Router::url(array('controller'=>'Info', 'action'=>'advisory_board'))?>'"></a></span>
+                                            <?php if(!(empty($user['User']['linkedin']))){ ?>
+                                            <span><a class="hvr-wobble-vertical fa fa-linkedin-square fa-2x" aria-hidden="true"  style="color: #bfbfbf;"  target="_blank"  href='//<?php echo $user['User']['linkedin'];?>'></a></span>
+                                            <?php } ?>
+                                            <span><a class="hvr-wobble-vertical fa fa-envelope-square fa-2x" aria-hidden="true"  style="color: #bfbfbf;"  href='mailto:<?php echo $user['User']['username'];?>'></a></span>
                                             <?php
                                                 if(AuthComponent::user('level') == 'Officer') 
                                                     echo $this->Html->link('Delete', array(
