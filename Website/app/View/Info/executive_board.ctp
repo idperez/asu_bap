@@ -7,7 +7,7 @@
         <div class="row">           
             <div class="col-md-12 col-sm-12" >
                 <div class="animate-box text-center" style="position:relative;">  
-                    <img src="/bap/assets/images/profile_logo.png"  alt="profile_logo" height="120" style="position:relative; top:-70px; ">
+                    <img src="/bap/Website/app/webroot/img/profile_logo.png"  alt="profile_logo" height="120" style="position:relative; top:-70px; ">
                 </div>
             </div>    
             <div class="col-md-12 col-sm-12" >
