@@ -56,7 +56,7 @@
                                             <?php if(!(empty($user['User']['linkedin']))){ ?>
                                             <span><a class="hvr-wobble-vertical fa fa-linkedin-square fa-2x" aria-hidden="true"  style="color: #bfbfbf;" target="_blank"  href="<?php $user['User']['linkedin'];?>"></a></span>
                                             <?php } ?>
-                                            <span><a class="hvr-wobble-vertical fa fa-envelope-square fa-2x" aria-hidden="true" href='mailto:<?php echo $user['User']['username'];?>'></a></span>
+                                            <span><a class="hvr-wobble-vertical fa fa-envelope-square fa-2x" aria-hidden="true" style="color: #bfbfbf;" href='mailto:<?php echo $user['User']['username'];?>'></a></span>
                                             <?php
                                                 if(AuthComponent::user('level') == 'Officer') 
                                                     echo $this->Html->link('Delete', array(

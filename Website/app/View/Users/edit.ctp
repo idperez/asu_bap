@@ -67,7 +67,7 @@
                     <fieldset>                 
                         <div class="form-group col-lg-6">
                             <?php echo $this->Form->input('linkedin', array(
-                                'type' => 'text',
+                                'type' => 'url',
                                 'class' => 'form-control',
                                 'maxlength' => 200,
                                 'placeholder' => 'LinkedIn Url',

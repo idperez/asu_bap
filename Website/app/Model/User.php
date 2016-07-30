@@ -56,7 +56,7 @@ class User extends AppModel{
         'linkedin' => array(
             'rule' => 'url',
             'allowEmpty' => true,
-            'message' => 'Please include a valid url (ex: https://linkedin.com).'
+            'message' => 'Please include a valid url (ex: https://www.linkedin.com).'
     ));
 }
 ?>
