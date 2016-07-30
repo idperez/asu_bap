@@ -1,4 +1,3 @@
-
 <div class="fh5co-hero-ish">
     <div class="fh5co-overlay"></div>
     <div class="desc animate-box" style="position:relative; top:280px; "></div>
@@ -67,7 +66,7 @@
                             </td>
                             </tr>
                         </table>
-                    <span><a class="hvr-wobble-vertical fa fa-linkedin-square fa-3x" aria-hidden="true"  style="color: #bfbfbf;" target="_blank"  href="<?php $user['User']['linkedin'];?>"></a></span>
+                    <span><a class="hvr-wobble-vertical fa fa-linkedin-square fa-3x" aria-hidden="true"  style="color: #bfbfbf;" target="_blank"  href="<?php echo $user['User']['linkedin'];?>"></a></span>
                     &nbsp;
                     <span><a class="hvr-wobble-vertical fa fa-envelope-square fa-3x" aria-hidden="true" style="color: #bfbfbf;" href='mailto:<?php echo $user['User']['username'];?>'></a></span>
                 </div>
