@@ -66,7 +66,10 @@ class UsersController extends AppController{
     
     public function profilehub($id = null)
     {
-        $this->editHelper($id);
+      
+        $user = $this->User->findById($id);
+        
+        $this->set('user', $user);
     }
     
     //Helper used across common views
