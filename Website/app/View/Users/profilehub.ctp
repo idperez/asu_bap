@@ -101,7 +101,7 @@
                 <div>
                     <h2>Officer Tools</h2>
                     <span ><a class="btn btn-primary" style="margin-bottom: 5px; width: 120px" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Users', 'action'=>'manage_events'))?>'">Events</a></span>
-                    <span ><a class="btn btn-primary" style="margin-bottom: 5px; width: 120px" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Users', 'action'=>'edit/'.$user['User']['id']))?>'">Members</a></span>
+                    <span ><a class="btn btn-primary" style="margin-bottom: 5px; width: 120px" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Users', 'action'=>'manage_members'))?>'">Members</a></span>
                 </div>
             </div>
         </div>

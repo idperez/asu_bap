@@ -55,7 +55,7 @@
                         </tbody>
                     </table>
                 </div>
-                <span class="animate-box" style="float: right"><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Info', 'action'=>'new_announcement'))?>'">New Annoucement</a></span>
+                <span class="animate-box" style="float: right;"><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Info', 'action'=>'new_announcement'))?>'">New Annoucement</a></span>
                 
             </div>    
         </div>
