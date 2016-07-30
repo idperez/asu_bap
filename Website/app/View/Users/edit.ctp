@@ -57,7 +57,8 @@
                             'class' => 'form-control',
                             'maxlength' => 30,
                             'placeholder' => 'Password',
-                            'name' => 'password'));
+                            'name' => 'password',
+                            'value' => ''));
                         ?>
                         </div>               
                     </fieldset>

@@ -50,6 +50,28 @@ class UsersController extends AppController{
     
     public function edit($id = null)
     {
+        if($this->Auth->user('id') == $id)
+            $this->editHelper($id);
+        else
+            throw new NotFoundException(_('You must be an administrator to perform this action.'));   
+    }
+    
+    public function adminedit($id = null)
+    {
+        if($this->Auth->user('level') != "Member" && $this->Auth->user('level') != "Candidate")
+            $this->editHelper($id);
+        else
+            throw new NotFoundException(__('You must be an administrator to perform this action.'));
+    }
+    
+    public function profilehub($id = null)
+    {
+        $this->editHelper($id);
+    }
+    
+    //Helper used across common views
+    public function editHelper($id)
+    {
         //returns a single member
         if(!$id)
         {
@@ -67,13 +89,14 @@ class UsersController extends AppController{
         if($this->request->is('post') || $this->request->is('put'))
         {       
             $this->User->id = $id; //set member id = to id caught
+
             if($this->User->save($this->request->data))
             {
                 $this->redirect('index');
             }
         }
         
-        $this->request->data = $user;    
+        $this->request->data = $user;
     }
     
     public function delete($id = null)
@@ -101,7 +124,6 @@ class UsersController extends AppController{
             $data = $this->request->data;
             $username = $data['username'];
             $password = Security::hash($data['password'], 'md5', false);
-            echo $password;
             
             $user = $this->User->find('first', array(
                 'conditions' => array(
@@ -114,7 +136,7 @@ class UsersController extends AppController{
             if(!empty($user) && $this->Auth->login($user['User']))
             {
                 $this->Session->setFlash('Connection Successful');
-                return $this->redirect('profilehub');
+                return $this->redirect('profilehub/' . $this->Auth->user('id'));
             }
             else 
             {
@@ -127,11 +149,6 @@ class UsersController extends AppController{
     {
         $this->Auth->logout();
         $this->redirect('login');
-    }
-    
-    public function profilehub()
-    {
-        
     }
 }
 ?>

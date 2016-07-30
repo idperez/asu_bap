@@ -121,8 +121,8 @@
                                         <?php if(AuthComponent::user())
                                                 {
                                                     echo $this->Html->link(
-                                                        'Logout',
-                                                        array('controller' => 'Users', 'action' => 'logout')
+                                                        'Hub',
+                                                        array('controller' => 'Users', 'action' => 'profilehub/' . AuthComponent::user('id'))
                                                     );
                                                 }
                                                 else

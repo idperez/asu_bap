@@ -50,10 +50,12 @@ class User extends AppModel{
     ),
         'phone' => array(
             'rule' => 'phone',
+            'allowEmpty' => true,
             'message' => 'Please use a valid 10 digit phone number.'    
     ),
         'linkedin' => array(
             'rule' => 'url',
+            'allowEmpty' => true,
             'message' => 'Please include a valid url (ex: https://linkedin.com).'
     ));
 }
