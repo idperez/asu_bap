@@ -14,7 +14,7 @@
     </div>
     <div class="container">    
         <div class="row animate-box">
-            <div class="col-lg-12 col-md-12 col-sm-12 " style="margin-bottom: 20px">
+            <div class="col-lg-12 col-md-12 col-sm-12 " style="margin-bottom: px">
                 <h1 style="display:inline; font-size: 30px; color: black;"><?php echo $user['User']['first_name'] . " " . $user['User']['last_name']; ?>
             </div>
             <div class="col-lg-3 col-md-3 col-sm-3" >
@@ -28,7 +28,7 @@
             <div class="col-lg-3 col-md-3 col-sm-3">
                 <div style="margin-bottom: 20px">
                     <h2>Your Events</h2>
-                    <span ><a class="btn btn-primary" style="margin-bottom: 5px; width: 200px" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Users', 'action'=>'edit/'.$user['User']['id']))?>'">Events RSVP</a></span>
+                    <span ><a class="btn btn-primary" style="margin-bottom: 5px; width: 200px" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Users', 'action'=>'rsvp/'.$user['User']['id']))?>'">Events RSVP</a></span>
                     <span ><a class="btn btn-primary" style="margin-bottom: 5px; width: 200px" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Users', 'action'=>'edit/'.$user['User']['id']))?>'">Events Attended</a></span>
                     <span ><a class="btn btn-primary" style="margin-bottom: 5px; width: 200px" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Users', 'action'=>'edit/'.$user['User']['id']))?>'">Stats</a></span>
                 </div>

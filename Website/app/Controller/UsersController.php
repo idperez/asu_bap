@@ -102,6 +102,13 @@ class UsersController extends AppController{
         $this->request->data = $user;
     }
     
+    public function rsvp($id = null)
+    {
+        $user = $this->User->findById($id);
+        
+        $this->set('user', $user);
+    }
+    
     public function delete($id = null)
     {
         $data = $this->User->findById($id);
