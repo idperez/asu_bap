@@ -54,7 +54,7 @@
                                                         'controller' => 'Users', 'action' => 'edit', $user['User']['id'])
                                             );?>
                                             <?php if(!(empty($user['User']['linkedin']))){ ?>
-                                            <span><a class="hvr-wobble-vertical fa fa-linkedin-square fa-2x" aria-hidden="true"  style="color: #bfbfbf;" target="_blank"  href="<?php $user['User']['linkedin'];?>"></a></span>
+                                            <span><a class="hvr-wobble-vertical fa fa-linkedin-square fa-2x" aria-hidden="true"  style="color: #bfbfbf;" target="_blank"  href='<?php echo $user['User']['linkedin'];?>'></a></span>
                                             <?php } ?>
                                             <span><a class="hvr-wobble-vertical fa fa-envelope-square fa-2x" aria-hidden="true" style="color: #bfbfbf;" href='mailto:<?php echo $user['User']['username'];?>'></a></span>
                                             <?php
@@ -121,7 +121,7 @@
                                                         'controller' => 'Users', 'action' => 'edit', $user['User']['id'])
                                             );?>
                                             <?php if(!(empty($user['User']['linkedin']))){ ?>
-                                            <span><a class="hvr-wobble-vertical fa fa-linkedin-square fa-2x" aria-hidden="true"  style="color: #bfbfbf;"  target="_blank"  href='//<?php echo $user['User']['linkedin'];?>'></a></span>
+                                            <span><a class="hvr-wobble-vertical fa fa-linkedin-square fa-2x" aria-hidden="true"  style="color: #bfbfbf;"  target="_blank"  href='<?php echo $user['User']['linkedin'];?>'></a></span>
                                             <?php } ?>
                                             <span><a class="hvr-wobble-vertical fa fa-envelope-square fa-2x" aria-hidden="true"  style="color: #bfbfbf;"  href='mailto:<?php echo $user['User']['username'];?>'></a></span>
                                             <?php
