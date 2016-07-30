@@ -8,7 +8,7 @@
         <div class="row" >
             <div class="col-md-12 col-sm-12" >
                 <div class="animate-box text-left" style="position:relative; top:-22">  
-                    <h1 style="display:inline; font-size: 40px; color: black;"><?php echo $user['User']['first_name'] . " " . $user['User']['last_name'] . " - ";?><h4 style="display:inline; font-size: 30px; color: grey"><?php echo $user['User']['title'];?></h4><img src="/bap/Website/app/webroot/img/profile_logo.png"  alt="profile_logo" height="120" style="position:relative; top:-35px; float: right"></h1>
+                    <h1 style="display:inline; font-size: 40px; color: black;"><?php echo $user['User']['first_name'] . " " . $user['User']['last_name']; ?><h4 style="display:inline; font-size: 30px; color: grey"><?php if($user['User']['title'] != null) echo ' - ' . $user['User']['title'];?></h4><img src="/bap/Website/app/webroot/img/profile_logo.png"  alt="profile_logo" height="120" style="position:relative; top:-35px; float: right"></h1>
                 </div>
             </div>    
        </div>
@@ -45,7 +45,7 @@
                             }
                             ?></h4></h3>
                             <br><br>
-                            <h3 style="display:inline; color: black;">Email &nbsp;&nbsp;<h4 style="display:inline; color: grey;"><?php echo $user['User']['email'];?></h4></h3>  
+                            <h3 style="display:inline; color: black;">Email &nbsp;&nbsp;<h4 style="display:inline; color: grey;"><?php echo $user['User']['username'];?></h4></h3>  
                             <br><br>
                             <h3 style="display:inline; color: black;">Hometown &nbsp;&nbsp;<h4 style="display:inline; color: grey;"><?php 
                                 $city = $user['User']['city'] ? $user['User']['city'] : null;
@@ -65,9 +65,9 @@
                                     </td>
                                     </tr>
                                 </table>
-                            <a target="_blank" href='<?php echo $user['User']['linkedin']; ?>'>
+                            <a target="_blank" href="//<?php echo $user['User']['linkedin'];?>">
                            
-                           <img alt="connect with me on linkedin" src="/bap/Website/app/webroot/img/linkedin.png" border=0 height="50" width="50" style="float: left;">            
+                           <img alt="linkedin logo" src="/bap/Website/app/webroot/img/linkedin.png" border=0 height="50" width="50" style="float: left;">            
                        </a>
                     </div>
                 </div>
