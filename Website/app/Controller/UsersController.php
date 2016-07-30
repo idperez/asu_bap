@@ -4,7 +4,7 @@ class UsersController extends AppController{
         //All pages that are visible to regular users
     public function beforeFilter()
     {
-        $this->Auth->allow('index', 'view', 'add');
+        $this->Auth->allow('index', 'view', 'add', 'manage_events');
     }
     
     public function index()
@@ -132,6 +132,11 @@ class UsersController extends AppController{
             //Member does not exist
             throw new NotFoundException(__('This member does not exist.'));
         }
+    }
+    
+    public function manage_events()
+    {
+        
     }
     
     public function login()
