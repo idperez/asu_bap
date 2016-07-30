@@ -17,7 +17,7 @@
     <div class="container">    
         <div class="row animate-box">
             <div class="col-lg-12 col-md-12 col-sm-12 " style="margin-bottom: 20px">
-                <h1 style="display:inline; font-size: 40px; color: black;"><?php echo $user['User']['first_name'] . " " . $user['User']['last_name']; ?><h4 style="display:inline; font-size: 30px; color: grey"> - Director of Internal Communications</h4>
+                <h1 style="display:inline; font-size: 40px; color: black;"><?php echo $user['User']['first_name'] . " " . $user['User']['last_name']; ?> &nbsp; <h4 style="display:inline; font-size: 30px; color: grey"><?php echo $user['User']['title']; ?></h4>
             </div>
             <div class="col-md-4 col-sm-4" >
                 <?php $photo = $user['Photo']['url']; ?>
@@ -68,6 +68,7 @@
                             </tr>
                         </table>
                     <span><a class="hvr-wobble-vertical fa fa-linkedin-square fa-3x" aria-hidden="true"  style="color: #bfbfbf;" target="_blank"  href="<?php $user['User']['linkedin'];?>"></a></span>
+                    &nbsp;
                     <span><a class="hvr-wobble-vertical fa fa-envelope-square fa-3x" aria-hidden="true" style="color: #bfbfbf;" href='mailto:<?php echo $user['User']['username'];?>'></a></span>
                 </div>
             </div>
