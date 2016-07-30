@@ -109,6 +109,13 @@ class UsersController extends AppController{
         $this->set('user', $user);
     }
     
+    public function my_events($id = null)
+    {
+        $user = $this->User->findById($id);
+        
+        $this->set('user', $user);
+    }
+    
     public function delete($id = null)
     {
         $data = $this->User->findById($id);
