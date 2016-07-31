@@ -3,10 +3,10 @@
     <div class="desc animate-box" style="position:relative; top:280px; "></div>
 </div>
 <div id="fh5co-work-section" >
-    <div class="container" style="position:relative;">
+    <div class="container">
         <div class="row" >
             <div class="col-md-12 col-sm-12" >
-                <div class="animate-box text-center" style="position:relative;">  
+                <div class="animate-box text-center">  
                     <img src="/bap/Website/app/webroot/img/profile_logo.png"  alt="profile_logo" height="120" style="position:relative; top:-35px; ">
                 </div>
                 <div class="animate-box" style="width: 100%; height: 20px; border-bottom: 1px solid black; text-align: center">
@@ -14,7 +14,7 @@
                     Event Name
                     </span>
                 </div>
-                <br><br>
+                <br><br><br>
                 <div class="col-lg-offset-1 col-sm-12 col-md-12 col-lg-12">
                     <div class="col-sm-7 col-md-7 col-lg-7">
                         <div class="panel-group animate-box">
@@ -32,13 +32,14 @@
                         </div>
                     </div>
                     <div class="col-sm-3 col-md-3 col-lg-3 animate-box">
-                        <span ><a class="btn btn-primary" style="width: 150px;" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Events', 'action'=>'view'))?>'">Edit</a></span>
+                        <span ><a class="btn btn-primary" style="width: 150px;" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Events', 'action'=>'edit'))?>'">Edit</a></span>
                         <br><br>
                         <span ><a class="btn btn-primary" style="width: 150px;" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Events', 'action'=>'view'))?>'">Remove</a></span>
                         <br><br>
-                        <span ><a class="btn btn-primary" style="width: 150px;" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Events', 'action'=>'view'))?>'">Start Login</a></span>
+                        <span ><a class="btn btn-primary" style="width: 150px;" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Events', 'action'=>'sign_in'))?>'">Start Login</a></span>
                     </div>
                 </div>
+                <br>
                 <div class="col-sm-12 col-md-12 col-lg-12">
                     <h2 class='text-center animate-box'>Attendance</h2>
                     <div class="container animate-box">

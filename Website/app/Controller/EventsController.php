@@ -133,6 +133,11 @@ class EventsController extends AppController{
         
     }
     
+    public function sign_in()
+    {
+        
+    }
+    
     public function officer_view($id = null)
     {
         $user = $this->User->findById($id);
