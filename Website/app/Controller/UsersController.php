@@ -126,20 +126,6 @@ class UsersController extends AppController{
         $this->request->data = $user;
     }
     
-    public function rsvp($id = null)
-    {
-        $user = $this->User->findById($id);
-        
-        $this->set('user', $user);
-    }
-    
-    public function my_events($id = null)
-    {
-        $user = $this->User->findById($id);
-        
-        $this->set('user', $user);
-    }
-    
     public function delete($id = null)
     {
         $data = $this->User->findById($id);
@@ -156,23 +142,6 @@ class UsersController extends AppController{
             //Member does not exist
             $this->redirect('profilehub');
         }
-    }
-    
-    public function manage_events()
-    {
-        
-    }
-    
-    public function manage_members()
-    {
-        
-    }
-    
-    public function officer_view($id = null)
-    {
-        $user = $this->User->findById($id);
-        
-        $this->set('user', $user);
     }
     
     public function login()

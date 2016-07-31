@@ -117,5 +117,36 @@ class EventsController extends AppController{
             'controller' => 'Users', 'action' => 'login'
         ));
     }
+    
+    public function manage_events()
+    {
+        
+    }
+    
+    public function manage_members()
+    {
+        
+    }
+    
+    public function officer_view($id = null)
+    {
+        $user = $this->User->findById($id);
+        
+        $this->set('user', $user);
+    }
+    
+    public function rsvp($id = null)
+    {
+        $user = $this->User->findById($id);
+        
+        $this->set('user', $user);
+    }
+    
+    public function my_events($id = null)
+    {
+        $user = $this->User->findById($id);
+        
+        $this->set('user', $user);
+    }
 }
 ?>
