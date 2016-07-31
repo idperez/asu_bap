@@ -11,7 +11,7 @@
                 </div>
                 <div class="animate-box" style="width: 100%; height: 20px; border-bottom: 1px solid black; text-align: center">
                     <span style="font-size: 30px; background-color: #F3F5F6; padding: 0 10px;">
-                    My RSVP's
+                    My Events
                     </span>
                 </div>
             </div>    
@@ -26,8 +26,6 @@
                     <th>Date</th>
                     <th>Time</th>
                     <th>Hours</th>
-                    <th>Attended</th>
-                    <th>Revoke RSVP</th>
                 </tr>
             </thead>
             <tbody>
@@ -36,32 +34,24 @@
                     <td>5/23/16</td>
                     <td>08:00PM</td>
                     <td>2</td>
-                    <td>Future Event</td>
-                    <td><a class="btn btn-primary"  onclick="window.location.href='<?php echo Router::url(array('controller'=>'Users', 'action'=>'cancel_rsvp'))?>'">Cancel</a></td>
                 </tr>
                 <tr>
                     <td>Event Title</td>
                     <td>5/23/16</td>
                     <td>08:00PM</td>
                     <td>2</td>
-                    <td>Yes</td>
-                    <td></td>
                 </tr>
                 <tr>
                     <td>Event Title</td>
                     <td>5/23/16</td>
                     <td>08:00PM</td>
                     <td>4</td>
-                    <td>Yes</td>
-                    <td></td>
                 </tr>
                 <tr>
                     <td>Event Title</td>
                     <td>5/23/16</td>
                     <td>08:00PM</td>
                     <td>1</td>
-                    <td>No</td>
-                    <td></td>
                 </tr>              
             </tbody>
         </table>

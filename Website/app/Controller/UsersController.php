@@ -4,7 +4,11 @@ class UsersController extends AppController{
         //All pages that are visible to regular users
     public function beforeFilter()
     {
+<<<<<<< HEAD
         $this->Auth->allow('index', 'view');
+=======
+        $this->Auth->allow('index', 'view', 'add', 'manage_events', 'manage_members');
+>>>>>>> 06b6b08602cd9fcd93643577719b30b56b7c1b7e
     }
     
     public function index()
@@ -130,6 +134,13 @@ class UsersController extends AppController{
         $this->set('user', $user);
     }
     
+    public function my_events($id = null)
+    {
+        $user = $this->User->findById($id);
+        
+        $this->set('user', $user);
+    }
+    
     public function delete($id = null)
     {
         $data = $this->User->findById($id);
@@ -146,6 +157,16 @@ class UsersController extends AppController{
             //Member does not exist
             throw new NotFoundException(__('This member does not exist.'));
         }
+    }
+    
+    public function manage_events()
+    {
+        
+    }
+    
+    public function manage_members()
+    {
+        
     }
     
     public function login()
