@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 10, 2016 at 05:17 AM
+-- Generation Time: Jul 25, 2016 at 05:15 PM
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 5.6.21
 
@@ -37,12 +37,12 @@ CREATE TABLE `events` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `events_members`
+-- Table structure for table `events_users`
 --
 
-CREATE TABLE `events_members` (
+CREATE TABLE `events_users` (
   `event_id` int(11) NOT NULL,
-  `member_id` int(11) NOT NULL
+  `user_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -131,112 +131,20 @@ INSERT INTO `majors` (`id`, `name`, `degree`, `accelerated`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `majors_members`
+-- Table structure for table `majors_users`
 --
 
-CREATE TABLE `majors_members` (
+CREATE TABLE `majors_users` (
   `major_id` int(11) NOT NULL,
-  `member_id` int(11) NOT NULL
+  `user_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `majors_members`
+-- Dumping data for table `majors_users`
 --
 
-INSERT INTO `majors_members` (`major_id`, `member_id`) VALUES
+INSERT INTO `majors_users` (`major_id`, `user_id`) VALUES
 (1, 1);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `members`
---
-
-CREATE TABLE `members` (
-  `id` int(11) NOT NULL,
-  `first_name` varchar(25) NOT NULL,
-  `last_name` varchar(25) NOT NULL,
-  `email` varchar(35) NOT NULL,
-  `title` varchar(25) NOT NULL,
-  `linkedin` varchar(200) NOT NULL,
-  `phone` varchar(25) NOT NULL,
-  `graduated` tinyint(1) NOT NULL,
-  `graduation_year` varchar(25) NOT NULL,
-  `graduation_semester` varchar(20) NOT NULL,
-  `password` varchar(100) NOT NULL,
-  `minor` varchar(50) NOT NULL,
-  `level` varchar(40) NOT NULL,
-  `state` varchar(20) NOT NULL,
-  `city` varchar(20) NOT NULL,
-  `bio` text NOT NULL,
-  `photo_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `members`
---
-
-INSERT INTO `members` (`id`, `first_name`, `last_name`, `email`, `title`, `linkedin`, `phone`, `graduated`, `graduation_year`, `graduation_semester`, `password`, `minor`, `level`, `state`, `city`, `bio`, `photo_id`) VALUES
-(1, 'Isidro', 'Perez', 'isidro.perez@live.com', 'admin', 'https://www.linkedin.com/in/isidro-perez-09645196?trk=hp-identity-name', '7608777804', 0, '2016', '', 'test', '', '', '', '', '', 1),
-(5, 'Jeb', 'Johnson', 'jebby.joe@icloud.com', 'Director of Software', 'https://www.linkedin.com/in/kaitlinfayemitchell?authType=NAME_SEARCH&authToken=8h9U&locale=en_US&trk=tyah&trkInfo=clickedVertical%3Amynetwork%2CentityType%3AentityHistoryName%2CclickedEntityId%3Amynet', '7608777804', 0, '2017', '', 'jeb', '', '', '', '', '', 1),
-(7, '', '', 'working@live.com', '', '', '', 0, '', '', '$2y$10$ZTdjZGUxMmI2ZTU2MzYzMungwaJZFWt64jPQZcJcJYUHAuE05rsvS', '', '', '', '', '', 1),
-(9, 'Doug', 'Carrol', 'dcarrol@gmail.com', '', '', '', 0, '', '', '$2y$10$M2EyZjg2YWFlZTRjNGY1YOB.OEP22JaYXXM5Dnb6QX0YrYnsDHJti', '', 'Candidate', '', '', '', 1),
-(10, 'Tommy', 'Murphey', 'tmurph@asu.edu', '', '', '', 0, '', '', '$2y$10$ZDQ3MmQzMzVjYmY4MDhhMOpltW2KvxvB2hc1C1xSgDQHmuK8fZdV6', '', 'Candidate', '', '', '', 1),
-(11, 'Greg', 'Perez', 'gregsocal@gmail.com', 'Manager', '', '(760) 877-7804', 0, '2017', '', '$2y$10$MGY1NzI5ZDhmZGQyYzRhN.WFo6DrEzUMEUdG7lZBA1FomC6Ei1mum', '', 'Candidate', '', '', '', 1),
-(12, 'Isidro', 'Perez', 'isidro.perez.espn@gmail.com', 'Manager', 'https://linkedin.com', '7608777804', 0, '2017', '', '$2y$10$NzQxZTgyMTY3NzVhNmRkNuYqXH2tXOxR5uWHb8k.3XIqGUPG.kVLS', '', 'admin', '', '', '', 1),
-(13, 'Drew', 'Demechko', 'isd@isd.com', '', '', '', 0, '', '', 'test', '', 'Officer', '', '', '', 1),
-(14, 'Dre', 'Demechko', 'isd.com', '', '', '', 0, '', '', 'test', '', 'Officer', '', '', '', 1),
-(15, 'Dre', 'Demechko', 'isd.com', '', '', '', 0, '', '', 'test', '', 'Officer', '', '', '', 1),
-(16, 'Dre', 'Demechko', 'isd.com', '', '', '', 0, '', '', 'test', '', 'Officer', '', '', '', 1),
-(17, 'Dre', 'Demechko', 'isd.com', '', '', '', 0, '', '', 'test', '', 'Officer', '', '', '', 1),
-(18, 'Dre', 'Demechko', 'isd.com', '', '', '', 0, '', '', 'test', '', 'Officer', '', '', '', 1),
-(19, 'Dre', 'Demechko', 'isd.com', '', '', '', 0, '', '', 'test', '', 'Officer', '', '', '', 1),
-(20, 'Dre', 'Demechko', 'isd.com', '', '', '', 0, '', '', 'test', '', 'Officer', '', '', '', 1),
-(21, 'Dre', 'Demechko', 'isd.com', '', '', '', 0, '', '', 'test', '', 'Officer', '', '', '', 1),
-(22, 'Dre', 'Demechko', 'isd.com', '', '', '', 0, '', '', 'test', '', 'Officer', '', '', '', 1),
-(23, 'Dre', 'Demechko', 'isd.com', '', '', '', 0, '', '', 'test', '', 'Officer', '', '', '', 1),
-(24, 'Dre', 'Demechko', 'isd.com', '', '', '', 0, '', '', 'test', '', 'Officer', '', '', '', 1),
-(25, 'Dre', 'Alan', 'isd.com', '', '', '', 0, '', '', 'test', '', 'Officer', '', '', '', 1),
-(26, 'Dre', 'Alan', 'isd.com', '', '', '', 0, '', '', 'test', '', 'Officer', '', '', '', 1),
-(27, 'Dre', 'Alan', 'isd.com', '', '', '', 0, '', '', 'test', '', 'Officer', '', '', '', 1),
-(28, 'Dre', 'Bri', 'isd.com', '', '', '', 0, '', '', 'test', '', 'Officer', '', '', '', 1),
-(29, 'Dre', 'Bri', 'isd.com', '', '', '', 0, '', '', 'test', '', 'Officer', '', '', '', 1),
-(30, 'Dre', 'Zi', 'isd.com', '', '', '', 0, '', '', 'test', '', 'Officer', '', '', '', 1),
-(31, 'Dre', 'Zi', 'isd.com', '', '', '', 0, '', '', 'test', '', 'Officer', '', '', '', 1),
-(32, 'Dre', 'Li', 'isd.com', '', '', '', 0, '', '', 'test', '', 'Officer', '', '', '', 1),
-(33, 'Dre', 'Li', 'isd.com', '', '', '', 0, '', '', 'test', '', 'Officer', '', '', '', 1),
-(34, 'Dre', 'Li', 'isd.com', '', '', '', 0, '', '', 'test', '', 'Officer', '', '', '', 1),
-(35, 'Dre', 'Mom', 'isd.com', '', '', '', 0, '', '', 'test', '', 'Officer', '', '', '', 1),
-(36, 'Dre', 'Mom', 'isd.com', '', '', '', 0, '', '', 'test', '', 'Officer', '', '', '', 1),
-(37, 'Dre', 'Mom', 'isd.com', '', '', '', 0, '', '', 'test', '', 'Officer', '', '', '', 1),
-(38, 'Dre', 'Yi', 'isd.com', '', '', '', 0, '', '', 'test', '', 'Officer', '', '', '', 1),
-(39, 'Dre', 'Yi', 'isd.com', '', '', '', 0, '', '', 'test', '', 'Officer', '', '', '', 1),
-(40, 'Dre', 'Yi', 'isd.com', '', '', '', 0, '', '', 'test', '', 'Officer', '', '', '', 1),
-(41, 'Dre', 'Yi', 'isd.com', '', '', '', 0, '', '', 'test', '', 'Officer', '', '', '', 1),
-(42, 'Dre', 'Vin', 'isd.com', '', '', '', 0, '', '', 'test', '', 'Officer', '', '', '', 1),
-(43, 'Dre', 'Vin', 'isd.com', '', '', '', 0, '', '', 'test', '', 'Officer', '', '', '', 1),
-(44, 'Dre', 'Vin', 'isd.com', '', '', '', 0, '', '', 'test', '', 'Officer', '', '', '', 1),
-(45, 'Dre', 'Vin', 'isd.com', '', '', '', 0, '', '', 'test', '', 'Officer', '', '', '', 1),
-(46, 'Dre', 'Eer', 'isd.com', '', '', '', 0, '', '', 'test', '', 'Officer', '', '', '', 1),
-(47, 'Dre', 'Eer', 'isd.com', '', '', '', 0, '', '', 'test', '', 'Officer', '', '', '', 1),
-(48, 'Dre', 'Eer', 'isd.com', '', '', '', 0, '', '', 'test', '', 'Officer', '', '', '', 1),
-(49, 'Dre', 'Eer', 'isd.com', '', '', '', 0, '', '', 'test', '', 'Officer', '', '', '', 1),
-(50, 'Dre', 'Eer', 'isd.com', '', '', '', 0, '', '', 'test', '', 'Officer', '', '', '', 1),
-(51, 'Dre', 'Eer', 'isd.com', '', '', '', 0, '', '', 'test', '', 'Officer', '', '', '', 1),
-(52, 'Dre', 'Eer', 'isd.com', '', '', '', 0, '', '', 'test', '', 'Officer', '', '', '', 1),
-(53, 'Dre', 'Eer', 'isd.com', '', '', '', 0, '', '', 'test', '', 'Officer', '', '', '', 1),
-(54, 'Dre', 'Eer', 'isd.com', '', '', '', 0, '', '', 'test', '', 'Officer', '', '', '', 1),
-(55, 'Dre', 'Eer', 'isd.com', '', '', '', 0, '', '', 'test', '', 'Officer', '', '', '', 1),
-(56, 'Dre', 'Fun', 'isd.com', '', '', '', 0, '', '', 'test', '', 'Officer', '', '', '', 1),
-(57, 'Dre', 'Fun', 'isd.com', '', '', '', 0, '', '', 'test', '', 'Officer', '', '', '', 1),
-(58, 'Dre', 'Fun', 'isd.com', '', '', '', 0, '', '', 'test', '', 'Officer', '', '', '', 1),
-(59, '', '', 'test@test.com', '', '', '', 0, '', '', 'test123', '', '0', '', '', '', 0),
-(60, '', '', 'test@test.com', '', '', '', 0, '', '', 'test123', '', '0', '', '', '', 0),
-(61, '', '', 'isidro.perez@live.com', '', '', '', 0, '', '', 'test', '', '0', '', '', '', 0),
-(62, '', '', 'isidro.perez@live.com', '', '', '', 0, '', '', 'test', '', '0', '', '', '', 0),
-(63, 'TestFirst', 'TestLast', 'isidro.perez@live.com', '', '', '', 0, '', '', 'test', '', '0', '', '', '', 0),
-(64, '', '', 'isidro.perez@liv', '', '', '', 0, '', '', 'test1234', '', '0', '', '', '', 0),
-(65, '12df', '', 'isidro.perez@yahoo.com', '', '', '', 0, '', '', 'test12344', '', '0', '', '', '', 0);
 
 -- --------------------------------------------------------
 
@@ -265,7 +173,42 @@ CREATE TABLE `photos` (
 --
 
 INSERT INTO `photos` (`id`, `url`) VALUES
+(0, 'http://www.crewbaseasia.com/wp-content/uploads/blank-user-300x225.jpg'),
 (1, 'http://www.crewbaseasia.com/wp-content/uploads/blank-user-300x225.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
+  `first_name` varchar(25) NOT NULL,
+  `last_name` varchar(25) NOT NULL,
+  `username` varchar(50) DEFAULT NULL,
+  `title` varchar(25) NOT NULL,
+  `linkedin` varchar(200) NOT NULL,
+  `phone` varchar(25) NOT NULL,
+  `graduated` tinyint(1) NOT NULL,
+  `graduation_year` varchar(25) NOT NULL,
+  `graduation_semester` varchar(20) NOT NULL,
+  `password` varchar(50) DEFAULT NULL,
+  `minor` varchar(50) NOT NULL,
+  `level` varchar(40) NOT NULL,
+  `state` varchar(20) NOT NULL,
+  `city` varchar(20) NOT NULL,
+  `bio` text NOT NULL,
+  `photo_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `first_name`, `last_name`, `username`, `title`, `linkedin`, `phone`, `graduated`, `graduation_year`, `graduation_semester`, `password`, `minor`, `level`, `state`, `city`, `bio`, `photo_id`) VALUES
+(91, 'test', 'test', 'test@test123.com', '', '', '', 0, '', '', '16d7a4fca7442dda3ad93c9a726597e4', '', '1', '', '', '', 0),
+(92, 'test', 'test', 'test@test12345.com', '', '', '', 0, '', '', '05a671c66aefea124cc08b76ea6d30bb', '', '1', '', '', '', 0);
 
 --
 -- Indexes for dumped tables
@@ -284,12 +227,6 @@ ALTER TABLE `majors`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `members`
---
-ALTER TABLE `members`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Indexes for table `minors`
 --
 ALTER TABLE `minors`
@@ -299,6 +236,12 @@ ALTER TABLE `minors`
 -- Indexes for table `photos`
 --
 ALTER TABLE `photos`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -316,11 +259,6 @@ ALTER TABLE `events`
 ALTER TABLE `majors`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
 --
--- AUTO_INCREMENT for table `members`
---
-ALTER TABLE `members`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=66;
---
 -- AUTO_INCREMENT for table `minors`
 --
 ALTER TABLE `minors`
@@ -330,6 +268,11 @@ ALTER TABLE `minors`
 --
 ALTER TABLE `photos`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=93;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
