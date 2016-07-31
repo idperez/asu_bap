@@ -40,7 +40,7 @@
                         <?php echo $this->Form->input('type', array(
                             'options' => array('Event' => 'Event', 'Opportunity' => 'Opportunity'),
                             'class' => 'form-control',
-                            'name' => 'level'));
+                            'name' => 'type'));
                         ?>
                   </div> 
                  </fieldset>

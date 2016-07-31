@@ -19,7 +19,7 @@ class EventsController extends AppController{
         }
         //user is not an admin
         else
-            $this->redirect('login');
+            $this->redirectToLogin();
     }
     
     public function edit($id = null)
@@ -62,7 +62,7 @@ class EventsController extends AppController{
         //else if user is not logged in
         else 
         {
-            $this->redirect('login');
+            $this->redirectToLogin();
         }
     }
     
@@ -87,24 +87,35 @@ class EventsController extends AppController{
     
     public function announcements()
     {
-        //returns all events to the view
-        $eventdata = $this->Event->find('all', 
-            array(
-                'order' => array('Event.time' => 'DESC'),
-                'group' => 'Event.time'
-        ));
-            
-        $this->set('events', $eventdata);
+        $this->EventHelper();
     }
     
     public function opportunities()
     {
-        
+        $this->EventHelper();
     }
     
     public function events()
     {
-        
+        $this->EventHelper();
+    }
+    
+    public function EventHelper()
+    {
+        //returns all events to the view
+        $eventdata = $this->Event->find('all', 
+            array(
+                'order' => array('Event.time' => 'DESC')
+        ));
+            
+        $this->set('events', $eventdata); 
+    }
+    
+    public function redirectToLogin()
+    {
+        $this->redirect(array(
+            'controller' => 'Users', 'action' => 'login'
+        ));
     }
 }
 ?>
