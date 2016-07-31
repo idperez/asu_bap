@@ -148,5 +148,10 @@ class EventsController extends AppController{
         
         $this->set('user', $user);
     }
+    
+    public function event_results()
+    {
+             
+    }
 }
 ?>
