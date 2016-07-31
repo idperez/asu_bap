@@ -18,16 +18,23 @@ class UsersController extends AppController{
     
     public function add()
     {
-        if($this->request->is('post'))
+        //if user is admin
+        if($this->Auth->user('level') != "Member" && $this->Auth->user('level') != "Candidate")
         {
-            $data = $this->request->data;
-            $this->User->create();
-            
-            if($this->User->save($this->request->data))
+            if($this->request->is('post'))
             {
-                $this->redirect('index');
+                $data = $this->request->data;
+                $this->User->create();
+                
+                if($this->User->save($this->request->data))
+                {
+                    $this->redirect('index');
+                }
             }
         }
+        //user is not an admin
+        else
+            $this->redirect('login');
     }
     
     public function view($id = null)
@@ -48,20 +55,37 @@ class UsersController extends AppController{
         $this->set('user', $user);
     }
     
+    public function editMajors($id = null)
+    {
+        
+    }
+    
+    public function editMinors($id = null)
+    {
+        
+    }
+    
     public function edit($id = null)
     {
-        if($this->Auth->user('id') == $id)
+        if($this->Auth->user('id') == $id) //if user id matches requested
             $this->editHelper($id);
-        else
-            throw new NotFoundException(_('You must be an administrator to perform this action.'));   
+        else if($this->Auth->user('id') != null) //else if user is logged in
+            $this->edit($this->Auth->user('id'));   
+        else //else no user is logged in
+            $this->redirect('login');
     }
     
     public function adminedit($id = null)
     {
+        //if user is admin
         if($this->Auth->user('level') != "Member" && $this->Auth->user('level') != "Candidate")
             $this->editHelper($id);
+        //else if user is not admin
+        else if($this->Auth->user('id') != null)
+            $this->redirect('profilehub');
+        //else user is not logged in    
         else
-            throw new NotFoundException(__('You must be an administrator to perform this action.'));
+            $this->redirect('login');
     }
     
     public function profilehub($id = null)
@@ -130,7 +154,7 @@ class UsersController extends AppController{
         else
         {
             //Member does not exist
-            throw new NotFoundException(__('This member does not exist.'));
+            $this->redirect('profilehub');
         }
     }
     
