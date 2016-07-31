@@ -24,7 +24,7 @@
                                 <th>Time</th>
                                 <th>Hours</th>
                                 <th>Edit</th>
-                                <th>Results</th>
+                                <th>View</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -34,7 +34,7 @@
                                 <td>08:00PM</td>
                                 <td>2</td>
                                 <th><span ><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Info', 'action'=>'edit_announcement'))?>'">Edit</a></span></th>
-                                <th><span ><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Events', 'action'=>'event_results'))?>'">Results</a></span></th>
+                                <th><span ><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Events', 'action'=>'view'))?>'">View</a></span></th>
                             </tr>
                             <tr>
                                 <td>Event Title</td>
@@ -42,7 +42,7 @@
                                 <td>08:00PM</td>
                                 <td>2</td>
                                 <th><span ><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Info', 'action'=>'edit_announcement'))?>'">Edit</a></span></th>
-                                <th><span ><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Events', 'action'=>'event_results'))?>'">Results</a></span></th>
+                                <th><span ><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Events', 'action'=>'view'))?>'">View</a></span></th>
                             </tr>
                             <tr>
                                 <td>Event Title</td>
@@ -50,7 +50,7 @@
                                 <td>08:00PM</td>
                                 <td>4</td>
                                 <th><span ><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Info', 'action'=>'edit_announcement'))?>'">Edit</a></span></th>
-                                <th><span ><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Events', 'action'=>'event_results'))?>'">Results</a></span></th>
+                                <th><span ><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Events', 'action'=>'view'))?>'">View</a></span></th>
                             </tr>
                         </tbody>
                     </table>
