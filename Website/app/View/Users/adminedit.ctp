@@ -29,7 +29,7 @@
                 <?php echo $this->Form->create('User'); ?> 
                 <div class="form-inline">
                     <fieldset>                 
-                        <div class="form-group col-lg-12">
+                        <div class="form-group col-lg-6">
                             <?php echo $this->Form->input('title', array(
                                 'type' => 'text',
                                 'class' => 'form-control',
@@ -37,6 +37,35 @@
                                 'placeholder' => 'Full-time Student',
                                 'name' => 'title'));
                             ?>
+                        </div>
+                        <div class="form-group col-lg-6">
+                        <?php echo $this->Form->input('level', array(
+                            'options' => array('Candidate' => 'Candidate', 'Member' => 'Member', 'Officer' => 'Officer', 'Alumni' => 'Alumni'),
+                            'class' => 'form-control',
+                            'name' => 'level'));
+                            ?>                     
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="form-inline">
+                    <fieldset>                 
+                        <div class="form-group col-lg-6">
+                            <?php echo $this->Form->input('first_name', array(
+                                'type' => 'text',
+                                'class' => 'form-control',
+                                'maxlength' => 50,
+                                'placeholder' => 'First Name',
+                                'name' => 'first_name'));
+                            ?>
+                        </div>
+                        <div class="form-group col-lg-6">
+                        <?php echo $this->Form->input('last_name', array(
+                            'type' => 'text',
+                            'class' => 'form-control',
+                            'maxlength' => 30,
+                            'placeholder' => 'Last Name',
+                            'name' => 'last_name'));
+                        ?>
                         </div>               
                     </fieldset>
                 </div>  
@@ -193,25 +222,3 @@
         </div>
     </div>
 </div>
-<!--admin only commands-->
-<?php/* echo $this->Form->input('first_name', array(
-    'type' => 'text',
-    'class' => 'form-control',
-    'maxlength' => 24,
-    'placeholder' => 'First Name',
-    'id' => 'first_name',
-    'name' => 'first_name'));*/
-?>
-<?php/* echo $this->Form->input('last_name', array(
-    'type' => 'text',
-    'class' => 'form-control',
-    'maxlength' => 24,
-    'placeholder' => 'Last Name',
-    'id' => 'last_name',
-    'name' => 'last_name'));*/
-?>
-<?php/* echo $this->Form->input('level', array(
-    'options' => array('Candidate' => 'Candidate', 'Member' => 'Member', 'Officer' => 'Officer', 'Alumni' => 'Alumni'),
-    'class' => 'form-control',
-    'name' => 'level'));*/
- ?>

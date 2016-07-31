@@ -36,5 +36,20 @@ class EventsController extends AppController{
     {
         
     }
+    
+    public function announcements()
+    {
+        
+    }
+    
+    public function opportunities()
+    {
+        
+    }
+    
+    public function events()
+    {
+        
+    }
 }
 ?>

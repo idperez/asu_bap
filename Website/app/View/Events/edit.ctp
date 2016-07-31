@@ -18,134 +18,70 @@
         </div>
     </div>
 </div>
-<form class="animate-box form-group" role="form" action="" method="post" enctype="multipart/form-data" style="position: relative; top: -50px;">
-    <div id="fh5co-content-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="container">
-                        <div class="col-md-6">
-                            <label>Annoucement Title</label>
-                            <input type="text" class="form-control" maxlength="50" placeholder="Title" name="title">
-                            <br>
-                        </div>
-                    </div>
-                    <div class="container"> 
-                        <div class="col-md-3">
-                            <label>Date</label>
-                            <input type="text" class="form-control" maxlength="50" placeholder="Title" name="date">
-                            <br>
-                            <label>Time (12:59 PM)</label>
-                            <input type="text" class="form-control" maxlength="50" placeholder="Title" name="time">
-                            <br>
-                            <div class="form-group">
-                                <label for="sel1">Announcement Type</label>
-                                <select class="form-control" id="sel1">
-                                    <option>Event</option>
-                                    <option>Opportunity</option>
-                                    <option>Other</option>
-                                </select>
-                            </div>
-                        <label>Hours</label>
-                            <input type="number" class="form-control" name="hours">
-                            <br>
-                        </div>
-                    </div>
-                    <div class="container">
-                        <div class="col-md-2 ">
-                            <label>Links</label>
-                            <input type="text" class="form-control" maxlength="24" placeholder="Name" name="link_name_1">
-                        </div>
+<div class="row">
+    <div class="col-lg-8 col-lg-offset-3">
+        <div class="input-group">          
+            <?php echo $this->Form->create('Event'); ?>
+              <div class="form-inline">                  
+                 <fieldset>                     
+                    <div class="form-group col-lg-6">
+                        <?php echo $this->Form->input('name', array(
+                            'type' => 'text',
+                            'label' => 'Announcement Title',
+                            'class' => 'form-control',
+                            'maxlength' => 30,
+                            'placeholder' => 'Name of Announcement',
+                            'id' => 'name',
+                            'name' => 'name'));
+                        ?>
                     </div>      
-                    <div class="container">
-                        <div class="col-md-6">  
-                            <input type="text" class="form-control" placeholder="URL" name="link_1">
-                        </div>
+                    <div class="form-group col-lg-6">
+                        <?php echo $this->Form->input('type', array(
+                            'options' => array('Event' => 'Event', 'Opportunity' => 'Opportunity', 
+                            'Announcement' => 'Announcement'),
+                            'class' => 'form-control',
+                            'name' => 'level'));
+                        ?>
+                  </div> 
+                 </fieldset>
+              </div>   
+              <div class="form-inline">
+                 <fieldset>        
+                    <!--Implement a js time picker to auto fill in the time-->          
+                    <div class="form-group col-lg-6">
+                        <?php echo $this->Form->input('time', array(
+                            'type' => 'text',
+                            'class' => 'form-control',
+                            'name' => 'time'));
+                        ?>
                     </div>
-                    <br>
-                    <div class="container" >
-                        <div class="col-md-2 ">
-                            <input type="text" class="form-control" maxlength="24" placeholder="Name" name="link_name_2">
-                        </div>
-                    </div>
-                    <div class="container">
-                        <div class="col-md-6">  
-                            <input type="text" class="form-control" placeholder="URL" name="link_2">
-                        </div>
-                    </div>
-                    <br>
-                    <div class="container" >
-                        <div class="col-md-2 ">             
-                            <input type="text" class="form-control" maxlength="24" placeholder="Name" name="link_name_3">
-                        </div>
-                    </div>
-                    <div class="container">
-                        <div class="col-md-6">  
-                            <input type="text" class="form-control" placeholder="URL" name="link_3">
-                        </div>
-                    </div>
-                    <br> 
-                </div>
-                <div class="col-md-6 col-sm-6">
-                    <div class="container">
-                        <div class="col-md-6">
-                            <label>Description</label>
-                            ​<textarea id="txtArea" placeholder="Description"rows="10" cols="70"></textarea>
-                        </div>
-                    </div>
-                    <div class="container">
-                        <div class="col-md-3">
-                        <label>Hours</label>
-                            <input type="number" class="form-control" name="hours">
-                            <br>
-                            <label>Type of Event</label>
-                            <input type="text" class="form-control" maxlength="50" placeholder="Title" name="event_type">
-                            <br>
-                        </div>
-                    </div>
-                    <div class="container">
-                        <div class="col-md-2 ">
-                            <label>Files</label>
-                            <input type="text" class="form-control" maxlength="24" placeholder="Name" name="file_name_1">
-                        </div>
-                    </div>      
-                    <div class="container">
-                        <div class="col-md-6">  
-                            <input type="text" class="form-control" placeholder="URL" name="file_1">
-                        </div>
-                    </div>
-                    <br>
-                    <div class="container" >
-                        <div class="col-md-2 ">
-                            <input type="text" class="form-control" maxlength="24" placeholder="Name" name="file_name_2">
-                        </div>
-                    </div>
-                    <div class="container">
-                        <div class="col-md-6">  
-                            <input type="text" class="form-control" placeholder="URL" name="file_2">
-                        </div>
-                    </div>
-                    <br>
-                    <div class="container" >
-                        <div class="col-md-2 ">             
-                            <input type="text" class="form-control" maxlength="24" placeholder="Name" name="file_name_3">
-                        </div>
-                    </div>
-                    <div class="container">
-                        <div class="col-md-6">  
-                            <input type="text" class="form-control" placeholder="URL" name="file_3">
-                        </div>
-                    </div>
-                    <br>
-                    <div class="col-md-6 col-sm-6">
-                    <div class="container">
-                        <div class="col-md-offset-5">
-                            <button type="submit" class="btn btn-primary" name="submit">Submit</button>
-                        </div>
-                    </div>
-                    </div>
-                </div>             
-            </div>
+                    <div class="form-group col-lg-6">
+                        <?php echo $this->Form->input('hours', array(
+                            'type' => 'number',
+                            'class' => 'form-control',
+                            'name' => 'hours'));
+                        ?>
+                    </div>                
+                 </fieldset>
+              </div>
+              <div class="form-group col-lg-12">
+                <?php echo $this->Form->input('description', array(
+                    'type' => 'textarea',
+                    'class' => 'form-control',
+                    'style' => 'resize:none',
+                    'maxlength' => 500,
+                    'placeholder' => 'List a little bit about the announcement here...',
+                    'name' => 'description'));
+                ?>
+              </div>                        
+              </div>             
+              <div class="form-group col-lg-12">         
+                <?php echo $this->Form->end(array('label' => 'Submit', 
+                            'class' => 'btn btn-primary', 
+                            'name' => 'submit')); 
+                ?>                  
+              </div>              
+            </form>         
         </div>
     </div>
-</form>
+</div>

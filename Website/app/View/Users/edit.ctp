@@ -193,26 +193,4 @@
         </div>
     </div>
 </div>
-<!--admin only commands-->
-<?php/* echo $this->Form->input('first_name', array(
-    'type' => 'text',
-    'class' => 'form-control',
-    'maxlength' => 24,
-    'placeholder' => 'First Name',
-    'id' => 'first_name',
-    'name' => 'first_name'));*/
-?>
-<?php/* echo $this->Form->input('last_name', array(
-    'type' => 'text',
-    'class' => 'form-control',
-    'maxlength' => 24,
-    'placeholder' => 'Last Name',
-    'id' => 'last_name',
-    'name' => 'last_name'));*/
-?>
-<?php/* echo $this->Form->input('level', array(
-    'options' => array('Candidate' => 'Candidate', 'Member' => 'Member', 'Officer' => 'Officer', 'Alumni' => 'Alumni'),
-    'class' => 'form-control',
-    'name' => 'level'));*/
- ?>
  
