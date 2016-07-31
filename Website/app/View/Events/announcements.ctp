@@ -37,6 +37,17 @@
                             <!--<b>Links:</b> LinkName1 LinkName2
                             <br>
                             <b>Files:</b> FileName1 FileName2-->
+                            <?php
+                                if(AuthComponent::user('level') == 'Officer')
+                                    echo $this->Html->link('Edit', array(
+                                    'controller' => 'Events', 'action' => 'edit', $event['Event']['id'])
+                                );
+                                echo ' ';
+                                if(AuthComponent::user('level') == 'Officer') 
+                                    echo $this->Html->link('Delete', array(
+                                    'controller' => 'Events', 'action' => 'delete', $event['Event']['id'])
+                                );
+                            ?>                            
                         </div> 
                     </div>
                 </div>  
