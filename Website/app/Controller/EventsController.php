@@ -24,7 +24,38 @@ class EventsController extends AppController{
     
     public function edit($id = null)
     {
-        
+        if($this->Auth->user('level') != "Member" && $this->Auth->user('level') != "Candidate")
+        {
+            //returns a single event
+            if(!$id)
+            {
+                throw new  NotFoundException(__('The Id was not found.'));
+            }
+            
+            $event = $this->Event->findById($id);
+            
+            if(!$event)
+            {
+                throw new NotFoundException(__('This event does not exist.'));
+            }    
+            
+            //save new inputs to member
+            if($this->request->is('post') || $this->request->is('put'))
+            {       
+                $this->Event->id = $id; //set event id = to id caught
+
+                if($this->Event->save($this->request->data))
+                {
+                    $this->redirect('announcements');
+                }
+            }
+            
+            $this->request->data = $event;
+        }
+        else 
+        {
+            $this->redirect('login');
+        }
     }
     
     public function delete($id = null)
