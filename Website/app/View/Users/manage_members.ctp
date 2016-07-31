@@ -22,22 +22,26 @@
                                 <th>Firstname</th>
                                 <th>Lastname</th>
                                 <th>Level</th>
+                                <th>Hours</th>
                                 <th>Edit</th>
                                 <th>Profile</th>
                             </tr>
                         </thead>
                         <tbody>
+                            <?php $go = 96; ?>
                             <tr>
                                 <td>Isidro</td>
                                 <td>Perez</td>
                                 <td>Officer</td>
+                                <td>3</td>
                                 <th><span ><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Info', 'action'=>'edit'))?>'">Edit</a></span></th>
-                                <th><span ><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Users', 'action'=>'officer_view'))?>'">View</a></span></th>
+                                <th><span ><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Users', 'action'=>'officer_view/'.$go))?>'">View</a></span></th>
                             </tr>
                             <tr>
                                 <td>Drew</td>
                                 <td>Monachy</td>
                                 <td>Member</td>
+                                <td>3</td>
                                 <th><span ><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Info', 'action'=>'edit'))?>'">Edit</a></span></th>
                                 <th><span ><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Users', 'action'=>'officer_view'))?>'">View</a></span></th>
                             </tr>
@@ -45,13 +49,14 @@
                                 <td>Lory</td>
                                 <td>Slorun</td>
                                 <td>Candidate</td>
+                                <td>3</td>
                                 <th><span ><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Info', 'action'=>'edit'))?>'">Edit</a></span></th>
                                 <th><span ><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Users', 'action'=>'officer_view'))?>'">View</a></span></th>
                             </tr>
                         </tbody>
                     </table>
                 </div>
-                <span class="animate-box" style="float: right;"><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Info', 'action'=>'new_announcement'))?>'">New Member</a></span>  
+                <span class="animate-box" style="float: right;"><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Users', 'action'=>'add'))?>'">New Member</a></span>  
             </div>    
         </div>
     </div>
