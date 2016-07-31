@@ -85,11 +85,6 @@ class EventsController extends AppController{
         }
     }
     
-    public function view($id = null)
-    {
-        
-    }
-    
     public function announcements()
     {
         

@@ -154,7 +154,7 @@ class UsersController extends AppController{
         else
         {
             //Member does not exist
-            throw new NotFoundException(__('This member does not exist.'));
+            $this->redirect('profilehub');
         }
     }
     
