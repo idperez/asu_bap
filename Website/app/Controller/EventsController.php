@@ -24,6 +24,7 @@ class EventsController extends AppController{
     
     public function edit($id = null)
     {
+        //if user is admin
         if($this->Auth->user('level') != "Member" && $this->Auth->user('level') != "Candidate")
         {
             //returns a single event
@@ -39,7 +40,7 @@ class EventsController extends AppController{
                 throw new NotFoundException(__('This event does not exist.'));
             }    
             
-            //save new inputs to member
+            //save new inputs to event
             if($this->request->is('post') || $this->request->is('put'))
             {       
                 $this->Event->id = $id; //set event id = to id caught
@@ -52,6 +53,13 @@ class EventsController extends AppController{
             
             $this->request->data = $event;
         }
+        //else if user is not admin
+        else if ($this->Auth->user('id') != null) 
+        {
+           $this->redirect(
+               array('controller' => 'Users', 'action' => 'profilehub'));
+        }
+        //else if user is not logged in
         else 
         {
             $this->redirect('login');
@@ -60,7 +68,21 @@ class EventsController extends AppController{
     
     public function delete($id = null)
     {
+        $data = $this->Event->findById($id);
         
+        if($this->Event->exists($id))
+        {
+            if($this->Event->delete($id)) //success
+                $this->redirect('announcements');
+            else //unsuccessful
+                throw new NotFoundException(__('This deletion was unsuccessful.'));
+        }
+        else
+        {
+            //Member does not exist
+            $this->redirect(
+               array('controller' => 'Users', 'action' => 'profilehub'));
+        }
     }
     
     public function view($id = null)

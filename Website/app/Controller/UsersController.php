@@ -81,6 +81,9 @@ class UsersController extends AppController{
         if($this->Auth->user('level') != "Member" && $this->Auth->user('level') != "Candidate")
             $this->editHelper($id);
         //else if user is not admin
+        else if($this->Auth->user('id') != null)
+            $this->redirect('profilehub');
+        //else user is not logged in    
         else
             $this->redirect('login');
     }
