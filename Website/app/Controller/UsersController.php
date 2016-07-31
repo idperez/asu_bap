@@ -4,7 +4,7 @@ class UsersController extends AppController{
         //All pages that are visible to regular users
     public function beforeFilter()
     {
-        $this->Auth->allow('index', 'view', 'add', 'manage_events', 'manage_members', 'officer_view');
+        $this->Auth->allow('index', 'view');
     }
     
     public function index()

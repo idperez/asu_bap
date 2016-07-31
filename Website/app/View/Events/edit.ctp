@@ -37,8 +37,7 @@
                     </div>      
                     <div class="form-group col-lg-6">
                         <?php echo $this->Form->input('type', array(
-                            'options' => array('Event' => 'Event', 'Opportunity' => 'Opportunity', 
-                            'Announcement' => 'Announcement'),
+                            'options' => array('Event' => 'Event', 'Opportunity' => 'Opportunity'),
                             'class' => 'form-control',
                             'name' => 'level'));
                         ?>

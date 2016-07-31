@@ -87,7 +87,14 @@ class EventsController extends AppController{
     
     public function announcements()
     {
-        
+        //returns all events to the view
+        $eventdata = $this->Event->find('all', 
+            array(
+                'order' => array('Event.time' => 'DESC'),
+                'group' => 'Event.time'
+        ));
+            
+        $this->set('events', $eventdata);
     }
     
     public function opportunities()
