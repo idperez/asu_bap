@@ -128,6 +128,16 @@ class EventsController extends AppController{
         
     }
     
+    public function view()
+    {
+        
+    }
+    
+    public function sign_in()
+    {
+        
+    }
+    
     public function officer_view($id = null)
     {
         $this->assignUserToView($id);
@@ -149,6 +159,11 @@ class EventsController extends AppController{
         $user = $this->User->findById($id);
         
         $this->set('user', $user);
+    }
+    
+    public function event_results()
+    {
+             
     }
 }
 ?>

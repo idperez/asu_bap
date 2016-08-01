@@ -3,7 +3,7 @@
     <div class="desc animate-box" style="position:relative; top:280px; "></div>
 </div>
 <div id="fh5co-work-section" >
-    <div class="container" style="position:relative;">
+    <div class="container">
         <div class="row" >
             <div class="col-md-12 col-sm-12" >
                 <div class="animate-box text-center" style="position:relative;">  
@@ -23,8 +23,9 @@
                                 <th>Date</th>
                                 <th>Time</th>
                                 <th>Hours</th>
-                                <th>Edit</th>
-                                <th>Results</th>
+                                <th>Attendance</th>
+                                <th>RSVP</th>
+                                <th>View</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -33,30 +34,32 @@
                                 <td>5/23/16</td>
                                 <td>08:00PM</td>
                                 <td>2</td>
-                                <th><span ><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Info', 'action'=>'edit_announcement'))?>'">Edit</a></span></th>
-                                <th><span ><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Users', 'action'=>'event_results'))?>'">Results</a></span></th>
+                                <td>2</td>
+                                <td>2</td>
+                                <th><span ><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Events', 'action'=>'view'))?>'">View</a></span></th>
                             </tr>
                             <tr>
                                 <td>Event Title</td>
                                 <td>5/23/16</td>
                                 <td>08:00PM</td>
                                 <td>2</td>
-                                <th><span ><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Info', 'action'=>'edit_announcement'))?>'">Edit</a></span></th>
-                                <th><span ><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Users', 'action'=>'event_results'))?>'">Results</a></span></th>
+                                <td>2</td>
+                                <td>2</td>
+                                <th><span ><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Events', 'action'=>'view'))?>'">View</a></span></th>
                             </tr>
                             <tr>
                                 <td>Event Title</td>
                                 <td>5/23/16</td>
                                 <td>08:00PM</td>
                                 <td>4</td>
-                                <th><span ><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Info', 'action'=>'edit_announcement'))?>'">Edit</a></span></th>
-                                <th><span ><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Users', 'action'=>'event_results'))?>'">Results</a></span></th>
+                                <td>2</td>
+                                <td>2</td>
+                                <th><span ><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Events', 'action'=>'view'))?>'">View</a></span></th>
                             </tr>
                         </tbody>
                     </table>
                 </div>
-                <span class="animate-box" style="float: right;"><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Info', 'action'=>'new_announcement'))?>'">New Annoucement</a></span>
-                
+                <span class="animate-box" style="float: right;"><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Events', 'action'=>'add'))?>'">New Annoucement</a></span>
             </div>    
         </div>
     </div>

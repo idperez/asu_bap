@@ -21,11 +21,11 @@
                 <?php $photo = $user['Photo']['url']; ?>
                 <div class="fh5co-blog" style="background-image: url(/bap/Website/app/webroot/img/profile_pics/Perez,Isidro.jpg); height: 280px; width: 260px;"></div>
                 <div class="panel panel-default">
-                    <div class="panel-heading">Your Stats</div>
+                    <div class="panel-heading">Isidro's Stats</div>
                     <div class="panel-body">
-                        Hours: 32                        
+                        Hours: 9                        
                         <br>
-                        Events Attended: 12
+                        Events Attended: 4
                         <br>
                         Events Missed: 1
                     </div>
@@ -35,6 +35,7 @@
             </div>
             <div class="col-sm-9 col-md-9 col-lg-9">
                 <div class="container animate-box">
+                    <h3>Events Attended</h3>
                     <table class="table table-hover">
                         <thead>
                             <tr>
@@ -76,6 +77,50 @@
                                 <td style="color: red;">No</td>
                                 <td><span ><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Users', 'action'=>'logout'))?>'">View</a></span></td>
 
+                            </tr>              
+                        </tbody>
+                    </table>
+                </div>
+                <div class="container animate-box">
+                    <h3>Current RSVPs</h3>
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th class="col-lg-1">Event Name</th>
+                                <th class="col-lg-1">Date</th>
+                                <th class="col-lg-1">Hours</th>
+                                <th class="col-lg-1">See Event</th>
+                                <th class="col-lg-2">Withdraw</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Meet The Firms</td>
+                                <td>5/23/16</td>
+                                <td>2</td>
+                                <td><span ><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Events', 'action'=>'view'))?>'">View</a></span></td>
+                                <td><span ><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Events', 'action'=>'cancel'))?>'">Cancel</a></span></td>
+                            </tr>
+                            <tr>
+                                <td>Event Title</td>
+                                <td>5/23/16</td>
+                                <td>2</td>
+                                <td><span ><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Users', 'action'=>'logout'))?>'">View</a></span></td>
+                                <td><span ><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Events', 'action'=>'cancel'))?>'">Cancel</a></span></td>
+                            </tr>
+                            <tr>
+                                <td>Event Title</td>
+                                <td>5/23/16</td>
+                                <td>4</td>
+                                <td><span ><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Users', 'action'=>'logout'))?>'">View</a></span></td>
+                                <td><span ><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Events', 'action'=>'cancel'))?>'">Cancel</a></span></td>   
+                            </tr>
+                            <tr>
+                                <td>Event Title</td>
+                                <td>5/23/16</td>
+                                <td>1</td>
+                                <td><span ><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Users', 'action'=>'logout'))?>'">View</a></span></td>
+                                <td><span ><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Events', 'action'=>'cancel'))?>'">Cancel</a></span></td>
                             </tr>              
                         </tbody>
                     </table>
