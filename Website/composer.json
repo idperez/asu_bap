@@ -1,0 +1,15 @@
+{
+    "name": "bap",
+    "authors": [
+        {
+            "name": "isidro",
+            "email": "idperez@asu.edu"
+        }
+    ],
+    "require": {
+        "chronon/stripe": "dev-master"
+    },
+    "config": {
+        "vendor-dir": "Vendor"
+    }
+}

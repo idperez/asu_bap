@@ -107,3 +107,9 @@ CakeLog::config('error', array(
 	'types' => array('warning', 'error', 'critical', 'alert', 'emergency'),
 	'file' => 'error',
 ));
+
+/**
+ * Load the stripe library
+ */
+App::import('Vendor', array('file' => 'autoload'));
+CakePlugin::load('Stripe');
