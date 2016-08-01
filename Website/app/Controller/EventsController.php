@@ -1,6 +1,6 @@
 <?php
 class EventsController extends AppController{
-
+    
     public function add()
     {
         //if user is admin
@@ -130,20 +130,22 @@ class EventsController extends AppController{
     
     public function officer_view($id = null)
     {
-        $user = $this->User->findById($id);
-        
-        $this->set('user', $user);
+        $this->assignUserToView($id);
     }
     
     public function rsvp($id = null)
     {
-        $user = $this->User->findById($id);
-        
-        $this->set('user', $user);
+        $this->assignUserToView($id);
     }
     
     public function my_events($id = null)
     {
+        $this->assignUserToView($id);
+    }
+    
+    public function assignUserToView($id)
+    {            
+        $this->loadModel('User');
         $user = $this->User->findById($id);
         
         $this->set('user', $user);
