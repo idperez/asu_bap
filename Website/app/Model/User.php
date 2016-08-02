@@ -26,6 +26,7 @@ class User extends AppModel{
                 'associationForeignKey' => 'event_id'
             )
     );
+    
     public $validate = array(
         'username' => array(
         'ValidEmailRule' => array(

@@ -52,6 +52,7 @@
                         <?php echo $this->Form->input('time', array(
                             'type' => 'text',
                             'class' => 'form-control',
+                            'placeholder' => 'yyyy-mm-dd hh:mm',
                             'name' => 'time'));
                         ?>
                     </div>

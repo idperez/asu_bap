@@ -16,6 +16,11 @@ class EventsController extends AppController{
                     $this->redirect('announcements');
                 }
             }
+            
+        $this->loadModel('User');
+        $users = $this->User->find('all');
+        
+        $this->set('user', $users);
         }
         //user is not an admin
         else
@@ -164,6 +169,20 @@ class EventsController extends AppController{
     public function event_results()
     {
              
+    }
+    
+    public function rsvpTo($userId = null, $eventId = null)
+    {        
+        $this->Event->addUser($userId, $eventId);
+        
+        $this->redirect('announcements');
+    }
+    
+    public function unRsvpTo($userId = null, $eventId = null)
+    {
+        $this->Event->deleteUser($userId, $eventId);
+        
+        $this->redirect('announcements');
     }
 }
 ?>
