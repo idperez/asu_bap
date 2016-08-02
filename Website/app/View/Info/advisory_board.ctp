@@ -8,7 +8,7 @@
         <div class="row" >
             <div class="col-md-12 col-sm-12" >
                 <div class="animate-box text-center" style="position:relative;">  
-                    <img src="/bap/Website/app/webroot/img/profile_logo.png"  alt="profile_logo" height="120" style="position:relative; top:-35px; ">
+                    <img src="./../app/webroot/img/profile_logo.png"  alt="profile_logo" height="120" style="position:relative; top:-35px; ">
                 </div>
                 <div class="animate-box" style="width: 100%; height: 20px; border-bottom: 1px solid black; text-align: center">
                     <span style="font-size: 30px; background-color: #F3F5F6; padding: 0 10px;">
@@ -22,7 +22,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-4 col-md-4 col-sm-4">
-                        <div class="fh5co-blog animate-box" style="background-image: url(/bap/Website/app/webroot/img/advisory_board/Waller,Mathew.jpg)">
+                        <div class="fh5co-blog animate-box" style="background-image: url(./../app/webroot/img/advisory_board/Waller,Mathew.jpg)">
                         </div>
                     </div>
                     <div class="col-lg-8 col-md-8 col-sm-8 animate-box">
@@ -43,7 +43,7 @@
                 <p> Eric works Firm’s Technology sector, serving clients in the semiconductor, software, Internet, services, waste and CleanTech industries. Eric served a three-year residency in Ernst & Young’s National Professional Practice Group where he consulted with engagement teams through the Southwest in connection with accounting, auditing and reporting issues, and is a member of Ernst & Young’s SEC Experts Network, helping engagement teams with SEC reporting concerns and complexities. </p>
             </div> 
             <div class="col-lg-4 col-md-8 col-sm-4">
-                <div class="fh5co-blog animate-box" style="background-image: url(/bap/Website/app/webroot/img/advisory_board/Lewis,Eric.jpg)">
+                <div class="fh5co-blog animate-box" style="background-image: url(./../app/webroot/img/advisory_board/Lewis,Eric.jpg)">
                 
                 </div>
             </div>      
@@ -53,7 +53,7 @@
         <div class="container">
         <div class="row">
             <div class="col-lg-4 col-md-4 col-sm-4">
-                <div class="fh5co-blog animate-box" style="background-image: url(/bap/Website/app/webroot/img/advisory_board/Torres,Paul.jpg)">
+                <div class="fh5co-blog animate-box" style="background-image: url(./../app/webroot/img/advisory_board/Torres,Paul.jpg)">
                 </div>
             </div>
             <div class="col-lg-8 col-md-8 col-sm-8 animate-box">
@@ -71,7 +71,7 @@
                 <p> Adam received his Bachelor of Science in Accountancy in 2010 and Master of Accountancy in 2011 from Arizona State University, where he was a member of Beta Alpha Psi. Adam began working at Moss Adams in June 2011 and is currently a business assurance manager. He works in a wide range of industry groups including healthcare, manufacturing and distribution, and not-for-profit. Additionally, Adam has experience with SEC reporting and employee benefit plan audits.</p>
             </div> 
             <div class="col-lg-4 col-md-4 col-sm-4">
-                <div class="fh5co-blog animate-box" style="background-image: url(/bap/Website/app/webroot/img/advisory_board/Bowman,Adam.png)">
+                <div class="fh5co-blog animate-box" style="background-image: url(./../app/webroot/img/advisory_board/Bowman,Adam.png)">
                 </div>
             </div>      
         </div>
@@ -80,7 +80,7 @@
         <div class="container">
         <div class="row">
             <div class="col-lg-4 col-md-4 col-sm-4">
-                <div class="fh5co-blog animate-box" style="background-image: url(/bap/Website/app/webroot/img/advisory_board/Walton,Taylor.jpg)">
+                <div class="fh5co-blog animate-box" style="background-image: url(./../app/webroot/img/advisory_board/Walton,Taylor.jpg)">
                 </div>
             </div>
             <div class="col-lg-8 col-md-8 col-sm-8 animate-box">

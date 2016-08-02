@@ -1,11 +1,11 @@
 <div class="fh5co-hero">
     <div class="fh5co-overlay"></div>
-        <div class="fh5co-cover text-center" style="background-image: url(/bap/Website/app/webroot/img/tempe.jpg); ">
+        <div class="fh5co-cover text-center" style="background-image: url(./app/webroot/img/tempe.jpg);">
         <div class="desc animate-box" style="position:relative; top:300px; ">                                
             <?php echo $this->Html->image('logo.png', array('width'=>'200px', 'height' => '200px', 'main')) ?>
 
             <span>Beta Tau Chapter</span>
-
+            
             <span ><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Info', 'action'=>'sponsor'))?>'" style="position:relative; top:-20px;">Donate Today</a></span>
             <div style="position:relative; top: -45px;">
                 <a target="_blank" title="find us on Facebook" href="http://www.facebook.com/bapasu">
@@ -32,7 +32,7 @@
             <div class="col-md-9">
                 <div class="row">
                     <div class="col-md-4 col-sm-4">
-                        <div class="fh5co-grid animate-box" style="background-image: url(/bap/Website/app/webroot/img/home_vertical.jpg);">
+                        <div class="fh5co-grid animate-box" style="background-image: url(./app/webroot/img/home_vertical.jpg);">
                             <a class="image-popup text-center">
                                 <div class="prod-title">
                                     <h3>World Class Members</h3>
@@ -42,7 +42,7 @@
                         </div>
                     </div>
                     <div class="col-md-8 col-sm-8">
-                        <div class="fh5co-grid animate-box" style="background-image: url(/bap/Website/app/webroot/img/home_horzontal_1.jpg);">
+                        <div class="fh5co-grid animate-box" style="background-image: url(./app/webroot/img/home_horzontal_1.jpg);">
                             <a class="image-popup text-center">
                                 <div class="prod-title">
                                     <h3>Memorable Events</h3>
@@ -52,7 +52,7 @@
                         </div>
                     </div>
                     <div class="col-md-8 col-sm-8">
-                        <div class="fh5co-grid animate-box" style="background-image: url(/bap/Website/app/webroot/img/home_horizontal_2.jpg);">
+                        <div class="fh5co-grid animate-box" style="background-image: url(./app/webroot/img/home_horizontal_2.jpg);">
                             <a class="image-popup text-center">
                                 <div class="prod-title">
                                     <h3>In Touch With The Community</h3>
@@ -62,7 +62,7 @@
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-4">
-                        <div class="fh5co-grid animate-box" style="background-image: url(/bap/Website/app/webroot/img/home_vertical_2.jpg);">
+                        <div class="fh5co-grid animate-box" style="background-image: url(./app/webroot/img/home_vertical_2.jpg);">
                             <a class="image-popup text-center">
                                 <div class="prod-title">
                                     <h3>Strong Minds, Strong Friends</h3>

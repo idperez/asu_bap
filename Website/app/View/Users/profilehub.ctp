@@ -7,7 +7,7 @@
         <div class="row" >
             <div class="col-md-12 col-sm-12" >
                 <div class="animate-box text-center">  
-                    <img src="/bap/Website/app/webroot/img/profile_logo.png"  alt="profile_logo" height="120">
+                    <img src="./../../app/webroot/img/profile_logo.png"  alt="profile_logo" height="120">
                 </div>
             </div>    
        </div>
@@ -19,7 +19,7 @@
             </div>
             <div class="col-lg-3 col-md-3 col-sm-3" >
                 <?php $photo = $user['Photo']['url']; ?>
-                <div class="fh5co-blog" style="background-image: url(/bap/Website/app/webroot/img/profile_pics/Perez,Isidro.jpg); height: 280px; width: 260px;"></div>
+                <div class="fh5co-blog" style="background-image: url(./../../app/webroot/img/profile_pics/Perez,Isidro.jpg); height: 280px; width: 260px;"></div>
                 <div class="panel panel-default">
                     <div class="panel-heading">Your Stats</div>
                     <div class="panel-body">

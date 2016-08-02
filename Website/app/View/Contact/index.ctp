@@ -1,6 +1,6 @@
 <div class="fh5co-hero">
     <div class="fh5co-overlay"></div>
-    <div class="fh5co-cover text-center" style="background-image: url(/bap/Website/app/webroot/img/contact.jpg); ">
+    <div class="fh5co-cover text-center" style="background-image: url(./app/webroot/img/contact.jpg); ">
         <div class="desc animate-box" style="position:relative; top:300px; ">
              <h2>Contact Us</h2>
         </div>
@@ -12,7 +12,7 @@
             <div class="col-md-9">
                 <div class="row">
                     <div class="col-md-3 col-sm-3">
-                        <div class="fh5co-blog" style="background-image: url(/bap/Website/app/webroot/img/executive_board/Kemper,George.jpeg); width: 200px; height: 220px;"></div>
+                        <div class="fh5co-blog" style="background-image: url(./app/webroot/img/executive_board/Kemper,George.jpeg); width: 200px; height: 220px;"></div>
                     </div> 
                     <div class="col-md-6 col-sm-6">
                         <div style="position:relative; left: 20px;">
@@ -38,7 +38,7 @@
            <div class="col-md-9">
                <div class="row">
                    <div class="col-md-3 col-sm-3">
-                       <div class="fh5co-blog" style="background-image: url(/bap/Website/app/webroot/img/executive_board/Culver,Kaitlin.jpeg); width: 200px; height: 220px;"></div>
+                       <div class="fh5co-blog" style="background-image: url(./app/webroot/img/executive_board/Culver,Kaitlin.jpeg); width: 200px; height: 220px;"></div>
                    </div> 
                    <div class="col-md-6 col-sm-6">
                         <div style="position:relative; left: 20px;">
