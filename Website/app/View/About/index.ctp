@@ -1,6 +1,6 @@
 <div class="fh5co-hero">
     <div class="fh5co-overlay"></div>
-    <div class="fh5co-cover text-center" style="background-image: url(/bap/Website/app/webroot/img/aboutus.jpg); ">
+    <div class="fh5co-cover text-center" style="background-image: url(./app/webroot/img/aboutus.jpg); ">
         <div class="desc animate-box" style="position:relative; top:300px; ">
              <h2>About Us</h2>
         </div>

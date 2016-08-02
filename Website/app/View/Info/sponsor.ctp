@@ -1,7 +1,7 @@
 <?php Configure::write('Stripe.TestSecret', 'sk_test_rcI0BYPN7E1Kn4UkXuunCay3'); ?>
 <div class="fh5co-hero">
     <div class="fh5co-overlay"></div>
-    <div class="fh5co-cover text-center" style="background-image: url(/bap/Website/app/webroot/img/brothers.jpg); ">
+    <div class="fh5co-cover text-center" style="background-image: url(./../app/webroot/img/brothers.jpg); ">
         <div class="desc animate-box" style="position:relative; top:280px; ">
             <h2>Get Informed</h2>
 

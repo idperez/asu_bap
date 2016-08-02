@@ -8,9 +8,9 @@
         <div class="row" >
             <div class="col-md-12 col-sm-12" >
                 <div class="animate-box text-center">  
-                    <img src="/bap/Website/app/webroot/img/profile_logo.png"  alt="profile_logo" height="120">
+                    <?php echo $this->Html->image('profile_logo.png', array('height'=>'120px')); ?>
                 </div>
-            </div>    
+            </div>
        </div>
     </div>
     <div class="container">    
@@ -20,7 +20,7 @@
             </div>
             <div class="col-md-4 col-sm-4" >
                 <?php $photo = $user['Photo']['url']; ?>
-                <div class="fh5co-blog" style="background-image: url(/bap/Website/app/webroot/img/profile_pics/Perez,Isidro.jpg)"></div>
+                <div class="fh5co-blog" style="background-image: url(./../../app/webroot/img/profile_pics/Perez,Isidro.jpg)"></div>
             </div>
             <div class="col-md-8 col-sm-8">
                 <div class="fh5co-grid text-nowrap animate-box">

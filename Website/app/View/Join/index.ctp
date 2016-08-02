@@ -1,6 +1,6 @@
 <div class="fh5co-hero">
     <div class="fh5co-overlay"></div>
-    <div class="fh5co-cover text-center" style="background-image: url(/bap/Website/app/webroot/img/join.JPG); ">
+    <div class="fh5co-cover text-center" style="background-image: url(./app/webroot/img/join.JPG); ">
         <div class="desc animate-box" style="position:relative; top:280px; ">
             <h2>Join Our Family</h2>
 
