@@ -28,27 +28,36 @@
                     <h3 class="heading-section"><?php echo $event['Event']['name'] . ' ' . date('m/d/y H:i', strtotime($event['Event']['time'])); ?></h3>
                     <div style="position:relative; top:-20px;">
                         <div class="panel-body">
-                            <?php echo $event['Event']['description']; ?>
-                            <br><br>
-                            <?php 
-                                if($event['Event']['type'] == 'Event')
-                                    echo '<span ><a class="btn btn-primary">RSVP</a></span>'; 
-                            ?>
-                            <!--<b>Links:</b> LinkName1 LinkName2
-                            <br>
-                            <b>Files:</b> FileName1 FileName2-->
-                            <?php
-                                if(AuthComponent::user('level') == 'Officer')
-                                    echo $this->Html->link('Edit', array(
-                                    'controller' => 'Events', 'action' => 'edit', $event['Event']['id'])
-                                );
-                                echo ' ';
-                                if(AuthComponent::user('level') == 'Officer') 
-                                    echo $this->Html->link('Delete', array(
-                                    'controller' => 'Events', 'action' => 'delete', $event['Event']['id'])
-                                );
-                            ?>                            
+                            <?php echo $event['Event']['description']; ?>                       
                         </div> 
+                        <?php
+                            if($event['Event']['type'] == 'Event'){ 
+                            //Check for RSVPd events
+                            $hasNotRsvped = FALSE;
+                            foreach($user['Event'] as $checkRsvp):
+                                if($checkRsvp['id'] == $event['Event']['id'])
+                                    $hasNotRsvped = TRUE;
+                            endforeach;
+                            if(!$hasNotRsvped)
+                                echo $this->Html->link('RSVP', array(
+                                    'controller' => 'Events', 'action' => 'rsvpTo', AuthComponent::user('id'), $event['Event']['id']),
+                                    array('class' => 'btn btn-primary')
+                                );
+                            else 
+                                echo '<span>You have already registered for this event. </span>';
+                            }
+                        ?>
+                        <?php
+                        if(AuthComponent::user('level') == 'Officer')
+                        {
+                            echo $this->Html->link('Edit', array(
+                                'controller' => 'Events', 'action' => 'edit', $event['Event']['id'])
+                            );
+                         echo ' ';
+                         echo $this->Html->link('Delete', array(
+                            'controller' => 'Events', 'action' => 'delete', $event['Event']['id'])
+                         );
+                        }?> 
                     </div>
                 </div>  
               <?php endforeach; ?> 

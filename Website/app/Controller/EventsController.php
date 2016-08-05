@@ -93,6 +93,7 @@ class EventsController extends AppController{
     public function announcements()
     {
         $this->EventHelper();
+        $this->assignUserToView($this->Auth->user('id'));
     }
     
     public function opportunities()
@@ -103,6 +104,8 @@ class EventsController extends AppController{
     public function events()
     {
         $this->EventHelper();
+        
+        $this->assignUserToView($this->Auth->user('id'));
     }
     
     public function EventHelper()
@@ -173,14 +176,9 @@ class EventsController extends AppController{
     
     public function rsvpTo($userId = null, $eventId = null)
     {        
-        $this->Event->addUser($userId, $eventId);
-        
-        $this->redirect('announcements');
-    }
-    
-    public function unRsvpTo($userId = null, $eventId = null)
-    {
-        $this->Event->deleteUser($userId, $eventId);
+        $this->Event->EventsUser->create();
+        $data = array("user_id" => $userId, "event_id" => $eventId);
+        $this->Event->EventsUser->save($data);
         
         $this->redirect('announcements');
     }
