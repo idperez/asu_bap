@@ -75,14 +75,14 @@ class UsersController extends AppController{
             $this->redirect('login');
     }
     
-    public function adminedit($id = null)
+    public function fulledit($id = null)
     {
         //if user is admin
         if($this->Auth->user('level') != "Member" && $this->Auth->user('level') != "Candidate")
             $this->editHelper($id);
         //else if user is not admin
         else if($this->Auth->user('id') != null)
-            $this->redirect('profilehub');
+            $this->editHelper($this->Auth->user('id'));
         //else user is not logged in    
         else
             $this->redirect('login');
@@ -90,7 +90,9 @@ class UsersController extends AppController{
     
     public function profilehub($id = null)
     {
-      
+        if($id == null)
+            $this->redirect('index');
+        
         $user = $this->User->findById($id);
         
         $this->set('user', $user);

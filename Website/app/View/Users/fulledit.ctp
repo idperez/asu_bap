@@ -16,7 +16,7 @@
                 <div class="animate-box text-center" style="position:relative; top:-22">  
                     <div style="width: 100%; height: 20px; border-bottom: 1px solid black; text-align: center">
                         <span style="font-size: 30px; background-color: #F3F5F6; padding: 0 10px;">
-                        Edit Member
+                        Edit Profile
                         </span>
                     </div>
                 </div>

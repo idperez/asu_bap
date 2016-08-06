@@ -30,7 +30,7 @@
                         Events Missed: 1
                     </div>
                 </div>
-                <span ><a class="btn btn-primary" style="margin-bottom: 5px; width: 125px" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Users', 'action'=>'edit/'.$user['User']['id']))?>'">Edit Info</a></span>
+                <span ><a class="btn btn-primary" style="margin-bottom: 5px; width: 125px" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Users', 'action'=>'fulledit/'.$user['User']['id']))?>'">Edit Info</a></span>
                 <span ><a class="btn btn-primary" style="margin-bottom: 5px; width: 125px" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Users', 'action'=>'logout'))?>'">Logout</a></span>             
             </div>
             <div class="col-sm-7 col-md-7 col-lg-7">

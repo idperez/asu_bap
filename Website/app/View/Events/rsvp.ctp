@@ -27,7 +27,6 @@
                     <th>Time</th>
                     <th>Hours</th>
                     <th>Attended</th>
-                    <th>Revoke RSVP</th>
                 </tr>
             </thead>
             <tbody>
@@ -37,7 +36,6 @@
                     <td>08:00PM</td>
                     <td>2</td>
                     <td>Future Event</td>
-                    <td><a class="btn btn-primary"  onclick="window.location.href='<?php echo Router::url(array('controller'=>'Users', 'action'=>'cancel_rsvp'))?>'">Cancel</a></td>
                 </tr>
                 <tr>
                     <td>Event Title</td>
