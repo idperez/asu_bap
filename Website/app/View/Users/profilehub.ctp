@@ -100,9 +100,11 @@
                     <span ><a class="btn btn-primary" style="margin-bottom: 5px; width: 120px" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Events', 'action'=>'my_events/'.$user['User']['id']))?>'">Events</a></span>
                 </div>
                 <div>
+                    <?php if(AuthComponent::user('level') == 'Officer'){ ?>
                     <h2>Officer Tools</h2>
                     <span ><a class="btn btn-primary" style="margin-bottom: 5px; width: 120px" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Events', 'action'=>'manage_events'))?>'">Events</a></span>
                     <span ><a class="btn btn-primary" style="margin-bottom: 5px; width: 120px" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Users', 'action'=>'manage_members'))?>'">Members</a></span>
+                    <?php } ?>
                 </div>
             </div>
         </div>
