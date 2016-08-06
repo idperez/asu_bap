@@ -11,7 +11,7 @@
                 </div>
                 <div class="animate-box" style="width: 100%; height: 20px; border-bottom: 1px solid black; text-align: center">
                     <span style="font-size: 30px; background-color: #F3F5F6; padding: 0 10px;">
-                    Manage Events
+                    Past Events
                     </span>
                 </div>
                 <br><br>                
@@ -59,7 +59,6 @@
                         </tbody>
                     </table>
                 </div>
-                <span class="animate-box" style="float: right; margin-left: 5px;"><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Events', 'action'=>'past_events'))?>'">Past Events</a></span>
                 <span class="animate-box" style="float: right;"><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Events', 'action'=>'add'))?>'">New Annoucement</a></span>
             </div>    
         </div>
