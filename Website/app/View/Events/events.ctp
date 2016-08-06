@@ -57,6 +57,7 @@
                          echo $this->Html->link('Delete', array(
                             'controller' => 'Events', 'action' => 'delete', $event['Event']['id'])
                          );
+                         $count++;
                         }?>          
                     </div>
                 </div> 

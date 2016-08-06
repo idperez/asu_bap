@@ -131,6 +131,11 @@ class EventsController extends AppController{
         if($this->Auth->user('level') == "Member" || $this->Auth->user('level') == "Candidate")
             $this->redirect(array(
                 'controller' => 'Users', 'action' => 'profilehub/' . $this->Auth->user('id')));
+            
+            $allRsvps = $this->Event->EventsUser->find('all');
+            $this->set('rsvps', $allRsvps);
+                
+            $this->EventHelper();    
     }
     
     public function past_events()
@@ -145,7 +150,7 @@ class EventsController extends AppController{
                 'controller' => 'Users', 'action' => 'profilehub'));
     }
     
-    public function view()
+    public function view($id = null)
     {
         
     }
