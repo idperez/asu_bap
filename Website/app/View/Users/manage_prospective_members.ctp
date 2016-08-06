@@ -14,32 +14,38 @@
                     Prospective Members
                     </span>
                 </div>
-                <br><br>                
-                <div class="container animate-box">
-                    <table class="table table-hover">
-                        <thead>
-                            <tr>
-                                <th>Firstname</th>
-                                <th>Lastname</th>
-                                <th>Email</th>
-                                <th>Date</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <?php foreach($prospective_members as $prospective_member):?>
-                                <td><?php echo $prospective_member['Prospective']['first_name']; ?></td>
-                                <td><?php echo $prospective_member['Prospective']['last_name']; ?></td>
-                                <td><?php echo $prospective_member['Prospective']['email']; ?></td>
-                                <td><?php echo date('m/d', strtotime($prospective_member['Prospective']['time'])); ?></td>
-                            <?php endforeach; ?> 
-                            <?php unset($prospective_member); ?>   
-                        </tbody>
-                    </table>
+                <br><br>
+                <div class='container animate-box'> 
+                    <div id="dvData">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>Email</th>
+                                    <th>Date</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                               <?php foreach($prospective_members as $prospective_member):?>
+                                <tr>
+                                 <td><?php echo $prospective_member['Prospective']['first_name']; ?></td>
+                                 <td><?php echo $prospective_member['Prospective']['last_name']; ?></td>
+                                 <td><?php echo $prospective_member['Prospective']['email']; ?></td>
+                                 <td><?php echo date('m/d', strtotime($prospective_member['Prospective']['time'])); ?></td>
+                                </tr>
+                             <?php endforeach; ?> 
+                             <?php unset($prospective_member); ?>     
+                            </tbody>
+                        </table>
+                    </div>
+                    <br/>
+                    <span class="animate-box" style="float: right;"><a class="btn btn-primary" id ="export" role='button'>Export</a></span> 
                 </div>
-                <span class="animate-box" style="float: right; margin-left: 5px"><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Users', 'action'=>'add'))?>'">New Member</a></span> 
-                <span class="animate-box" style="float: right; margin-left: 5px"><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Users', 'action'=>'add'))?>'">Export</a></span> 
-            </div>    
+            </div>
         </div>
     </div>
 </div>
 
+<script type='text/javascript' src='https://code.jquery.com/jquery-1.11.0.min.js'></script>
+<?php echo $this->Html->script('export-csv.js');?>   

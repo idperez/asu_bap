@@ -46,5 +46,16 @@ class JoinController extends AppController {
 
     public function prospective_member() {
         
+        $this->loadModel('Prospective');
+        
+        if($this->request->is('post'))
+            {
+                $this->Prospective->create();
+                
+                if($this->Prospective->save($this->request->data))
+                {
+                    $this->redirect('success');
+                }
+            }
     }
 }
