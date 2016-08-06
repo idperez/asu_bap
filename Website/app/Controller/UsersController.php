@@ -93,6 +93,17 @@ class UsersController extends AppController {
         if($id == null)
             $this->redirect('index');
         
+        $this->loadmodel('Event');  
+          
+        //returns all events to the view
+        $eventdata = $this->Event->find('all', 
+            array(
+                'order' => array('Event.time' => 'DESC'),
+                'limit' => 3
+        ));
+            
+        $this->set('events', $eventdata); 
+        
         $user = $this->User->findById($id);
         
         $this->set('user', $user);
