@@ -151,11 +151,6 @@ class EventsController extends AppController{
         $this->assignUserToView($id);
     }
     
-    public function rsvp($id = null)
-    {
-        $this->assignUserToView($id);
-    }
-    
     public function my_events($id = null)
     {
         $this->assignUserToView($id);

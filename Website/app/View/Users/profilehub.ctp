@@ -95,7 +95,6 @@
             <div class='col-lg-2'>
                 <div style="margin-bottom: 20px">
                     <h2>Your Events</h2>
-                    <span ><a class="btn btn-primary" style="margin-bottom: 5px; width: 120px" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Events', 'action'=>'rsvp/'.$user['User']['id']))?>'">RSVP</a></span>
                     <span ><a class="btn btn-primary" style="margin-bottom: 5px; width: 120px" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Events', 'action'=>'my_events/'.$user['User']['id']))?>'">Events</a></span>
                 </div>
                 <div>
