@@ -26,25 +26,13 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <?php $go = 96; ?>
-                            <tr>
-                                <td>Isidro</td>
-                                <td>Perez</td>
-                                <td>Officer</td>
-                                <td>1/1/1</td>
-                            </tr>
-                            <tr>
-                                <td>Drew</td>
-                                <td>Monachy</td>
-                                <td>Member</td>
-                                <td>1/1/1</td>
-                            </tr>
-                            <tr>
-                                <td>Lory</td>
-                                <td>Slorun</td>
-                                <td>Candidate</td>
-                                <td>1/1/1</td>
-                            </tr>
+                            <?php foreach($prospective_members as $prospective_member):?>
+                                <td><?php echo $prospective_member['Prospective']['first_name']; ?></td>
+                                <td><?php echo $prospective_member['Prospective']['last_name']; ?></td>
+                                <td><?php echo $prospective_member['Prospective']['email']; ?></td>
+                                <td><?php echo date('m/d', strtotime($prospective_member['Prospective']['time'])); ?></td>
+                            <?php endforeach; ?> 
+                            <?php unset($prospective_member); ?>   
                         </tbody>
                     </table>
                 </div>
