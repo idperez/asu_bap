@@ -26,33 +26,19 @@
                     <th>Date</th>
                     <th>Time</th>
                     <th>Hours</th>
+                    <th>Attended</th>
                 </tr>
             </thead>
             <tbody>
+                <?php foreach($user['Event'] as $event): ?>
                 <tr>
-                    <td>Event Title</td>
-                    <td>5/23/16</td>
-                    <td>08:00PM</td>
-                    <td>2</td>
+                    <td><?php echo $event['name']; ?></td>
+                    <td><?php echo date('m/d/y', strtotime($event['time'])); ?></td>
+                    <td><?php echo date('h:m', strtotime($event['time'])); ?></td>
+                    <td><?php echo $event['hours']; ?></td>
+                    <td>Future Event</td> <!--todo - Not implemented yet.-->
                 </tr>
-                <tr>
-                    <td>Event Title</td>
-                    <td>5/23/16</td>
-                    <td>08:00PM</td>
-                    <td>2</td>
-                </tr>
-                <tr>
-                    <td>Event Title</td>
-                    <td>5/23/16</td>
-                    <td>08:00PM</td>
-                    <td>4</td>
-                </tr>
-                <tr>
-                    <td>Event Title</td>
-                    <td>5/23/16</td>
-                    <td>08:00PM</td>
-                    <td>1</td>
-                </tr>              
+                <?php endforeach; ?>              
             </tbody>
         </table>
     </div>

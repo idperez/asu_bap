@@ -128,7 +128,9 @@ class EventsController extends AppController{
     
     public function manage_events()
     {
-        
+        if($this->Auth->user('level') == "Member" || $this->Auth->user('level') == "Candidate")
+            $this->redirect(array(
+                'controller' => 'Users', 'action' => 'profilehub/' . $this->Auth->user('id')));
     }
     
     public function past_events()
@@ -138,7 +140,9 @@ class EventsController extends AppController{
     
     public function manage_members()
     {
-        
+        if($this->Auth->user('level') == "Member" || $this->Auth->user('level') == "Candidate")
+            $this->redirect(array(
+                'controller' => 'Users', 'action' => 'profilehub'));
     }
     
     public function view()
@@ -152,11 +156,6 @@ class EventsController extends AppController{
     }
     
     public function officer_view($id = null)
-    {
-        $this->assignUserToView($id);
-    }
-    
-    public function rsvp($id = null)
     {
         $this->assignUserToView($id);
     }
