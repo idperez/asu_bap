@@ -11,7 +11,7 @@
                 </div>
                 <div class="animate-box" style="width: 100%; height: 20px; border-bottom: 1px solid black; text-align: center">
                     <span style="font-size: 30px; background-color: #F3F5F6; padding: 0 10px;">
-                    Past Events
+                   Past Events
                     </span>
                 </div>
                 <br><br>                
@@ -29,36 +29,41 @@
                             </tr>
                         </thead>
                         <tbody>
+                        <?php foreach($events as $event):?>
+                        <?php if($event['Event']['type'] == 'Event' && $event['Event']['closed']){ ?>
                             <tr>
-                                <td>Event Title</td>
-                                <td>5/23/16</td>
-                                <td>08:00PM</td>
-                                <td>2</td>
-                                <td>2</td>
-                                <td>2</td>
-                                <th><span ><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Events', 'action'=>'view'))?>'">View</a></span></th>
+                                <td><?php echo $event['Event']['name']; ?></td>
+                                <td><?php echo date('m/d/y', strtotime($event['Event']['time'])); ?></td>
+                                <td><?php echo date('h:i', strtotime($event['Event']['time'])); ?></td>
+                                <td><?php echo $event['Event']['hours']; ?></td>
+                                <?php 
+                                $numOfPresentMembers = 0;
+                                $numOfRsvps = 0;
+                                foreach($rsvps as $rsvpdMember):
+                                    if($event['Event']['id'] == $rsvpdMember['EventsUser']['event_id'])
+                                    {
+                                        $numOfRsvps++;
+                                        if($rsvpdMember['EventsUser']['present'])
+                                            $numOfPresentMembers++;
+                                    }
+                                endforeach;
+                                ?>
+                                <td><?php echo $numOfPresentMembers; ?></td>
+                                <td><?php echo $numOfRsvps; ?></td>
+                                <th>
+                                <?php echo $this->Html->link('View', array(
+                                    'controller' => 'Events', 'action' => 'view', $event['Event']['id']),
+                                    array('class' => 'btn btn-primary')
+                                );
+                                ?>
+                                </th>
                             </tr>
-                            <tr>
-                                <td>Event Title</td>
-                                <td>5/23/16</td>
-                                <td>08:00PM</td>
-                                <td>2</td>
-                                <td>2</td>
-                                <td>2</td>
-                                <th><span ><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Events', 'action'=>'view'))?>'">View</a></span></th>
-                            </tr>
-                            <tr>
-                                <td>Event Title</td>
-                                <td>5/23/16</td>
-                                <td>08:00PM</td>
-                                <td>4</td>
-                                <td>2</td>
-                                <td>2</td>
-                                <th><span ><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Events', 'action'=>'view'))?>'">View</a></span></th>
-                            </tr>
+                        <?php } ?>
+                        <?php endforeach; ?>
                         </tbody>
                     </table>
                 </div>
+                <span class="animate-box" style="float: right; margin-left: 5px;"><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Events', 'action'=>'manage_events'))?>'">Future Events</a></span>
                 <span class="animate-box" style="float: right;"><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Events', 'action'=>'add'))?>'">New Annoucement</a></span>
             </div>    
         </div>
