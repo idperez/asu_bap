@@ -37,61 +37,45 @@
             </div>
             <div class="col-sm-7 col-md-7 col-lg-7">
                 <div class="panel-group animate-box">
+                  <?php foreach($events as $event): ?>
                   <div class="panel panel-default" >
-                    <h3 class="heading-section">Announcement Title (5/23/16) 05:00PM</h3>
+                    <h3 class="heading-section"><?php echo $event['Event']['name'] . ' ' . date('m/d/y H:i', strtotime($event['Event']['time'])); ?></h3>
                     <div style="position:relative; top:-20px;">
-                        <div class="panel-body">Would you like to earn good money working for Apple this next year? Is a flexible part time schedule, something you are looking for? Do you want rewarding/meaningful work where you ARE the difference? How about a job that can grow into a career? Motivated Sun Devils can work for Apple from home. All majors with a 2.7+ GPA who will be enrolled at ASU through May 2017 are encouraged to apply
-                            <br><br>
-                            <b>Links:</b> LinkName1 LinkName2
-                            <br>
-                            <b>Files:</b> FileName1 FileName2
-                        </div>   
+                        <div class="panel-body">
+                            <?php echo $event['Event']['description']; ?>
+                        </div>
+                        <?php
+                            if($event['Event']['type'] == 'Event'){ 
+                            //Check for RSVPd events
+                            $hasNotRsvped = FALSE;
+                            foreach($user['Event'] as $checkRsvp):
+                                if($checkRsvp['id'] == $event['Event']['id'])
+                                    $hasNotRsvped = TRUE;
+                            endforeach;
+                            if(!$hasNotRsvped)
+                                echo $this->Html->link('RSVP', array(
+                                    'controller' => 'Events', 'action' => 'rsvpTo', AuthComponent::user('id'), $event['Event']['id']),
+                                    array('class' => 'btn btn-primary')
+                                );
+                            else 
+                                echo '<span>You have already registered for this event. </span>';
+                            }
+                        ?>
+                        <?php
+                        if(AuthComponent::user('level') == 'Officer')
+                        {
+                            echo $this->Html->link('Edit', array(
+                                'controller' => 'Events', 'action' => 'edit', $event['Event']['id'])
+                            );
+                         echo ' ';
+                         echo $this->Html->link('Delete', array(
+                            'controller' => 'Events', 'action' => 'delete', $event['Event']['id'])
+                         );
+                        }?>                            
                     </div>
                   </div>
-                  <div class="panel panel-default" >
-                    <h3 class="heading-section">Announcement Title (5/23/16) 05:00PM</h3>
-                    <div style="position:relative; top:-20px;">
-                        <div class="panel-body">Would you like to earn good money working for Apple this next year? Is a flexible part time schedule, something you are looking for? Do you want rewarding/meaningful work where you ARE the difference? How about a job that can grow into a career? Motivated Sun Devils can work for Apple from home. All majors with a 2.7+ GPA who will be enrolled at ASU through May 2017 are encouraged to apply
-                            <br><br>
-                            <b>Helpful Links:</b> LinkName1 LinkName2
-                            <br>
-                            <b>Additional Files:</b> FileName1 FileName2
-                        </div>
-                    </div>
-                  </div>
-                    <div class="panel panel-default" >
-                    <h3 class="heading-section">Announcement Title (5/23/16) 05:00PM</h3>
-                    <div style="position:relative; top:-20px;">
-                        <div class="panel-body">Would you like to earn good money working for Apple this next year? Is a flexible part time schedule, something you are looking for? Do you want rewarding/meaningful work where you ARE the difference? How about a job that can grow into a career? Motivated Sun Devils can work for Apple from home. All majors with a 2.7+ GPA who will be enrolled at ASU through May 2017 are encouraged to apply
-                            <br><br>
-                            <b>Helpful Links:</b> LinkName1 LinkName2
-                            <br>
-                            <b>Additional Files:</b> FileName1 FileName2
-                        </div>
-                    </div>
-                  </div>
-                    <div class="panel panel-default" >
-                    <h3 class="heading-section">Announcement Title (5/23/16) 05:00PM</h3>
-                    <div style="position:relative; top:-20px;">
-                        <div class="panel-body">Would you like to earn good money working for Apple this next year? Is a flexible part time schedule, something you are looking for? Do you want rewarding/meaningful work where you ARE the difference? How about a job that can grow into a career? Motivated Sun Devils can work for Apple from home. All majors with a 2.7+ GPA who will be enrolled at ASU through May 2017 are encouraged to apply
-                            <br><br>
-                            <b>Helpful Links:</b> LinkName1 LinkName2
-                            <br>
-                            <b>Additional Files:</b> FileName1 FileName2
-                        </div>
-                    </div>
-                  </div>
-                    <div class="panel panel-default" >
-                    <h3 class="heading-section">Announcement Title (5/23/16) 05:00PM</h3>
-                    <div style="position:relative; top:-20px;">
-                        <div class="panel-body">Would you like to earn good money working for Apple this next year? Is a flexible part time schedule, something you are looking for? Do you want rewarding/meaningful work where you ARE the difference? How about a job that can grow into a career? Motivated Sun Devils can work for Apple from home. All majors with a 2.7+ GPA who will be enrolled at ASU through May 2017 are encouraged to apply
-                            <br><br>
-                            <b>Helpful Links:</b> LinkName1 LinkName2
-                            <br>
-                            <b>Additional Files:</b> FileName1 FileName2
-                        </div>
-                    </div>
-                    </div>
+                  <?php endforeach; ?>
+                  <?php unset($event); ?>
                 </div>
             </div>
             <div class='col-lg-2'>
