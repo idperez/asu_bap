@@ -150,22 +150,6 @@
                             ?>
                         </div>
                         <div class="form-group col-lg-6">
-                            <!--Todo - Convert this from photo_id to url? Find other options?-->
-                            <?php echo $this->Form->input('photo_id', array(
-                                'type' => 'text',
-                                'class' => 'form-control',
-                                'maxlength' => 100,
-                                'placeholder' => 'Photo id or url',
-                                'name' => 'photo_id'));
-                                //Todo - Display a way to preview the image via javascript to load dynamically
-                            ?>
-                        </div>               
-                    </fieldset>
-
-                </div>
-                <div class="form-inline">
-                    <fieldset>                 
-                        <div class="form-group col-lg-6">
                             <?php echo $this->Form->input('city', array(
                                 'type' => 'text',
                                 'class' => 'form-control',
@@ -174,6 +158,11 @@
                                 'name' => 'city'));
                             ?>
                         </div>
+                    </fieldset>
+
+                </div>
+                <div class="form-inline">
+                    <fieldset>                     
                         <div class="form-group col-lg-6">
                             <?php echo $this->Form->input('state', array(
                                 'options' => array('Prefer not to answer' => 'Prefer not to answer','Not in the US' => 'Not in the US', 
@@ -212,14 +201,13 @@
                         </div>            
                     </fieldset>
                 </div> 
-            </div>              
-              <div class="form-group col-lg-6">        
-                <?php echo $this->Form->end(array('label' => 'Save', 
-                            'class' => 'btn btn-primary', 
-                            'name' => 'submit')); 
-                ?>                  
-              </div>  
-            </form>         
+                <br>
+            </div>               
+            <div class="form-group col-lg-6">        
+              <?php echo $this->Form->end(array('label' => 'Save', 
+                          'class' => 'btn btn-primary', 
+                          'name' => 'submit')); 
+              ?>                  
+            </div>           
         </div>
     </div>
-</div>
