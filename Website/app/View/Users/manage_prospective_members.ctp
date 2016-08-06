@@ -11,7 +11,7 @@
                 </div>
                 <div class="animate-box" style="width: 100%; height: 20px; border-bottom: 1px solid black; text-align: center">
                     <span style="font-size: 30px; background-color: #F3F5F6; padding: 0 10px;">
-                    Manage Members
+                    Prospective Members
                     </span>
                 </div>
                 <br><br>                
@@ -21,11 +21,8 @@
                             <tr>
                                 <th>Firstname</th>
                                 <th>Lastname</th>
-                                <th>Level</th>
-                                <th>Hours</th>
-                                <th>Missed Events</th>
-                                <th>Edit</th>
-                                <th>Profile</th>
+                                <th>Email</th>
+                                <th>Date</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -34,35 +31,27 @@
                                 <td>Isidro</td>
                                 <td>Perez</td>
                                 <td>Officer</td>
-                                <td>3</td>
-                                <td>0</td>
-                                <th><span ><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Info', 'action'=>'edit'))?>'">Edit</a></span></th>
-                                <th><span ><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Users', 'action'=>'officer_view/'.$go))?>'">View</a></span></th>
+                                <td>1/1/1</td>
                             </tr>
                             <tr>
                                 <td>Drew</td>
                                 <td>Monachy</td>
                                 <td>Member</td>
-                                <td>3</td>
-                                <td>3</td>
-                                <th><span ><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Info', 'action'=>'edit'))?>'">Edit</a></span></th>
-                                <th><span ><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Users', 'action'=>'officer_view'))?>'">View</a></span></th>
+                                <td>1/1/1</td>
                             </tr>
                             <tr>
                                 <td>Lory</td>
                                 <td>Slorun</td>
                                 <td>Candidate</td>
-                                <td>3</td>
-                                <td>3</td>
-                                <th><span ><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Info', 'action'=>'edit'))?>'">Edit</a></span></th>
-                                <th><span ><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Users', 'action'=>'officer_view'))?>'">View</a></span></th>
+                                <td>1/1/1</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
                 <span class="animate-box" style="float: right; margin-left: 5px"><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Users', 'action'=>'add'))?>'">New Member</a></span> 
-                <span class="animate-box" style="float: right;"><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Users', 'action'=>'manage_prospective_members'))?>'">Prospective Members</a></span> 
+                <span class="animate-box" style="float: right; margin-left: 5px"><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Users', 'action'=>'add'))?>'">Export</a></span> 
             </div>    
         </div>
     </div>
 </div>
+

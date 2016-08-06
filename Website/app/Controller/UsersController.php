@@ -1,5 +1,5 @@
 <?php
-class UsersController extends AppController{
+class UsersController extends AppController {
     
         //All pages that are visible to regular users
     public function beforeFilter()
@@ -190,6 +190,15 @@ class UsersController extends AppController{
     public function manage_members()
     {
         
+    }
+    
+    public function manage_prospective_members()
+    {
+        $this->loadModel('Prospective');
+        
+        $prospective_members_data = $this->Prospective->find('all');
+        
+        $this->set('prospective_members', $prospective_members_data);
     }
 }
 ?>
