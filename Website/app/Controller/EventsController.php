@@ -131,6 +131,11 @@ class EventsController extends AppController{
         
     }
     
+    public function past_events()
+    {
+        
+    }
+    
     public function manage_members()
     {
         

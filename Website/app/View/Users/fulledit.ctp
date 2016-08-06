@@ -3,14 +3,15 @@
     <div class="desc animate-box" style="position:relative; top:280px; "></div>
 </div>
 <div id="fh5co-work-section" >
-    <div class="container" style="position:relative; top:-20">
+    <div class="container" style="position:relative; top:-40">
         <div class="row" >
             <div class="col-md-12 col-sm-12" >
-                <div class="animate-box text-center" style="position:relative; top:-22">  
-                    <img src="./../app/webroot/img/profile_logo.png"  alt="profile_logo" height="120" style="position:relative; top:-35px; ">
+                <div class="animate-box text-center">  
+                    <img src="./../../app/webroot/img/profile_logo.png"  alt="profile_logo" height="120">
                 </div>
             </div>    
-        </div>
+       </div>
+    </div>
         <div class="row" >
             <div class="col-md-12 col-sm-12" >
                 <div class="animate-box text-center" style="position:relative; top:-22">  
@@ -23,7 +24,7 @@
         </div>
 </div>
     </div>
-    <div class="row">
+    <div class="row animate-box" style="position:relative; top:-60;">
         <div class="col-lg-8 col-lg-offset-3">
             <div class="input-group">          
                 <?php echo $this->Form->create('User'); ?> 
@@ -149,22 +150,6 @@
                             ?>
                         </div>
                         <div class="form-group col-lg-6">
-                            <!--Todo - Convert this from photo_id to url? Find other options?-->
-                            <?php echo $this->Form->input('photo_id', array(
-                                'type' => 'text',
-                                'class' => 'form-control',
-                                'maxlength' => 100,
-                                'placeholder' => 'Photo id or url',
-                                'name' => 'photo_id'));
-                                //Todo - Display a way to preview the image via javascript to load dynamically
-                            ?>
-                        </div>               
-                    </fieldset>
-
-                </div>
-                <div class="form-inline">
-                    <fieldset>                 
-                        <div class="form-group col-lg-6">
                             <?php echo $this->Form->input('city', array(
                                 'type' => 'text',
                                 'class' => 'form-control',
@@ -173,6 +158,11 @@
                                 'name' => 'city'));
                             ?>
                         </div>
+                    </fieldset>
+
+                </div>
+                <div class="form-inline">
+                    <fieldset>                     
                         <div class="form-group col-lg-6">
                             <?php echo $this->Form->input('state', array(
                                 'options' => array('Prefer not to answer' => 'Prefer not to answer','Not in the US' => 'Not in the US', 
@@ -211,14 +201,13 @@
                         </div>            
                     </fieldset>
                 </div> 
-            </div>              
-              <div class="form-group col-lg-6">        
-                <?php echo $this->Form->end(array('label' => 'Save', 
-                            'class' => 'btn btn-primary', 
-                            'name' => 'submit')); 
-                ?>                  
-              </div>  
-            </form>         
+                <br>
+            </div>               
+            <div class="form-group col-lg-6">        
+              <?php echo $this->Form->end(array('label' => 'Save', 
+                          'class' => 'btn btn-primary', 
+                          'name' => 'submit')); 
+              ?>                  
+            </div>           
         </div>
     </div>
-</div>

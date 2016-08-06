@@ -213,5 +213,6 @@
     <?php echo $this->Html->script('magnific-popup-options.min.js');?> 
     <?php echo $this->Html->script('main.js');?>    
     <?php echo $this->Html->script('respond.min.js');?>
+    <?php echo $this->Html->script('image_preview.js');?> 
     <?php echo $this->Html->script('superfish.js');?>     
 </html>

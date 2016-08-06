@@ -20,6 +20,8 @@
             <div class="col-lg-3 col-md-3 col-sm-3" >
                 <?php $photo = $user['Photo']['url']; ?>
                 <div class="fh5co-blog" style="background-image: url(./../../app/webroot/img/profile_pics/Perez,Isidro.jpg); height: 280px; width: 260px;"></div>
+                <span ><a class="btn btn-primary" style="margin-bottom: 5px; width: 260px" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Users', 'action'=>'profile_pic/'.$user['User']['id']))?>'">Change Profile Picture</a></span>
+                <br>
                 <div class="panel panel-default">
                     <div class="panel-heading">Your Stats</div>
                     <div class="panel-body">
