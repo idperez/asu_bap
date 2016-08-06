@@ -23,6 +23,7 @@
     <div class="row" >
         <div class="col-sm-7 col-md-7 col-lg-7">
             <div class="panel-group animate-box">
+              <?php $count = 0; ?>
               <?php foreach($events as $event):?>
                 <div class="panel panel-default" >
                     <h3 class="heading-section"><?php echo $event['Event']['name'] . ' ' . date('m/d/y H:i', strtotime($event['Event']['time'])); ?></h3>
@@ -62,6 +63,9 @@
                 </div>  
               <?php endforeach; ?> 
               <?php unset($event); ?>   
+              <?php if($count == 0) { ?>
+                <h2>Nothing Posted At This Time. Check Back Soon!</h2>
+             <?php } ?>  
             </div>
         </div>
         <div class="animate-box">
