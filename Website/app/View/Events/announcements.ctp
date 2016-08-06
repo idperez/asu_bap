@@ -71,13 +71,13 @@
                     <p>Questions about any announcements, feel free to message one of our executives.<br><a onclick="window.location.href='<?php echo Router::url(array('controller'=>'Contact', 'action'=>'index'))?>'" style="cursor: pointer;"?>Contact Us</a></p>
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-offset-7  col-md-3">
                 <h3 class="heading-section">Filter</h3>
                 <p>What are you looking for?</p>
                 <div style="position:relative; top:-20px;">
-                    <a onclick="window.location.href='<?php echo Router::url(array('controller'=>'Info', 'action'=>'opportunities'))?>'" style="cursor: pointer;">Opportunities</a>
+                    <a onclick="window.location.href='<?php echo Router::url(array('controller'=>'Events', 'action'=>'opportunities'))?>'" style="cursor: pointer;">Opportunities</a>
                     &nbsp;
-                    <a onclick="window.location.href='<?php echo Router::url(array('controller'=>'Info', 'action'=>'events'))?>'" style="cursor: pointer;">Events</a>
+                    <a onclick="window.location.href='<?php echo Router::url(array('controller'=>'Events', 'action'=>'events'))?>'" style="cursor: pointer;">Events</a>
                 </div>
             </div>
             <div class="col-md-2">

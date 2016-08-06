@@ -186,5 +186,10 @@ class UsersController extends AppController{
         $this->Auth->logout();
         $this->redirect('login');
     }
+     
+    public function manage_members()
+    {
+        
+    }
 }
 ?>

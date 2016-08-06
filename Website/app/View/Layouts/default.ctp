@@ -82,16 +82,16 @@
                                                 );?>
                                             </li>
                                             <li>
-                                                <a class="fh5co-sub-ddown" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Info', 'action'=>'announcements'))?>'" style="cursor: pointer;">Announcements</a>
+                                                <a class="fh5co-sub-ddown" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Events', 'action'=>'announcements'))?>'" style="cursor: pointer;">Announcements</a>
                                                 <ul class="fh5co-sub-menu">
                                                     <li><?php echo $this->Html->link(
                                                             'Events',
-                                                            array('controller' => 'Info', 'action' => 'events')
+                                                            array('controller' => 'Events', 'action' => 'events')
                                                         );?>
                                                     </li>
                                                     <li><?php echo $this->Html->link(
                                                             'Opportunities',
-                                                            array('controller' => 'Info', 'action' => 'opportunities')
+                                                            array('controller' => 'Events', 'action' => 'opportunities')
                                                         );?>
                                                     </li>
                                                     

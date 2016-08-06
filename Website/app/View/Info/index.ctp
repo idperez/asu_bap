@@ -49,14 +49,14 @@
                     <div class="row">
                         <div class="col-md-4 col-sm-4">
                             <div class="services animate-box">                          
-                                <span><a class="hvr-wobble-vertical fa fa-binoculars fa-4x" aria-hidden="true" style="color: #bfbfbf;" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Info', 'action'=>'opportunities'))?>'"></a></span>
+                                <span><a class="hvr-wobble-vertical fa fa-binoculars fa-4x" aria-hidden="true" style="color: #bfbfbf;" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Events', 'action'=>'opportunities'))?>'"></a></span>
                                 <h3>Opportunities</h3>
                                 <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
                             </div>
                         </div>
                         <div class="col-md-4 col-sm-4">
                             <div class="services animate-box">
-                                <span><a class="hvr-wobble-vertical fa fa-calendar fa-4x" aria-hidden="true" style="color: #bfbfbf;" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Info', 'action'=>'events'))?>'"></a></span>
+                                <span><a class="hvr-wobble-vertical fa fa-calendar fa-4x" aria-hidden="true" style="color: #bfbfbf;" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Events', 'action'=>'events'))?>'"></a></span>
                                 <h3>Events</h3>
                                 <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
                             </div>
