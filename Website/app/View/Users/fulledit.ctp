@@ -3,14 +3,15 @@
     <div class="desc animate-box" style="position:relative; top:280px; "></div>
 </div>
 <div id="fh5co-work-section" >
-    <div class="container" style="position:relative; top:-20">
+    <div class="container" style="position:relative; top:-40">
         <div class="row" >
             <div class="col-md-12 col-sm-12" >
-                <div class="animate-box text-center" style="position:relative; top:-22">  
-                    <img src="./../app/webroot/img/profile_logo.png"  alt="profile_logo" height="120" style="position:relative; top:-35px; ">
+                <div class="animate-box text-center">  
+                    <img src="./../../app/webroot/img/profile_logo.png"  alt="profile_logo" height="120">
                 </div>
             </div>    
-        </div>
+       </div>
+    </div>
         <div class="row" >
             <div class="col-md-12 col-sm-12" >
                 <div class="animate-box text-center" style="position:relative; top:-22">  
@@ -23,7 +24,7 @@
         </div>
 </div>
     </div>
-    <div class="row">
+    <div class="row animate-box" style="position:relative; top:-60;">
         <div class="col-lg-8 col-lg-offset-3">
             <div class="input-group">          
                 <?php echo $this->Form->create('User'); ?> 
