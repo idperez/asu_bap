@@ -60,7 +60,8 @@
                         </tbody>
                     </table>
                 </div>
-                <span class="animate-box" style="float: right;"><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Users', 'action'=>'add'))?>'">New Member</a></span>  
+                <span class="animate-box" style="float: right; margin-left: 5px"><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Users', 'action'=>'add'))?>'">New Member</a></span> 
+                <span class="animate-box" style="float: right;"><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Users', 'action'=>'manage_prospective_members'))?>'">Prospective Members</a></span> 
             </div>    
         </div>
     </div>
