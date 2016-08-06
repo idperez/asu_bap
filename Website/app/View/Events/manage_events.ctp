@@ -1,4 +1,3 @@
-<?php print_r($rsvps);?>
 <div class="fh5co-hero-ish">
     <div class="fh5co-overlay"></div>
     <div class="desc animate-box" style="position:relative; top:280px; "></div>
@@ -31,7 +30,7 @@
                         </thead>
                         <tbody>
                         <?php foreach($events as $event):?>
-                        <?php if($event['Event']['type'] == 'Event'){ ?>
+                        <?php if($event['Event']['type'] == 'Event' && $event['Event']['closed'] == FALSE){ ?>
                             <tr>
                                 <td><?php echo $event['Event']['name']; ?></td>
                                 <td><?php echo date('m/d/y', strtotime($event['Event']['time'])); ?></td>
