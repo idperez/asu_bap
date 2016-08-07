@@ -1,4 +1,4 @@
 <?php
-class MajorsController extends AppController{
+class MajorsController extends AppController { 
 }
 ?>

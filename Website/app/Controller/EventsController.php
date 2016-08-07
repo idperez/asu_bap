@@ -8,7 +8,6 @@ class EventsController extends AppController{
         {
             if($this->request->is('post'))
             {
-                $data = $this->request->data;
                 $this->Event->create();
                 
                 if($this->Event->save($this->request->data))
@@ -17,10 +16,10 @@ class EventsController extends AppController{
                 }
             }
             
-        $this->loadModel('User');
-        $users = $this->User->find('all');
-        
-        $this->set('user', $users);
+            $this->loadModel('User');
+            $users = $this->User->find('all');
+
+            $this->set('user', $users);
         }
         //user is not an admin
         else
