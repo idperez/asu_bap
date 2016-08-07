@@ -37,6 +37,7 @@
             </div>
             <div class="col-sm-7 col-md-7 col-lg-7">
                 <div class="panel-group animate-box">
+                  <?php $count = 0; ?>
                   <?php foreach($events as $event): ?>
                   <div class="panel panel-default" >
                     <h3 class="heading-section"><?php echo $event['Event']['name'] . ' ' . date('m/d/y H:i', strtotime($event['Event']['time'])); ?></h3>
@@ -47,6 +48,7 @@
                         <?php
                             if($event['Event']['type'] == 'Event'){ 
                             //Check for RSVPd events
+                            $count++;
                             $hasNotRsvped = FALSE;
                             foreach($user['Event'] as $checkRsvp):
                                 if($checkRsvp['id'] == $event['Event']['id'])
@@ -76,6 +78,9 @@
                   </div>
                   <?php endforeach; ?>
                   <?php unset($event); ?>
+                  <?php if($count == 0) { ?> 
+                    <h1>No Events At This Time. Check Back Soon!</h1>
+                  <?php } ?>
                 </div>
             </div>
             <div class='col-lg-2'>
@@ -85,9 +90,9 @@
                 </div>
                 <div>
                     <?php if(AuthComponent::user('level') == 'Officer'){ ?>
-                    <h2>Officer Tools</h2>
-                    <span ><a class="btn btn-primary" style="margin-bottom: 5px; width: 120px" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Events', 'action'=>'manage_events'))?>'">Events</a></span>
-                    <span ><a class="btn btn-primary" style="margin-bottom: 5px; width: 120px" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Users', 'action'=>'manage_members'))?>'">Members</a></span>
+                        <h2>Officer Tools</h2>
+                        <span ><a class="btn btn-primary" style="margin-bottom: 5px; width: 120px" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Events', 'action'=>'manage_events'))?>'">Events</a></span>
+                        <span ><a class="btn btn-primary" style="margin-bottom: 5px; width: 120px" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Users', 'action'=>'manage_members'))?>'">Members</a></span>
                     <?php } ?>
                 </div>
             </div>
