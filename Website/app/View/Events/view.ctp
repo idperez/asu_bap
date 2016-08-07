@@ -11,7 +11,7 @@
                 </div>
                 <div class="animate-box" style="width: 100%; height: 20px; border-bottom: 1px solid black; text-align: center">
                     <span style="font-size: 30px; background-color: #F3F5F6; padding: 0 10px;">
-                    Event Name
+                    <?php echo $event['Event']['name']; ?>
                     </span>
                 </div>
                 <br><br><br>
@@ -19,9 +19,10 @@
                     <div class="col-sm-7 col-md-7 col-lg-7">
                         <div class="panel-group animate-box">
                             <div class="panel panel-default" >
-                                <h3 class="heading-section">Announcement Title (5/23/16) 05:00PM</h3>
+                                <h3 class="heading-section"><?php echo $event['Event']['name'] . ' ' . date('m/d/y H:i', strtotime($event['Event']['time'])); ?></h3>
                                 <div style="position:relative; top:-20px;">
-                                    <div class="panel-body">Would you like to earn good money working for Apple this next year? Is a flexible part time schedule, something you are looking for? Do you want rewarding/meaningful work where you ARE the difference? How about a job that can grow into a career? Motivated Sun Devils can work for Apple from home. All majors with a 2.7+ GPA who will be enrolled at ASU through May 2017 are encouraged to apply
+                                    <div class="panel-body">
+                                        <?php echo $event['Event']['description']; ?>
                                     </div>   
                                 </div>
                             </div>
@@ -31,22 +32,29 @@
                     <div class="panel panel-default">
                     <div class="panel-heading">Event Stats</div>
                     <div class="panel-body">
-                        Hours: 3                        
+                        <?php 
+                        $present = 0;
+                        foreach($rsvps as $rsvp):
+                            if($rsvp['EventsUser']['present'] == TRUE)
+                                $present++;
+                        endforeach;
+                        ?>
+                        Hours: <?php echo $event['Event']['hours']; ?>                        
                         <br>
-                        Total Attendance: 12
+                        Total Attendance: <?php echo $present; ?>
                         <br>
-                        Total RSVPs: 11
+                        Total RSVPs: <?php echo count($rsvps); ?>
                         <br>
-                        Total Misses: 1
+                        Total Misses: <?php echo count($rsvps) - $present; ?>
                     </div>
                     </div>
                 </div>
                     <div class="col-sm-2 col-md-2 col-lg-2 animate-box">
-                        <span ><a class="btn btn-primary" style="width: 150px;" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Events', 'action'=>'edit'))?>'">Edit</a></span>
+                        <span ><a class="btn btn-primary" style="width: 150px;" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Events', 'action'=>'edit', $event['Event']['id']))?>'">Edit</a></span>
                         <br><br>
-                        <span ><a class="btn btn-primary" style="width: 150px;" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Events', 'action'=>'view'))?>'">Remove</a></span>
+                        <span ><a class="btn btn-primary" style="width: 150px;" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Events', 'action'=>'delete', $event['Event']['id']))?>'">Delete</a></span>
                         <br><br>
-                        <span ><a class="btn btn-primary" style="width: 150px;" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Events', 'action'=>'sign_in'))?>'">Start Login</a></span>
+                        <span ><a class="btn btn-primary" style="width: 150px;" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Events', 'action'=>'sign_in', $event['Event']['id']))?>'">Start Login</a></span>
                     </div>
                 </div>
                 <br>
@@ -58,63 +66,23 @@
                                 <tr>
                                     <th>First Name</th>
                                     <th>Last Name</th>
-                                    <th>Hours</th>
-                                    <th>View Profile</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Isidro</td>
-                                    <td>Perez</td>
-                                    <td>2</td>
-                                    <th><span ><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Events', 'action'=>'view'))?>'">View</a></span></th>
-                                </tr>
-                                <tr>
-                                    <td>Scott</td>
-                                    <td>Karl</td>
-                                    <td>2</td>
-                                    <th><span ><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Events', 'action'=>'view'))?>'">View</a></span></th>
-                                </tr>
-                                <tr>
-                                    <td>Dennis</td>
-                                    <td>Richards</td>
-                                    <td>4</td>
-                                    <th><span ><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Events', 'action'=>'view'))?>'">View</a></span></th>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <br>
-                    <h2 class='text-center animate-box'>RSVPs</h2>
-                    <div class="container animate-box">
-                        <table class="table table-hover">
-                            <thead>
-                                <tr>
-                                    <th>First Name</th>
-                                    <th>Last Name</th>
                                     <th>Attended</th>
                                     <th>View Profile</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>Isidro</td>
-                                    <td>Perez</td>
-                                    <td>Yes</td>
-                                    <th><span ><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Events', 'action'=>'view'))?>'">View</a></span></th>
-                                </tr>
-                                <tr>
-                                    <td>Scott</td>
-                                    <td>Karl</td>
-                                    <td style='color: red'>No</td>
-                                    <th><span ><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Events', 'action'=>'view'))?>'">View</a></span></th>
-                                </tr>
-                                <tr>
-                                    <td>Dennis</td>
-                                    <td>Richards</td>
-                                    <td>Event starts 5/2/2016</td>
-                                    <th><span ><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Events', 'action'=>'view'))?>'">View</a></span></th>
-                                </tr>
+                                <?php 
+                                foreach($rsvps as $rsvp): ?>
+                                    <tr>
+                                        <?php foreach($users as $user)
+                                            if($user['User']['id'] == $rsvp['EventsUser']['user_id']){ ?>
+                                                <td><?php echo $user['User']['first_name']; ?></td>
+                                                <td><?php echo $user['User']['last_name']; ?></td>
+                                                <td><?php if($rsvp['EventsUser']['present'] == TRUE) echo 'Yes'; else echo 'No'; ?></td>
+                                                <th><span><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Events', 'action'=>'officer_view', $user['User']['id']))?>'">View</a></span></th>
+                                        <?php } ?>
+                                    </tr>
+                                <?php endforeach; ?>
                             </tbody>
                         </table>
                     </div>   

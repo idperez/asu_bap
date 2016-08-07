@@ -159,7 +159,21 @@ class EventsController extends AppController{
     
     public function view($id = null)
     {
+        $event = $this->Event->findById($id);
+        if($event == null || $id == null)
+            $this->redirect(array(
+                'controller' => 'Users', 'action' => 'profilehub/' . $this->Auth->user('id')));
         
+        $allRsvps = $this->Event->EventsUser->find('all', array(
+            'conditions' => array('event_id' => $id)
+        ));
+        
+        $this->loadModel('User');
+        $users = $this->User->find('all');
+        
+        $this->set('rsvps', $allRsvps);
+        $this->set('users', $users);
+        $this->set('event', $event);
     }
     
     public function sign_in()
