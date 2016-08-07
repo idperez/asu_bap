@@ -53,9 +53,13 @@ class JoinController extends AppController {
                 $this->Prospective->create();
                 
                 if($this->Prospective->save($this->request->data))
-                {
+                {                  
                     $this->redirect('success');
                 }
             }
     }
+    
+    public function success() {
+        
+    }    
 }
