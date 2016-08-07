@@ -23,11 +23,11 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">Isidro's Stats</div>
                     <div class="panel-body">
-                        Hours: 9                        
+                        Hours: <?php echo $numOfHours; ?>                       
                         <br>
-                        Events Attended: 4
+                        Events Attended: <?php echo $numOfEvents; ?>
                         <br>
-                        Events Missed: 1
+                        Events Missed: <?php echo $numOfMisses; ?>
                     </div>
                 </div>
                 <span ><a class="btn btn-primary" style="margin-bottom: 5px; width: 125px" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Users', 'action'=>'edit/'.$user['User']['id']))?>'">Edit Info</a></span>
