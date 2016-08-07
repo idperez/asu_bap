@@ -18,10 +18,9 @@
                 <h1 style="display:inline; font-size: 30px; color: black;"><?php echo $user['User']['first_name'] . " " . $user['User']['last_name']; ?>
             </div>
             <div class="col-lg-3 col-md-3 col-sm-3" >
-                <?php $photo = $user['Photo']['url']; ?>
                 <div class="fh5co-blog" style="background-image: url(/bap/Website/app/webroot/img/profile_pics/Perez,Isidro.jpg); height: 280px; width: 260px;"></div>
                 <div class="panel panel-default">
-                    <div class="panel-heading">Isidro's Stats</div>
+                    <div class="panel-heading"><?php echo $user['User']['first_name'] . "'s" . ' stats' ?></div>
                     <div class="panel-body">
                         Hours: <?php echo $numOfHours; ?>                       
                         <br>
@@ -47,81 +46,20 @@
                             </tr>
                         </thead>
                         <tbody>
+                            <?php foreach($events as $event): ?>
+                                <?php foreach($allRsvps as $rsvpd): 
+                                if($rsvpd['EventsUser']['event_id'] == $event['Event']['id']) {
+                                ?>
                             <tr>
-                                <td>Meet The Firms</td>
-                                <td>5/23/16</td>
-                                <td>2</td>
-                                <td>Yes</td>
+                                <td><?php echo $event['Event']['name']; ?></td>
+                                <td><?php echo date('m/d/y', strtotime($event['Event']['time'])); ?></td>
+                                <td><?php echo $event['Event']['hours']; ?></td>
+                                <td><?php if($rsvpd['EventsUser']['present'] == TRUE) echo 'Yes'; else echo 'No'; ?></td>
                                 <td><span ><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Users', 'action'=>'logout'))?>'">View</a></span></td>
+                                <?php } ?>
                             </tr>
-                            <tr>
-                                <td>Event Title</td>
-                                <td>5/23/16</td>
-                                <td>2</td>
-                                <td>Yes</td>
-                                <td><span ><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Users', 'action'=>'logout'))?>'">View</a></span></td>
-
-                            </tr>
-                            <tr>
-                                <td>Event Title</td>
-                                <td>5/23/16</td>
-                                <td>4</td>
-                                <td>Yes</td>
-                                <td><span ><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Users', 'action'=>'logout'))?>'">View</a></span></td>
-
-                            </tr>
-                            <tr>
-                                <td>Event Title</td>
-                                <td>5/23/16</td>
-                                <td>1</td>
-                                <td style="color: red;">No</td>
-                                <td><span ><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Users', 'action'=>'logout'))?>'">View</a></span></td>
-
-                            </tr>              
-                        </tbody>
-                    </table>
-                </div>
-                <div class="container animate-box">
-                    <h3>Current RSVPs</h3>
-                    <table class="table table-hover">
-                        <thead>
-                            <tr>
-                                <th class="col-lg-1">Event Name</th>
-                                <th class="col-lg-1">Date</th>
-                                <th class="col-lg-1">Hours</th>
-                                <th class="col-lg-1">See Event</th>
-                                <th class="col-lg-2">Withdraw</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Meet The Firms</td>
-                                <td>5/23/16</td>
-                                <td>2</td>
-                                <td><span ><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Events', 'action'=>'view'))?>'">View</a></span></td>
-                                <td><span ><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Events', 'action'=>'cancel'))?>'">Cancel</a></span></td>
-                            </tr>
-                            <tr>
-                                <td>Event Title</td>
-                                <td>5/23/16</td>
-                                <td>2</td>
-                                <td><span ><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Users', 'action'=>'logout'))?>'">View</a></span></td>
-                                <td><span ><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Events', 'action'=>'cancel'))?>'">Cancel</a></span></td>
-                            </tr>
-                            <tr>
-                                <td>Event Title</td>
-                                <td>5/23/16</td>
-                                <td>4</td>
-                                <td><span ><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Users', 'action'=>'logout'))?>'">View</a></span></td>
-                                <td><span ><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Events', 'action'=>'cancel'))?>'">Cancel</a></span></td>   
-                            </tr>
-                            <tr>
-                                <td>Event Title</td>
-                                <td>5/23/16</td>
-                                <td>1</td>
-                                <td><span ><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Users', 'action'=>'logout'))?>'">View</a></span></td>
-                                <td><span ><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Events', 'action'=>'cancel'))?>'">Cancel</a></span></td>
-                            </tr>              
+                            <?php endforeach; ?>
+                            <?php endforeach; ?>               
                         </tbody>
                     </table>
                 </div>

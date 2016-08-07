@@ -216,9 +216,11 @@ class EventsController extends AppController{
             }    
         endforeach;
         
+        $this->set('allRsvps', $allRsvps);
         $this->set('numOfEvents', $numOfEvents);
         $this->set('numOfHours', $numOfHours);
         $this->set('numOfMisses', $numOfMisses);   
+        $this->set('events', $eventdata);
     }
     
     public function my_events($id = null)
