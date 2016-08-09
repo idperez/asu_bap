@@ -25,21 +25,28 @@
                 <?php $photo = $user['Photo']['url']; ?>
                 <div class="fh5co-blog" style="background-image: url(./../../app/webroot/img/profile_pics/Perez,Isidro.jpg); height: 280px; width: 260px;"></div>             
             </div>
+            <?php echo $this->Form->create('Photo'); ?>
             <div class="col-lg-offset-3 col-lg-5 form-group">
                 <div class="input-group">
                     <label class="input-group-btn">
                         <span class="btn btn-primary">
-                            Browse&hellip; <input type="file" style="display: none;" multiple>
+                            Browse&hellip; 
+                            <?php echo $this->Form->input(array('label' => 'Browse', 
+                                'type' => 'file',
+                                'style' => 'display: none;',
+                                'name' => 'url')); 
+                            ?>
                         </span>
                     </label>
                     <input type="text" class="form-control" readonly>
                 </div>
             </div>
         </div>
-        <div class="form-group col-lg-offset-5 col-lg-6">        
+        <div class="form-group col-lg-offset-5 col-lg-6">    
+  
               <?php echo $this->Form->end(array('label' => 'Save', 
-                          'class' => 'btn btn-primary', 
-                          'name' => 'submit')); 
+                'class' => 'btn btn-primary', 
+                'name' => 'submit')); 
               ?>                  
             </div> 
     </div>
