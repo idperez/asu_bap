@@ -31,26 +31,6 @@
                 <div class="form-inline">
                     <fieldset>                 
                         <div class="form-group col-lg-6">
-                            <?php echo $this->Form->input('title', array(
-                                'type' => 'text',
-                                'class' => 'form-control',
-                                'maxlength' => 50,
-                                'placeholder' => 'Full-time Student',
-                                'name' => 'title'));
-                            ?>
-                        </div>
-                        <div class="form-group col-lg-6">
-                        <?php echo $this->Form->input('level', array(
-                            'options' => array('Candidate' => 'Candidate', 'Member' => 'Member', 'Officer' => 'Officer', 'Alumni' => 'Alumni'),
-                            'class' => 'form-control',
-                            'name' => 'level'));
-                            ?>                     
-                        </div>
-                    </fieldset>
-                </div>
-                <div class="form-inline">
-                    <fieldset>                 
-                        <div class="form-group col-lg-6">
                             <?php echo $this->Form->input('first_name', array(
                                 'type' => 'text',
                                 'class' => 'form-control',
@@ -159,7 +139,6 @@
                             ?>
                         </div>
                     </fieldset>
-
                 </div>
                 <div class="form-inline">
                     <fieldset>                     
@@ -184,7 +163,38 @@
                                 'class' => 'form-control',
                                 'name' => 'state'));
                             ?>
-                        </div>               
+                        </div>   
+                        <div class="form-group col-lg-6">
+                            <?php echo $this->Form->input('title', array(
+                                'type' => 'text',
+                                'class' => 'form-control',
+                                'maxlength' => 50,
+                                'placeholder' => 'Full-time Student',
+                                'name' => 'title'));
+                            ?>
+                        </div>            
+                    </fieldset>
+                </div>
+                <div class="form-inline">
+                    <fieldset>                 
+                        <div class="form-group col-lg-6">
+                            <?php echo $this->Form->input('major', array(
+                                'type' => 'text',
+                                'class' => 'form-control',
+                                'maxlength' => 100,
+                                'placeholder' => 'Separate each major by a comma.',
+                                'name' => 'major'));
+                            ?>
+                        </div>
+                        <div class="form-group col-lg-6">
+                            <?php echo $this->Form->input('minor', array(
+                                'type' => 'text',
+                                'class' => 'form-control',
+                                'maxlength' => 100,
+                                'placeholder' => 'Separate each minor by a comma.',
+                                'name' => 'minor'));
+                            ?>
+                        </div>
                     </fieldset>
                 </div>
                 <div class="form-inline">
@@ -207,7 +217,15 @@
               <?php echo $this->Form->end(array('label' => 'Save', 
                           'class' => 'btn btn-primary', 
                           'name' => 'submit')); 
-              ?>                  
-            </div>           
+              ?>   
+            </div>
+            <div class="form-group col-lg-6">
+                        <?php echo $this->Form->input('level', array(
+                            'options' => array('Candidate' => 'Candidate', 'Member' => 'Member', 'Officer' => 'Officer', 'Alumni' => 'Alumni'),
+                            'class' => 'form-control',
+                            'name' => 'level',
+                            'type' => 'hidden'));
+                            ?>                    
+            </div>                         
         </div>
     </div>

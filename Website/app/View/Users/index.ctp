@@ -37,14 +37,10 @@
                                     ));?>
                                     <figcaption>
                                         <p><?php 
-                                        $majorCount = count($user['Major']);
-                                        if($majorCount > 0) // members have majors
+                                        if($user['User']['major'] != "" || $user['User']['major'] != null) // members has major(s)
                                         {
-                                            echo $user['Major'][0]['name'];
-                                        }  
-                                        else 
-                                        { // members have no majors
-                                            echo 'Undecided';
+                                            $topMajor = explode(",", $user['User']['major']);
+                                            echo $topMajor[0]; //list first major
                                         }?>
                                         </p>
                                         <h6 class="icon-links">

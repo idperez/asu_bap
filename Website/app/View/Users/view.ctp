@@ -26,22 +26,15 @@
                 <div class="fh5co-grid text-nowrap animate-box">
                     <h3 style="display:inline; color: black;">Class &nbsp;&nbsp; <h4 style="display:inline; color: grey;"> 2017 </h4></h3>
                     <br><br>
-                    <h3 style="display:inline; color: black;">Major &nbsp;&nbsp;<h4 style="display:inline; color: grey;">
                     <?php 
-                    $majorCount = count($user['Major']);
-                    if($majorCount > 0) // members have majors
+                    if($user['User']['major'] != "" || $user['User']['major'] != null)
+                    {?>
+                    <h3 style="display:inline; color: black;">Major &nbsp;&nbsp;<h4 style="display:inline; color: grey;">
+                    <?php echo $user['User']['major'];
+                    }
+                    if($user['User']['minor'] != "" || $user['User']['minor'])
                     {
-                        for($i = 0; $i < $majorCount; $i++)
-                        {
-                            if($i == 0 || $user['Major'][$i+=1]['name'] == null)
-                                echo $user['Major'][$i]['name'];
-                            else
-                                echo ', ' . $user['Major'][$i]['name'];
-                        }
-                    }  
-                    else 
-                    { // members have no majors
-                        echo 'Member does not have a major declared yet.';
+                        echo ' with a minor in ' . $user['User']['minor'];
                     }
                     ?></h4></h3>
                     <br><br>

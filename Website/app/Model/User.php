@@ -43,10 +43,10 @@ class User extends AppModel{
             'message' => 'Please enter a valid Last Name.'    
     ),
         'major' => array(
-            'rule' => '/^[a-zA-Z]*$/', //regex for exluding all numberic and special chars
+            'rule' => '/[a-zA-Z]*$/', //regex for exluding all numberic and special chars
             'message' => 'Please enter a valid Major.'
     ), 
-        'major' => array(
+        'minor' => array(
             'rule' => '/^[a-zA-Z]*$/', //regex for exluding all numberic and special chars
             'message' => 'Please enter a valid Minor.'
     ), 
