@@ -37,10 +37,14 @@
                                     ));?>
                                     <figcaption>
                                         <p><?php 
-                                        if($user['User']['major'] != "" || $user['User']['major'] != null) // members has major(s)
+                                        if($user['User']['major'] != "" && $user['User']['major'] != null) // members has major(s)
                                         {
                                             $topMajor = explode(",", $user['User']['major']);
                                             echo $topMajor[0]; //list first major
+                                        }
+                                        else 
+                                        {
+                                            echo '<br>';
                                         }?>
                                         </p>
                                         <h6 class="icon-links">
@@ -100,14 +104,14 @@
                                     ));?>
                                     <figcaption>
                                         <p><?php 
-                                        $majorCount = count($user['Major']);
-                                        if($majorCount > 0) // members have majors
+                                        if($user['User']['major'] != "" && $user['User']['major'] != null) // members has major(s)
                                         {
-                                            echo $user['Major'][0]['name'];
-                                        }  
+                                            $topMajor = explode(",", $user['User']['major']);
+                                            echo $topMajor[0]; //list first major
+                                        }
                                         else 
-                                        { // members have no majors
-                                            echo 'Undecided';
+                                        {
+                                            echo '<br>';
                                         }?>
                                         </p>
                                         <h6 class="icon-links">

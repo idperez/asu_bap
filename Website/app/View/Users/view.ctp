@@ -27,17 +27,17 @@
                     <h3 style="display:inline; color: black;">Class &nbsp;&nbsp; <h4 style="display:inline; color: grey;"> 2017 </h4></h3>
                     <br><br>
                     <?php 
-                    if($user['User']['major'] != "" || $user['User']['major'] != null)
+                    if($user['User']['major'] != "" && $user['User']['major'] != null)
                     {?>
-                    <h3 style="display:inline; color: black;">Major &nbsp;&nbsp;<h4 style="display:inline; color: grey;">
-                    <?php echo $user['User']['major'];
-                    }
-                    if($user['User']['minor'] != "" || $user['User']['minor'])
-                    {
-                        echo ' with a minor in ' . $user['User']['minor'];
+                        <h3 style="display:inline; color: black;">Major &nbsp;&nbsp;<h4 style="display:inline; color: grey;">
+                        <?php echo $user['User']['major'];
+                        if($user['User']['minor'] != "" || $user['User']['minor'])
+                        {
+                            echo ' with a minor in ' . $user['User']['minor'];
+                        }
+                        echo '<br><br>';
                     }
                     ?></h4></h3>
-                    <br><br>
                     <h3 style="display:inline; color: black;">Email &nbsp;&nbsp;<h4 style="display:inline; color: grey;"><?php echo $user['User']['username'];?></h4></h3>  
                     <br><br>
                     <h3 style="display:inline; color: black;">Hometown &nbsp;&nbsp;<h4 style="display:inline; color: grey;"><?php 
