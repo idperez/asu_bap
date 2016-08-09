@@ -11,13 +11,6 @@ class User extends AppModel{
    
    public $belongsTo = 'Photo';
    public $hasAndBelongsToMany = array(
-    'Major' =>
-            array(
-                'className' => 'Major',
-                'joinTable' => 'majors_users',
-                'foreignKey' => 'user_id',
-                'associationForeignKey' => 'major_id'
-            ),
     'Event' =>
             array(
                 'className' => 'Event',
@@ -49,6 +42,14 @@ class User extends AppModel{
             'rule' => '/^[a-zA-Z]*$/', //regex for exluding all numberic and special chars
             'message' => 'Please enter a valid Last Name.'    
     ),
+        'major' => array(
+            'rule' => '/^[a-zA-Z]*$/', //regex for exluding all numberic and special chars
+            'message' => 'Please enter a valid Major.'
+    ), 
+        'major' => array(
+            'rule' => '/^[a-zA-Z]*$/', //regex for exluding all numberic and special chars
+            'message' => 'Please enter a valid Minor.'
+    ), 
         'phone' => array(
             'rule' => 'phone',
             'allowEmpty' => true,
