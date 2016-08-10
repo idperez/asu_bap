@@ -179,6 +179,15 @@ class UsersController extends AppController {
         $user = $this->User->findById($id);
         
         $this->set('user', $user);
+        
+        if($this->request->is('post'))
+        {
+             $data = $this->request->data;
+             
+             echo $_FILES[$data['url']];
+        }
+        
+        
     }
     
     public function delete($id = null)

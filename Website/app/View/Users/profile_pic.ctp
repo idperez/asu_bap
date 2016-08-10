@@ -30,8 +30,7 @@
                 <div class="input-group">
                     <label class="input-group-btn">
                         <span class="btn btn-primary">
-                            Browse&hellip; 
-                            <?php echo $this->Form->input(array('label' => 'Browse', 
+                            <?php echo $this->Form->input('url', array('label' => 'Browse', 
                                 'type' => 'file',
                                 'style' => 'display: none;',
                                 'name' => 'url')); 
