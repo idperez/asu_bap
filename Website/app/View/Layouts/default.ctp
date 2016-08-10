@@ -113,11 +113,13 @@
                                                     </li>
                                                 </ul>
                                             </li>
-                                            <li><?php echo $this->Html->link(
+                                            <!-- Sponsor page will be launched at a later time
+                                            <li><?php /*echo $this->Html->link(
                                                     'Sponsor',
                                                     array('controller' => 'Info', 'action' => 'sponsor')
-                                                );?>
-                                            </li>              
+                                                ); */?>
+                                            </li>  
+                                            -->
                                         </ul>
                                     </li>              
                                     <li>
@@ -134,19 +136,19 @@
                                     </li>
                                     <li>
                                         <?php if(AuthComponent::user())
-                                                {
-                                                    echo $this->Html->link(
-                                                        'Hub',
-                                                        array('controller' => 'Users', 'action' => 'profilehub/' . AuthComponent::user('id'))
-                                                    );
-                                                }
-                                                else
-                                                { 
-                                                    echo $this->Html->link(
-                                                        'Login',
-                                                        array('controller' => 'Users', 'action' => 'login')
-                                                    );
-                                                }
+                                            {
+                                                echo $this->Html->link(
+                                                    'Hub',
+                                                    array('controller' => 'Users', 'action' => 'profilehub/' . AuthComponent::user('id'))
+                                                );
+                                            }
+                                            else
+                                            { 
+                                                echo $this->Html->link(
+                                                    'Login',
+                                                    array('controller' => 'Users', 'action' => 'login')
+                                                );
+                                            }
                                         ?>
                                     </li> 
                                 </li>

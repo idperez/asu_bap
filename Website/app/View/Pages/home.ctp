@@ -6,7 +6,7 @@
 
             <span>Beta Tau Chapter</span>
             
-            <span ><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Info', 'action'=>'sponsor'))?>'" style="position:relative; top:-20px;">Donate Today</a></span>
+            <span ><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Join', 'action'=>'index'))?>'" style="position:relative; top:-20px;">Join Today</a></span>
             <div style="position:relative; top: -45px;">
                 <a target="_blank" title="find us on Facebook" href="http://www.facebook.com/bapasu">
                     <img alt="follow us on facebook" src="//login.create.net/images/icons/user/facebook_30x30.png" border=0>
