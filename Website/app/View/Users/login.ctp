@@ -17,7 +17,7 @@
                                         'name' => 'username')
                                     );                                    
                                     echo $this->Form->input('password', array(
-                                        'type' => 'text',
+                                        'type' => 'password',
                                         'class' => 'form-control',
                                         'maxlength' => 30,
                                         'placeholder' => 'Password',

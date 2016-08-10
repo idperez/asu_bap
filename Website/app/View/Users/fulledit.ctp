@@ -165,12 +165,14 @@
                             ?>
                         </div>   
                         <div class="form-group col-lg-6">
-                            <?php echo $this->Form->input('title', array(
-                                'type' => 'text',
+                            <?php 
+                            if(AuthComponent::user('level') == 'Officer') {
+                            echo $this->Form->input('title', array(
+                                'options' => array( 'Member' => 'Member', 'Candidate' => 'Candidate', 'Officer' => 'Officer', 
+                                    'Alumni' => 'Alumni'),
                                 'class' => 'form-control',
-                                'maxlength' => 50,
-                                'placeholder' => 'Full-time Student',
                                 'name' => 'title'));
+                            }
                             ?>
                         </div>            
                     </fieldset>

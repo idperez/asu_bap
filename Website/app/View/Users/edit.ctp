@@ -64,12 +64,16 @@
                         ?>
                     </div>
                     <div class="form-group col-lg-6">
-                        <?php echo $this->Form->input('level', array(
-                            'options' => array('Candidate' => 'Candidate', 'Member' => 'Member', 'Officer' => 'Officer', 
-                                'Alumni' => 'Alumni'),
-                            'class' => 'form-control',
-                            'name' => 'level'));
+                        <?php 
+                        if(AuthComponent::user('level') == 'Officer') {
+                            echo $this->Form->input('level', array(
+                                'options' => array('Candidate' => 'Candidate', 'Member' => 'Member', 'Officer' => 'Officer', 
+                                    'Alumni' => 'Alumni'),
+                                'class' => 'form-control',
+                                'name' => 'level'));
+                        }
                         ?>
+                        
                   </div>               
                  </fieldset>
               </div>
