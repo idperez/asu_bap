@@ -14,7 +14,8 @@
         <link href='http://fonts.googleapis.com/css?family=Raleway:400,800,300' rel='stylesheet' type='text/css'> 
         <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" media="all">
         <title>Beta Alpha Psi</title>
-        <link rel="icon" href=<?php echo $this->Html->image("logo.png"); ?>
+        <?php $this->Html->meta('icon', $this->Html->image('logo.png')); ?>
+       
         <?php echo $this->Html->script('modernizr-2.6.2.min.js');?>
         <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
         <script>tinymce.init({

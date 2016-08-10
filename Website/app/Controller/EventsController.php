@@ -1,6 +1,11 @@
 <?php
 class EventsController extends AppController{
     
+    public function beforeFilter()
+    {
+        $this->Auth->allow('events', 'announcements', 'opportunities');
+    }
+    
     public function add()
     {
         //if user is admin
