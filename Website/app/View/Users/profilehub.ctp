@@ -25,11 +25,11 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">Your Stats</div>
                     <div class="panel-body">
-                        Hours: 32                        
+                        Hours: <?php echo $numOfHours; ?>                       
                         <br>
-                        Events Attended: 12
+                        Events Attended: <?php echo $numOfEvents; ?>
                         <br>
-                        Events Missed: 1
+                        Events Missed: <?php echo $numOfMisses; ?>
                     </div>
                 </div>
                 <span ><a class="btn btn-primary" style="margin-bottom: 5px; width: 125px" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Users', 'action'=>'fulledit/'.$user['User']['id']))?>'">Edit Info</a></span>

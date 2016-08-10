@@ -94,15 +94,50 @@ class UsersController extends AppController {
             $this->redirect('index');
         
         $this->loadmodel('Event');  
+        
+        $allRsvps = $this->Event->EventsUser->find('all', array(
+            'conditions' => array('user_id' => $id)
+        ));
           
         //returns all events to the view
+        $eventdata = $this->Event->find('all', 
+            array(
+                'order' => array('Event.time' => 'DESC')
+        ));
+        
+        $this->set('rsvps', $allRsvps);    
+        
+        $numOfEvents = 0;
+        $numOfMisses = 0;
+        $numOfHours = 0;
+        
+        //count number of events, hours, and missed events
+        foreach($allRsvps as $rsvp):
+            if($rsvp['EventsUser']['present'] == TRUE)
+            {
+                $numOfEvents++;
+                foreach($eventdata as $event):
+                    if($event['Event']['id'] == $rsvp['EventsUser']['event_id'])
+                        $numOfHours += $event['Event']['hours'];
+                endforeach;
+            }
+            else
+            {
+                $numOfMisses++;
+            }    
+        endforeach;
+        
         $eventdata = $this->Event->find('all', 
             array(
                 'order' => array('Event.time' => 'DESC'),
                 'limit' => 3
         ));
-            
-        $this->set('events', $eventdata); 
+        
+        $this->set('allRsvps', $allRsvps);
+        $this->set('numOfEvents', $numOfEvents);
+        $this->set('numOfHours', $numOfHours);
+        $this->set('numOfMisses', $numOfMisses);   
+        $this->set('events', $eventdata);
         
         $user = $this->User->findById($id);
         
