@@ -59,7 +59,7 @@
                         <br><br>
                         <span><a class="btn btn-primary" style="width: 150px;" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Events', 'action'=>'close_event', $event['Event']['id']))?>'">Close</a></span>
                         <?php }else{ ?>
-                        <span><a class="btn btn-primary" style="width: 150px;" disabled="true">Closed</a></span>                        
+                        <span><a class="btn btn-primary" style="width: 150px;" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Events', 'action'=>'open_event', $event['Event']['id']))?>'">Open</a></span>                        
                         <?php } ?>
                     </div>
                 </div>
@@ -87,9 +87,12 @@
                                                 <td><?php echo $user['User']['last_name']; ?></td>
                                                 <td><?php if($rsvp['EventsUser']['present'] == TRUE) echo 'Yes'; else echo 'No'; ?></td>
                                                 <th><span><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Events', 'action'=>'officer_view', $user['User']['id']))?>'">View</a></span></th>
-                                                <?php if($rsvp['EventsUser']['present'] == 0) {?>
+                                                <!--if user is checked in and event is not closed-->
+                                                <?php if($rsvp['EventsUser']['present'] == 0 && (!($event['Event']['closed']))) {?>
                                                 <th><span><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Events', 'action'=>'sign_in', $event['Event']['id'], $user['User']['username']))?>'">Check in</a></span></th>
-                                                <?php }else{ ?>
+                                                <?php } else if($rsvp['EventsUser']['present']){ ?>
+                                                <th><span>Checked in</span></th>
+                                                <?php } else { ?>
                                                 <th><span><a class="btn btn-primary" disabled="true">Check in</a></span></th>
                                                 <?php } ?>
                                         <?php } ?>

@@ -212,6 +212,14 @@ class EventsController extends AppController{
         $this->redirect('view/'. $id);
     }
     
+    public function open_event($id = null)
+    {
+        $this->Event->id = $id;
+        $this->Event->set(array('closed' => 0));
+        $this->Event->save();
+        $this->redirect('view/'. $id);
+    }
+    
     public function officer_view($id = null)
     {
         $this->assignUserToView($id); //user
