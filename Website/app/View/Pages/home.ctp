@@ -1,12 +1,12 @@
 <div class="fh5co-hero">
     <div class="fh5co-overlay"></div>
         <div class="fh5co-cover text-center" style="background-image: url(./app/webroot/img/tempe.jpg);">
-        <div class="desc animate-box" style="position:relative; top:300px; ">                                
+        <div class="desc animate-box" style="position:relative; top:280px; ">                                
             <?php echo $this->Html->image('logo.png', array('width'=>'200px', 'height' => '200px', 'main')) ?>
 
             <span>Beta Tau Chapter</span>
             
-            <span ><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Join', 'action'=>'index'))?>'" style="position:relative; top:-20px;">Join Today</a></span>
+            <span ><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Join', 'action'=>'index'))?>'" style="position:relative; top:-25px;">Join Today</a></span>
             <div style="position:relative; top: -45px;">
                 <a target="_blank" title="find us on Facebook" href="http://www.facebook.com/bapasu">
                     <img alt="follow us on facebook" src="//login.create.net/images/icons/user/facebook_30x30.png" border=0>
@@ -134,7 +134,7 @@
                         <h3>Want To Become A Member?</h3>
                         <h2 >Join the club that will elevate you.</h2>
                         <p>See when to apply.</p>
-                        <span><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Join', 'action'=>'index'))?>'" style="position:relative; top:-30px;">Join</a></span>
+                        <span><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Join', 'action'=>'index'))?>'" style="position:relative; top:-15px;">Join</a></span>
                     </div>
                 </div>
             </div>
