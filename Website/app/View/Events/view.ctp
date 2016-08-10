@@ -59,7 +59,7 @@
                         <br><br>
                         <span><a class="btn btn-primary" style="width: 150px;" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Events', 'action'=>'close_event', $event['Event']['id']))?>'">Close</a></span>
                         <?php }else{ ?>
-                        <span><a class="btn btn-primary" style="width: 150px;" disabled="true" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Events', 'action'=>'sign_in', $event['Event']['id']))?>'">Closed</a></span>                        
+                        <span><a class="btn btn-primary" style="width: 150px;" disabled="true">Closed</a></span>                        
                         <?php } ?>
                     </div>
                 </div>

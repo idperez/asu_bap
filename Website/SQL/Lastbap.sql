@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 25, 2016 at 05:15 PM
+-- Generation Time: Jul 31, 2016 at 08:40 PM
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 5.6.21
 
@@ -31,8 +31,18 @@ CREATE TABLE `events` (
   `name` varchar(30) NOT NULL,
   `description` varchar(100) NOT NULL,
   `time` datetime NOT NULL,
-  `address` varchar(100) NOT NULL
+  `hours` int(11) NOT NULL,
+  `type` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `events`
+--
+
+INSERT INTO `events` (`id`, `name`, `description`, `time`, `hours`, `type`) VALUES
+(1, 'TestAnnouncement', 'Testing the first announcement', '0000-00-00 00:00:00', 3, ''),
+(2, 'TestEvent', 'TestEvent Description', '0000-00-00 00:00:00', 1, ''),
+(3, 'TestEvent', 'testevent description..', '0000-00-00 00:00:00', 1, 'Event');
 
 -- --------------------------------------------------------
 
@@ -144,7 +154,7 @@ CREATE TABLE `majors_users` (
 --
 
 INSERT INTO `majors_users` (`major_id`, `user_id`) VALUES
-(1, 1);
+(1, 99);
 
 -- --------------------------------------------------------
 
@@ -207,8 +217,15 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `first_name`, `last_name`, `username`, `title`, `linkedin`, `phone`, `graduated`, `graduation_year`, `graduation_semester`, `password`, `minor`, `level`, `state`, `city`, `bio`, `photo_id`) VALUES
-(91, 'test', 'test', 'test@test123.com', '', '', '', 0, '', '', '16d7a4fca7442dda3ad93c9a726597e4', '', '1', '', '', '', 0),
-(92, 'test', 'test', 'test@test12345.com', '', '', '', 0, '', '', '05a671c66aefea124cc08b76ea6d30bb', '', '1', '', '', '', 0);
+(91, 'test', 'test', 'test@test123.com', '', '', '', 0, '0', 'Unknown', 'd41d8cd98f00b204e9800998ecf8427e', '', '1', 'Prefer not to answer', '', '', 0),
+(92, 'test', 'test', 'test@test12345.com', '', '', '', 0, '', '', '05a671c66aefea124cc08b76ea6d30bb', '', '1', '', '', '', 0),
+(93, 'Drew', 'Demechko', 'test@test1.com', '', 'www.linkedin.com', '4053127191', 0, '0', 'Unknown', 'b670eab762c7013782d240ea562305e8', '', '1', 'Prefer not to answer', '', '', 0),
+(94, 'Drew', 'Demechko', 'test@test12.com', '', 'www.linkedin.com', '4053127191', 0, '0', 'Unknown', 'b670eab762c7013782d240ea562305e8', '', 'Member', 'Prefer not to answer', '', '', 0),
+(95, 'test', 'test', 'testee@test.com', '', '', '', 0, '', '', '16d7a4fca7442dda3ad93c9a726597e4', '', 'Officer', '', '', '', 0),
+(96, 'test', 'test', 'test@testee.com', '', 'www.linkedin.com', '4053127191', 0, '0', 'Unknown', 'd41d8cd98f00b204e9800998ecf8427e', '', 'Candidate', 'Prefer not to answer', '', '', 0),
+(97, 'test', 'test', 'drew.a.demechko@gmail.com', '', 'www.linkedin.com', '4053127191', 0, '0', 'Unknown', 'd41d8cd98f00b204e9800998ecf8427e', '', 'Member', 'Prefer not to answer', '', '', 0),
+(98, 'test', 'test', 'ddemechko@uco.edu', '', 'www.linkedin.com', '4053127191', 0, '0', 'Unknown', 'd41d8cd98f00b204e9800998ecf8427e', '', 'Member', 'Prefer not to answer', '', '', 0),
+(99, 'test', 'test', 'test@test124.com', '', '', '', 0, '0', 'Unknown', '16d7a4fca7442dda3ad93c9a726597e4', '', 'Candidate', 'Prefer not to answer', '', '', 0);
 
 --
 -- Indexes for dumped tables
@@ -252,7 +269,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `events`
 --
 ALTER TABLE `events`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `majors`
 --
@@ -272,7 +289,7 @@ ALTER TABLE `photos`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=93;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=100;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
