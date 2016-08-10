@@ -54,9 +54,10 @@
                                 'controller' => 'Events', 'action' => 'edit', $event['Event']['id'])
                             );
                          echo ' ';
-                         echo $this->Html->link('Delete', array(
-                            'controller' => 'Events', 'action' => 'delete', $event['Event']['id'])
-                         );
+                            echo $this->Html->link('Delete', 
+                                array('controller' => 'Events', 'action' => 'delete', $event['Event']['id']),
+                                array('confirm' => 'Are you sure you wish to delete this Event?')
+                            );
                          $count++;
                         }?>          
                     </div>

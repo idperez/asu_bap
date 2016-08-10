@@ -215,5 +215,5 @@
     <?php echo $this->Html->script('main.js');?>    
     <?php echo $this->Html->script('respond.min.js');?>
     <?php echo $this->Html->script('image_preview.js');?> 
-    <?php echo $this->Html->script('superfish.js');?>     
+    <?php echo $this->Html->script('superfish.js');?>  
 </html>
