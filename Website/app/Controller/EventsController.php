@@ -175,9 +175,36 @@ class EventsController extends AppController{
         $this->set('event', $event);
     }
     
-    public function sign_in()
+    public function sign_in($id = null, $email = null)
     {
+        //pull all current attendees present and display them below sign in button
         
+        if($email != null)
+        {
+            $this->loadModel('User');
+            $user = $this->User->find('first', array(
+                'conditions' => array('username' => $email)    
+            ));
+            
+            $event = $this->Event->EventsUser->find('first', array(
+                'conditions' => array('event_id' => $id, 'user_id' => $user['User']['id'])
+            ));
+            
+            $this->loadModel('EventsUser');
+            $this->EventsUser->id = $event['EventsUser']['id'];
+            $this->EventsUser->set(array('present' => 1));
+            $this->EventsUser->save();
+            
+            $this->redirect('view/' . $id);
+        }
+    }
+    
+    public function close_event($id = null)
+    {
+        $this->Event->id = $id;
+        $this->Event->set(array('closed' => 1));
+        $this->Event->save();
+        $this->redirect('view/'. $id);
     }
     
     public function officer_view($id = null)

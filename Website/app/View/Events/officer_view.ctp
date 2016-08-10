@@ -55,7 +55,7 @@
                                 <td><?php echo date('m/d/y', strtotime($event['Event']['time'])); ?></td>
                                 <td><?php echo $event['Event']['hours']; ?></td>
                                 <td><?php if($rsvpd['EventsUser']['present'] == TRUE) echo 'Yes'; else echo 'No'; ?></td>
-                                <td><span ><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Users', 'action'=>'logout'))?>'">View</a></span></td>
+                                <td><span ><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Events', 'action'=>'view',$event['Event']['id']))?>'">View</a></span></td>
                                 <?php } ?>
                             </tr>
                             <?php endforeach; ?>

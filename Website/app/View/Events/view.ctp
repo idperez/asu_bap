@@ -54,7 +54,13 @@
                         <br><br>
                         <span ><a class="btn btn-primary" style="width: 150px;" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Events', 'action'=>'delete', $event['Event']['id']))?>'">Delete</a></span>
                         <br><br>
-                        <span ><a class="btn btn-primary" style="width: 150px;" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Events', 'action'=>'sign_in', $event['Event']['id']))?>'">Start Login</a></span>
+                        <?php if(!($event['Event']['closed'])) {?>
+                        <span><a class="btn btn-primary" style="width: 150px;" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Events', 'action'=>'sign_in', $event['Event']['id']))?>'">Start Login</a></span>
+                        <br><br>
+                        <span><a class="btn btn-primary" style="width: 150px;" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Events', 'action'=>'close_event', $event['Event']['id']))?>'">Close</a></span>
+                        <?php }else{ ?>
+                        <span><a class="btn btn-primary" style="width: 150px;" disabled="true" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Events', 'action'=>'sign_in', $event['Event']['id']))?>'">Closed</a></span>                        
+                        <?php } ?>
                     </div>
                 </div>
                 <br>
@@ -68,6 +74,7 @@
                                     <th>Last Name</th>
                                     <th>Attended</th>
                                     <th>View Profile</th>
+                                    <td>Status</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -80,6 +87,11 @@
                                                 <td><?php echo $user['User']['last_name']; ?></td>
                                                 <td><?php if($rsvp['EventsUser']['present'] == TRUE) echo 'Yes'; else echo 'No'; ?></td>
                                                 <th><span><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Events', 'action'=>'officer_view', $user['User']['id']))?>'">View</a></span></th>
+                                                <?php if($rsvp['EventsUser']['present'] == 0) {?>
+                                                <th><span><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Events', 'action'=>'sign_in', $event['Event']['id'], $user['User']['username']))?>'">Check in</a></span></th>
+                                                <?php }else{ ?>
+                                                <th><span><a class="btn btn-primary" disabled="true">Check in</a></span></th>
+                                                <?php } ?>
                                         <?php } ?>
                                     </tr>
                                 <?php endforeach; ?>
