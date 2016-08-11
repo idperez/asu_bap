@@ -43,15 +43,15 @@ class InfoController extends AppController {
     }
     
     public function announcements() {
-        
+        $this->layout = 'hero-ish';
     }
     
     public function advisory_board() {
-        
+        $this->layout = 'hero-ish';   
     }
     
     public function executive_board() {
-        
+        $this->layout = 'hero-ish';
     }
     
     public function sponsor() {
@@ -59,27 +59,27 @@ class InfoController extends AppController {
     }
     
     public function events() {
-        
+        $this->layout = 'hero-ish';
     }
     
     public function opportunities() {
-        
+        $this->layout = 'hero-ish';
     }
     
     public function policies() {
-        
+        $this->layout = 'hero-ish';
     }
     
     public function new_announcement() {
-        
+        $this->layout = 'hero-ish';
     }
     
     public function edit_announcement() {
-        
+        $this->layout = 'hero-ish';
     }
     
     public function our_sponsors() {
-        
+        $this->layout = 'hero-ish';
     }
     
     public function charge() {

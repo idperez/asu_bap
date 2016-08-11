@@ -27,6 +27,8 @@ class EventsController extends AppController{
         $users = $this->User->find('all');
 
         $this->set('user', $users);
+        
+        $this->layout = 'hero-ish';
     }
     
     public function edit($id = null)
@@ -68,6 +70,8 @@ class EventsController extends AppController{
         {
             $this->redirectToLogin();
         }
+        
+        $this->layout = 'hero-ish';
     }
     
     public function delete($id = null)
@@ -98,6 +102,8 @@ class EventsController extends AppController{
     {
         $this->EventHelper();
         $this->assignUserToView($this->Auth->user('id'));
+        
+        $this->layout = 'hero-ish';
     }
     
     public function opportunities()
@@ -110,6 +116,8 @@ class EventsController extends AppController{
         ));
             
         $this->set('events', $eventdata);
+        
+        $this->layout = 'hero-ish';
     }
     
     public function events()
@@ -124,6 +132,8 @@ class EventsController extends AppController{
         $this->set('events', $eventdata);
         
         $this->assignUserToView($this->Auth->user('id'));
+        
+        $this->layout = 'hero-ish';
     }
     
     public function EventHelper()
@@ -155,19 +165,23 @@ class EventsController extends AppController{
         $this->set('rsvps', $allRsvps);
                 
         $this->EventHelper();    
+        
+        $this->layout = 'hero-ish';
     }
     
     public function past_events()
     {
-    //if user is not admin
-    if($this->Auth->user('level') != "Officer")
-        $this->redirect(
-            array('controller' => 'Users', 'action' => 'profilehub/' . $this->Auth->user('id')));
-                
-    $allRsvps = $this->Event->EventsUser->find('all');
-    $this->set('rsvps', $allRsvps);
-                
-    $this->EventHelper();
+        //if user is not admin
+        if($this->Auth->user('level') != "Officer")
+            $this->redirect(
+                array('controller' => 'Users', 'action' => 'profilehub/' . $this->Auth->user('id')));
+
+        $allRsvps = $this->Event->EventsUser->find('all');
+        $this->set('rsvps', $allRsvps);
+
+        $this->EventHelper();
+
+        $this->layout = 'hero-ish';
     }
     
     public function manage_members()
@@ -176,6 +190,8 @@ class EventsController extends AppController{
         if($this->Auth->user('level') != "Officer")
             $this->redirect(
                 array('controller' => 'Users', 'action' => 'profilehub/' . $this->Auth->user('id')));
+        
+        $this->layout = 'hero-ish';
                 
     }
     
@@ -196,6 +212,8 @@ class EventsController extends AppController{
         $this->set('rsvps', $allRsvps);
         $this->set('users', $users);
         $this->set('event', $event);
+        
+        $this->layout = 'hero-ish';
     }
     
     public function sign_in($id = null, $email = null)
@@ -218,6 +236,8 @@ class EventsController extends AppController{
             
             $this->redirect('view/' . $id);
         }
+        
+        $this->layout = 'hero-ish';
     }
     
     public function close_event($id = null)
@@ -295,6 +315,8 @@ class EventsController extends AppController{
         $this->set('numOfHours', $numOfHours);
         $this->set('numOfMisses', $numOfMisses);   
         $this->set('events', $eventdata);
+        
+        $this->layout = 'hero-ish';
     }
     
     public function my_events($id = null)
@@ -303,6 +325,8 @@ class EventsController extends AppController{
             $this->redirect('my_events/' .$this->Auth->user('id'));
         
         $this->assignUserToView($id);
+        
+        $this->layout = 'hero-ish';
     }
     
     public function assignUserToView($id)

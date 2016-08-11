@@ -34,6 +34,8 @@ class UsersController extends AppController {
                 $this->redirect('index');
             }
         }
+        
+        $this->layout = 'hero-ish';
     }
     
     public function view($id = null)
@@ -47,6 +49,8 @@ class UsersController extends AppController {
         $user = $this->User->findById($id);
         
         $this->set('user', $user);
+        
+        $this->layout = 'hero-ish';
     }
     
     public function edit($id = null)
@@ -57,6 +61,8 @@ class UsersController extends AppController {
             $this->edit($this->Auth->user('id'));   
         else //else no user is logged in
             $this->redirect('login');
+        
+        $this->layout = 'hero-ish';
     }
     
     public function fulledit($id = null)
@@ -70,6 +76,8 @@ class UsersController extends AppController {
         //else user is not logged in    
         else
             $this->redirect('login');
+        
+        $this->layout = 'hero-ish';
     }
     
     public function profilehub($id = null)
@@ -132,6 +140,8 @@ class UsersController extends AppController {
         $user = $this->User->findById($id);
         
         $this->set('user', $user);
+        
+        $this->layout = 'hero-ish';
     }
     
     //Helper used across common views
@@ -175,7 +185,9 @@ class UsersController extends AppController {
              $data = $this->request->data;
              
              echo $_FILES[$data['url']];
-        }             
+        }          
+        
+        $this->layout = 'hero-ish';
     }
     
     
@@ -253,6 +265,8 @@ class UsersController extends AppController {
         $this->set('users', $users);
         $this->set('allRsvps', $allRsvps);
         $this->set('events', $events);
+        
+        $this->layout = 'hero-ish';
     }
     
     public function manage_prospective_members()
@@ -266,6 +280,8 @@ class UsersController extends AppController {
         $prospective_members_data = $this->Prospective->find('all');
         
         $this->set('prospective_members', $prospective_members_data);
+        
+        $this->layout = 'hero-ish';
     }
 }
 ?>
