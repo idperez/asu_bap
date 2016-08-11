@@ -12,13 +12,13 @@
             <div class="col-md-6 col-sm-6">
                 <div class="fh5co-about-us animate-box">
                     <img style="height: 400px; width: 550px;"<?php echo $this->Html->image('about_middle.jpg', array('alt' => 'about')) ?>     
-                    <p>Founded in 1919, Beta Alpha Psi is an honor organization for financial information students and professionals. There are over 300 chapters on college and university campuses with over 300,000 members initiated since Beta Alpha Psi's formation.
+                    <p> The mission of Beta Alpha Psi, the premier international honor and service organization for financial and business information students and professionals, is to inspire and support excellence.
                 </div>
             </div>
             <div class="col-md-6 col-sm-6">
                 <div class="fh5co-about-us animate-box">
                     <img style="height: 400px; width: 550px;"<?php echo $this->Html->image('about_middle_2.jpg', array('alt' => 'about')) ?>            
-                    <p>Founded in 1919, Beta Alpha Psi is an honor organization for financial information students and professionals. There are over 300 chapters on college and university campuses with over 300,000 members initiated since Beta Alpha Psi's formation.
+                    <p>Beta Alpha Psi will shape the financial and business information professions by developing members into ethical, professional, and confident leaders.
                 </div>
             </div>
         </div>
@@ -35,14 +35,14 @@
                         <?php echo $this->Html->image('logo.png', array('alt' => 'mission')) ?>
                     </figure>
                     <blockquote>
-                        <p>Founded in 1919, Beta Alpha Psi is an honor organization for financial information students and professionals. There are over 300 chapters on college and university campuses with over 300,000 members initiated since Beta Alpha Psi's formation.</p>           
+                        <p>Founded in 1919, Beta Alpha Psi is an honor organization for financial information students and professionals. There are over 300 chapters on college and university campuses with over 300,000 members initiated since Beta Alpha Psi's formation. </p>           
                     </blockquote>
                 </div>
             </div>
             <div class="col-md-6 col-sm-6">
                 <div class="fh5co-about-us animate-box">
                     <?php echo $this->Html->image('global_about.jpg', array('alt' => 'about')) ?>            
-                    <p>Founded in 1919, Beta Alpha Psi is an honor organization for financial information students and professionals. There are over 300 chapters on college and university campuses with over 300,000 members initiated since Beta Alpha Psi's formation. <br><a onclick="window.location.href='https://www.bap.org/'" style="cursor: pointer;">Visit our global site.</a></p>
+                    <p>Our alumni and current members have had significant impact in industry and academics. Visit our global site to explore more about the history and learn about the other chapters. <br><a onclick="window.location.href='https://www.bap.org/'" style="cursor: pointer;">Visit our global site.</a></p>
                 </div>
             </div>
         </div>
@@ -54,29 +54,29 @@
         <div class="row">
             <div class="col-md-3 animate-box">
                 <h3 class="heading-section">What We Do</h3>
-                <p>Far far away, behind the word mountains, far from the countries Vokalia and </p>
+                <p>Get familiar with our family. Explore a little. </p>
             </div>
             <div class="col-md-9 col-sm-12">
                 <div class="row">
                     <div class="col-md-4 col-sm-4">
                         <div class="services animate-box">
-                            <span><a class="hvr-wobble-vertical fa fa-paypal fa-4x" ria-hidden="true" style="color: #bfbfbf" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Info', 'action'=>'sponsor'))?>'"></a></span>
-                            <h3>Sponsor</h3>
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                            <span><a class="hvr-wobble-vertical fa fa-paypal fa-4x" ria-hidden="true" style="color: #bfbfbf" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Join', 'action'=>'index'))?>'"></a></span>
+                            <h3>Join</h3>
+                            <p>With one form  you will be on your way to making the best decision you will make in your college career.</p>
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-4">
                         <div class="services animate-box">
                             <span><a class="hvr-wobble-vertical fa fa-briefcase fa-4x" aria-hidden="true" style="color: #bfbfbf;" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Info', 'action'=>'advisory_board'))?>'"></a></span>
                             <h3>Advisory Board</h3>
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                            <p>Meet these champions of industry who help our chapter stay competitive and on top.</p>
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-4">
                         <div class="services animate-box">
                             <span><a class="hvr-wobble-vertical fa fa-users fa-4x" aria-hidden="true" style="color: #bfbfbf;" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Info', 'action'=>'executive_board'))?>'"></a></span>
                             <h3>Executive Board</h3>
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                            <p>Our 2016 executive board is announced. See who you need to be in contact with to advance.</p>
                         </div>
                     </div>	
                 </div>
@@ -89,21 +89,21 @@
                         <div class="services animate-box">                          
                             <span><a class="hvr-wobble-vertical fa fa-binoculars fa-4x" aria-hidden="true" style="color: #bfbfbf;" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Events', 'action'=>'opportunities'))?>'"></a></span>
                             <h3>Opportunities</h3>
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                            <p>Check out new opportunities in the valley. Put yourself on the map.</p>
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-4">
                         <div class="services animate-box">
                             <span><a class="hvr-wobble-vertical fa fa-calendar fa-4x" aria-hidden="true" style="color: #bfbfbf;" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Events', 'action'=>'events'))?>'"></a></span>
                             <h3>Events</h3>
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                            <p>Keep updated with the latest events. Don't miss out!</p>
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-4">
                         <div class="services animate-box">
                             <span><a class="hvr-wobble-vertical fa fa-clipboard fa-4x" aria-hidden="true" style="color: #bfbfbf;" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Info', 'action'=>'policies'))?>'"></a></span>
                             <h3>Policies</h3>
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                            <p>See what it takes to be the best member you can be. A must read for anyone.</p>
                         </div>
                     </div>	
                 </div>
