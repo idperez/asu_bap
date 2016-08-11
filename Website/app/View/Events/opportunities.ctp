@@ -59,34 +59,35 @@
                     <?php echo $this->Html->image('opportunities.jpg', array('alt' => 'about')) ?>            
                     <p>Questions about any career opportunities, feel free to message one of our executives.<br><a onclick="window.location.href='<?php echo Router::url(array('controller'=>'Contact', 'action'=>'index'))?>'" style="cursor: pointer;"?>Contact Us</a></p>
                 </div>
-            </div>
-            <div class="col-md-offset-7 col-md-3">
-                <h3 class="heading-section">Filter</h3>
-                <p>What are you looking for?</p>
-                <div style="position:relative; top:-20px;">
-                    <a onclick="window.location.href='<?php echo Router::url(array('controller'=>'Events', 'action'=>'announcements'))?>'" style="cursor: pointer;">Announcements</a>
-                    &nbsp;
-                    <a onclick="window.location.href='<?php echo Router::url(array('controller'=>'Events', 'action'=>'events'))?>'" style="cursor: pointer;">Events</a>
-                </div>
-            </div>
-            <div class="col-md-2">
-                <h3 class="heading-section">Don't Miss Out</h3>
-                <a target="_blank" title="find us on Facebook" href="http://www.facebook.com/bapasu">
-                    <img alt="follow us on facebook" src="//login.create.net/images/icons/user/facebook_30x30.png" border=0>
-                </a>
-                <a target="_blank" title="follow me on twitter" href="http://www.twitter.com/asu_bap">
-                    <img alt="follow me on twitter" src="//login.create.net/images/icons/user/twitter-b_30x30.png" border=0>
-                </a>
-                <a target="_blank" title="follow me on instagram" href="http://www.instagram.com/asu_bap">
-                    <img alt="follow me on instagram" src="https://c866088.ssl.cf3.rackcdn.com/assets/instagram30x30.png" border=0>
-                </a>
-            </div>
-            <div class="col-md-offset-7 col-sm-offset-7 col-md-5 col-sm-5">
-                <br>
-                <iframe width="450" height="255" src="https://www.youtube.com/embed/s2TKXYWNfMk" frameborder="0" allowfullscreen></iframe>
+                <div class="col-md-12 col-sm-12">
+                    <div class="col-md-7 col-sm-7">
+                        <h3 class="heading-section">Filter</h3>
+                        <p>What are you looking for?</p>
+                        <div style="position:relative; top:-20px;">
+                            <a onclick="window.location.href='<?php echo Router::url(array('controller'=>'Events', 'action'=>'announcements'))?>'" style="cursor: pointer;">Announcements</a>
+                            &nbsp;
+                            <a onclick="window.location.href='<?php echo Router::url(array('controller'=>'Events', 'action'=>'events'))?>'" style="cursor: pointer;">Events</a>
+                        </div>
+                    </div>
+                    <div class="col-md-5 col-sm-5">
+                        <h3 class="heading-section">Don't Miss Out</h3>
+                        <a target="_blank" title="find us on Facebook" href="http://www.facebook.com/bapasu">
+                            <img alt="follow us on facebook" src="//login.create.net/images/icons/user/facebook_30x30.png" border=0>
+                        </a>
+                        <a target="_blank" title="follow me on twitter" href="http://www.twitter.com/asu_bap">
+                            <img alt="follow me on twitter" src="//login.create.net/images/icons/user/twitter-b_30x30.png" border=0>
+                        </a>
+                        <a target="_blank" title="follow me on instagram" href="http://www.instagram.com/asu_bap">
+                            <img alt="follow me on instagram" src="https://c866088.ssl.cf3.rackcdn.com/assets/instagram30x30.png" border=0>
+                        </a>
+                    </div>
+                    <br>
+                    <iframe width="450" height="255" src="https://www.youtube.com/embed/s2TKXYWNfMk" frameborder="0" allowfullscreen></iframe>
+                </div>     
             </div>
         </div>
     </div>
+</div> 
 </div>
-</div>  
+
 
