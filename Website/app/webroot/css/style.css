@@ -365,6 +365,15 @@ figure {
   padding-top: 40px;
 }
 
+#fh5co-header-section-ish {
+  padding: 0;
+  position: absolute;
+  top: 5%;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+}
+
 .nav-header {
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   position: relative;
@@ -396,30 +405,6 @@ figure {
   color: #fff !important;
 }
 
-#fh5co-logo-ish {
-  position: relative;
-  z-index: 2;
-  font-size: 26px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-top: 0px;
-  font-weight: bold;
-  float: left;
-}
-@media screen and (max-width: 768px) {
-  #fh5co-logo-ish {
-    width: 100%;
-    float: none;
-    text-align: center;
-  }
-}
-#fh5co-logo-ish a {
-  color: #fff;
-}
-#fh5co-logo-ish a:hover, #fh5co-logo-ish a:focus {
-  color: #fff !important;
-}
-
 #fh5co-menu-wrap {
   position: relative;
   z-index: 2;
@@ -428,16 +413,6 @@ figure {
 }
 #fh5co-menu-wrap .sf-menu a {
   padding: 2em .75em;
-}
-
-#fh5co-menu-wrap-ish {
-  position: relative;
-  z-index: 2;
-  display: block;
-  float: right;
-}
-#fh5co-menu-wrap-ish .sf-menu a {
-  padding: 0em .75em;
 }
 
 #fh5co-primary-menu > li > ul li.active > a {
@@ -1049,12 +1024,6 @@ h3.heading-section:before {
 
 @media screen and (max-width: 768px) {
   #fh5co-menu-wrap {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  #fh5co-menu-wrap-ish {
     display: none;
   }
 }
