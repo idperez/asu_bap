@@ -45,7 +45,13 @@
                         <br>
                         Total RSVPs: <?php echo count($rsvps); ?>
                         <br>
-                        Total Misses: <?php echo count($rsvps) - $present; ?>
+                        Total Misses: 
+                        <?php 
+                        if(!($event['Event']['closed']))
+                            echo '0';
+                        else
+                            echo count($rsvps) - $present; 
+                        ?>
                     </div>
                     </div>
                 </div>
@@ -55,8 +61,6 @@
                         <span ><a class="btn btn-primary" style="width: 150px;" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Events', 'action'=>'delete', $event['Event']['id']))?>'">Delete</a></span>
                         <br><br>
                         <?php if(!($event['Event']['closed'])) {?>
-                        <span><a class="btn btn-primary" style="width: 150px;" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Events', 'action'=>'sign_in', $event['Event']['id']))?>'">Start Login</a></span>
-                        <br><br>
                         <span><a class="btn btn-primary" style="width: 150px;" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Events', 'action'=>'close_event', $event['Event']['id']))?>'">Close</a></span>
                         <?php }else{ ?>
                         <span><a class="btn btn-primary" style="width: 150px;" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Events', 'action'=>'open_event', $event['Event']['id']))?>'">Open</a></span>                        

@@ -123,7 +123,10 @@ class UsersController extends AppController {
             }
             else
             {
-                $numOfMisses++;
+                foreach($eventdata as $event):
+                    if($event['Event']['id'] == $rsvp['EventsUser']['event_id'] && $event['Event']['closed'])
+                        $numOfMisses++;
+                endforeach;
             }    
         endforeach;
         
