@@ -51,6 +51,7 @@
                         <?php echo $this->Form->input('time', array(
                             'type' => 'text',
                             'class' => 'form-control',
+                            'label' => 'Time (YYYY-MM-DD HH:MI:SS)',
                             'name' => 'time'));
                         ?>
                     </div>
