@@ -55,16 +55,6 @@ class UsersController extends AppController {
         $this->set('user', $user);
     }
     
-    public function editMajors($id = null)
-    {
-        
-    }
-    
-    public function editMinors($id = null)
-    {
-        
-    }
-    
     public function edit($id = null)
     {
         if($this->Auth->user('id') == $id) //if user id matches requested
@@ -188,9 +178,7 @@ class UsersController extends AppController {
              $data = $this->request->data;
              
              echo $_FILES[$data['url']];
-        }
-        
-        
+        }             
     }
     
     public function delete($id = null)
@@ -247,7 +235,18 @@ class UsersController extends AppController {
      
     public function manage_members()
     {
+        $this->loadModel('Event');
         
+        //returns all users to the view
+        $users = $this->User->find('all', 
+            array('order' => array('level' => 'DESC')));
+        
+        $allRsvps = $this->Event->EventsUser->find('all');
+        $events = $this->Event->find('all');
+        
+        $this->set('users', $users);
+        $this->set('allRsvps', $allRsvps);
+        $this->set('events', $events);
     }
     
     public function manage_prospective_members()
