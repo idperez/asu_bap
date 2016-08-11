@@ -18,39 +18,31 @@ class UsersController extends AppController {
     
     public function add()
     {
-        //if user is admin
-        if($this->Auth->user('level') != "Member" && $this->Auth->user('level') != "Candidate")
+        //if user is not admin
+        if($this->Auth->user('level') != "Officer")
+            $this->redirect('profilehub/' . $this->Auth->user('id'));
+            
+        if($this->request->is('post'))
         {
-            if($this->request->is('post'))
-            {
-                $data = $this->request->data;
-                $this->User->create();
+            $data = $this->request->data;
+            $this->User->create();
                 
-                if($this->User->save($this->request->data))
-                {
-                    $this->redirect('index');
-                }
+            if($this->User->save($this->request->data))
+            {
+                $this->redirect('index');
             }
         }
-        //user is not an admin
-        else
-            $this->redirect('login');
     }
     
     public function view($id = null)
     {
         //returns a single user
-        if(!$id)
+        if(!$id || !user)
         {
-           throw new  NotFoundException(__('The Id was not found.'));
+           $this->redirect('index');
         }
         
         $user = $this->User->findById($id);
-        
-        if(!$user)
-        {
-            throw new NotFoundException(__('This member does not exist.'));
-        }
         
         $this->set('user', $user);
     }
@@ -80,8 +72,11 @@ class UsersController extends AppController {
     
     public function profilehub($id = null)
     {
-        if($id == null)
-            $this->redirect('index');
+        if(!$id)
+            $this->redirect('login');
+              
+        if($this->Auth->user('id') != $id)
+            $this->redirect('profilehub/' . $this->Auth->user('id'));
         
         $this->loadmodel('Event');  
         
@@ -181,8 +176,13 @@ class UsersController extends AppController {
         }             
     }
     
+    
     public function delete($id = null)
     {
+        //if user is not admin
+        if($this->Auth->user('level') != 'Officer')
+            $this->redirect('profilehub/' . $this->Auth->user('id'));
+        
         $data = $this->User->findById($id);
         
         if($this->User->exists($id))
@@ -235,6 +235,10 @@ class UsersController extends AppController {
      
     public function manage_members()
     {
+        //if user is not admin
+        if($this->Auth->user('level') != 'Officer')
+            $this->redirect('profilehub/' . $this->Auth->user('id'));
+            
         $this->loadModel('Event');
         
         //returns all users to the view
@@ -251,6 +255,10 @@ class UsersController extends AppController {
     
     public function manage_prospective_members()
     {
+        //if user is not admin
+        if($this->Auth->user('level') != 'Officer')
+            $this->redirect('profilehub/' . $this->Auth->user('id'));
+            
         $this->loadModel('Prospective');
         
         $prospective_members_data = $this->Prospective->find('all');
