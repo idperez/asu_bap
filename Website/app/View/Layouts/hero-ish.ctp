@@ -50,110 +50,49 @@
                     <!-- START #fh5co-menu-wrap -->
                     <nav id="fh5co-menu-wrap" role="navigation">
                         <ul class="sf-menu" id="fh5co-primary-menu">
+                            
                             <li>
                                 <?php echo $this->Html->link(
-                                    'Home',
-                                    array('manager' => true, 'controller' => 'Pages', 'action' => 'display')
-                                );?>
-                            </li>
-                            <li>
-                                <?php echo $this->Html->link(
-                                    'Members',
-                                    array('controller' => 'Users', 'action' => 'index')
+                                            'Members',
+                                            array('controller' => 'Users', 'action' => 'index')
                                 );?>
                                 <ul class="fh5co-sub-menu">
-                                    <li><?php echo $this->Html->link(
-                                            'Join',
-                                            array('controller' => 'Join', 'action' => 'index')
-                                        );?>
-                                   </li>
-                                   <li><?php echo $this->Html->link(
-                                           'Policies',
-                                           array('controller' => 'Info', 'action' => 'policies')
-                                       );?>
-                                   </li>   
+                                             <li><?php echo $this->Html->link(
+                                                            'Join',
+                                                            array('controller' => 'Join', 'action' => 'index')
+                                                        );?>
+                                            </li>
+                                            <li><?php echo $this->Html->link(
+                                                    'Policies',
+                                                    array('controller' => 'Info', 'action' => 'policies')
+                                                );?>
+                                            </li>   
                                 </ul>
                             </li>
                             <li>
-                                 <?php echo $this->Html->link(
-                                    'Info',
-                                    array('controller' => 'Info', 'action' => 'index')
-                                );?>
-
+                                <a href="services.html" class="fh5co-sub-ddown">Services</a>
                                 <ul class="fh5co-sub-menu">
-                                   <li><?php echo $this->Html->link(
-                                           'Join',
-                                           array('controller' => 'Join', 'action' => 'index')
-                                       );?>
-                                   </li>
-                                   <li>
-                                       <a class="fh5co-sub-ddown" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Events', 'action'=>'announcements'))?>'" style="cursor: pointer;">Announcements</a>
-                                       <ul class="fh5co-sub-menu">
-                                           <li><?php echo $this->Html->link(
-                                                   'Events',
-                                                   array('controller' => 'Events', 'action' => 'events')
-                                               );?>
-                                           </li>
-                                           <li><?php echo $this->Html->link(
-                                                   'Opportunities',
-                                                   array('controller' => 'Events', 'action' => 'opportunities')
-                                              );?>
-                                          </li>
-                                       </ul>
-                                   </li> 
-                                   <li>
-                                       <a class="fh5co-sub-ddown">Board</a>
-                                       <ul class="fh5co-sub-menu">
-                                           <li><?php echo $this->Html->link(
-                                                   'Advisory',
-                                                   array('controller' => 'Info', 'action' => 'advisory_board')
-                                               );?>
-                                           </li>
-                                           <li><?php echo $this->Html->link(
-                                                   'Executive',
-                                                   array('controller' => 'Info', 'action' => 'executive_board')
-                                               );?>
-                                           </li>
-                                       </ul>
-                                   </li>
-                                   <!-- Sponsor page will be launched at a later time
-                                   <li><?php /*echo $this->Html->link(
-                                           'Sponsor',
-                                           array('controller' => 'Info', 'action' => 'sponsor')
-                                       ); */?>
-                                   </li>  
-                                   -->
+                                    <li><a href="left-sidebar.html">Web Development</a></li>
+                                    <li><a href="right-sidebar.html">Branding &amp; Identity</a></li>
+                                    <li>
+                                        <a href="#" class="fh5co-sub-ddown">Free HTML5</a>
+                                        <ul class="fh5co-sub-menu">
+                                            <li><a href="http://freehtml5.co/preview/?item=build-free-html5-bootstrap-template" target="_blank">Build</a></li>
+                                            <li><a href="http://freehtml5.co/preview/?item=work-free-html5-template-bootstrap" target="_blank">Work</a></li>
+                                            <li><a href="http://freehtml5.co/preview/?item=light-free-html5-template-bootstrap" target="_blank">Light</a></li>
+                                            <li><a href="http://freehtml5.co/preview/?item=relic-free-html5-template-using-bootstrap" target="_blank">Relic</a></li>
+                                            <li><a href="http://freehtml5.co/preview/?item=display-free-html5-template-using-bootstrap" target="_blank">Display</a></li>
+                                            <li><a href="http://freehtml5.co/preview/?item=sprint-free-html5-template-bootstrap" target="_blank">Sprint</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">UI Animation</a></li>
+                                    <li><a href="#">Copywriting</a></li>
+                                    <li><a href="#">Photography</a></li> 
                                 </ul>
                             </li>
-                            <li>
-                                <?php echo $this->Html->link(
-                                    'About',
-                                    array('controller' => 'About', 'action' => 'index')
-                                );?>
-                            </li>
-                            <li>
-                                <?php echo $this->Html->link(
-                                    'Contact',
-                                    array('controller' => 'Contact', 'action' => 'index')
-                                );?>
-                             </li>
-                            <li>
-                                <?php if(AuthComponent::user())
-                                    {
-                                        echo $this->Html->link(
-                                            'Hub',
-                                            array('controller' => 'Users', 'action' => 'profilehub/' . AuthComponent::user('id'))
-                                        );
-                                    }
-                                    else
-                                    { 
-                                        echo $this->Html->link(
-                                            'Login',
-                                            array('controller' => 'Users', 'action' => 'login')
-                                        );
-                                    }
-                                ?>
-                            </li> 
+                            <li class="active"><a href="about.html">About</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="contact.html">Contact</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -220,3 +159,4 @@
     <?php echo $this->Html->script('respond.min.js');?>
     <?php echo $this->Html->script('image_preview.js');?> 
     <?php echo $this->Html->script('superfish.js');?>  
+

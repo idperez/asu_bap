@@ -14,6 +14,8 @@ class UsersController extends AppController {
             array('order' => 'last_name'));
             
         $this->set('users', $userdata);
+        
+        $this->layout = 'hero-ish';
     }
     
     public function add()
