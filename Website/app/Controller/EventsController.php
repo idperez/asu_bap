@@ -33,16 +33,16 @@ class EventsController extends AppController{
     {
         //if user is admin
         if($this->Auth->user('level') != "Member" && $this->Auth->user('level') != "Candidate")
-        {
-            //returns a single event
+        {                        
+           //returns a single event, if present
+           $event = $this->Event->findById($id);   
+
             if(!$id || !$event)
             {
                 $this->redirect(
-                    array('controller' => 'User', 'action' => 'profilehub/' .$this->Auth->user('id'))
+                    array('controller' => 'Users', 'action' => 'profilehub/' .$this->Auth->user('id'))
                 );
             }
-            
-            $event = $this->Event->findById($id);   
             
             //save new inputs to event
             if($this->request->is('post') || $this->request->is('put'))
