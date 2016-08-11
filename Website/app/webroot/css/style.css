@@ -1053,6 +1053,12 @@ h3.heading-section:before {
   }
 }
 
+@media screen and (max-width: 768px) {
+  #fh5co-menu-wrap-ish {
+    display: none;
+  }
+}
+
 #offcanvas-menu {
   position: absolute;
   top: 0;
