@@ -23,7 +23,6 @@
     <div class="row" >
         <div class="col-sm-7 col-md-7 col-lg-7">
             <div class="panel-group animate-box">
-              <?php $count = 0; ?>
               <?php foreach($events as $event):?>
               <?php if($event['Event']['type'] == 'Event'){ ?>
                 <div class="panel panel-default" >
@@ -32,20 +31,23 @@
                         <div class="panel-body">
                             <?php echo $event['Event']['description']; ?>
                         </div> 
-                        <?php 
-                        //Check for RSVPd events
-                        $hasNotRsvped = FALSE;
-                        foreach($user['Event'] as $checkRsvp):
-                            if($checkRsvp['id'] == $event['Event']['id'])
-                                $hasNotRsvped = TRUE;
-                        endforeach;
-                        if(!$hasNotRsvped)
-                            echo $this->Html->link('RSVP', array(
-                                'controller' => 'Events', 'action' => 'rsvpTo', AuthComponent::user('id'), $event['Event']['id']),
-                                array('class' => 'btn btn-primary')
-                            );
-                        else 
-                            echo '<span>You have already registered for this event. </span>';
+                        <?php
+                        if($user)
+                        {
+                            //Check for RSVPd events
+                            $hasNotRsvped = FALSE;
+                            foreach($user['Event'] as $checkRsvp):
+                                if($checkRsvp['id'] == $event['Event']['id'])
+                                    $hasNotRsvped = TRUE;
+                            endforeach;
+                            if(!$hasNotRsvped)
+                                echo $this->Html->link('RSVP', array(
+                                    'controller' => 'Events', 'action' => 'rsvpTo', AuthComponent::user('id'), $event['Event']['id']),
+                                    array('class' => 'btn btn-primary')
+                                );
+                            else 
+                                echo '<span>You have already registered for this event. </span>';
+                        }
                         ?> 
                         <?php
                         if(AuthComponent::user('level') == 'Officer')
@@ -58,14 +60,12 @@
                                 array('controller' => 'Events', 'action' => 'delete', $event['Event']['id']),
                                 array('confirm' => 'Are you sure you wish to delete this Event?')
                             );
-                         $count++;
                         }?>          
                     </div>
                 </div> 
               <?php } ?> 
-              <?php endforeach; ?> 
-              <?php unset($event); ?>   
-              <?php if($count == 0) { ?>
+              <?php endforeach; ?>    
+              <?php if(!(count($events))) { ?>
                 <h2>Nothing Posted At This Time. Check Back Soon!</h2>
              <?php } ?> 
             </div>

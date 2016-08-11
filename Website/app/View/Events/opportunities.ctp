@@ -23,7 +23,6 @@
     <div class="row" >
         <div class="col-sm-7 col-md-7 col-lg-7">
             <div class="panel-group animate-box">
-              <?php $count = 0; ?>
               <?php foreach($events as $event):?>
               <?php if($event['Event']['type'] == 'Opportunity'){ ?>
                 <div class="panel panel-default" >
@@ -43,15 +42,13 @@
                                         array('controller' => 'Events', 'action' => 'delete', $event['Event']['id']),
                                         array('confirm' => 'Are you sure you wish to delete this Opportuinity?')
                                 );
-                                $count++;
                             ?>
                         </div> 
                     </div>
                 </div>  
               <?php } ?>
-              <?php endforeach; ?> 
-              <?php unset($event); ?>   
-              <?php if($count == 0) { ?>
+              <?php endforeach; ?>    
+              <?php if(!(count($events))) { ?>
                 <h2>Nothing Posted At This Time. Check Back Soon!</h2>
              <?php } ?>
             </div>
