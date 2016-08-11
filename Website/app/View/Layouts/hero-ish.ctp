@@ -33,6 +33,7 @@
         });</script>
     </head>
     <body>
+    <?php $page = $this->Session->read('Page'); ?>
     <div id="fh5co-wrapper">
         <div id="fh5co-page">
         <div id="fh5co-header">
@@ -55,8 +56,12 @@
                                     'Home',
                                     array('manager' => true, 'controller' => 'Pages', 'action' => 'display')
                                 );?>
-                            </li>
+                            </li> 
+                            <?php if($page == 'Members') { ?>
+                            <li class="active">
+                            <?php } else { ?>
                             <li>
+                                <?php } ?>
                                 <?php echo $this->Html->link(
                                     'Members',
                                     array('controller' => 'Users', 'action' => 'index')
@@ -74,7 +79,11 @@
                                    </li>   
                                 </ul>
                             </li>
+                            <?php if($page == 'Info') { ?>
+                            <li class="active">
+                            <?php } else { ?>
                             <li>
+                            <?php } ?>
                                  <?php echo $this->Html->link(
                                     'Info',
                                     array('controller' => 'Info', 'action' => 'index')
@@ -125,19 +134,31 @@
                                    -->
                                 </ul>
                             </li>
+                            <?php if($page == 'About') { ?>
+                            <li class="active">
+                            <?php } else { ?>
                             <li>
+                            <?php } ?>
                                 <?php echo $this->Html->link(
                                     'About',
                                     array('controller' => 'About', 'action' => 'index')
                                 );?>
                             </li>
+                            <?php if($page == 'Contact') { ?>
+                            <li class="active">
+                            <?php } else { ?>
                             <li>
+                            <?php } ?>
                                 <?php echo $this->Html->link(
                                     'Contact',
                                     array('controller' => 'Contact', 'action' => 'index')
                                 );?>
                              </li>
+                            <?php if($page == 'Hub') { ?>
+                            <li class="active">
+                            <?php } else { ?>
                             <li>
+                            <?php } ?>
                                 <?php if(AuthComponent::user())
                                     {
                                         echo $this->Html->link(
@@ -220,3 +241,4 @@
     <?php echo $this->Html->script('respond.min.js');?>
     <?php echo $this->Html->script('image_preview.js');?> 
     <?php echo $this->Html->script('superfish.js');?>  
+            

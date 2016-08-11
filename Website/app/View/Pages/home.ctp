@@ -114,8 +114,7 @@
             </div>            
         </div>
     </div>
-</div>
-          
+</div>      
 <hr>
 <div id="main-section">
     <div id="fh5co-work">

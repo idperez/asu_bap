@@ -29,6 +29,7 @@ class EventsController extends AppController{
         $this->set('user', $users);
         
         $this->layout = 'hero-ish';
+        $this->Session->write('Page', 'Hub');
     }
     
     public function edit($id = null)
@@ -72,6 +73,7 @@ class EventsController extends AppController{
         }
         
         $this->layout = 'hero-ish';
+        $this->Session->write('Page', 'Hub');
     }
     
     public function delete($id = null)
@@ -104,6 +106,7 @@ class EventsController extends AppController{
         $this->assignUserToView($this->Auth->user('id'));
         
         $this->layout = 'hero-ish';
+        $this->Session->write('Page', 'Info');
     }
     
     public function opportunities()
@@ -118,6 +121,7 @@ class EventsController extends AppController{
         $this->set('events', $eventdata);
         
         $this->layout = 'hero-ish';
+        $this->Session->write('Page', 'Info');
     }
     
     public function events()
@@ -134,6 +138,7 @@ class EventsController extends AppController{
         $this->assignUserToView($this->Auth->user('id'));
         
         $this->layout = 'hero-ish';
+        $this->Session->write('Page', 'Info');
     }
     
     public function EventHelper()
@@ -167,6 +172,7 @@ class EventsController extends AppController{
         $this->EventHelper();    
         
         $this->layout = 'hero-ish';
+        $this->Session->write('Page', 'Hub');
     }
     
     public function past_events()
@@ -182,6 +188,7 @@ class EventsController extends AppController{
         $this->EventHelper();
 
         $this->layout = 'hero-ish';
+        $this->Session->write('Page', 'Hub');
     }
     
     public function manage_members()
@@ -192,7 +199,7 @@ class EventsController extends AppController{
                 array('controller' => 'Users', 'action' => 'profilehub/' . $this->Auth->user('id')));
         
         $this->layout = 'hero-ish';
-                
+        $this->Session->write('Page', 'Hub');
     }
     
     public function view($id = null)
@@ -214,6 +221,7 @@ class EventsController extends AppController{
         $this->set('event', $event);
         
         $this->layout = 'hero-ish';
+        $this->Session->write('Page', 'Hub');
     }
     
     public function sign_in($id = null, $email = null)
@@ -238,6 +246,7 @@ class EventsController extends AppController{
         }
         
         $this->layout = 'hero-ish';
+        $this->Session->write('Page', 'Hub');
     }
     
     public function close_event($id = null)
@@ -317,6 +326,7 @@ class EventsController extends AppController{
         $this->set('events', $eventdata);
         
         $this->layout = 'hero-ish';
+        $this->Session->write('Page', 'Hub');
     }
     
     public function my_events($id = null)
@@ -327,6 +337,7 @@ class EventsController extends AppController{
         $this->assignUserToView($id);
         
         $this->layout = 'hero-ish';
+        $this->Session->write('Page', 'Hub');
     }
     
     public function assignUserToView($id)

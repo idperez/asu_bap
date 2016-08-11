@@ -16,6 +16,7 @@ class UsersController extends AppController {
         $this->set('users', $userdata);
         
         $this->layout = 'hero-ish';
+        $this->Session->write('Page', 'Members');
     }
     
     public function add()
@@ -36,6 +37,7 @@ class UsersController extends AppController {
         }
         
         $this->layout = 'hero-ish';
+        $this->Session->write('Page', 'Hub');
     }
     
     public function view($id = null)
@@ -51,6 +53,7 @@ class UsersController extends AppController {
         $this->set('user', $user);
         
         $this->layout = 'hero-ish';
+        $this->Session->write('Page', 'Members');
     }
     
     public function edit($id = null)
@@ -63,6 +66,7 @@ class UsersController extends AppController {
             $this->redirect('login');
         
         $this->layout = 'hero-ish';
+        $this->Session->write('Page', 'Hub');
     }
     
     public function fulledit($id = null)
@@ -78,6 +82,7 @@ class UsersController extends AppController {
             $this->redirect('login');
         
         $this->layout = 'hero-ish';
+        $this->Session->write('Page', 'Hub');
     }
     
     public function profilehub($id = null)
@@ -142,6 +147,7 @@ class UsersController extends AppController {
         $this->set('user', $user);
         
         $this->layout = 'hero-ish';
+        $this->Session->write('Page', 'Hub');
     }
     
     //Helper used across common views
@@ -188,6 +194,7 @@ class UsersController extends AppController {
         }          
         
         $this->layout = 'hero-ish';
+        $this->Session->write('Page', 'Hub');
     }
     
     
@@ -239,6 +246,7 @@ class UsersController extends AppController {
                 $this->Session->setFlash('Invalid username and/or password');
             }
         }
+        $this->Session->write('Page', 'Hub');
     }
     
     public function logout()
@@ -267,6 +275,7 @@ class UsersController extends AppController {
         $this->set('events', $events);
         
         $this->layout = 'hero-ish';
+        $this->Session->write('Page', 'Hub');
     }
     
     public function manage_prospective_members()
@@ -282,6 +291,7 @@ class UsersController extends AppController {
         $this->set('prospective_members', $prospective_members_data);
         
         $this->layout = 'hero-ish';
+        $this->Session->write('Page', 'Hub');
     }
 }
 ?>

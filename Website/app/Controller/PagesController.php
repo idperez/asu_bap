@@ -57,6 +57,8 @@ class PagesController extends AppController {
     }
     
     public function display() {
+        $this->Session->write('Page', 'Home');
+        
         $path = func_get_args();
 
         $count = count($path);
