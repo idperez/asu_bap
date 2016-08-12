@@ -29,17 +29,14 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `prospectives` (
   `id` int(11) NOT NULL,
-<<<<<<< HEAD
   `name` varchar(30) NOT NULL,
   `description` varchar(100) NOT NULL,
   `time` datetime NOT NULL,
   `address` varchar(100) NOT NULL
-=======
   `first_name` varchar(100) NOT NULL,
   `last_name` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
   `time` datetime(6) NOT NULL
->>>>>>> cdd79cc1c27d9f289ba7e93767fb8b353e4ca79c
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --

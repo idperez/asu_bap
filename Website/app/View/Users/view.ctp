@@ -19,8 +19,7 @@
                 <h1 style="display:inline; font-size: 40px; color: black;"><?php echo $user['User']['first_name'] . " " . $user['User']['last_name']; ?> &nbsp; <h4 style="display:inline; font-size: 30px; color: grey"><?php echo $user['User']['title']; ?></h4>
             </div>
             <div class="col-md-4 col-sm-4" >
-                <?php $photo = $user['Photo']['url']; ?>
-                <div class="fh5co-blog" style="background-image: url(./../../app/webroot/img/profile_pics/Perez,Isidro.jpg)"></div>
+                <div class="fh5co-blog" style="background-image: url(./../../app/webroot/img/profile_pics/<?php if(file_exists('./../../app/webroot/img/profile_pics/'.$user['User']['id'].'.png')) echo $user['User']['id']; else echo '0' ?>.png)"></div>
             </div>
             <div class="col-md-8 col-sm-8">
                 <div class="fh5co-grid text-nowrap animate-box">

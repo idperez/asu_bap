@@ -42,13 +42,13 @@ class UsersController extends AppController {
     
     public function view($id = null)
     {
-        //returns a single user
-        if(!$id || !user)
+        //returns a single user    
+        $user = $this->User->findById($id);
+        
+        if(!$id || !$user)
         {
            $this->redirect('index');
         }
-        
-        $user = $this->User->findById($id);
         
         $this->set('user', $user);
         

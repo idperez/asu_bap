@@ -27,14 +27,17 @@
                         <?php foreach($users as $user):?> 
                             <?php if($user['User']['level'] == 'Officer'){ ?>
                                 <figure class="effect-zoe">  
-                                    <?php echo $this->Html->image($user['Photo']['url'], array(
-                                        "alt" => "Profile image",
-                                        'url' => array('controller' => 'Users', 'action' => 'view', $user['User']['id']),
-                                        'class' => 'img-responsive',
-                                        'style' => 'height: 190px; width: 165px;',
-                                        'width' => '100%',
-                                        'height' => '30%'
-                                    ));?>
+                                    <!--Get user profile image-->
+                                    <?php 
+                                    $dir = './../../app/webroot/img/profile_pics/';
+                                    $profileImage = "0.png";
+                                    if(file_exists($dir.$user['User']['id'].'.png')) 
+                                        $profileImage = $user['User']['id'].'.png'; 
+                                    $profileImagePath = 'app/webroot/img/profile_pics/'.$profileImage;
+                                    ?>
+                                    <a onclick="window.location.href='<?php echo Router::url(array('controller'=>'Users', 'action'=>'view', $user['User']['id']))?>'">
+                                        <img src="<?php echo $profileImagePath; ?>" alt="Profile image" class="img-responsive" style="height: 190px; width: 165px;" width="100%" height="30%">
+                                    </a>
                                     <figcaption>
                                         <p><?php 
                                         if($user['User']['major'] != "" && $user['User']['major'] != null) // members has major(s)
@@ -94,14 +97,17 @@
                         <?php foreach($users as $user):?> 
                             <?php if($user['User']['level'] == 'Member'){ ?>
                                 <figure class="effect-zoe">  
-                                    <?php echo $this->Html->image($user['Photo']['url'], array(
-                                        "alt" => "Profile image",
-                                        'url' => array('controller' => 'Users', 'action' => 'view', $user['User']['id']),
-                                        'class' => 'img-responsive',
-                                        'style' => 'height: 190px; width: 165px;',
-                                        'width' => '100%',
-                                        'height' => '30%'
-                                    ));?>
+                                    <!--Get user profile image-->
+                                    <?php 
+                                    $dir = './../../app/webroot/img/profile_pics/';
+                                    $profileImage = "0.png";
+                                    if(file_exists($dir.$user['User']['id'].'.png')) 
+                                        $profileImage = $user['User']['id'].'.png'; 
+                                    $profileImagePath = 'app/webroot/img/profile_pics/'.$profileImage;
+                                    ?>
+                                    <a onclick="window.location.href='<?php echo Router::url(array('controller'=>'Users', 'action'=>'view', $user['User']['id']))?>'">
+                                        <img src="<?php echo $profileImagePath; ?>" alt="Profile image" class="img-responsive" style="height: 190px; width: 165px;" width="100%" height="30%">
+                                    </a>
                                     <figcaption>
                                         <p><?php 
                                         if($user['User']['major'] != "" && $user['User']['major'] != null) // members has major(s)
