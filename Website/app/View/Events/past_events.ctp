@@ -34,7 +34,7 @@
                             <tr>
                                 <td><?php echo $event['Event']['name']; ?></td>
                                 <td><?php echo date('m/d/y', strtotime($event['Event']['time'])); ?></td>
-                                <td><?php echo date('h:i', strtotime($event['Event']['time'])); ?></td>
+                                <td><?php echo date('h:iA', strtotime($event['Event']['time'])); ?></td>
                                 <td><?php echo $event['Event']['hours']; ?></td>
                                 <?php 
                                 $numOfPresentMembers = 0;

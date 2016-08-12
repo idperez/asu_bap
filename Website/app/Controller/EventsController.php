@@ -9,7 +9,7 @@ class EventsController extends AppController{
     public function add()
     {
         //if user is not admin
-        if($this->Auth->user('level') != "Officer" && $this->Auth->user('level') != "Officer")
+        if($this->Auth->user('level') != "Officer" && $this->Auth->user('level') != "Admin")
             $this->redirect(
                 array('controller' => 'Users', 'action' => 'profilehub/' . $this->Auth->user('id')));
                 

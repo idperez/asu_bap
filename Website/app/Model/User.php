@@ -31,8 +31,8 @@ class User extends AppModel{
             'message' => 'This email has already been registered.'
     )),
         'password' => array(
-        'rule' => array('minlength', '8'),
-        'message' => 'Minimum length is 8 characters.'
+            'rule' => array('minlength', '8'),
+            'message' => 'Minimum length is 8 characters.'
     ),
         'first_name' => array(
             'rule' => '/^[a-zA-Z]*$/', //regex for exluding all numberic and special chars

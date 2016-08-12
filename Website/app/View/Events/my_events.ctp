@@ -34,7 +34,7 @@
                 <tr>
                     <td><?php echo $event['name']; ?></td>
                     <td><?php echo date('m/d/y', strtotime($event['time'])); ?></td>
-                    <td><?php echo date('h:m', strtotime($event['time'])); ?></td>
+                    <td><?php echo date('h:iA', strtotime($event['time'])); ?></td>
                     <td><?php echo $event['hours']; ?></td>
                     <td>Future Event</td> <!--todo - Not implemented yet.-->
                 </tr>
