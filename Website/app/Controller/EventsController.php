@@ -9,7 +9,7 @@ class EventsController extends AppController{
     public function add()
     {
         //if user is not admin
-        if($this->Auth->user('level') != "Officer")
+        if($this->Auth->user('level') != "Officer" && $this->Auth->user('level') != "Officer")
             $this->redirect(
                 array('controller' => 'Users', 'action' => 'profilehub/' . $this->Auth->user('id')));
                 
@@ -79,7 +79,7 @@ class EventsController extends AppController{
     public function delete($id = null)
     {
         //if user is not admin
-        if($this->Auth->user('level') != "Officer")
+        if($this->Auth->user('level') != "Officer" && $this->Auth->user('level') != "Admin")
             $this->redirect(
                 array('controller' => 'Users', 'action' => 'profilehub/' . $this->Auth->user('id')));
                 
@@ -162,7 +162,7 @@ class EventsController extends AppController{
     public function manage_events()
     {
         //if user is not admin
-        if($this->Auth->user('level') != "Officer")
+        if($this->Auth->user('level') != "Officer" && $this->Auth->user('level') != "Admin")
             $this->redirect(
                 array('controller' => 'Users', 'action' => 'profilehub/' . $this->Auth->user('id')));
             
@@ -178,7 +178,7 @@ class EventsController extends AppController{
     public function past_events()
     {
         //if user is not admin
-        if($this->Auth->user('level') != "Officer")
+        if($this->Auth->user('level') != "Officer" && $this->Auth->user('level') != "Admin")
             $this->redirect(
                 array('controller' => 'Users', 'action' => 'profilehub/' . $this->Auth->user('id')));
 
@@ -194,7 +194,7 @@ class EventsController extends AppController{
     public function manage_members()
     {
         //if user is not admin
-        if($this->Auth->user('level') != "Officer")
+        if($this->Auth->user('level') != "Officer" && $this->Auth->user('level') != "Admin")
             $this->redirect(
                 array('controller' => 'Users', 'action' => 'profilehub/' . $this->Auth->user('id')));
         
@@ -252,7 +252,7 @@ class EventsController extends AppController{
     public function close_event($id = null)
     {
         //if user is not admin
-        if($this->Auth->user('level') != "Officer")
+        if($this->Auth->user('level') != "Officer" && $this->Auth->user('level') != "Admin")
             $this->redirect(
                 array('controller' => 'Users', 'action' => 'profilehub/' . $this->Auth->user('id')));
                 
@@ -265,7 +265,7 @@ class EventsController extends AppController{
     public function open_event($id = null)
     {
         //if user is not admin
-        if($this->Auth->user('level') != "Officer")
+        if($this->Auth->user('level') != "Officer" && $this->Auth->user('level') != "Admin")
             $this->redirect(
                 array('controller' => 'Users', 'action' => 'profilehub/' . $this->Auth->user('id')));
                 
@@ -278,7 +278,7 @@ class EventsController extends AppController{
     public function officer_view($id = null)
     {
         //if user is not admin
-        if($this->Auth->user('level') != "Officer")
+        if($this->Auth->user('level') != "Officer" && $this->Auth->user('level') != "Admin")
             $this->redirect(
                 array('controller' => 'Users', 'action' => 'profilehub/' . $this->Auth->user('id')));
                 

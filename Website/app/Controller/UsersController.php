@@ -22,7 +22,7 @@ class UsersController extends AppController {
     public function add()
     {
         //if user is not admin
-        if($this->Auth->user('level') != "Officer")
+        if($this->Auth->user('level') != "Officer" && $this->Auth->user('level') != "Admin")
             $this->redirect('profilehub/' . $this->Auth->user('id'));
             
         if($this->request->is('post'))
@@ -214,7 +214,7 @@ class UsersController extends AppController {
     public function delete($id = null)
     {
         //if user is not admin
-        if($this->Auth->user('level') != 'Officer')
+        if($this->Auth->user('level') != 'Officer' && $this->Auth->user('level') != "Admin")
             $this->redirect('profilehub/' . $this->Auth->user('id'));
         
         $data = $this->User->findById($id);
@@ -271,7 +271,7 @@ class UsersController extends AppController {
     public function manage_members()
     {
         //if user is not admin
-        if($this->Auth->user('level') != 'Officer')
+        if($this->Auth->user('level') != 'Officer' && $this->Auth->user('level') != "Admin")
             $this->redirect('profilehub/' . $this->Auth->user('id'));
             
         $this->loadModel('Event');
@@ -294,7 +294,7 @@ class UsersController extends AppController {
     public function manage_prospective_members()
     {
         //if user is not admin
-        if($this->Auth->user('level') != 'Officer')
+        if($this->Auth->user('level') != 'Officer' && $this->Auth->user('level') != "Admin")
             $this->redirect('profilehub/' . $this->Auth->user('id'));
             
         $this->loadModel('Prospective');
