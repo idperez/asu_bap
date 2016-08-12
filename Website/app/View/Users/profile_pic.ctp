@@ -25,19 +25,16 @@
                 <?php $photo = $user['Photo']['url']; ?>
                 <div class="fh5co-blog" style="background-image: url(./../../app/webroot/img/profile_pics/Perez,Isidro.jpg); height: 280px; width: 260px;"></div>             
             </div>
-            <?php echo $this->Form->create('Photo'); ?>
+            <?php echo $this->Form->create('Photo', array('enctype' => 'multipart/form-data')); ?>
             <div class="col-lg-offset-3 col-lg-5 form-group">
                 <div class="input-group">
                     <label class="input-group-btn">
                         <span class="btn btn-primary">
-                            <?php echo $this->Form->input('url', array('label' => 'Browse', 
-                                'type' => 'file',
-                                'style' => 'display: none;',
-                                'name' => 'url')); 
+                            <?php echo $this->Form->input('url', array(
+                                'label' => '','type' => 'file', 'accept' => 'image/*')); 
                             ?>
                         </span>
                     </label>
-                    <input type="text" class="form-control" readonly>
                 </div>
             </div>
         </div>

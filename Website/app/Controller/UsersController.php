@@ -182,6 +182,14 @@ class UsersController extends AppController {
     
     public function profile_pic($id = null) 
     {
+        if(!$id)
+            $this->redirect('login');
+              
+        if($this->Auth->user('id') != $id)
+            $this->redirect('profilehub/' . $this->Auth->user('id'));
+            
+        $dir = "../webroot/img/profile_pics/";
+        
         $user = $this->User->findById($id);
         
         $this->set('user', $user);
@@ -190,7 +198,12 @@ class UsersController extends AppController {
         {
              $data = $this->request->data;
              
-             echo $_FILES[$data['url']];
+             $filename = $this->Auth->user('id') . '.png';
+             //new file path
+             $dir = $dir.$filename;
+             //move from temp location to host directory
+             move_uploaded_file($data['Photo']['url']['tmp_name'], $dir);
+             $this->redirect('profile_pic/' .$this->Auth->user('id'));
         }          
         
         $this->layout = 'hero-ish';
