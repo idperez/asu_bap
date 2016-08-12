@@ -19,7 +19,7 @@
                     <div class="col-sm-7 col-md-7 col-lg-7">
                         <div class="panel-group animate-box">
                             <div class="panel panel-default" >
-                                <h3 class="heading-section"><?php echo $event['Event']['name'] . ' ' . date('m/d/y H:i', strtotime($event['Event']['time'])); ?></h3>
+                                <h3 class="heading-section"><?php echo $event['Event']['name'] . ' ' . date('m/d/y h:iA', strtotime($event['Event']['time'])); ?></h3>
                                 <div style="position:relative; top:-20px;">
                                     <div class="panel-body">
                                         <?php echo $event['Event']['description']; ?>
