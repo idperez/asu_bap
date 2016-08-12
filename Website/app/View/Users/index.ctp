@@ -24,6 +24,7 @@
             <div class="col-sm-12 col-md-12 col-lg-12">
                 <div class="animate-box text-center">  
                     <div class="grid">
+                        <br>
                         <?php foreach($users as $user):?> 
                             <?php if($user['User']['level'] == 'Officer'){ ?>
                                 <figure class="effect-zoe">  
@@ -73,12 +74,13 @@
                                 </figure>
                             <?php } ?>
                         <?php endforeach; ?>
-                        <?php unset($user); ?>            
+                        <?php unset($user); ?>   
                     </div>
                 </div>
             </div>
         </div>
-    </div>                      
+    </div>      
+    <br>
     <div class="container" style="position:relative;">
         <div class="row" >
             <div class="col-md-12 col-sm-12" >
