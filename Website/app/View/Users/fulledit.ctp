@@ -108,8 +108,8 @@
                             <!--Loop through to generate years (max age is currently 120)-->
                             <?php $years = array(); //stores all years needed for list
                             $currYear = date('Y'); //gets current year 
-                            $lastYear = $currYear - 120; //gets earliest year we want to list
-                            for($currYear; $currYear > $lastYear; $currYear--) 
+                            $lastYear = $currYear + 10; //gets earliest year we want to list
+                            for($currYear; $currYear < $lastYear; $currYear++) 
                                 array_push($years, $currYear); ?>
                             <?php echo $this->Form->input('graduation_year', array(
                                 'options' => $years,
@@ -144,7 +144,7 @@
                     <fieldset>                     
                         <div class="form-group col-lg-6">
                             <?php echo $this->Form->input('state', array(
-                                'options' => array('Prefer not to answer' => 'Prefer not to answer','Not in the US' => 'Not in the US', 
+                                'options' => array( 
                                     'Alabama' => 'Alabama', 'Alaska' => 'Alaska', 'Arizona' => 'Arizona', 'Arkansas' => 'Arkansas', 
                                     'California' => 'California', 'Colorado' => 'Colorado', 'Connecticut' => 'Connecticut', 
                                     'Delaware' => 'Delaware', 'District of Columbia' => 'District of Columbia', 'Florida' => 'Florida', 
@@ -166,7 +166,7 @@
                         </div>   
                         <div class="form-group col-lg-6">
                             <?php 
-                            if(AuthComponent::user('level') == 'Officer') {
+                            if(AuthComponent::user('level') == 'Admin') {
                             echo $this->Form->input('title', array(
                                 'options' => array( 'Member' => 'Member', 'Candidate' => 'Candidate', 'Officer' => 'Officer', 
                                     'Alumni' => 'Alumni'),
@@ -222,12 +222,12 @@
               ?>   
             </div>
             <div class="form-group col-lg-6">
-                        <?php echo $this->Form->input('level', array(
-                            'options' => array('Candidate' => 'Candidate', 'Member' => 'Member', 'Officer' => 'Officer', 'Alumni' => 'Alumni'),
-                            'class' => 'form-control',
-                            'name' => 'level',
-                            'type' => 'hidden'));
-                            ?>                    
+                <?php echo $this->Form->input('level', array(
+                    'options' => array('Candidate' => 'Candidate', 'Member' => 'Member', 'Officer' => 'Officer', 'Alumni' => 'Alumni'),
+                    'class' => 'form-control',
+                    'name' => 'level',
+                    'type' => 'hidden'));
+                    ?>                    
             </div>                         
         </div>
     </div>

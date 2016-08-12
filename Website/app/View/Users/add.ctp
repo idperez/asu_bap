@@ -24,8 +24,8 @@
         </div>
     </div>
 </div>
-<div class="row">
-    <div class="col-lg-8 col-lg-offset-3">
+<div class="row animate-box">
+    <div class="col-lg-8 col-lg-offset-4">
         <div class="input-group">          
             <?php echo $this->Form->create('User'); ?>
               <div class="form-inline">                  
@@ -76,7 +76,7 @@
               </div>
               <div class="form-group col-lg-12">
                 <?php echo $this->Form->input('password', array(
-                            'type' => 'password',
+                            'type' => 'text',
                             'class' => 'form-control',
                             'maxlength' => 24,
                             'placeholder' => 'Password',

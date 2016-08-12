@@ -48,7 +48,9 @@ class User extends AppModel{
     ), 
         'minor' => array(
             'rule' => '/^[a-zA-Z]*$/', //regex for exluding all numberic and special chars
-            'message' => 'Please enter a valid Minor.'
+            'message' => 'Please enter a valid Minor.',
+            'allowEmpty' => true,
+            'required' => false
     ), 
         'phone' => array(
             'rule' => 'phone',
@@ -58,7 +60,8 @@ class User extends AppModel{
         'linkedin' => array(
             'rule' => 'url',
             'allowEmpty' => true,
-            'message' => 'Please include a valid url (ex: https://www.linkedin.com).'
+            'message' => 'Please include a valid url (ex: https://www.linkedin.com).',
+            'required' => false
     ));
 }
 ?>

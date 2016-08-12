@@ -25,7 +25,7 @@
                 <div class="fh5co-blog" style="background-image: url(./../../app/webroot/img/profile_pics/<?php if(file_exists('./../../app/webroot/img/profile_pics/'.$user['User']['id'].'.png')) echo $user['User']['id']; else echo '0' ?>.png); height: 280px; width: 260px;"></div>             
             </div>
             <?php echo $this->Form->create('Photo', array('enctype' => 'multipart/form-data')); ?>
-            <div class="col-lg-offset-3 col-lg-5 form-group">
+            <div class="col-lg-offset-4 col-lg-5 form-group">
                 <div class="input-group">
                     <label class="input-group-btn">
                         <span class="btn btn-primary">

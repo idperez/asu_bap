@@ -7,12 +7,12 @@
     <div class="container" style="position:relative;">
         <div class="row" >
             <div class="col-md-12 col-sm-12" >
-                <div class="animate-box text-center" style="position:relative;">  
-                    <img src="./app/webroot/img/profile_logo.png"  alt="profile_logo" height="120" style="position:relative; top:-35px; ">
+                <div class="animate-box text-center" style="position:relative; top: -35px;">  
+                    <?php echo $this->Html->image('profile_logo.png', array('alt' => 'mission', 'height' => '120')) ?>
                 </div>
                 <div class="animate-box" style="width: 100%; height: 20px; border-bottom: 1px solid black; text-align: center">
                     <span style="font-size: 30px; background-color: #F3F5F6; padding: 0 10px;">
-                    Officers
+                        Officers
                     </span>
                 </div>
             </div>    
@@ -29,11 +29,13 @@
                                 <figure class="effect-zoe">  
                                     <!--Get user profile image-->
                                     <?php 
-                                    $dir = './../../app/webroot/img/profile_pics/';
+                                    $dir = $_SERVER['DOCUMENT_ROOT'].'/bap/Website/app/webroot/img/profile_pics/';
                                     $profileImage = "0.png";
-                                    if(file_exists($dir.$user['User']['id'].'.png')) 
-                                        $profileImage = $user['User']['id'].'.png'; 
-                                    $profileImagePath = 'app/webroot/img/profile_pics/'.$profileImage;
+                           
+                                    if(file_exists($dir.$user['User']['id'].'.png')) {
+                                        $profileImage = $user['User']['id'].'.png';   
+                                    }
+                                    $profileImagePath = '/bap/Website/app/webroot/img/profile_pics/'.$profileImage;
                                     ?>
                                     <a onclick="window.location.href='<?php echo Router::url(array('controller'=>'Users', 'action'=>'view', $user['User']['id']))?>'">
                                         <img src="<?php echo $profileImagePath; ?>" alt="Profile image" class="img-responsive" style="height: 190px; width: 165px;" width="100%" height="30%">
@@ -82,7 +84,7 @@
             <div class="col-md-12 col-sm-12" >
                 <div class="animate-box" style="width: 100%; height: 20px; border-bottom: 1px solid black; text-align: center">
                     <span style="font-size: 30px; background-color: #F3F5F6; padding: 0 10px;">
-                    Members
+                        Members
                     </span>
                 </div>
             </div>    
@@ -94,16 +96,18 @@
             <div class="col-sm-12 col-md-12 col-lg-12">
                 <div class="animate-box text-center">  
                     <div class="grid">
+                        <?php $count = 0; ?>
                         <?php foreach($users as $user):?> 
                             <?php if($user['User']['level'] == 'Member'){ ?>
                                 <figure class="effect-zoe">  
                                     <!--Get user profile image-->
                                     <?php 
-                                    $dir = './../../app/webroot/img/profile_pics/';
+                                    $count++;
+                                    $dir = '/bap/Webiste/app/webroot/img/profile_pics/';
                                     $profileImage = "0.png";
                                     if(file_exists($dir.$user['User']['id'].'.png')) 
                                         $profileImage = $user['User']['id'].'.png'; 
-                                    $profileImagePath = 'app/webroot/img/profile_pics/'.$profileImage;
+                                    $profileImagePath = '/bap/Website/app/webroot/img/profile_pics/'.$profileImage;
                                     ?>
                                     <a onclick="window.location.href='<?php echo Router::url(array('controller'=>'Users', 'action'=>'view', $user['User']['id']))?>'">
                                         <img src="<?php echo $profileImagePath; ?>" alt="Profile image" class="img-responsive" style="height: 190px; width: 165px;" width="100%" height="30%">
@@ -141,7 +145,11 @@
                                 </figure>
                             <?php } ?>
                         <?php endforeach; ?>
-                        <?php unset($user); ?>            
+                        <?php unset($user); ?>
+                        <?php if($count == 0) {
+                            echo '<br><br>';
+                            echo '<h2>Our Members Will Be Announced Soon. Stay Tuned!</h2>';
+                        } ?>  
                     </div>
                 </div>
             </div>
