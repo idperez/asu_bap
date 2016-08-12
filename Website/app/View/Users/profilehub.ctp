@@ -39,6 +39,7 @@
                 <div class="panel-group animate-box">
                   <?php $count = 0; ?>
                   <?php foreach($events as $event): ?>
+                  <?php  $count++; ?>
                   <div class="panel panel-default" >
                     <h3 class="heading-section"><?php echo $event['Event']['name'] . ' ' . date('m/d/y H:i', strtotime($event['Event']['time'])); ?></h3>
                     <div style="position:relative; top:-20px;">
@@ -46,9 +47,8 @@
                             <?php echo $event['Event']['description']; ?>
                         </div>
                         <?php
-                            if($event['Event']['type'] == 'Event'){ 
-                            //Check for RSVPd events
-                            $count++;
+                            if($event['Event']['type'] == 'Event') { 
+                            //Check for RSVPd events     
                             $hasNotRsvped = FALSE;
                             foreach($user['Event'] as $checkRsvp):
                                 if($checkRsvp['id'] == $event['Event']['id'])

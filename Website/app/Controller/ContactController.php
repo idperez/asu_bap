@@ -38,6 +38,6 @@ class ContactController extends AppController {
  * @return void
  */
     public function index() {
-        
+        $this->Session->write('Page', 'Contact');
     }
 }

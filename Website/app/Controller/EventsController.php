@@ -8,46 +8,44 @@ class EventsController extends AppController{
     
     public function add()
     {
-        //if user is admin
-        if($this->Auth->user('level') != "Member" && $this->Auth->user('level') != "Candidate")
-        {
-            if($this->request->is('post'))
-            {
-                $this->Event->create();
+        //if user is not admin
+        if($this->Auth->user('level') != "Officer")
+            $this->redirect(
+                array('controller' => 'Users', 'action' => 'profilehub/' . $this->Auth->user('id')));
                 
-                if($this->Event->save($this->request->data))
-                {
-                    $this->redirect('announcements');
-                }
+        if($this->request->is('post'))
+        {
+            $this->Event->create();
+                
+            if($this->Event->save($this->request->data))
+            {
+                $this->redirect('announcements');
             }
-            
-            $this->loadModel('User');
-            $users = $this->User->find('all');
-
-            $this->set('user', $users);
         }
-        //user is not an admin
-        else
-            $this->redirectToLogin();
+            
+        $this->loadModel('User');
+        $users = $this->User->find('all');
+
+        $this->set('user', $users);
+        
+        $this->layout = 'hero-ish';
+        $this->Session->write('Page', 'Hub');
     }
     
     public function edit($id = null)
     {
         //if user is admin
         if($this->Auth->user('level') != "Member" && $this->Auth->user('level') != "Candidate")
-        {
-            //returns a single event
-            if(!$id)
+        {                        
+           //returns a single event, if present
+           $event = $this->Event->findById($id);   
+
+            if(!$id || !$event)
             {
-                throw new  NotFoundException(__('The Id was not found.'));
+                $this->redirect(
+                    array('controller' => 'Users', 'action' => 'profilehub/' .$this->Auth->user('id'))
+                );
             }
-            
-            $event = $this->Event->findById($id);
-            
-            if(!$event)
-            {
-                throw new NotFoundException(__('This event does not exist.'));
-            }    
             
             //save new inputs to event
             if($this->request->is('post') || $this->request->is('put'))
@@ -73,10 +71,18 @@ class EventsController extends AppController{
         {
             $this->redirectToLogin();
         }
+        
+        $this->layout = 'hero-ish';
+        $this->Session->write('Page', 'Hub');
     }
     
     public function delete($id = null)
     {
+        //if user is not admin
+        if($this->Auth->user('level') != "Officer")
+            $this->redirect(
+                array('controller' => 'Users', 'action' => 'profilehub/' . $this->Auth->user('id')));
+                
         $data = $this->Event->findById($id);
         
         if($this->Event->exists($id))
@@ -90,7 +96,7 @@ class EventsController extends AppController{
         {
             //Member does not exist
             $this->redirect(
-               array('controller' => 'Users', 'action' => 'profilehub'));
+               array('controller' => 'Users', 'action' => 'profilehub/' . $this->Auth->user('id')));
         }
     }
     
@@ -98,18 +104,41 @@ class EventsController extends AppController{
     {
         $this->EventHelper();
         $this->assignUserToView($this->Auth->user('id'));
+        
+        $this->layout = 'hero-ish';
+        $this->Session->write('Page', 'Info');
     }
     
     public function opportunities()
     {
-        $this->EventHelper();
+        //returns all opportunities to the view
+        $eventdata = $this->Event->find('all', 
+            array(
+                'order' => array('Event.time' => 'DESC'),
+                'condition' => array('type' => 'Opportunity')
+        ));
+            
+        $this->set('events', $eventdata);
+        
+        $this->layout = 'hero-ish';
+        $this->Session->write('Page', 'Info');
     }
     
     public function events()
     {
-        $this->EventHelper();
+        //returns all true events to the view
+        $eventdata = $this->Event->find('all', 
+            array(
+                'order' => array('Event.time' => 'DESC'),
+                'condition' => array('type' => 'Event')
+        ));
+            
+        $this->set('events', $eventdata);
         
         $this->assignUserToView($this->Auth->user('id'));
+        
+        $this->layout = 'hero-ish';
+        $this->Session->write('Page', 'Info');
     }
     
     public function EventHelper()
@@ -132,33 +161,45 @@ class EventsController extends AppController{
     
     public function manage_events()
     {
-        if($this->Auth->user('level') == "Member" || $this->Auth->user('level') == "Candidate")
-            $this->redirect(array(
-                'controller' => 'Users', 'action' => 'profilehub/' . $this->Auth->user('id')));
+        //if user is not admin
+        if($this->Auth->user('level') != "Officer")
+            $this->redirect(
+                array('controller' => 'Users', 'action' => 'profilehub/' . $this->Auth->user('id')));
             
-            $allRsvps = $this->Event->EventsUser->find('all');
-            $this->set('rsvps', $allRsvps);
+        $allRsvps = $this->Event->EventsUser->find('all');
+        $this->set('rsvps', $allRsvps);
                 
-            $this->EventHelper();    
+        $this->EventHelper();    
+        
+        $this->layout = 'hero-ish';
+        $this->Session->write('Page', 'Hub');
     }
     
     public function past_events()
     {
-        if($this->Auth->user('level') == "Member" || $this->Auth->user('level') == "Candidate")
-            $this->redirect(array(
-                'controller' => 'Users', 'action' => 'profilehub/' . $this->Auth->user('id')));
-            
-            $allRsvps = $this->Event->EventsUser->find('all');
-            $this->set('rsvps', $allRsvps);
-                
-            $this->EventHelper();
+        //if user is not admin
+        if($this->Auth->user('level') != "Officer")
+            $this->redirect(
+                array('controller' => 'Users', 'action' => 'profilehub/' . $this->Auth->user('id')));
+
+        $allRsvps = $this->Event->EventsUser->find('all');
+        $this->set('rsvps', $allRsvps);
+
+        $this->EventHelper();
+
+        $this->layout = 'hero-ish';
+        $this->Session->write('Page', 'Hub');
     }
     
     public function manage_members()
     {
-        if($this->Auth->user('level') == "Member" || $this->Auth->user('level') == "Candidate")
-            $this->redirect(array(
-                'controller' => 'Users', 'action' => 'profilehub'));
+        //if user is not admin
+        if($this->Auth->user('level') != "Officer")
+            $this->redirect(
+                array('controller' => 'Users', 'action' => 'profilehub/' . $this->Auth->user('id')));
+        
+        $this->layout = 'hero-ish';
+        $this->Session->write('Page', 'Hub');
     }
     
     public function view($id = null)
@@ -178,12 +219,13 @@ class EventsController extends AppController{
         $this->set('rsvps', $allRsvps);
         $this->set('users', $users);
         $this->set('event', $event);
+        
+        $this->layout = 'hero-ish';
+        $this->Session->write('Page', 'Hub');
     }
     
     public function sign_in($id = null, $email = null)
-    {
-        //pull all current attendees present and display them below sign in button
-        
+    {         
         if($email != null)
         {
             $this->loadModel('User');
@@ -202,10 +244,18 @@ class EventsController extends AppController{
             
             $this->redirect('view/' . $id);
         }
+        
+        $this->layout = 'hero-ish';
+        $this->Session->write('Page', 'Hub');
     }
     
     public function close_event($id = null)
     {
+        //if user is not admin
+        if($this->Auth->user('level') != "Officer")
+            $this->redirect(
+                array('controller' => 'Users', 'action' => 'profilehub/' . $this->Auth->user('id')));
+                
         $this->Event->id = $id;
         $this->Event->set(array('closed' => 1));
         $this->Event->save();
@@ -214,6 +264,11 @@ class EventsController extends AppController{
     
     public function open_event($id = null)
     {
+        //if user is not admin
+        if($this->Auth->user('level') != "Officer")
+            $this->redirect(
+                array('controller' => 'Users', 'action' => 'profilehub/' . $this->Auth->user('id')));
+                
         $this->Event->id = $id;
         $this->Event->set(array('closed' => 0));
         $this->Event->save();
@@ -222,6 +277,11 @@ class EventsController extends AppController{
     
     public function officer_view($id = null)
     {
+        //if user is not admin
+        if($this->Auth->user('level') != "Officer")
+            $this->redirect(
+                array('controller' => 'Users', 'action' => 'profilehub/' . $this->Auth->user('id')));
+                
         $this->assignUserToView($id); //user
         
         $allRsvps = $this->Event->EventsUser->find('all', array(
@@ -264,11 +324,20 @@ class EventsController extends AppController{
         $this->set('numOfHours', $numOfHours);
         $this->set('numOfMisses', $numOfMisses);   
         $this->set('events', $eventdata);
+        
+        $this->layout = 'hero-ish';
+        $this->Session->write('Page', 'Hub');
     }
     
     public function my_events($id = null)
     {
+        if(!$id)
+            $this->redirect('my_events/' .$this->Auth->user('id'));
+        
         $this->assignUserToView($id);
+        
+        $this->layout = 'hero-ish';
+        $this->Session->write('Page', 'Hub');
     }
     
     public function assignUserToView($id)
@@ -279,13 +348,11 @@ class EventsController extends AppController{
         $this->set('user', $user);
     }
     
-    public function event_results()
-    {
-             
-    }
-    
     public function rsvpTo($userId = null, $eventId = null)
-    {        
+    {       
+        if(!$userId || !$eventId)
+            $this->redirect('announcements');
+         
         $this->Event->EventsUser->create();
         $data = array("user_id" => $userId, "event_id" => $eventId);
         $this->Event->EventsUser->save($data);

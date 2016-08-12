@@ -3,9 +3,10 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Aug 12, 2016 at 04:55 AM
+
+-- Generation Time: Aug 11, 2016 at 10:28 PM
 -- Server version: 10.1.13-MariaDB
--- PHP Version: 5.6.20
+-- PHP Version: 5.5.35
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -23,21 +24,29 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `events`
+-- Table structure for table `prospectives`
 --
 
-CREATE TABLE `events` (
+CREATE TABLE `prospectives` (
   `id` int(11) NOT NULL,
+<<<<<<< HEAD
   `name` varchar(30) NOT NULL,
   `description` varchar(100) NOT NULL,
   `time` datetime NOT NULL,
   `address` varchar(100) NOT NULL
+=======
+  `first_name` varchar(100) NOT NULL,
+  `last_name` varchar(100) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `time` datetime(6) NOT NULL
+>>>>>>> cdd79cc1c27d9f289ba7e93767fb8b353e4ca79c
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `events`
+-- Dumping data for table `prospectives`
 --
 
+<<<<<<< HEAD
 INSERT INTO `events` (`id`, `name`, `description`, `time`, `address`) VALUES
 (1, 'Meet The Firms', '<p><em>Hello &nbsp;kj kj &nbsp;jkHello &nbsp;kj kj &nbsp;jkHello &nbsp;kj kj &nbsp;jkHello &nbsp;kj ', '1993-12-31 00:00:00', '');
 
@@ -242,14 +251,19 @@ INSERT INTO `users` (`id`, `first_name`, `last_name`, `username`, `title`, `link
 (92, 'test', 'test', 'test@test12345.com', '', '', '', 0, '', '', '05a671c66aefea124cc08b76ea6d30bb', '', '1', '', '', '', 0),
 (96, 'Isidro', 'Perez', 'isidro.perez1@live.com', 'Director of Technology', 'https://www.linkedin.com/in/isidro-perez-09645196?trk=hp-identity-photo', '', 0, '', '', '25d55ad283aa400af464c76d713c07ad', '', 'Officer', 'AZ', 'Phoenix', 'Eric works Firm’s Technology sector, serving clients in the semiconductor, software, Internet, services, waste and CleanTech industries. Eric served a three-year residency in Ernst & Young’s National Professional Practice Group where he consulted with engagement teams through the Southwest in connection with accounting, auditing and reporting issues, and is a member of Ernst & Young’s SEC Experts Network, helping engagement teams with SEC reporting concerns and complexities.', 0),
 (97, 'Greg', 'Wilson', 'isidro.perez11@live.com', '', 'www.linkedin.com/in/isidro-perez-09645196?trk=nav_responsive_tab_profile_pic', '', 0, '0', 'Unknown', '25d55ad283aa400af464c76d713c07ad', '', 'Member', 'Prefer not to answer', '', 'Eric works Firmâ€™s Technology sector, serving clients in the semiconductor, software, Internet, services, waste and CleanTech industries. Eric served a three-year residency in Ernst & Youngâ€™s National Professional Practice Group where he consulted with engagement teams through the Southwest in connection with accounting, auditing and reporting issues, and is a member of Ernst & Youngâ€™s SEC Experts Network, helping engagement teams with SEC reporting concerns and complexities.', 0);
+=======
+INSERT INTO `prospectives` (`id`, `first_name`, `last_name`, `email`, `time`) VALUES
+(1, '', 'Perez', 'isidro.perez@live.com', '2016-08-11 22:22:30.000000');
+>>>>>>> cdd79cc1c27d9f289ba7e93767fb8b353e4ca79c
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `events`
+-- Indexes for table `prospectives`
 --
+<<<<<<< HEAD
 ALTER TABLE `events`
   ADD PRIMARY KEY (`id`);
 
@@ -281,6 +295,9 @@ ALTER TABLE `prospectives`
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
+=======
+ALTER TABLE `prospectives`
+>>>>>>> cdd79cc1c27d9f289ba7e93767fb8b353e4ca79c
   ADD PRIMARY KEY (`id`);
 
 --
@@ -288,8 +305,9 @@ ALTER TABLE `users`
 --
 
 --
--- AUTO_INCREMENT for table `events`
+-- AUTO_INCREMENT for table `prospectives`
 --
+<<<<<<< HEAD
 ALTER TABLE `events`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
@@ -317,6 +335,10 @@ ALTER TABLE `prospectives`
 --
 ALTER TABLE `users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=98;
+
+ALTER TABLE `prospectives`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

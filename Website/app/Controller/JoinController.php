@@ -37,11 +37,11 @@ class JoinController extends AppController {
     }
     
     public function index() {
-        
+        $this->Session->write('Page', 'Members');
     }
     
     public function new_member() {
-        
+        $this->Session->write('Page', 'Members');
     }
 
     public function prospective_member() {
@@ -57,9 +57,11 @@ class JoinController extends AppController {
                     $this->redirect('success');
                 }
             }
+            
+        $this->Session->write('Page', 'Members');
     }
     
     public function success() {
-        
+        $this->Session->write('Page', 'Members');
     }    
 }

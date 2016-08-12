@@ -14,55 +14,46 @@ class UsersController extends AppController {
             array('order' => 'last_name'));
             
         $this->set('users', $userdata);
+        
+        $this->layout = 'hero-ish';
+        $this->Session->write('Page', 'Members');
     }
     
     public function add()
     {
-        //if user is admin
-        if($this->Auth->user('level') != "Member" && $this->Auth->user('level') != "Candidate")
+        //if user is not admin
+        if($this->Auth->user('level') != "Officer")
+            $this->redirect('profilehub/' . $this->Auth->user('id'));
+            
+        if($this->request->is('post'))
         {
-            if($this->request->is('post'))
-            {
-                $data = $this->request->data;
-                $this->User->create();
+            $data = $this->request->data;
+            $this->User->create();
                 
-                if($this->User->save($this->request->data))
-                {
-                    $this->redirect('index');
-                }
+            if($this->User->save($this->request->data))
+            {
+                $this->redirect('index');
             }
         }
-        //user is not an admin
-        else
-            $this->redirect('login');
+        
+        $this->layout = 'hero-ish';
+        $this->Session->write('Page', 'Hub');
     }
     
     public function view($id = null)
     {
         //returns a single user
-        if(!$id)
+        if(!$id || !user)
         {
-           throw new  NotFoundException(__('The Id was not found.'));
+           $this->redirect('index');
         }
         
         $user = $this->User->findById($id);
         
-        if(!$user)
-        {
-            throw new NotFoundException(__('This member does not exist.'));
-        }
-        
         $this->set('user', $user);
-    }
-    
-    public function editMajors($id = null)
-    {
         
-    }
-    
-    public function editMinors($id = null)
-    {
-        
+        $this->layout = 'hero-ish';
+        $this->Session->write('Page', 'Members');
     }
     
     public function edit($id = null)
@@ -73,6 +64,9 @@ class UsersController extends AppController {
             $this->edit($this->Auth->user('id'));   
         else //else no user is logged in
             $this->redirect('login');
+        
+        $this->layout = 'hero-ish';
+        $this->Session->write('Page', 'Hub');
     }
     
     public function fulledit($id = null)
@@ -86,12 +80,18 @@ class UsersController extends AppController {
         //else user is not logged in    
         else
             $this->redirect('login');
+        
+        $this->layout = 'hero-ish';
+        $this->Session->write('Page', 'Hub');
     }
     
     public function profilehub($id = null)
     {
-        if($id == null)
-            $this->redirect('index');
+        if(!$id)
+            $this->redirect('login');
+              
+        if($this->Auth->user('id') != $id)
+            $this->redirect('profilehub/' . $this->Auth->user('id'));
         
         $this->loadmodel('Event');  
         
@@ -145,6 +145,9 @@ class UsersController extends AppController {
         $user = $this->User->findById($id);
         
         $this->set('user', $user);
+        
+        $this->layout = 'hero-ish';
+        $this->Session->write('Page', 'Hub');
     }
     
     //Helper used across common views
@@ -188,13 +191,19 @@ class UsersController extends AppController {
              $data = $this->request->data;
              
              echo $_FILES[$data['url']];
-        }
+        }          
         
-        
+        $this->layout = 'hero-ish';
+        $this->Session->write('Page', 'Hub');
     }
+    
     
     public function delete($id = null)
     {
+        //if user is not admin
+        if($this->Auth->user('level') != 'Officer')
+            $this->redirect('profilehub/' . $this->Auth->user('id'));
+        
         $data = $this->User->findById($id);
         
         if($this->User->exists($id))
@@ -237,6 +246,7 @@ class UsersController extends AppController {
                 $this->Session->setFlash('Invalid username and/or password');
             }
         }
+        $this->Session->write('Page', 'Hub');
     }
     
     public function logout()
@@ -247,16 +257,41 @@ class UsersController extends AppController {
      
     public function manage_members()
     {
+        //if user is not admin
+        if($this->Auth->user('level') != 'Officer')
+            $this->redirect('profilehub/' . $this->Auth->user('id'));
+            
+        $this->loadModel('Event');
         
+        //returns all users to the view
+        $users = $this->User->find('all', 
+            array('order' => array('level' => 'DESC')));
+        
+        $allRsvps = $this->Event->EventsUser->find('all');
+        $events = $this->Event->find('all');
+        
+        $this->set('users', $users);
+        $this->set('allRsvps', $allRsvps);
+        $this->set('events', $events);
+        
+        $this->layout = 'hero-ish';
+        $this->Session->write('Page', 'Hub');
     }
     
     public function manage_prospective_members()
     {
+        //if user is not admin
+        if($this->Auth->user('level') != 'Officer')
+            $this->redirect('profilehub/' . $this->Auth->user('id'));
+            
         $this->loadModel('Prospective');
         
         $prospective_members_data = $this->Prospective->find('all');
         
         $this->set('prospective_members', $prospective_members_data);
+        
+        $this->layout = 'hero-ish';
+        $this->Session->write('Page', 'Hub');
     }
 }
 ?>

@@ -24,39 +24,41 @@
                                 <th>Level</th>
                                 <th>Hours</th>
                                 <th>Missed Events</th>
-                                <th>Edit</th>
-                                <th>Profile</th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
                             </tr>
                         </thead>
                         <tbody>
-                            <?php $go = 96; ?>
-                            <tr>
-                                <td>Isidro</td>
-                                <td>Perez</td>
-                                <td>Officer</td>
-                                <td>3</td>
-                                <td>0</td>
-                                <th><span ><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Info', 'action'=>'edit'))?>'">Edit</a></span></th>
-                                <th><span ><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Users', 'action'=>'officer_view/'.$go))?>'">View</a></span></th>
+                            <?php foreach($users as $user): ?>
+                            <?php 
+                            $numOfHours = 0;
+                            $numOfMisses = 0;
+                            foreach($allRsvps as $rsvpd): 
+                                if($rsvpd['EventsUser']['user_id'] == $user['User']['id'])
+                                {
+                                    foreach($events as $event): 
+                                        if($rsvpd['EventsUser']['event_id'] == $event['Event']['id'])
+                                            if($event['Event']['closed'])
+                                                if($rsvpd['EventsUser']['present'] == 0)
+                                                    $numOfMisses++;
+                                                else
+                                                    $numOfHours += $event['Event']['hours'];
+                                    endforeach;           
+                                }
+                            endforeach;        
+                            ?>
+                            <tr>            
+                                <td><?php echo $user['User']['first_name']; ?></td>
+                                <td><?php echo $user['User']['last_name']; ?></td>
+                                <td><?php echo $user['User']['level']; ?></td>
+                                <td><?php echo $numOfHours; ?></td>
+                                <td><?php echo $numOfMisses; ?></td>
+                                <th><span><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Users', 'action'=>'edit', $user['User']['id']))?>'">Edit</a></span></th>
+                                <th><span><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Events', 'action'=>'officer_view', $user['User']['id']))?>'">View</a></span></th>
+                                <th><span><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Users', 'action'=>'delete', $user['User']['id']))?>'">Delete</a></span></th>
                             </tr>
-                            <tr>
-                                <td>Drew</td>
-                                <td>Monachy</td>
-                                <td>Member</td>
-                                <td>3</td>
-                                <td>3</td>
-                                <th><span ><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Info', 'action'=>'edit'))?>'">Edit</a></span></th>
-                                <th><span ><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Users', 'action'=>'officer_view'))?>'">View</a></span></th>
-                            </tr>
-                            <tr>
-                                <td>Lory</td>
-                                <td>Slorun</td>
-                                <td>Candidate</td>
-                                <td>3</td>
-                                <td>3</td>
-                                <th><span ><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Info', 'action'=>'edit'))?>'">Edit</a></span></th>
-                                <th><span ><a class="btn btn-primary" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Users', 'action'=>'officer_view'))?>'">View</a></span></th>
-                            </tr>
+                            <?php endforeach; ?>
                         </tbody>
                     </table>
                 </div>

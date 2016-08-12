@@ -37,7 +37,7 @@
                     </div>      
                     <div class="form-group col-lg-6">
                         <?php echo $this->Form->input('type', array(
-                            'options' => array('Event' => 'Event', 'Opportunity' => 'Opportunity'),
+                            'options' => array('Event' => 'Event', 'Opportunity' => 'Opportunity', 'Other' => 'Other'),
                             'class' => 'form-control',
                             'name' => 'type'));
                         ?>
@@ -51,6 +51,7 @@
                         <?php echo $this->Form->input('time', array(
                             'type' => 'text',
                             'class' => 'form-control',
+                            'label' => 'Time (YYYY-MM-DD HH:MI:SS)',
                             'name' => 'time'));
                         ?>
                     </div>

@@ -39,47 +39,56 @@ class InfoController extends AppController {
     }
     
     public function index() {
-        
+        $this->Session->write('Page', 'Info');
     }
     
     public function announcements() {
-        
+        $this->layout = 'hero-ish';
+        $this->Session->write('Page', 'Info');
     }
     
     public function advisory_board() {
-        
+        $this->layout = 'hero-ish'; 
+        $this->Session->write('Page', 'Info');
     }
     
     public function executive_board() {
-        
+        $this->layout = 'hero-ish';
+        $this->Session->write('Page', 'Info');
     }
     
     public function sponsor() {
-        
+        $this->Session->write('Page', 'Info');
     }
     
     public function events() {
-        
+        $this->layout = 'hero-ish';
+        $this->Session->write('Page', 'Info');
     }
     
     public function opportunities() {
-        
+        $this->layout = 'hero-ish';
+        $this->Session->write('Page', 'Info');
     }
     
     public function policies() {
-        
+        $this->layout = 'hero-ish';
+        $this->Session->write('Page', 'Members');
     }
     
     public function new_announcement() {
-        
+        $this->layout = 'hero-ish';
+        $this->Session->write('Page', 'Hub');
     }
     
     public function edit_announcement() {
-        
+        $this->layout = 'hero-ish';
+        $this->Session->write('Page', 'Hub');
     }
     
     public function our_sponsors() {
-        
+        $this->layout = 'hero-ish';
+        $this->Session->write('Page', 'Info');
     }
     
     public function charge() {

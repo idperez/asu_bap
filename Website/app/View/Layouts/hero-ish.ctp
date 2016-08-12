@@ -38,7 +38,7 @@
         <div id="fh5co-page">
         <div id="fh5co-header">
         <!-- end:top -->
-        <header id="fh5co-header-section">
+        <header id="fh5co-header-section-ish">
             <div class="container">
                 <div class="nav-header">
                     <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
@@ -51,11 +51,7 @@
                     <!-- START #fh5co-menu-wrap -->
                     <nav id="fh5co-menu-wrap" role="navigation">
                         <ul class="sf-menu" id="fh5co-primary-menu">
-                            <?php if($page == 'Home') { ?>
-                            <li class="active">
-                            <?php } else { ?>
                             <li>
-                            <?php } ?>
                                 <?php echo $this->Html->link(
                                     'Home',
                                     array('manager' => true, 'controller' => 'Pages', 'action' => 'display')
@@ -245,3 +241,4 @@
     <?php echo $this->Html->script('respond.min.js');?>
     <?php echo $this->Html->script('image_preview.js');?> 
     <?php echo $this->Html->script('superfish.js');?>  
+            

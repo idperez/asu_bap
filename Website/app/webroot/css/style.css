@@ -112,7 +112,7 @@ figure {
 
 .fh5co-hero-ish {
   position: relative;
-  height: 100px;
+  height: 102px;
   font-weight: 200;
   background-image: url(/bap/Website/app/webroot/img/tempe.jpg);
 }
@@ -363,6 +363,15 @@ figure {
   width: 100%;
   z-index: 2;
   padding-top: 40px;
+}
+
+#fh5co-header-section-ish {
+  padding: 0;
+  position: absolute;
+  top: 5%;
+  left: 0;
+  width: 100%;
+  z-index: 2;
 }
 
 .nav-header {

@@ -38,6 +38,6 @@ class AboutController extends AppController {
     }
     
     public function index() {
-        
+        $this->Session->write('Page', 'About');
     }
 }
