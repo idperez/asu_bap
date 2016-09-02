@@ -58,7 +58,7 @@
                     <div class="col-sm-2 col-md-2 col-lg-2 animate-box">
                         <span ><a class="btn btn-primary" style="width: 150px;" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Events', 'action'=>'edit', $event['Event']['id']))?>'">Edit</a></span>
                         <br><br>
-                        <span ><a class="btn btn-primary" style="width: 150px;" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Events', 'action'=>'delete', $event['Event']['id']))?>'">Delete</a></span>
+                        <span ><a class="btn btn-primary" style="width: 150px;" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Events', 'action'=>'check_in', $event['Event']['id']))?>'">Check In</a></span>
                         <br><br>
                         <?php if(!($event['Event']['closed'])) {?>
                         <span><a class="btn btn-primary" style="width: 150px;" onclick="window.location.href='<?php echo Router::url(array('controller'=>'Events', 'action'=>'close_event', $event['Event']['id']))?>'">Close</a></span>

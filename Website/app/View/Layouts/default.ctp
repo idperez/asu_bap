@@ -191,7 +191,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
-                        C© 2016 Beta Alpha Psi, Beta Tau Chapter - Isidro Perez, Drew Demechko                     
+                        Isidro Perez, Drew Demechko - C© 2016 Beta Alpha Psi, Beta Tau Chapter                    
                     </div>
                     <div class="col-md-6">
                         <ul class="footer-menu">

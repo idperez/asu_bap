@@ -32,6 +32,14 @@ class EventsController extends AppController{
         $this->Session->write('Page', 'Hub');
     }
     
+    public function check_in($id = null) 
+    {
+        
+  
+        $this->layout = 'hero-ish';
+        $this->Session->write('Page', 'Hub');
+    }
+    
     public function edit($id = null)
     {
         //if user is admin
