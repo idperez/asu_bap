@@ -4,7 +4,7 @@ class UsersController extends AppController {
         //All pages that are visible to regular users
     public function beforeFilter()
     {
-        $this->Auth->allow('index', 'view');
+        $this->Auth->allow('index', 'view', 'forgot_password', 'reset_password');
     }
     
     public function index()
@@ -17,6 +17,53 @@ class UsersController extends AppController {
         
         $this->layout = 'hero-ish';
         $this->Session->write('Page', 'Members');
+    }
+    
+    public function forgot_password()
+    {
+        if($this->request->is('post'))
+        {
+            $data = $this->request->data;
+            $username = $data['username'];
+          
+            $user = $this->User->find('first', array(
+                'conditions' => array(
+                    'user.username' => $username,
+                ),
+                'recursive' => -1
+            ));
+            
+            if(!empty($user))
+            {
+                $this->Session->setFlash('Connection Successful'); 
+                return $this->redirect('reset_password/' . $this->Auth->user('id'));
+            }
+            else 
+            {
+                // TODO: FLASH NOT WORKING
+                $this->Session->setFlash('Invalid username and/or password');
+            }
+        }
+        
+        $this->layout = 'hero-ish';
+        $this->Session->write('Page', 'Hub');
+    }
+    
+    public function reset_password($id = null)
+    {
+        //returns a single user    
+        $user = $this->User->findById($id);
+        
+        print_r($user['username']);
+        /*
+        if(!$id || !$user)
+        {
+           $this->redirect('login');
+        }
+        */
+        $this->set('user', $user);
+        $this->layout = 'hero-ish';
+        $this->Session->write('Page', 'Hub');
     }
     
     public function add()
