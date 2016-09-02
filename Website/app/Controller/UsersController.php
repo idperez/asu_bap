@@ -360,16 +360,17 @@ class UsersController extends AppController {
     
     public function welcome_member() {
         
-        $this->loadModel('Users');
+        $this->loadModel('User');
         
         if($this->request->is('post'))
         {
-            $this->Users->create();
+            $data = $this->request->data;
+            $this->User->create();
                 
-                if($this->Users->save($this->request->data))
-                {                  
-                    $this->redirect('welcome');
-                }
+            if($this->User->save($this->request->data))
+            {
+                $this->redirect('welcome');
+            }
         }
         
         $this->layout = 'hero-ish';
@@ -377,6 +378,8 @@ class UsersController extends AppController {
     }
     
     public function welcome_candidate() {
+        
+        $this->loadModel('User');
         
         if($this->request->is('post'))
         {
