@@ -64,4 +64,5 @@ class JoinController extends AppController {
     public function success() {
         $this->Session->write('Page', 'Members');
     }    
+   
 }

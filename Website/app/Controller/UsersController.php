@@ -4,7 +4,7 @@ class UsersController extends AppController {
         //All pages that are visible to regular users
     public function beforeFilter()
     {
-        $this->Auth->allow('index', 'view', 'forgot_password', 'reset_password');
+        $this->Auth->allow('index', 'view', 'forgot_password', 'reset_password', 'welcome', 'welcome_member', 'welcome_candidate');
     }
     
     public function index()
@@ -54,7 +54,6 @@ class UsersController extends AppController {
         //returns a single user    
         $user = $this->User->findById($id);
         
-        print_r($user['username']);
         /*
         if(!$id || !$user)
         {
@@ -352,6 +351,46 @@ class UsersController extends AppController {
         
         $this->layout = 'hero-ish';
         $this->Session->write('Page', 'Hub');
+    }
+    
+    public function welcome() {
+        
+        $this->Session->write('Page', 'Members');
+    }
+    
+    public function welcome_member() {
+        
+        $this->loadModel('Users');
+        
+        if($this->request->is('post'))
+        {
+            $this->Users->create();
+                
+                if($this->Users->save($this->request->data))
+                {                  
+                    $this->redirect('welcome');
+                }
+        }
+        
+        $this->layout = 'hero-ish';
+        $this->Session->write('Page', 'Members');
+    }
+    
+    public function welcome_candidate() {
+        
+        if($this->request->is('post'))
+        {
+            $data = $this->request->data;
+            $this->User->create();
+                
+            if($this->User->save($this->request->data))
+            {
+                $this->redirect('welcome');
+            }
+        }
+        
+        $this->layout = 'hero-ish';
+        $this->Session->write('Page', 'Members');
     }
 }
 ?>

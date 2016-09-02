@@ -30,7 +30,7 @@
                                     );
                                     ?>  
                                     <div style="position:relative; top:-10px;">
-                                    <br><a onclick="window.location.href='<?php echo Router::url(array('controller'=>'Users', 'action'=>'forgot_password'))?>'" style="cursor: pointer;">Forgot Password</a></p>
+                                    <br><a onclick="window.location.href='<?php echo Router::url(array('controller'=>'Users', 'action'=>'forgot_password'))?>'" style="cursor: pointer; color: grey;">Forgot Password</a></p>
                                     </div>
                                 </div>                     
                             </form>      
